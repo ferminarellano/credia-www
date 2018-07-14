@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>@yield('title') Credia</title>
+		<title>@yield('title') CREDIA</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
@@ -24,15 +24,14 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
 		
-		<link rel="stylesheet" href="{{ asset('assets/css/colors/color1.css') }}">
+		<!--<link rel="stylesheet" href="{{ asset('assets/css/colors/color1.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/colors/color2.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/colors/color3.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/colors/color4.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/colors/color5.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/colors/color6.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/colors/color7.css') }}">
-		
-
+		<link rel="stylesheet" href="{{ asset('assets/css/colors/color7.css') }}">-->
+	
 		<!--For Plugins external css-->
 		<link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
 
@@ -57,7 +56,7 @@
 		</div>
 	</div> <!-- #preloader -->
 	
-	<div class="colors">
+	<!--<div class="colors">
 		<a href="#" class="btn btn-primary panel_opener"><i class="colors_panel"></i></a>
 		<div class="colors_panel">
 			<h5>Colors</h5>
@@ -69,7 +68,7 @@
 			<a class="color6" data-val="color6"></a>
 			<a class="color7" data-val="color7"></a>
 		</div>
-	</div>
+	</div>-->
 
 	<header class="xs-header header-transparent">
 		<div class="container">
@@ -119,10 +118,10 @@
 						<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
 					</ul><!-- .nav-menu END -->
 				</div>
-				<div class="col-lg-2">
+				<!--<div class="col-lg-2">
 					<a href="https://www.facebook.com/crediahonduras/" class="fa fa-facebook fi"></a>
 					<a href="#" class="fa fa-instagram fi"></a> 
-				</div>
+				</div>-->
 			</div><!-- .nav-menus-wrapper .row END -->
 		</nav><!-- .xs-menus .fundpress-menu END -->
 	</div><!-- .container end -->
@@ -139,7 +138,7 @@
 	@yield('voluntarios')
 	@yield('eventos')
 	@yield('equipo')
-	@yield('diario')
+	{{--@yield('diario')--}}
 <!-- END CONTENIDO INDEX -->
 
 <!--   CONTENIDO SOBRE NOSOTROS   -->
@@ -334,7 +333,7 @@
 				</div>-->
 				
 				<div class="xs-back-to-top-wraper">
-					<a href="#"  onclick="topFunction()" id="myBtn"><i class="fa fa-angle-double-up"></i></a>
+					<a href="#"  onclick="topFunction()" id="myBtn"><i class="fa fa-angle-up"></i></a>
 				</div>
 			</div>
 		</div>

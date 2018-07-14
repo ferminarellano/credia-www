@@ -41,47 +41,55 @@
 @endsection
 
 @section('archive')
-	<!-- archive section -->
+	<!-- misión section -->
 	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-6">
 					<div class="xs-archive-content">
 						<div class="xs-heading">
-							<h2 class="xs-line-title">Our Missions</h2>
-							<h3 class="xs-title big" data-title="Archived">Archived</h3>
+							<h2 class="xs-line-title">Nuestra</h2>
+							<h3 class="xs-title big" data-title="Misión">Misión</h3>
 						</div>
-						<p>We register and regulate charities in England and Wales, to ensure that the public can support charities with confidence. As registrar, we are responsible for maintaining an accurate.</p>
-						<h5>Our strategic priorities up to 2018 are:</h5>
-						<ul class="xs-unorder-list arrow">
-							<li>Protecting charities from abuse or mismanagement</li>
-							<li>Enabling trustees to run their charities effectively</li>
-							<li>Encouraging greater transparency and accountability</li>
+						
+						<p align="justify">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
+						facilitando la toma de decisiones para la planificación ordenada del territorio, impulsando 
+						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
+						en el Corredor Biológico del Caribe Hondureño.</p>
+						
+						<h5>Nuestros componentes estratégicos hasta 2018 son:</h5>
+						
+						<ul class="xs-unorder-list arrow" align="justify">
+							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ONCCDS).</li>
+							<li>Centro de Documentación.</li>
+							<li>Educación Ambiental.</li>
+							<li>Innovación de la información y servicios técnicos.</li>
 						</ul>
-						<ul class="xs-funfact-list">
+						
+						<ul class="xs-funfact-list" align="center" style="font-weight: bold;">
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="132" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Primary Schools</span>
+								<span>Escuelas primarias</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="19" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Hospitals</span>
+								<span>Colegios</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Volunteers</span>
+								<span>Universidades</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="27" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Winning Awards</span>
+								<span>Voluntarios</span>
 							</li>
 							<div class="clearfix"></div>
 						</ul>
@@ -108,15 +116,16 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Popular Causes</h2>
+					<h2 class="xs-title">Proyectos</h2>
 					<span class="xs-separetor dashed"></span>
-					<p>FundPress has built a platform focused on aiding entrepreneurs, startups, and <br> companies raise capital from anyone.</p>
+					<p>Principales proyectos.</p>
 				</div><!-- .xs-heading-title END -->
 				<div class="col-xl-3 col-md-3 xs-btn-wraper">
-					<a href="" class="btn btn-primary">all Causes</a>
+					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">todas los proyectos</a>
 				</div><!-- .xs-btn-wraper END -->
 			</div><!-- .row end -->
 			<div class="row">
+				
 				<div class="col-lg-4 col-md-6">
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
@@ -131,15 +140,15 @@
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Food</a></li>
+								<li><a href="">Proyecto Fondo de Adaptación (PFA)</a></li>
 							</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30">Splash Drone 3 a Fully Waterproof Drone that floats</a>
+							<a href="#" class="xs-post-title xs-mb-30" align="justify">Incrementar la resiliencia de la población más vulnerable en Honduras</a>
 
-							<ul class="xs-list-with-content">
-								<li>$67,000<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>3<span>Days to go</span></li>
+							<ul class="xs-list-with-content" align="center">
+								<li>$67,000<span>Prometido</span></li>
+								<li><span class="number-percentage-count number-percentage" data-value="60" data-animation-duration="3500">0</span>% <span>financiado</span></li>
+								<li>3<span>Días para ir</span></li>
 							</ul>
 										
 							<span class="xs-separetor"></span>
@@ -149,13 +158,14 @@
 									<img src="assets/images/avatar/avatar_1.jpg" alt="">
 								</div>
 								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Ema Watson</a>
+									<a href="#"><span>Por</span>Fundación CREDIA</a>
 								</div>
 							</div>
 						</div><!-- .xs-item-content END -->
 					</div><!-- .xs-popular-item END -->
 				</div>
 
+				
 				<div class="col-lg-4 col-md-6">
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
@@ -170,15 +180,15 @@
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Health</a></li>
+								<li><a href="">Cambio climático</a></li>
 							</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30">The Read Read: Braille Literacy Tool for the Blind</a>
+							<a href="#" class="xs-post-title xs-mb-30" align="justify">Introducir en el concepto de Cambio Climático a los niños y niñas.</a>
 
-							<ul class="xs-list-with-content">
-								<li>$33,600<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>10<span>Days to go</span></li>
+							<ul class="xs-list-with-content" align="center">
+								<li>$33,600<span>Prometido</span></li>
+								<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>financiado</span></li>
+								<li>10<span>Días para ir</span></li>
 							</ul>
 							
 							<span class="xs-separetor"></span>
@@ -188,7 +198,7 @@
 									<img src="assets/images/avatar/avatar_2.jpg" alt="">
 								</div>
 								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Kene Williamson</a>
+									<a href="#"><span>Por</span>Fundación CREDIA</a>
 								</div>
 							</div>
 						</div><!-- .xs-item-content END -->
@@ -209,15 +219,15 @@
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Education</a></li>
+								<li><a href="">Fortaleciendo de las áreas marinas protegidas</a></li>
 							</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30">BuildOne: $99 3D Printer w/ WiFi and Auto Bed Leveling!</a>
+							<a href="#" class="xs-post-title xs-mb-30" align="justify">Diseño e implementación del sistema de monitoreo de los ecosistemas marinos</a>
 
-							<ul class="xs-list-with-content">
-								<li>$12,760<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>66<span>Days to go</span></li>
+							<ul class="xs-list-with-content" align="center">
+								<li>$12,760<span>Prometido</span></li>
+								<li><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>% <span>financiado</span></li>
+								<li>66<span>Días para ir</span></li>
 							</ul>
 							
 							<span class="xs-separetor"></span>
@@ -227,14 +237,14 @@
 									<img src="assets/images/avatar/avatar_3.jpg" alt="">
 								</div>
 								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Leo Baddabes</a>
+									<a href="#"><span>Por</span>Fundación CREDIA</a>
 								</div>
 							</div>
 						</div><!-- .xs-item-content END -->
 					</div><!-- .xs-popular-item END -->
 				</div>
 
-				<div class="col-lg-4 col-md-6">
+				<!--<div class="col-lg-4 col-md-6">
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
 
@@ -245,7 +255,7 @@
 									<p><span class="number-percentage-count number-percentage" data-value="85" data-animation-duration="3500">0</span>%</p>
 								</div>
 							</div>
-						</div><!-- .xs-item-header END -->
+						</div>
 						<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
 								<li><a href="">Charity</a></li>
@@ -269,9 +279,11 @@
 									<a href="#"><span>By</span>Jhung Li</a>
 								</div>
 							</div>
-						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
+						</div>-->
+						<!-- .xs-item-content END -->
+					<!--</div>-->
+					<!-- .xs-popular-item END -->
+				<!--</div>
 
 				<div class="col-lg-4 col-md-6">
 					<div class="xs-popular-item xs-box-shadow">
@@ -284,8 +296,8 @@
 									<p><span class="number-percentage-count number-percentage" data-value="74" data-animation-duration="3500">0</span>%</p>
 								</div>
 							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="xs-item-content">
+						</div>--><!-- .xs-item-header END -->
+						<!--<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
 								<li><a href="">Cave</a></li>
 							</ul>
@@ -308,9 +320,9 @@
 									<a href="#"><span>By</span>Chirstina Perry</a>
 								</div>
 							</div>
-						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
+						</div>--><!-- .xs-item-content END -->
+					<!--</div>--><!-- .xs-popular-item END -->
+				<!--</div>
 
 				<div class="col-lg-4 col-md-6">
 					<div class="xs-popular-item xs-box-shadow">
@@ -323,8 +335,8 @@
 									<p><span class="number-percentage-count number-percentage" data-value="89" data-animation-duration="3500">0</span>%</p>
 								</div>
 							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="xs-item-content">
+						</div>--><!-- .xs-item-header END -->
+						<!--<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
 								<li><a href="">Watar</a></li>
 							</ul>
@@ -348,8 +360,8 @@
 								</div>
 							</div>
 						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
+					<!--</div>--><!-- .xs-popular-item END -->
+				<!--</div>-->
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 </section>
@@ -362,10 +374,10 @@
 			<div class="row">
 				<div class="col-md-12 col-lg-6">
 					<div class="xs-text-content xs-pr-20">
-						<h2 class="color-navy-blue">Welcome to CharityPress please rise your hand</h2>
-						<p>The CharityPress community was named a “Top 25 Best Global Philanthropist” by Barron’s. We beat Oprah. And, Mashable named CharityPress something like “the best place to raise money online for your favorite causes.”</p>
-						<blockquote>
-							If you don't understand how fast and easy it is to so long for your favorite charity on FundPress, please try it. <span>How it works</span> page, <span>Contact us</span>.
+						<h2 class="color-navy-blue" align="justify">Bienvenido a la fundación CREDIA por favor levante su mano</h2>
+						<p> A través de sus componentes la fundación ha logrado convertirse en uno de los principales impulsadores para mejorar la situación de la población local en los aspectos sociales, económicos y ambientales.</p>
+						<blockquote align="justify">
+							Si no comprende la importancia de estos temas, es tan rápido y fácil, conviertalo en prioridad. <span>Cómo funciona</span> la página, <span>Contáctenos.</span>.
 						</blockquote>
 					</div><!-- .xs-text-content END -->
 				</div>
@@ -388,7 +400,7 @@
 	<section class="bg-navy-blue">
 		<div class="container-fulid">
 			<div class="xs-feature-content">
-				<h2 class="color-white">CharityPress are <span> charity </span> activities are taken place around the world, lets contribute.</h2>
+				<h2 class="color-white">Las actividades de la <span> fundación CREDIA</span> se realizan en todo el Corredor Biologico del Caribe Hondureño, contribuyamos.</h2>
 			</div><!-- .xs-feature-content END -->
 		</div><!-- .container-fulid end -->
 	</section>
@@ -400,30 +412,30 @@
 			<div class="row xs-feature-box-wraper">
 				<div class="col-md-12 col-lg-4 xs-feature-box">
 					<div class="xs-feature-box-content">
-						<h3 class="color-white">But we’re not done yet. We need your.</h3>
+						<h3 class="color-white">No hemos terminado aún. Necesitamos tu.</h3>
 						<a href="#" class="btn btn-secondary btn-color-alt">
-							get involved
+							participación
 						</a>
 					</div><!-- .xs-feature-box-content END -->
 				</div>
 				<div class="col-md-12 col-lg-4 xs-feature-box highlight">
 					<div class="xs-feature-box-content">
-						<h3 class="color-white">Sponsor an entire trending project</h3>
-						<p>For $10,000 or more you can fully fund a water project for a Community. 100% funds clean water projects. 663 million people  drink.</p>
+						<h3 class="color-white">Involucrate con nuestros proyectos</h3>
+						<p>Por un corto espacio de tu tiempo puedes beneficiar con educación a muchos niños y niñas.</p>
 						<a href="#" class="btn btn-secondary btn-color-alt">
-							Become an Sponsor
+							Conviertase en un contribuidor
 						</a>
 					</div> <!-- .xs-feature-box-content end -->
 				</div><!-- .xs-feature-box .highlight END -->
 				<div class="col-md-12 col-lg-4 xs-feature-box">
 					<div class="xs-feature-box-content">
-						<h3 class="color-white">Connect with us on social media</h3>
+						<h3 class="color-white">Conéctate con nosotros en las redes sociales</h3>
 						<ul class="xs-social-list">
-							<li><a href=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/crediahonduras/"><i class="fa fa-facebook"></i></a></li>
+							<!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
 							<li><a href=""><i class="fa fa-instagram"></i></a></li>
-							<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
-							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							<!--<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
+							<!--<li><a href=""><i class="fa fa-google-plus"></i></a></li>-->
 						</ul><!-- .xs-social-list END -->
 					</div><!-- .xs-feature-box-content END -->
 				</div><!-- .xs-feature-box END -->
@@ -434,37 +446,37 @@
 
 @section('servicios')
 	<section class="xs-section-padding">
-		<div class="container">
+		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
-				<h2 class="xs-mb-0 xs-title">We’ve funded <span>120,00 charity projects</span> for <br> 20M people around the world.</h2>
+				<h2 class="xs-mb-0 xs-title">Hemos realizado <span>varias actividades</span> para <br> el beneficio de niños y niñas de La Ceiba y alrededores.</h2>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-water"></span>
-						<h5>Pure Water <br>For Poor People</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="fa fa-blind"></span>
+						<h5>Pasaporte <br> verde</h5>
+						<p>Recorriendo las diez áreas protegidas del Corredor Biologico del Caribe Hondureño a travéz del pasaporte verde.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-groceries"></span>
-						<h5>Healty Food <br>For Poor People</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="fa fa-leaf"></span>
+						<h5>Historia natural<br>de las plantas</h5>
+						<p>Conociendo la historia natural de las plantas, desarrollo del reino Fungi. Conociendo los hogos del CREDIA.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-heartbeat"></span>
-						<h5>Medical <br>Facilities for People</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="fa fa-snowflake-o"></span>
+						<h5>Charlas sobre <br>Cambio climatico</h5>
+						<p>Se desarrollan charlas continuas sobre el cambio climatico a travez del plan piloto la Ghinkhana.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-open-book"></span>
-						<h5>Pure Education <br>For Every Children</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="fa fa-eye"></span>
+						<h5>Avistamiento <br>de aves</h5>
+						<p>Conocer especies de aves por medio del pasaporte de aves, asi como de los animales en peligro de extinción.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->
@@ -478,33 +490,33 @@
 			<div class="row">
 				<div class="col-md-8 col-lg-7">
 					<div class="xs-volunteer-form-wraper bg-aqua">
-						<h2>Become a Volunteer</h2>
-						<p>It only takes a minute to set up a campaign. Decide what to do. Pick a name. Pick a photo. And just like that, you’ll be ready to start raising money.</p>
+						<h2>Conviértase en voluntario</h2>
+						<p>Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. Y así, estarás listo para comenzar.</p>
 						<form action="#" method="POST" id="volunteer-form" class="xs-volunteer-form">
 							<div class="row">
 								<div class="col-lg-6">
-									<input type="text" id="volunteer_name" class="form-control" placeholder="Your Name">
+									<input type="text" id="volunteer_name" class="form-control" placeholder="Su nombre">
 								</div>
 								<div class="col-lg-6">
-									<input type="email" id="volunteer_email" class="form-control" placeholder="Your Email">
+									<input type="email" id="volunteer_email" class="form-control" placeholder="Su correo">
 								</div>
 								<div class="col-lg-6">
 									<select name="branch" class="form-control" id="volunteer_brach">
-										<option value="">Select</option>	
-										<option value="">Branch</option>
-										<option value="">New york</option>
-										<option value="">washington</option>
+										<option value="">Seleccionar</option>	
+										<option value="">Senderismo</option>
+										<option value="">Charlas</option>
+										<option value="">Capacitaciones</option>
 									</select>
 								</div>
 								<div class="col-lg-6 xs-mb-20">
 									<div class="xs-fileContainer">
 										<input type="file" id="volunteer_cv" class="form-control" name="file">
-										<label for="volunteer_cv">Upload Your CV</label>
+										<label for="volunteer_cv">Sube tu CV</label>
 									</div>
 								</div>
 							</div><!-- .row end -->
-							<textarea name="massage" id="massage" placeholder="Enter your massage" cols="30" class="form-control" rows="10"></textarea>
-							<button type="submit" class="btn btn-secondary btn-color-alt">apply now</button>
+							<textarea name="massage" id="massage" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
+							<button type="submit" class="btn btn-secondary btn-color-alt">aplica ya</button>
 						</form><!-- #volunteer-form .xs-volunteer-form END -->
 					</div>
 				</div>
@@ -518,7 +530,7 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Our Events</h2>
+					<h2 class="xs-title">Nuestros eventos</h2>
 					<span class="xs-separetor dashed"></span>
 					<p>FundPress has built a platform focused on aiding entrepreneurs, startups, and <br> companies raise capital from anyone.</p>
 				</div><!-- .xs-heading-title END -->
