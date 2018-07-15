@@ -531,8 +531,8 @@
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
 					<h2 class="xs-title">Nuestros eventos</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>FundPress has built a platform focused on aiding entrepreneurs, startups, and <br> companies raise capital from anyone.</p>
+					<!--<span class="xs-separetor dashed"></span>-->
+					<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
 				</div><!-- .xs-heading-title END -->
 			</div>
 			<div class="row">
@@ -541,19 +541,19 @@
 						<div class="xs-event-image">
 							<img src="assets/images/event/event_1.jpg" alt="">
 							<div class="xs-entry-date">
-								<span class="entry-date-day">27</span>
-								<span class="entry-date-month">dec</span>
+								<span class="entry-date-day">26</span>
+								<span class="entry-date-month">Ago</span>
 							</div>
 							<div class="xs-black-overlay"></div>
 						</div><!-- .xs-event-image END -->
 					</div>
 					<div class="col-md-7">
 						<div class="xs-event-content">
-							<a href="#">Raspberry velbet</a>
-							<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-							<div class="xs-countdown-timer" data-countdown="2020/01/24"></div>
+							<a href="#">Senderismo</a>
+							<p>Caminata para conocer las especies de arboles, hogos y animales que posee la fundación CREDIA.</p>
+							<div class="xs-countdown-timer" data-countdown="2018/08/26"></div>
 							<a href="#" class="btn btn-primary">
-								Learn More
+								Aprende más
 							</a>
 						</div><!-- .xs-event-content END -->
 					</div>
@@ -563,24 +563,24 @@
 						<div class="xs-event-image">
 							<img src="assets/images/event/event_2.jpg" alt="">
 							<div class="xs-entry-date">
-								<span class="entry-date-day">15</span>
-								<span class="entry-date-month">aug</span>
+								<span class="entry-date-day">28</span>
+								<span class="entry-date-month">Jul</span>
 							</div>
 							<div class="xs-black-overlay"></div>
 						</div><!-- .xs-event-image END -->
 					</div>
 					<div class="col-md-7">
 						<div class="xs-event-content">
-							<a href="#">Arsenal, the intelligent.</a>
-							<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-							<div class="xs-countdown-timer" data-countdown="2020/08/24"></div>
+							<a href="#">Capacitación.</a>
+							<p>Introducción a la mayor amenaza medioambiental a la que se enfrenta la humanidad.</p>
+							<div class="xs-countdown-timer" data-countdown="2018/07/28"></div>
 							<a href="#" class="btn btn-primary">
-								Learn More
+								Aprende más
 							</a>
 						</div><!-- .xs-event-content END -->
 					</div>
 				</div><!-- .xs-single-event END -->
-				<div class="col-lg-6 row xs-single-event">
+				<!--<div class="col-lg-6 row xs-single-event">
 					<div class="col-md-5">
 						<div class="xs-event-image">
 							<img src="assets/images/event/event_3.jpg" alt="">
@@ -589,7 +589,7 @@
 								<span class="entry-date-month">jan</span>
 							</div>
 							<div class="xs-black-overlay"></div>
-						</div><!-- .xs-event-image END -->
+						</div>
 					</div>
 					<div class="col-md-7">
 						<div class="xs-event-content">
@@ -597,11 +597,11 @@
 							<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
 							<div class="xs-countdown-timer" data-countdown="2019/05/24"></div>
 							<a href="#" class="btn btn-primary">
-								Learn More
+								Aprende más
 							</a>
-						</div><!-- .xs-event-content END -->
+						</div>
 					</div>
-				</div><!-- .xs-single-event END -->
+				</div>
 				<div class="col-lg-6 row xs-single-event">
 					<div class="col-md-5">
 						<div class="xs-event-image">
@@ -611,9 +611,9 @@
 								<span class="entry-date-month">jun</span>
 							</div>
 							<div class="xs-black-overlay"></div>
-						</div><!-- .xs-event-image END -->
+						</div>
 					</div>
-					<div class="col-md-7">
+					<!--<div class="col-md-7">
 						<div class="xs-event-content">
 							<a href="">Braille Literacy Tool for.</a>
 							<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
@@ -621,9 +621,9 @@
 							<a href="#" class="btn btn-primary">
 								Learn More
 							</a>
-						</div><!-- .xs-event-content END -->
+						</div>
 					</div>
-				</div><!-- .xs-single-event END -->
+				</div>-->
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>

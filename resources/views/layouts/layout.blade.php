@@ -137,7 +137,7 @@
 	@yield('servicios')
 	@yield('voluntarios')
 	@yield('eventos')
-	@yield('equipo')
+	{{--@yield('equipo')--}}
 	{{--@yield('diario')--}}
 <!-- END CONTENIDO INDEX -->
 
