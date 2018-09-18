@@ -10,7 +10,7 @@
 				<div class="container">
 					<div class="xs-welcome-wraper color-white">
 						<h2>CREDIA</h2>
-						<p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p>
+						<p>Centro Regional de documentación e interpretación ambiental</p>
 					</div><!-- .xs-welcome-wraper END -->
 				</div><!-- .container end -->
 				<div class="xs-black-overlay"></div>
@@ -19,8 +19,8 @@
 			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_2.jpg);">
 				<div class="container">
 					<div class="xs-welcome-wraper color-white">
-						<h2>CREDIA</h2>
-						<p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p>
+						<h2>Naturaleza al servicio de la educación</h2>
+						<!-- <p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p> -->
 					</div><!-- .xs-welcome-wraper END -->
 				</div><!-- .container end -->
 				<div class="xs-black-overlay"></div>
@@ -29,8 +29,8 @@
 			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_3.jpg);">
 				<div class="container">
 					<div class="xs-welcome-wraper color-white">
-						<h2>CREDIA</h2>
-						<p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p>
+						<h2>El punto de encuentro natural</h2>
+						<!-- <p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p> -->
 					</div><!-- .xs-welcome-wraper END -->
 				</div><!-- .container end -->
 				<div class="xs-black-overlay"></div>
@@ -40,7 +40,7 @@
 	</section>
 @endsection
 
-@section('archive')
+@section('mision')
 	<!-- misión section -->
 	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
@@ -48,18 +48,18 @@
 				<div class="col-md-12 col-lg-6">
 					<div class="xs-archive-content">
 						<div class="xs-heading">
-							<h2 class="xs-line-title">Nuestra</h2>
-							<h3 class="xs-title big" data-title="Misión">Misión</h3>
+							<h2 class="xs-line-title" style="color:#a6ce39;">Nuestra Misión</h2>
+							<h3 class="xs-title big" data-title="Misión" style="color:#011b58;">Misión</h3>
 						</div>
 						
-						<p align="justify">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
+						<p align="justify" style="color:#626c84;">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
 						facilitando la toma de decisiones para la planificación ordenada del territorio, impulsando 
 						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
 						en el Corredor Biológico del Caribe Hondureño.</p>
 						
-						<h5>Nuestros componentes estratégicos hasta 2018 son:</h5>
+						<h5 style="color:#011b58;">Nuestros componentes estratégicos actuales:</h5>
 						
-						<ul class="xs-unorder-list arrow" align="justify">
+						<ul class="xs-unorder-list arrow" align="justify" style="color:#626c84;">
 							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ONCCDS).</li>
 							<li>Centro de Documentación.</li>
 							<li>Educación Ambiental.</li>
@@ -69,25 +69,25 @@
 						<ul class="xs-funfact-list" align="center" style="font-weight: bold;">
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
+									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Escuelas primarias</span>
+								<span>Escuelas</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
+									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Colegios</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
+									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Universidades</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
+									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Voluntarios</span>
 							</li>

@@ -76,7 +76,7 @@
 			<div class="nav-header">
 				<div class="nav-toggle"></div>
 				<a href="{{ URL::route('index') }}" class="nav-logo">
-					<img src="assets/image/logo.png" alt="">
+					<img src="assets/images/logo.png" alt="CREDIA">
 				</a>
 			</div> <!-- .nav-header END -->
 			
@@ -86,8 +86,8 @@
 						<img src="assets/image/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
-				<div class="col-lg-8">
-					<ul class="nav-menu">
+				<div class="col-lg-7">
+					<ul class="nav-menu" style="padding-top:5px;">
 						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
 						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
@@ -115,13 +115,13 @@
 								<li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li>
 							</ul>
 						</li>
-						<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
 					</ul><!-- .nav-menu END -->
 				</div>
-				<!--<div class="col-lg-2">
-					<a href="https://www.facebook.com/crediahonduras/" class="fa fa-facebook fi"></a>
-					<a href="#" class="fa fa-instagram fi"></a> 
-				</div>-->
+				<div class="xs-navs-button d-flex-center-end col-lg-3">
+					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">
+						<span class=""></span> Contacto
+					</a>
+				</div><!-- .xs-navs-button END -->
 			</div><!-- .nav-menus-wrapper .row END -->
 		</nav><!-- .xs-menus .fundpress-menu END -->
 	</div><!-- .container end -->
@@ -129,7 +129,7 @@
 
 <!--   CONTENIDO INDEX   -->
 	@yield('welcomeindex')
-	@yield('archive')
+	@yield('mision')
 	@yield('proyectos')
 	@yield('textoimagen')
 	@yield('descripcion')
