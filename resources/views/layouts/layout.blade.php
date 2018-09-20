@@ -86,8 +86,8 @@
 						<img src="assets/image/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
-				<div class="col-lg-7">
-					<ul class="nav-menu" style="padding-top:5px;">
+				<div class="col-lg-8">
+					<ul class="nav-menu">
 						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
 						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
@@ -117,10 +117,8 @@
 						</li>
 					</ul><!-- .nav-menu END -->
 				</div>
-				<div class="xs-navs-button d-flex-center-end col-lg-3">
-					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">
-						<span class=""></span> Contacto
-					</a>
+				<div class="xs-navs-button d-flex-center-end col-lg-2">
+					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
 				</div><!-- .xs-navs-button END -->
 			</div><!-- .nav-menus-wrapper .row END -->
 		</nav><!-- .xs-menus .fundpress-menu END -->

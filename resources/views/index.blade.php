@@ -48,46 +48,46 @@
 				<div class="col-md-12 col-lg-6">
 					<div class="xs-archive-content">
 						<div class="xs-heading">
-							<h2 class="xs-line-title" style="color:#a6ce39;">Nuestra Misión</h2>
-							<h3 class="xs-title big" data-title="Misión" style="color:#011b58;">Misión</h3>
+							<h2 class="xs-line-title">Nuestra Misión</h2>
+							<h3 class="xs-title big" data-title="Misión">Misión</h3>
 						</div>
 						
-						<p align="justify" style="color:#626c84;">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
+						<p>Promover el desarrollo sostenible mediante la gestión del conocimiento, 
 						facilitando la toma de decisiones para la planificación ordenada del territorio, impulsando 
 						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
 						en el Corredor Biológico del Caribe Hondureño.</p>
 						
-						<h5 style="color:#011b58;">Nuestros componentes estratégicos actuales:</h5>
+						<h5>Nuestros componentes estratégicos actuales:</h5>
 						
-						<ul class="xs-unorder-list arrow" align="justify" style="color:#626c84;">
+						<ul class="xs-unorder-list arrow">
 							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ONCCDS).</li>
 							<li>Centro de Documentación.</li>
 							<li>Educación Ambiental.</li>
 							<li>Innovación de la información y servicios técnicos.</li>
 						</ul>
 						
-						<ul class="xs-funfact-list" align="center" style="font-weight: bold;">
+						<ul class="xs-funfact-list">
 							<li>
 								<p>
-									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Escuelas</span>
 							</li>
 							<li>
 								<p>
-									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Colegios</span>
 							</li>
 							<li>
 								<p>
-									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Universidades</span>
 							</li>
 							<li>
 								<p>
-									<span style="color:#a6ce39;" class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Voluntarios</span>
 							</li>
@@ -374,10 +374,12 @@
 			<div class="row">
 				<div class="col-md-12 col-lg-6">
 					<div class="xs-text-content xs-pr-20">
-						<h2 class="color-navy-blue" align="justify">Bienvenido a la fundación CREDIA por favor levante su mano</h2>
-						<p> A través de sus componentes la fundación ha logrado convertirse en uno de los principales impulsadores para mejorar la situación de la población local en los aspectos sociales, económicos y ambientales.</p>
-						<blockquote align="justify">
-							Si no comprende la importancia de estos temas, es tan rápido y fácil, conviertalo en prioridad. <span>Cómo funciona</span> la página, <span>Contáctenos.</span>.
+						<h2 class="color-navy-blue">Levanta tu mano y di presente para el sostenimiento del CREDIA</h2>
+						<p> A través de sus componentes la fundación ha logrado convertirse en uno de los principales impulsadores para mejorar la situación de la población 
+						del Corredor Biológico del Caribe Hondureño en los aspectos sociales, económicos y ambientales de esta importante región del país.</p>
+						
+						<blockquote>
+							Sus aportes también le benefician a usted, ya que todos somos habitantes de este planeta al cual debemos proteger, conservar y promocionar. Cómo <span>ayudar, Contáctenos.</span>
 						</blockquote>
 					</div><!-- .xs-text-content END -->
 				</div>
