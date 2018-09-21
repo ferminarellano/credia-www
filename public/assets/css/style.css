@@ -609,7 +609,7 @@ blockquote {
 	border: none;
 	outline: none;
 	background: rgba(42, 79, 94, 0.5);
-	color: #FFFFFF;
+	color: #6acaf0;
 	cursor: pointer;
 	width:50px;
 	height:50px;
@@ -618,10 +618,12 @@ blockquote {
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	border-radius: 50px;
+	border: 1px solid rgba(1, 27, 88, 0.3);
  }
 
 #myBtn:hover {
 	background-color: #011b58;
+	border: 1px solid rgba(42, 79, 94, 0.8);
 }
 
 .xs-unorder-list li {
@@ -799,7 +801,8 @@ blockquote {
 
 .header-transparent .nav-menu,
 .xs-box .nav-menu {
-  text-align: center; }
+  text-align: right; 
+  padding-right: 40px;}
   .header-transparent .nav-menu li,
   .xs-box .nav-menu li {
     float: none; }
@@ -965,7 +968,7 @@ blockquote {
   position: relative;
   z-index: 1; }
   .xs-welcome-wraper h2 {
-    font-size: 4.64286em;
+    font-size:2.9em;
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 0px; }
@@ -1821,7 +1824,8 @@ blockquote {
 
 .footer-widget p {
   color: #FFFFFF;
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+  text-align:justify;}
 
 .footer-widget .widget-title {
   margin-bottom: 30px;

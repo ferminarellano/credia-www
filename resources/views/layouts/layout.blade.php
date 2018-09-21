@@ -223,7 +223,7 @@
 						<!--<img src="assets/image/logo.png" alt="">-->
 						<img src="assets/images/footer_logo.png" alt="">
 						</a>
-						<p>CharityPress online and raise money for charity and causes you’re passionate about. CharityPress is an innovative, cost-effective online.</p>
+						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">
 							<li><a href="https://www.facebook.com/crediahonduras/" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="https://www.youtube.com/channel/UCLk28-2HjGIf13dW6cD7u1A" class="color-youtube"><i class="fa fa-youtube"></i></a></li>
@@ -232,14 +232,14 @@
 						</ul><!-- .xs-social-list END -->
 					</div>
 					<div class="col-lg-2 col-md-6 footer-widget">
-						<h3 class="widget-title">Sobre nosotros</h3>
+						<h3 class="widget-title">¡Conocenos más!</h3>
 							<ul class="xs-footer-list">
-								<li><a href="{{ URL::route('equipo') }}">Equipo de trabajo</a></li>
-								<li><a href="#">Sostenibilidad</a></li>
-								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
-								<li><a href="#">Componentes</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
+								<li><a href="#">Componentes</a></li>
 								<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
+								<li><a href="{{ URL::route('equipo') }}">Equipo de trabajo</a></li>
+								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
+								<li><a href="#">Sostenibilidad</a></li>
 							</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 footer-widget">
@@ -301,7 +301,7 @@
 						<h3 class="widget-title">Contáctenos</h3>
 							<ul class="xs-info-list">
 								<li><i class="fa fa-map-marker" aria-hidden="true"></i>Boulevard Cangrejal, Colonia El Naranjal,  La Ceiba, Atlántida, Honduras.</li>
-								<li><i class="fa fa-phone"></i>(504) 2442-2610</li>
+								<li><i class="fa fa-phone"></i>(+504) 2442-2610</li>
 								<li><i class="fa fa-envelope-o"></i><a href="mailto:administracionyeventos@credia.hn">administracionyeventos@credia.hn</a></li>
 							</ul><!-- .xs-list-with-icon END -->
 					</div>
