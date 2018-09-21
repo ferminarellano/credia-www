@@ -6,7 +6,7 @@
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			
-			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_1.jpg);">
+			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_7.jpg);">
 				<div class="container">
 					<div class="xs-welcome-wraper color-white">
 						<h2>CREDIA</h2>
@@ -60,7 +60,7 @@
 						<h5>Nuestros componentes estratégicos actuales:</h5>
 						
 						<ul class="xs-unorder-list arrow">
-							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ONCCDS).</li>
+							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ODS).</li>
 							<li>Centro de Documentación.</li>
 							<li>Educación Ambiental.</li>
 							<li>Innovación de la información y servicios técnicos.</li>
@@ -399,10 +399,15 @@
 @endsection
 
 @section('descripcion')
-	<section class="bg-navy-blue">
+	<section class="" style="background-image: url('assets/images/backgrounds/background-img.png')">
 		<div class="container-fulid">
 			<div class="xs-feature-content">
-				<h2 class="color-white">Las actividades de la <span> fundación CREDIA</span> se realizan en todo el Corredor Biologico del Caribe Hondureño, contribuyamos.</h2>
+				<h2 class="color-white">
+					El <span>CREDIA</span> trabaja en beneficio de los habitantes 
+					del <span>Corredor Biológico del Caribe Hondureño</span> promoviendo el desarrollo sostenible, 
+					y los métodos de adaptación y mitigación al cambio climático, bajo un enfoque de gestión 
+					del conocimiento, promoción del turismo sostenible, la cultura y la recreación.
+				</h2>
 			</div><!-- .xs-feature-content END -->
 		</div><!-- .container-fulid end -->
 	</section>
@@ -414,18 +419,21 @@
 			<div class="row xs-feature-box-wraper">
 				<div class="col-md-12 col-lg-4 xs-feature-box">
 					<div class="xs-feature-box-content">
-						<h3 class="color-white">No hemos terminado aún. Necesitamos tu.</h3>
+						<h3 class="color-white">La tarea aun no termina, por eso necesitamos de ti</h3>
 						<a href="#" class="btn btn-secondary btn-color-alt">
-							participación
+							Apoyanos
 						</a>
 					</div><!-- .xs-feature-box-content END -->
 				</div>
 				<div class="col-md-12 col-lg-4 xs-feature-box highlight">
 					<div class="xs-feature-box-content">
-						<h3 class="color-white">Involucrate con nuestros proyectos</h3>
-						<p>Por un corto espacio de tu tiempo puedes beneficiar con educación a muchos niños y niñas.</p>
+						<h3 class="color-white">Patrocina uno de nuestros proyectos</h3>
+						<p>
+							Con tu patrocinio puedes llegar a difundir la percepción de la población hacia la conservación
+							de los recursos naturales y de las áreas protegidas del Corredor Biológico del Caribe Hondureño y sus ecosistemas.
+						</p>
 						<a href="#" class="btn btn-secondary btn-color-alt">
-							Conviertase en un contribuidor
+							Patrocina
 						</a>
 					</div> <!-- .xs-feature-box-content end -->
 				</div><!-- .xs-feature-box .highlight END -->
@@ -434,10 +442,10 @@
 						<h3 class="color-white">Conéctate con nosotros en las redes sociales</h3>
 						<ul class="xs-social-list">
 							<li><a href="https://www.facebook.com/crediahonduras/"><i class="fa fa-facebook"></i></a></li>
-							<!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
+							<li><a href=""><i class="fa fa-twitter"></i></a></li>
 							<li><a href=""><i class="fa fa-instagram"></i></a></li>
-							<!--<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>-->
-							<!--<li><a href=""><i class="fa fa-google-plus"></i></a></li>-->
+							<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 						</ul><!-- .xs-social-list END -->
 					</div><!-- .xs-feature-box-content END -->
 				</div><!-- .xs-feature-box END -->
@@ -450,35 +458,36 @@
 	<section class="xs-section-padding">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
-				<h2 class="xs-mb-0 xs-title">Hemos realizado <span>varias actividades</span> para <br> el beneficio de niños y niñas de La Ceiba y alrededores.</h2>
+				<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba y comunidades vecinas del CBCH. </h2>
 			</div>
+			
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="fa fa-blind"></span>
-						<h5>Pasaporte <br> verde</h5>
-						<p>Recorriendo las diez áreas protegidas del Corredor Biologico del Caribe Hondureño a travéz del pasaporte verde.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
+						<h5>Jardín botánico y Sendero<br> Gerardo Rodríguez</h5>
+						<p>Ofrece un recorrido interpretado por un guía especializado que ofrece conocimiento acerca de las diversas especies de flora, aves, pequeños mamíferos y anfibios de diversas clases que habitan el Jardín del CREDIA.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="fa fa-leaf"></span>
-						<h5>Historia natural<br>de las plantas</h5>
-						<p>Conociendo la historia natural de las plantas, desarrollo del reino Fungi. Conociendo los hogos del CREDIA.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/pasaporte.png') no-repeat;"></span>
+						<h5>Pasaporte Verde del<br>Corredor Biológico</h5>
+						<p>Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH, al tiempo que se adquieren conocimientos que son certificados mediante los diferentes sellos que acreditan las visitas a las áreas.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="fa fa-snowflake-o"></span>
-						<h5>Charlas sobre <br>Cambio climatico</h5>
-						<p>Se desarrollan charlas continuas sobre el cambio climatico a travez del plan piloto la Ghinkhana.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
+						<h5>Forestería comunitaria y<br>Cambio Climático</h5>
+						<p>Mediante la realización de charlas, y visitas a la parcela demostrativa dentro del Jardín Botánico se concientiza acerca de la implementación de métodos amigables para mitigar los efectos del cambio climático.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="fa fa-eye"></span>
-						<h5>Avistamiento <br>de aves</h5>
-						<p>Conocer especies de aves por medio del pasaporte de aves, asi como de los animales en peligro de extinción.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
+						<h5>Videos sobre el ambiente<br>y proyecciones en 3D</h5>
+						<p>La sala de proyecciones audiovisuales enriquese la experiencia de la visita con la presentación de videos, e imagenes 3D basados en temas de importancia para la conservación del ambiete.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->
@@ -492,7 +501,7 @@
 			<div class="row">
 				<div class="col-md-8 col-lg-7">
 					<div class="xs-volunteer-form-wraper bg-aqua">
-						<h2>Conviértase en voluntario</h2>
+						<h2>Se un voluntario del CREDIA</h2>
 						<p>Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. Y así, estarás listo para comenzar.</p>
 						<form action="#" method="POST" id="volunteer-form" class="xs-volunteer-form">
 							<div class="row">
@@ -631,28 +640,33 @@
 	</section>
 @endsection
 
-@section('equipo')
+@section('afiliados')
 	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5">
+				<div class="col-md-5">
 					<div class="xs-partner-content">
 						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">Trusted by the biggest <span>brand.</span></h2>
+							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y civiles</h2>
 						</div>
-						<p>In-kind donations from our donors and partners allow charity: water to pass 100% of public donations straight to water projects. We are deeply grateful for those who have surprised us with their generosity. A big thanks to the following companies and people who have helped make charity: water’s work possible.</p>
-						<a href="#" class="btn btn-primary">
-							join us now
-						</a>
+						<p>
+							Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 
+							implementación de un módelo de gestión basado en el fortalecimiento de redes y promoción del análisis estratégico de los procesos 
+							sociales, económicas y ambientales, para la toma de decisiones participativas.
+						</p>
+						<!-- <a href="#" class="btn btn-primary"> -->
+							<!-- join us now -->
+						<!-- </a> -->
 					</div>
 				</div>
-				<div class="col-lg-7">
+				<div class="col-md-7">
 					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/partner/client_1.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_2.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_3.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_4.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_5.png" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_1.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_2.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_3.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_4.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_5.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/partner/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
 					</ul>
 				</div>
 			</div><!-- .row end -->

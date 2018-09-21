@@ -83,7 +83,7 @@
 			<div class="nav-menus-wrapper row">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
-						<img src="assets/image/logo.png" alt="">
+						<img src="assets/images/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
 				<div class="col-lg-8">
@@ -135,7 +135,7 @@
 	@yield('servicios')
 	@yield('voluntarios')
 	@yield('eventos')
-	{{--@yield('equipo')--}}
+	@yield('afiliados')
 	{{--@yield('diario')--}}
 <!-- END CONTENIDO INDEX -->
 

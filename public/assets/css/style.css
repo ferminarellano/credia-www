@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.857;
-  color: #626c84;
+  color: #6acaf0;
   background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,11 +79,12 @@ ul, li {
 
 .xs-heading .xs-title {
   color: #011b58;
-  font-size: 3.28571em;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: -.2px;
   position: relative;
   z-index: 1;
+  text-align: justify;
   margin-bottom: 7px; }
   .xs-heading .xs-title:before {
     position: absolute;
@@ -270,11 +271,11 @@ ul, li {
     border-color: #FFFFFF; }
 
 .btn-secondary {
-  background-color: #041D57; }
+  background-color: #011b58; }
   .btn-secondary:hover:before, .btn-secondary:hover:after {
     background-color: #18bfc3; }
   .btn-secondary:hover {
-    background-color: #041D57;
+    background-color: #011b58;
     color: #FFFFFF; }
 
 .btn-warning {
@@ -361,13 +362,15 @@ a.xs-post-title:hover {
 .xs-feature-content-v2 h2, .xs-feature-box-content h3 {
   font-weight: 700;
   font-size: 25px;
-  text-align: justify;
+  text-align: center;
   letter-spacing: -.2px; }
 
 .xs-big-sub-title, .xs-volunteer-form-wraper h2 {
   font-weight: 700;
-  font-size: 3.28571em;
-  letter-spacing: -.2px; }
+  font-size: 31px;
+  letter-spacing: -.2px; 
+   float:left;
+   position:relative;}
 
 .xs-social-list li, .xs-social-list-v2 li {
   display: inline-block;
@@ -605,7 +608,7 @@ blockquote {
 	text-align: center;
 	border: none;
 	outline: none;
-	background-color: #6acaf0;
+	background: rgba(42, 79, 94, 0.5);
 	color: #FFFFFF;
 	cursor: pointer;
 	width:50px;
@@ -715,7 +718,7 @@ blockquote {
   top: 0;
   left: 0;
   z-index: 9999999999;
-  background-color: #6acaf0; }
+  background: rgba(106,202,240,1);}
 
 .spinner {
   width: 40px;
@@ -1264,7 +1267,7 @@ blockquote {
   padding-bottom: 150px; }
   .xs-feature-content h2,
   .xs-feature-content-v2 h2 {
-    font-size: 3.28571em;
+    font-size: 38px;
     margin-bottom: 0; }
     .xs-feature-content h2 span,
     .xs-feature-content-v2 h2 span {
@@ -1299,7 +1302,7 @@ blockquote {
           align-items: center; }
   .xs-feature-box.highlight {
     min-height: 450px;
-    background-color: #12b8bc;
+    background-color: #a6ce39;
     padding: 80px 40px; }
   .xs-feature-box.bg-purple {
     background-color: #9064bf; }
@@ -1317,7 +1320,7 @@ blockquote {
   line-height: 1.3; }
 
 .xs-feature-box-content p {
-  color: #FFFFFF;
+  color: #011b58;
   margin-bottom: 32px;
   font-size: 1.14286em; }
 
@@ -1335,10 +1338,10 @@ blockquote {
   position: relative;
   z-index: 4; }
   .xs-service-promo span {
-    color: #18bfc3;
     display: inline-block;
     margin-bottom: 30px;
-    font-size: 4.28571em; }
+	width: 98px;
+	height: 82px;}
   .xs-service-promo .color-orange {
     color: #f7a900; }
   .xs-service-promo .color-red {
@@ -1348,9 +1351,9 @@ blockquote {
   .xs-service-promo .color-green {
     color: #2cc391; }
   .xs-service-promo h5 {
-    font-size: 1.28571em;
+    font-size: 15px;
     font-weight: 700;
-    color: #041D57;
+    color: #011b58;
     line-height: 1.4;
     margin-bottom: 20px; }
   .xs-service-promo p {
@@ -1414,7 +1417,8 @@ blockquote {
   .xs-volunteer-form-wraper h2 {
     margin-bottom: 12px; }
   .xs-volunteer-form-wraper p {
-    margin-bottom: 50px; }
+    margin-bottom: 50px; 
+	text-align:justify;}
   .xs-volunteer-form-wraper.bg-aqua {
     color: #FFFFFF; }
     .xs-volunteer-form-wraper.bg-aqua .xs-volunteer-form input:not([type="submit"]),
@@ -1677,26 +1681,25 @@ blockquote {
   padding-top: 70px; }
   .xs-partner-content p {
     font-size: 1.14286em;
-    margin-bottom: 50px; }
+    margin-bottom: 50px; 
+	text-align:justify;}
 
 .fundpress-partners {
   text-align: center; }
   .fundpress-partners li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: auto;
     margin-bottom: 20px; }
     .fundpress-partners li a {
       width: 180px;
       height: 180px;
       line-height: 180px;
       -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-      background-color: #FFFFFF;
-      border-radius: 100%;
-      display: block;
+              box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.2);
+      border-radius: 10%;
+      display: table-row-group;
       margin: 0 auto; }
     .fundpress-partners li:first-child, .fundpress-partners li:last-child {
-      display: block;
       margin-right: 0px; }
     .fundpress-partners li:nth-child(4) {
       margin-right: 0px; }
@@ -1797,7 +1800,7 @@ blockquote {
         color: #9064bf; }
 
 .xs-footer-section {
-  background-color: #262e3b;
+  background-color: #011b58;
   position: relative;
   background-position: center right;
   background-size: contain;
@@ -3614,8 +3617,9 @@ svg {
 .bg-navy-blue {
   background-color: #041D57; }
 
-.bg-aqua {
-  background-color: #18bfc3; }
+.bg-aqua{
+  background-color: #18bfc3;
+  background: rgba(9, 75, 76, 0.3);}
 
 .bg-navy-blue {
   background-color: #041D57; }
