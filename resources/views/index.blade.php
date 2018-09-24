@@ -1,41 +1,25 @@
 @extends('layouts.layout')
 
-@section('title', '')
+@section('title','')
 
 @section('welcomeindex')
+	
+	<?php
+		$sliders = App\Models\Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
+	?>
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
-			
-			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_7.jpg);">
-				<div class="container">
-					<div class="xs-welcome-wraper color-white">
-						<h2>CREDIA</h2>
-						<p>Centro Regional de documentación e interpretación ambiental</p>
-					</div><!-- .xs-welcome-wraper END -->
-				</div><!-- .container end -->
-				<div class="xs-black-overlay"></div>
-			</div><!-- .xs-welcome-content END -->
-			
-			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_2.jpg);">
-				<div class="container">
-					<div class="xs-welcome-wraper color-white">
-						<h2>Naturaleza al servicio de la educación</h2>
-						<!-- <p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p> -->
-					</div><!-- .xs-welcome-wraper END -->
-				</div><!-- .container end -->
-				<div class="xs-black-overlay"></div>
-			</div><!-- .xs-welcome-content END -->
-			
-			<div class="xs-welcome-content" style="background-image: url(assets/images/slider/slider_3.jpg);">
-				<div class="container">
-					<div class="xs-welcome-wraper color-white">
-						<h2>El punto de encuentro natural</h2>
-						<!-- <p>Es una plataforma de captura integración y análisis de información socioambiental <br> en apoyo a la prospección del desarrollo sostenible de Honduras.</p> -->
-					</div><!-- .xs-welcome-wraper END -->
-				</div><!-- .container end -->
-				<div class="xs-black-overlay"></div>
-			</div><!-- .xs-welcome-content END -->
-		
+			@foreach($sliders as $slide)
+				<div class="xs-welcome-content" style="background-image: url(<?php echo $slide->foto; ?>);">
+					<div class="container">
+						<div class="xs-welcome-wraper color-white">
+							<h2><?php echo $slide->titulo; ?></h2>
+							<p><?php echo $slide->contenido; ?></p>
+						</div><!-- .xs-welcome-wraper END -->
+					</div><!-- .container end -->
+					<div class="xs-black-overlay"></div>
+				</div><!-- .xs-welcome-content END -->
+			@endforeach
 		</div>
 	</section>
 @endsection

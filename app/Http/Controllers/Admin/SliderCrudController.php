@@ -18,7 +18,11 @@ class SliderCrudController extends CrudController
         $this->crud->setModel('App\Models\Slider');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/slider');
         $this->crud->setEntityNameStrings('slider', 'sliders');
-
+		
+		$this->crud->addColumn([
+			'name' => 'secuencia',
+			'label' => 'Secuencia',
+		]);
 		
 		$this->crud->addColumn([
 			'name' => 'indicador',
@@ -28,16 +32,15 @@ class SliderCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
-			'name' => 'foto',
-			'label' => 'Registro del Avaluo'
+			'name' => 'titulo',
+			'label' => 'Título'
 		]);
 		
 		$this->crud->addField([
 			'name' => 'foto',
-			'label' => 'Fotografía',
+			'label' => "Fotografía",
 			'type' => 'upload',
 			'upload' => true,
-			'disk' => 'uploads'
 		]);
 		
 		$this->crud->addField([
@@ -51,7 +54,19 @@ class SliderCrudController extends CrudController
 			'label' => "Página",
 			'type' => 'select_from_array',
 			'options' => ['inicio' => 'Inicio', 'fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 'eventos' => 'Eventos', 'blog' => 'Blog'],
-			'allows_null' => true
+			'allows_null' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-8',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'secuencia',
+			'label' => "Secuencia",
+			'type' => 'number',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-4',
+			], 
 		]);
 		
 		$this->crud->addField([

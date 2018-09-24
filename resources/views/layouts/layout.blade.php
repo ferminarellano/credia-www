@@ -273,7 +273,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_2.jpg">
+												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">23</span>
 													<span class="entry-month d-block">sep</span>
@@ -319,9 +319,9 @@
 					<div class="col-sm-6">
 						<nav class="xs-footer-menu">
 							<ul>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Help Desk</a></li>
-								<li><a href="#">Support</a></li>
+								<li><a href="#">Preguntas frecuentes</a></li>
+								<li><a href="#">Ayuda</a></li>
+								<li><a href="#">Soporte</a></li>
 							</ul>
 						</nav>
 					</div>

@@ -7,50 +7,35 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class SliderRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
+
     public function authorize()
     {
-        // only allow updates if the user is logged in
         return \Auth::check();
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+			'foto' => 'required|image|max:5120',
+			'indicador' => 'required',
+			'secuencia' => 'required|unique:sliders,secuencia',
         ];
     }
 
-    /**
-     * Get the validation attributes that apply to the request.
-     *
-     * @return array
-     */
     public function attributes()
     {
-        return [
-            //
-        ];
+        return [];
     }
 
-    /**
-     * Get the validation messages that apply to the request.
-     *
-     * @return array
-     */
     public function messages()
     {
         return [
-            //
+            'foto.required' => 'Es necesario agregar un archivo de imagen.',
+            'foto.image' => 'El archivo seleccionado debe ser una imagen.',
+			'foto.max' => 'El tamaño de la fotografía no es valido. Máximo 5MB.',
+			'indicador.required' => 'Es necesario seleccionar a que página pertenece la fotografía.',
+			'secuencia.required' => 'Es necesario agregar el número de secuencia de la fotografía.',
+			'secuencia.unique' => 'El número de secuencia de la fotografía debe ser único.',
         ];
     }
 }
