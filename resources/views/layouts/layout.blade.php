@@ -91,30 +91,30 @@
 						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
 						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
-						<li><a href="#">Eventos</a>
-							<ul class="nav-dropdown">
-								<li><a href="{{ URL::route('evento') }}">Eventos</a></li>
-								<li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li>
-							</ul>
+						<li><a href="{{ URL::route('evento') }}">Eventos</a>
+							<!-- <ul class="nav-dropdown"> -->
+								<!-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> -->
+								<!-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> -->
+							<!-- </ul> -->
 						</li>
-						<li><a href="#">Blog</a>
-							<ul class="nav-dropdown">
-								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
-								<li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li>
-							</ul>
+						<li><a href="{{ URL::route('blog') }}">Blog</a>
+							<!-- <ul class="nav-dropdown"> -->
+								<!-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> -->
+								<!-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> -->
+							<!-- </ul> -->
 						</li>
-						<li><a href="#">Páginas</a>
-							<ul class="nav-dropdown">
-								<li><a href="{{ URL::route('donacion') }}">donación</a></li>
-								<li><a href="{{ URL::route('faq') }}">FAQ</a></li>
-								<li><a href="{{ URL::route('mision') }}">misión</a></li>
-								<li><a href="{{ URL::route('galeria') }}">galería</a></li>
-								<li><a href="{{ URL::route('precio') }}">precio</a></li>
-								<li><a href="{{ URL::route('servicio') }}">servicios</a></li>
-								<li><a href="{{ URL::route('equipo') }}">equipo</a></li>
-								<li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li>
-							</ul>
-						</li>
+						<!-- <li><a href="#">Páginas</a> -->
+							<!-- <ul class="nav-dropdown"> -->
+								<!-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> -->
+								<!-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> -->
+								<!-- <li><a href="{{ URL::route('mision') }}">misión</a></li> -->
+								<!-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> -->
+								<!-- <li><a href="{{ URL::route('precio') }}">precio</a></li> -->
+								<!-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> -->
+								<!-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> -->
+								<!-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> -->
+							<!-- </ul> -->
+						<!-- </li> -->
 					</ul><!-- .nav-menu END -->
 				</div>
 				<div class="xs-navs-button d-flex-center-end col-lg-2">
@@ -324,7 +324,7 @@
 					<div class="col-sm-6">
 						<nav class="xs-footer-menu">
 							<ul>
-								<li><a href="#">Preguntas frecuentes</a></li>
+								<li><a href="{{ URL::route('faq') }}">Preguntas frecuentes</a></li>
 								<li><a href="#">Ayuda</a></li>
 								<li><a href="#">Soporte</a></li>
 							</ul>

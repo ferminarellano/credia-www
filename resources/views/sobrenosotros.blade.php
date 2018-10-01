@@ -3,20 +3,12 @@
 @section('title', 'Sobre nosotros -')
 
 @section('welcomesn')
-	
-	<?php
-		$sliders = App\Models\Slider::where([['indicador','=','fundacion']])->get();
-		$slide = $sliders->first()->foto;
-		$titulo = $sliders->first()->titulo;
-		$contenido = $sliders->first()->contenido;
-	?>
-
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$slide}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/about_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>{{$titulo}}</h2>
-				<p>{{$contenido}}</p>
+				<h2>Sobre Nosotros</h2>
+				<p>Conoce más sobre la fundación</p>
 				<!-- <ul class="xs-breadcumb"> -->
 					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Conócenos</li> -->
 				<!-- </ul> -->
@@ -35,7 +27,7 @@
 					<div class="xs-video-popup-wraper">
 						<img src="assets/images/video_img.jpg" alt="">
 						<div class="xs-video-popup-content">
-							<a href="https://www.youtube.com/watch?v=Jha2VAu6fJI" class="xs-video-popup xs-round-btn">
+							<a href="#" class="xs-video-popup xs-round-btn">
 								<i class="fa fa-play"></i>
 							</a>
 						</div><!-- .xs-video-popup-content end -->
@@ -75,20 +67,20 @@
 					</div>
 				</div>
 			</div><!-- .row end -->
-			<div style="padding-top: 50px;" class="row">
-					<div class="col-md-4">
-						<div class="xs-about-feature">
-							<h3>Nuestros Valores</h3>
-							<ul class="xs-unorder-list play green-icon">
-								<li>Laboriosidad</li>
-								<li>Respeto</li>
-								<li>Justicia y Responsabilidad</li>
-								<li>Honestidad</li>
-								<li>Creatividad</li>
-							</ul>
-						</div>
-					</div>
-			</div><!-- .row end -->
+			<!-- <div style="padding-top: 50px;" class="row"> -->
+					<!-- <div class="col-md-4"> -->
+						<!-- <div class="xs-about-feature"> -->
+							<!-- <h3>Nuestros Valores</h3> -->
+							<!-- <ul class="xs-unorder-list play green-icon"> -->
+								<!-- <li>Laboriosidad</li> -->
+								<!-- <li>Respeto</li> -->
+								<!-- <li>Justicia y Responsabilidad</li> -->
+								<!-- <li>Honestidad</li> -->
+								<!-- <li>Creatividad</li> -->
+							<!-- </ul> -->
+						<!-- </div> -->
+					<!-- </div> -->
+			<!-- </div> -->
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
 @endsection
@@ -104,28 +96,28 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="xs-single-funFact color-white">
 						<i class="icon-donation_2"></i>
-						<span class="number-percentage-count number-percentage" data-value="10" data-animation-duration="3500">100</span><span>M</span>
+						<span class="number-percentage-count number-percentage" data-value="10" data-animation-duration="3500">100</span><span></span>
 						<small>Proyectos</small>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="xs-single-funFact color-white">
 						<i class="icon-group"></i>
-						<span class="number-percentage-count number-percentage" data-value="25" data-animation-duration="3500">100</span><span>k</span>
+						<span class="number-percentage-count number-percentage" data-value="25" data-animation-duration="3500">100</span><span></span>
 						<small>Voluntarios</small>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="xs-single-funFact color-white">
 						<i class="icon-children"></i>
-						<span class="number-percentage-count number-percentage" data-value="30" data-animation-duration="3500">100</span><span>k</span>
+						<span class="number-percentage-count number-percentage" data-value="10000" data-animation-duration="3500">100</span><span></span>
 						<small>Niños</small>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="xs-single-funFact color-white">
 						<i class="icon-planet-earth"></i>
-						<span class="number-percentage-count number-percentage" data-value="14" data-animation-duration="3500">8</span><span>k</span>
+						<span class="number-percentage-count number-percentage" data-value="8" data-animation-duration="3500">8</span><span></span>
 						<small>Municipios</small>
 					</div>
 				</div>
@@ -190,9 +182,9 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Nuestro equipo</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>Nuestra fundación esta compuesta por el personal adecuado, los mejores profesionales en su labor, unete se parte de esta gran familia con voluntariados y más.</p>
+					<h2 class="xs-title" style="color:#a6ce39;">Nuestro equipo</h2>
+					<!-- <span class="xs-separetor dashed"></span> -->
+					<p style="color:#011b58;text-align:justify;">Nuestra fundación esta compuesta por el personal adecuado, los mejores profesionales en su labor, unete se parte de esta gran familia con voluntariados y más.</p>
 				</div><!-- .xs-heading-title END -->
 			</div><!-- .row end -->
 			<div class="row xs-mb-60">
@@ -210,7 +202,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_2.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Lic. Mirian López</h4>
 							<small>Administración</small>
@@ -222,7 +214,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_3.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Lic. Cenaida Moncada</h4>
 							<small>Educación Ambiental</small>
@@ -234,7 +226,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_4.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Ing. Fermin Arellano</h4>
 							<small>Centro de Documentación</small>
@@ -245,11 +237,11 @@
 					</div><!-- .xs-single-team END -->
 				</div>
 			</div><!-- .row END -->
-			<div class="text-center">
-				<a href="#" class="btn btn-success">
-					Unete a nosotros
-				</a>
-			</div>
+			<!-- <div class="text-center"> -->
+				<!-- <a href="#" class="btn btn-success"> -->
+					<!-- Unete a nosotros -->
+				<!-- </a> -->
+			<!-- </div> -->
 		</div><!-- .container end -->
 	</section>	<!-- End team section -->
 @endsection
@@ -275,9 +267,9 @@
 							<li>Pluralismo</li>
 						</ul>
 						
-						<a href="#" class="btn btn-primary bg-orange">
-							Únete a nosotros ahora
-						</a>
+						<!-- <a href="#" class="btn btn-primary bg-orange"> -->
+							<!-- Únete a nosotros ahora -->
+						<!-- </a> -->
 					</div>
 				</div>
 				<div class="col-lg-7">

@@ -801,8 +801,8 @@ blockquote {
 
 .header-transparent .nav-menu,
 .xs-box .nav-menu {
-  text-align: right; 
-  padding-right: 40px;}
+  text-align: center; 
+  padding-left: 0px;}
   .header-transparent .nav-menu li,
   .xs-box .nav-menu li {
     float: none; }
@@ -3565,7 +3565,6 @@ svg {
 .d-flex-center-end {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
