@@ -7,14 +7,15 @@
 	<?php
 		$sliders = App\Models\Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
 	?>
+	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
-				<div class="xs-welcome-content" style="background-image: url(<?php echo $slide->foto; ?>);">
+				<div class="xs-welcome-content" style="background-image: url({{$slide->foto}});">
 					<div class="container">
 						<div class="xs-welcome-wraper color-white">
-							<h2><?php echo $slide->titulo; ?></h2>
-							<p><?php echo $slide->contenido; ?></p>
+							<h2>{{$slide->titulo}}</h2>
+							<p>{{$slide->contenido}}</p>
 						</div><!-- .xs-welcome-wraper END -->
 					</div><!-- .container end -->
 					<div class="xs-black-overlay"></div>
@@ -486,6 +487,7 @@
 				<div class="col-md-8 col-lg-7">
 					<div class="xs-volunteer-form-wraper bg-aqua">
 						<h2>Se un voluntario del CREDIA</h2>
+						<br><br><br>
 						<p>Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. Y así, estarás listo para comenzar.</p>
 						<form action="#" method="POST" id="volunteer-form" class="xs-volunteer-form">
 							<div class="row">

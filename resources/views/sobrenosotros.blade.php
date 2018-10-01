@@ -3,21 +3,29 @@
 @section('title', 'Sobre nosotros -')
 
 @section('welcomesn')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/about_bg.jpg')">
+	
+	<?php
+		$sliders = App\Models\Slider::where([['indicador','=','fundacion']])->get();
+		$slide = $sliders->first()->foto;
+		$titulo = $sliders->first()->titulo;
+		$contenido = $sliders->first()->contenido;
+	?>
+
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$slide}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Sobre nosotros</h2>
-				<p>Conoce más sobre la fundación</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Conócenos</li>
-				</ul>
+				<h2>{{$titulo}}</h2>
+				<p>{{$contenido}}</p>
+				<!-- <ul class="xs-breadcumb"> -->
+					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Conócenos</li> -->
+				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
 @endsection
 
-@section('snsection')
+@section('video_sn')
 	<main class="xs-main">
 		<!-- video popup section section -->
 	<div class="xs-video-popup-section">
@@ -36,9 +44,11 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</div>	<!-- End video popup section section -->
+@endsection
 
-		<!-- video popup section section -->
-		<section class="xs-content-section-padding">
+@section('contenido_video_sn')
+	<!-- video popup section section -->
+	<section class="xs-content-section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-11 content-center">
@@ -81,9 +91,11 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
+@endsection
 
-		<!-- funfacts section -->
-		<div class="xs-funfact-section xs-content-section-padding waypoint-tigger parallax-window" style="background-image: url('assets/images/backgrounds/parallax_1.jpg')">
+@section('funfacts_sn')
+	<!-- funfacts section -->
+	<div class="xs-funfact-section xs-content-section-padding waypoint-tigger parallax-window" style="background-image: url('assets/images/backgrounds/parallax_1.jpg')">
 		<div class="container">
 			<div class="row col-lg-10 xs-heading mx-auto">
 				<h2 align="center" class="xs-title color-white small">Nuestra fundación ha estado presente por más de 7 años. Hacemos lo mejor para todos.</h2>
@@ -121,52 +133,60 @@
 		</div><!-- .container end -->
 		<div class="xs-black-overlay"></div>
 	</div>	<!-- End funfacts section -->
+@endsection
 
-		<!-- what we do section -->
-		<section class="xs-section-padding">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
+@section('quehacemos_sn')
+	<!-- what we do section -->
+	<section class="xs-section-padding">
+		<div class="container" align="justify">
+			<!-- .xs-heading row -->
+			<div class="xs-heading row xs-mb-60"> 
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Qué hacemos</h2>
-					<!--<span class="xs-separetor dashed"></span>-->
-					<!--<p>It allows you to gather monthly subscriptions from fans to help fund your creative projects. They also encourage their users to offer rewards to fans as a way to repay them for their support.</p>-->
-				</div><!-- .xs-heading-title END -->
-			</div><!-- .row end -->
+					<h2 class="xs-title" style="color:#a6ce39;">Qué hacemos</h2>
+					<hr style="width:220px;float:left;margin-bottom:20px;margin-top:10px;">
+				</div>
+				<div class="xs-heading xs-mb-70 text-center">
+					<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba y comunidades vecinas del CBCH. </h2>
+				</div>
+			</div><!-- .xs-heading row END -->
+			
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-water color-orange"></span>
-						<h5>Desarrollo <br>y sostenibilidad</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
+						<h5>Jardín botánico y Sendero<br> Gerardo Rodríguez</h5>
+						<p>Ofrece un recorrido interpretado por un guía especializado que ofrece conocimiento acerca de las diversas especies de flora, aves, pequeños mamíferos y anfibios de diversas clases que habitan el Jardín del CREDIA.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-groceries color-red"></span>
-						<h5>Cultura <br>y recreación</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/pasaporte.png') no-repeat;"></span>
+						<h5>Pasaporte Verde del<br>Corredor Biológico</h5>
+						<p>Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH, al tiempo que se adquieren conocimientos que son certificados mediante los diferentes sellos que acreditan las visitas a las áreas.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-heartbeat color-purple"></span>
-						<h5>Ecoturismo <br>y educación ambiental</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
+						<h5>Forestería comunitaria y<br>Cambio Climático</h5>
+						<p>Mediante la realización de charlas, y visitas a la parcela demostrativa dentro del Jardín Botánico se concientiza acerca de la implementación de métodos amigables para mitigar los efectos del cambio climático.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="icon-open-book color-green"></span>
-						<h5>Gestión <br>del conocimiento</h5>
-						<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local economies.</p>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
+						<h5>Videos sobre el ambiente<br>y proyecciones en 3D</h5>
+						<p>La sala de proyecciones audiovisuales enriquese la experiencia de la visita con la presentación de videos, e imagenes 3D basados en temas de importancia para la conservación del ambiete.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End what we do section -->
+@endsection
 
-		<!-- team section -->
-		<section class="xs-section-padding bg-gray">
+@section('team_sn')
+	<!-- team section -->
+	<section class="xs-section-padding bg-gray">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
@@ -232,9 +252,11 @@
 			</div>
 		</div><!-- .container end -->
 	</section>	<!-- End team section -->
+@endsection
 
-		<!-- partners section -->
-		<section class="xs-partner-section" style="background-image: url('assets/images/map.png');">
+@section('partners_sn')
+	<!-- partners section -->
+	<section class="xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5">
@@ -270,5 +292,5 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End partners section -->
-	</main>
 @endsection
+</main>

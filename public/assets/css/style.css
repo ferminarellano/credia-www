@@ -106,7 +106,7 @@ ul, li {
   color: #18bfc3; }
 
 .xs-heading .color-green {
-  color: #3ac798; }
+  color: #6acaf0; }
 
 .xs-heading .color-white {
   color: #FFFFFF; }
@@ -2975,12 +2975,12 @@ svg {
   z-index: 1;
   text-align: center; }
   .xs-inner-banner-content h2 {
-    font-size: 3.71429em;
+    font-size: 2.9em;
     font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -.2px; }
+    margin-bottom: 0px;
+    letter-spacing: 4.8px; }
   .xs-inner-banner-content p {
-    font-size: 1.57143em;
+    font-size: 1.28571em;
     margin-bottom: 15px;
     line-height: 1.5; }
 

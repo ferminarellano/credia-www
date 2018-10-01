@@ -141,7 +141,12 @@
 
 <!--   CONTENIDO SOBRE NOSOTROS   -->
 	@yield('welcomesn')
-	@yield('snsection')
+	@yield('video_sn')
+	@yield('contenido_video_sn')
+	@yield('funfacts_sn')
+	@yield('quehacemos_sn')
+	@yield('team_sn')
+	@yield('partners_sn')
 <!-- END CONTENIDO SOBRE NOSOTROS -->
 
 <!--   CONTENIDO PROYECTOS   -->
