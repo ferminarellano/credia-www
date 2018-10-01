@@ -76,14 +76,14 @@
 			<div class="nav-header">
 				<div class="nav-toggle"></div>
 				<a href="{{ URL::route('index') }}" class="nav-logo">
-					<img src="assets/image/logo.png" alt="">
+					<img src="assets/images/logo.png" alt="CREDIA">
 				</a>
 			</div> <!-- .nav-header END -->
 			
 			<div class="nav-menus-wrapper row">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
-						<img src="assets/image/logo.png" alt="">
+						<img src="assets/images/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
 				<div class="col-lg-8">
@@ -115,13 +115,11 @@
 								<li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li>
 							</ul>
 						</li>
-						<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
 					</ul><!-- .nav-menu END -->
 				</div>
-				<!--<div class="col-lg-2">
-					<a href="https://www.facebook.com/crediahonduras/" class="fa fa-facebook fi"></a>
-					<a href="#" class="fa fa-instagram fi"></a> 
-				</div>-->
+				<div class="xs-navs-button d-flex-center-end col-lg-2">
+					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
+				</div><!-- .xs-navs-button END -->
 			</div><!-- .nav-menus-wrapper .row END -->
 		</nav><!-- .xs-menus .fundpress-menu END -->
 	</div><!-- .container end -->
@@ -129,7 +127,7 @@
 
 <!--   CONTENIDO INDEX   -->
 	@yield('welcomeindex')
-	@yield('archive')
+	@yield('mision')
 	@yield('proyectos')
 	@yield('textoimagen')
 	@yield('descripcion')
@@ -137,13 +135,18 @@
 	@yield('servicios')
 	@yield('voluntarios')
 	@yield('eventos')
-	{{--@yield('equipo')--}}
+	@yield('afiliados')
 	{{--@yield('diario')--}}
 <!-- END CONTENIDO INDEX -->
 
 <!--   CONTENIDO SOBRE NOSOTROS   -->
 	@yield('welcomesn')
-	@yield('snsection')
+	@yield('video_sn')
+	@yield('contenido_video_sn')
+	@yield('funfacts_sn')
+	@yield('quehacemos_sn')
+	@yield('team_sn')
+	@yield('partners_sn')
 <!-- END CONTENIDO SOBRE NOSOTROS -->
 
 <!--   CONTENIDO PROYECTOS   -->
@@ -225,7 +228,7 @@
 						<!--<img src="assets/image/logo.png" alt="">-->
 						<img src="assets/images/footer_logo.png" alt="">
 						</a>
-						<p>CharityPress online and raise money for charity and causes you’re passionate about. CharityPress is an innovative, cost-effective online.</p>
+						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">
 							<li><a href="https://www.facebook.com/crediahonduras/" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="https://www.youtube.com/channel/UCLk28-2HjGIf13dW6cD7u1A" class="color-youtube"><i class="fa fa-youtube"></i></a></li>
@@ -234,14 +237,14 @@
 						</ul><!-- .xs-social-list END -->
 					</div>
 					<div class="col-lg-2 col-md-6 footer-widget">
-						<h3 class="widget-title">Sobre nosotros</h3>
+						<h3 class="widget-title">¡Conocenos más!</h3>
 							<ul class="xs-footer-list">
-								<li><a href="{{ URL::route('equipo') }}">Equipo de trabajo</a></li>
-								<li><a href="#">Sostenibilidad</a></li>
-								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
-								<li><a href="#">Componentes</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
+								<li><a href="#">Componentes</a></li>
 								<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
+								<li><a href="{{ URL::route('equipo') }}">Equipo de trabajo</a></li>
+								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
+								<li><a href="#">Sostenibilidad</a></li>
 							</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 footer-widget">
@@ -275,7 +278,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_2.jpg">
+												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">23</span>
 													<span class="entry-month d-block">sep</span>
@@ -303,7 +306,7 @@
 						<h3 class="widget-title">Contáctenos</h3>
 							<ul class="xs-info-list">
 								<li><i class="fa fa-map-marker" aria-hidden="true"></i>Boulevard Cangrejal, Colonia El Naranjal,  La Ceiba, Atlántida, Honduras.</li>
-								<li><i class="fa fa-phone"></i>(504) 2442-2610</li>
+								<li><i class="fa fa-phone"></i>(+504) 2442-2610</li>
 								<li><i class="fa fa-envelope-o"></i><a href="mailto:administracionyeventos@credia.hn">administracionyeventos@credia.hn</a></li>
 							</ul><!-- .xs-list-with-icon END -->
 					</div>
@@ -321,9 +324,9 @@
 					<div class="col-sm-6">
 						<nav class="xs-footer-menu">
 							<ul>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Help Desk</a></li>
-								<li><a href="#">Support</a></li>
+								<li><a href="#">Preguntas frecuentes</a></li>
+								<li><a href="#">Ayuda</a></li>
+								<li><a href="#">Soporte</a></li>
 							</ul>
 						</nav>
 					</div>
