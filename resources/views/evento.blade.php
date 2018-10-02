@@ -7,11 +7,11 @@
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Events</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Eventos</li>
-				</ul>
+				<h2>Eventos</h2>
+				<!-- <p>Give a helping hand for poor people</p> -->
+				<!-- <ul class="xs-breadcumb"> -->
+					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Eventos</li> -->
+				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
@@ -28,19 +28,19 @@
 						<div class="xs-event-image">
 							<img src="assets/images/event/event_1.jpg" alt="">
 							<div class="xs-entry-date">
-								<span class="entry-date-day">27</span>
-								<span class="entry-date-month">dec</span>
+								<span class="entry-date-day">24</span>
+								<span class="entry-date-month">Nov</span>
 							</div>
 							<div class="xs-black-overlay"></div>
 						</div><!-- .xs-event-image END -->
 					</div>
 					<div class="col-md-7">
 						<div class="xs-event-content">
-							<a href="#">Raspberry velbet</a>
-							<p>In a time of overwhelming emotions, sadness, and pain, obligations.</p>
-							<div class="xs-countdown-timer" data-countdown="2020/01/24"></div>
-							<a href="#" class="btn btn-primary">
-								Learn More
+							<a href="{{ URL::route('eventodetalle') }}">Seminario</a>
+							<p style="text-align:justify;">El cambio climático es uno de los grandes desafíos del siglo XXI.</p>
+							<div class="xs-countdown-timer" data-countdown="2018/11/24"></div>
+							<a href="{{ URL::route('eventodetalle') }}" class="btn btn-primary">
+								Aprende más
 							</a>
 						</div><!-- .xs-event-content END -->
 					</div>
@@ -117,30 +117,35 @@
 
 		<!-- partners section -->
 		<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<div class="xs-partner-content">
-						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">Trusted by the biggest <span class="color-green">brand.</span></h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="xs-partner-content">
+							<div class="xs-heading xs-mb-40">
+								<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y civiles</h2>
+							</div>
+							<p>
+								Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 
+								implementación de un módelo de gestión basado en el fortalecimiento de redes y promoción del análisis estratégico de los procesos 
+								sociales, económicas y ambientales, para la toma de decisiones participativas.
+							</p>
+							<!-- <a href="#" class="btn btn-primary"> -->
+								<!-- join us now -->
+							<!-- </a> -->
 						</div>
-						<p>In-kind donations from our donors and partners allow charity: water to pass 100% of public donations straight to water projects. We are deeply grateful for those who have surprised us with their generosity. A big thanks to the following companies and people who have helped make charity: water’s work possible.</p>
-						<a href="#" class="btn btn-primary bg-orange">
-							join us now
-						</a>
 					</div>
-				</div>
-				<div class="col-lg-7">
-					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/partner/client_1.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_2.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_3.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_4.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_5.png" alt=""></a></li>
-					</ul>
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End partners section -->
+					<div class="col-md-7">
+						<ul class="fundpress-partners">
+							<li><a href="#"><img src="assets/images/partner/client_1.png" style="width: 90%;" alt=""></a></li>
+							<li><a href="#"><img src="assets/images/partner/client_2.png" style="width: 90%;" alt=""></a></li>
+							<li><a href="#"><img src="assets/images/partner/client_3.png" style="width: 90%;" alt=""></a></li>
+							<li><a href="#"><img src="assets/images/partner/client_4.png" style="width: 90%;" alt=""></a></li>
+							<li><a href="#"><img src="assets/images/partner/client_5.png" style="width: 90%;" alt=""></a></li>
+							<li><a href="#"><img src="assets/images/partner/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
+						</ul>
+					</div>
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>	<!-- End partners section -->
 	</main>
 @endsection

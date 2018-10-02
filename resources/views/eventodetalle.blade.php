@@ -7,11 +7,11 @@
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Events</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Evento</li>
-				</ul>
+				<h2>Evento</h2>
+				<p>Seminario sobre Cambio climático</p>
+				<!-- <ul class="xs-breadcumb"> -->
+					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Evento</li> -->
+				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
@@ -30,64 +30,66 @@
 					<div class="row">
 						<div class="col-lg-8 xs-event-wraper">
 							<div class="xs-event-content">
-								<h4>Event Detalis</h4>
-								<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local econom mies. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore ete dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<h4>Detalle de evento</h4>
+								<p style="text-align:justify;">Existe un gran desconocimiento de lo que es el cambio climático en realidad, bien por exceso de información, inexactitud en las fuentes o por desinformación interesada, lo que da origen a una serie de falsos mitos sobre el cambio climático. En este espacio abordaremos desde un punto de vista objetivo y científico qué es el cambio climático, cuáles son sus causas, sus consecuencias y cómo se puede combatir. En definitiva, cómo nos afecta el cambio climático.</p>
 							</div>
 							<!-- horizontal tab -->
 							<div class="xs-horizontal-tabs">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" data-toggle="tab" href="#facilities" role="tab">Facilities</a>
+				<a class="nav-link active" data-toggle="tab" href="#facilities" role="tab">Instalaciones</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#mapLocation" role="tab">Map Location</a>
+				<a class="nav-link" data-toggle="tab" href="#mapLocation" role="tab">Ubicación</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#contactUs" role="tab">Contact us</a>
+				<a class="nav-link" data-toggle="tab" href="#contactUs" role="tab">Contáctenos</a>
 			</li>
 		</ul><!-- .nav-tabs END -->
 
 		<!-- Tab panes -->
 		<div class="tab-content">
 			<div class="tab-pane fade show active" id="facilities" role="tabpanel">
-				<p>663 million people drink dirty water. Learn how access to clean water can improve health, boost local econom mies. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore ete dolore magna aliqua.</p>
+				<p style="text-align:justify;">Antes de profundizar en el detalle de sus causas y consecuencias, te vamos a contar por qué no te importa el cambio climático, ven y obten tan preciada información que sera de beneficio para ti y tus futuras generaciones.</p>
 				<div class="row">
 					<div class="col-md-6">
 						<ul class="xs-unorder-list circle green-icon">
-							<li>Assisting senior consultants in projects </li>
-							<li>Share best practices and knowledge.</li>
-							<li>Assisting senior consultants in projects </li>
+							<li>Causas</li>
+							<li>Consecuencias</li>
+							<li>¿Qué es el calentamiento global?</li>
 						</ul>
 					</div>
 					<div class="col-md-6">
 						<ul class="xs-unorder-list circle green-icon">
-							<li>Collaborate with technology, informations security, and business partners </li>
-							<li>Find and address performance issues.</li>
+							<li>Como poder combatir el cambio climático. </li>
+							<li>¿Por qué no te importa el cambio climático?</li>
 						</ul>
 					</div>
 				</div>
 			</div><!-- #facilities END -->
+			
 			<div class="tab-pane" id="mapLocation" role="tabpanel">
 				<div id="xs-map"></div>
 			</div><!-- #mapLocation END -->
+			
 			<div class="tab-pane" id="contactUs" role="tabpanel">
 				<div class="xs-contact-form-wraper">
 					<form action="#" method="POST" id="xs-contact-form" class="xs-contact-form">
 						<div class="input-group">
-							<input type="text" name="name" id="xs-name" class="form-control" placeholder="Enter Your Name.....">
+							<input type="text" name="name" id="xs-name" class="form-control" placeholder="Introduzca su nombre.....">
 							<div class="input-group-append">
 								<div class="input-group-text"><i class="fa fa-user"></i></div>
 							</div>
 						</div><!-- .input-group END -->
 						<div class="input-group">
-							<input type="email" name="email" id="xs-email" class="form-control" placeholder="Enter Your Email.....">
+							<input type="email" name="email" id="xs-email" class="form-control" placeholder="Introduzca su correo electrónico.....">
 							<div class="input-group-append">
 								<div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
 							</div>
 						</div><!-- .input-group END -->
 						<div class="input-group massage-group">
-							<textarea name="massage" placeholder="Enter Your Message....." id="xs-massage" class="form-control" cols="30" rows="10"></textarea>
+							<textarea name="massage" placeholder="Introduzca su mensaje....." id="xs-massage" class="form-control" cols="30" rows="10"></textarea>
 							<div class="input-group-append">
 								<div class="input-group-text"><i class="fa fa-pencil"></i></div>
 							</div>
@@ -113,59 +115,59 @@
 								<h3>Our Vission</h3>
 								<p class="lead">The Globian Fund for Charities seeks positive change around the world through support of non-profit organizations dedicated to social, cultural.</p>
 							</div>
-							<div class="row">
-								<div class="col-md-4">
-									<div class="xs-service-promo">
-										<span class="icon-water color-orange"></span>
-										<h5>Pure Water <br>For Poor People</h5>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="xs-service-promo">
-										<span class="icon-groceries color-red"></span>
-										<h5>Healty Food <br>For Poor People</h5>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="xs-service-promo">
-										<span class="icon-open-book color-green"></span>
-										<h5>Pure Education <br>For Every Children</h5>
-									</div>
-								</div>
-							</div>
+							<!-- <div class="row"> -->
+								<!-- <div class="col-md-4"> -->
+									<!-- <div class="xs-service-promo"> -->
+										<!-- <span class="icon-water color-orange"></span> -->
+										<!-- <h5>Pure Water <br>For Poor People</h5> -->
+									<!-- </div> -->
+								<!-- </div> -->
+								<!-- <div class="col-md-4"> -->
+									<!-- <div class="xs-service-promo"> -->
+										<!-- <span class="icon-groceries color-red"></span> -->
+										<!-- <h5>Healty Food <br>For Poor People</h5> -->
+									<!-- </div> -->
+								<!-- </div> -->
+								<!-- <div class="col-md-4"> -->
+									<!-- <div class="xs-service-promo"> -->
+										<!-- <span class="icon-open-book color-green"></span> -->
+										<!-- <h5>Pure Education <br>For Every Children</h5> -->
+									<!-- </div> -->
+								<!-- </div> -->
+							<!-- </div> -->
 						</div>
 						<div class="col-lg-4">
 							<!-- horizontal tab -->
 							<div class="xs-event-schedule-widget">
 		<div class="media xs-event-schedule">
 			<div class="d-flex xs-evnet-meta-date">
-				<span class="xs-event-date">25</span>
-				<span class="xs-event-month">May</span>
+				<span class="xs-event-date">24</span>
+				<span class="xs-event-month">Nov</span>
 			</div>
 			<div class="media-body">
-				<h5>Braille Literacy is for the Blind</h5>
+				<h5 style="text-align:justify;">Evento destinado para el público en general</h5>
 			</div>
 		</div>
 		<ul class="list-group xs-list-group">
 			<li class="d-flex justify-content-between">
-				Organized by: 
-				<span>Robert Slim</span>
+				Organizado por: 
+				<span>Fundación CREDIA</span>
 			</li>
 			<li class="d-flex justify-content-between">
-				Start: 
-				<span>9.30 am</span>
+				Inicio: 
+				<span>8:00 am</span>
 			</li>
 			<li class="d-flex justify-content-between">
-				Venue: 
-				<span>National Zoo, NY</span>
+				Lugar de encuentro: 
+				<span>Salón España, Fundación CREDIA</span>
 			</li>
 			<li class="d-flex justify-content-between">
-				Phone:  
-				<span>91 260 5524</span>
+				Teléfono:  
+				<span>(+504) 2442-2610</span>
 			</li>
 			<li class="d-flex justify-content-between">
-				Email: 
-				<span>charity@example.com</span>
+				Correo: &nbsp;
+				<span style="font-size:12px;"> &nbsp;administracionyeventos@credia.hn</span>
 			</li>
 		</ul>
 	</div><!-- .xs-event-schedule-widget END -->

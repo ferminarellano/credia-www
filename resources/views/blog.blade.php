@@ -8,10 +8,10 @@
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
 				<h2>Blog</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Blog</li>
-				</ul>
+				<!-- <p>Give a helping hand for poor people</p> -->
+				<!-- <ul class="xs-breadcumb"> -->
+					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Blog</li> -->
+				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
@@ -32,7 +32,7 @@
 									<img class="img-responsive" src="assets/images/avatar/avatar_1.jpg" alt="">
 								</span>
 								<span class="author-name">
-									<a href="#">By Simona</a>
+									<a href="#">Por Cenaida Moncada</a>
 								</span>
 							</div>
 						</div><!-- .xs-item-header END -->
@@ -40,13 +40,13 @@
 							<div class="entry-meta">
 								<span class="date">
 									<a href=""  rel="bookmark" class="entry-date">
-										27th August 2017
+										18 de mayo de 2019
 									</a>
 								</span>
 							</div>
 							
 							<h4 class="entry-title">
-								<a href="#">Brilliant After All, A New Album by Rebecca: Help poor people</a>
+								<a href="{{ URL::route('blogdetalle') }}">Primera celebración internacional sobre la fascinación por las plantas.</a>
 							</h4>
 						</div><!-- .xs-entry-header END -->
 						<span class="xs-separetor"></span>
