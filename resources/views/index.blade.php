@@ -82,13 +82,13 @@
 				</div>
 				<div class="col-md-12 col-lg-6 row xs-archive-image">
 					<div class="col-md-12 xs-mb-30">
-						<img src="assets/images/archive-img-1.jpg" alt="" class="rounded">
+						<img src="assets/images/mision-img-1.jpg" alt="" class="rounded">
 					</div>
 					<div class="col-md-6 col-sm-6">
-						<img src="assets/images/archive-img-2.jpg" alt="" class="rounded">
+						<img src="assets/images/mision-img-2.jpg" alt="" class="rounded">
 					</div>
 					<div class="col-md-6 col-sm-6">
-						<img src="assets/images/archive-img-3.jpg" alt="" class="rounded">
+						<img src="assets/images/mision-img-3.jpg" alt="" class="rounded">
 					</div>
 				</div>
 			</div><!-- .row end -->
@@ -106,7 +106,7 @@
 					<p>Principales proyectos.</p>
 				</div><!-- .xs-heading-title END -->
 				<div class="col-xl-3 col-md-3 xs-btn-wraper">
-					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">todas los proyectos</a>
+					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">todos los proyectos</a>
 				</div><!-- .xs-btn-wraper END -->
 			</div><!-- .row end -->
 			<div class="row">
@@ -115,7 +115,7 @@
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
 
-							<img src="assets/images/causes/causes_4.jpg" alt="">
+							<img src="assets/images/proyectos/proyectos_4.jpg" alt="">
 
 							<div class="xs-skill-bar">
 								<div class="xs-skill-track">
@@ -155,7 +155,7 @@
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
 
-							<img src="assets/images/causes/causes_5.jpg" alt="">
+							<img src="assets/images/proyectos/proyectos_5.jpg" alt="">
 
 							<div class="xs-skill-bar">
 								<div class="xs-skill-track">
@@ -168,7 +168,7 @@
 								<li><a href="">Cambio climático</a></li>
 							</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30" align="justify">Introducir en el concepto de Cambio Climático a los niños y niñas.</a>
+							<a href="#" class="xs-post-title xs-mb-30" align="justify">Introducir en el concepto de Cambio Climático a los niños y niñas del CBCH.</a>
 
 							<ul class="xs-list-with-content" align="center">
 								<li>$33,600<span>Prometido</span></li>
@@ -194,7 +194,7 @@
 					<div class="xs-popular-item xs-box-shadow">
 						<div class="xs-item-header">
 
-							<img src="assets/images/causes/causes_6.jpg" alt="">
+							<img src="assets/images/proyectos/proyectos_6.jpg" alt="">
 
 							<div class="xs-skill-bar">
 								<div class="xs-skill-track">
@@ -204,7 +204,7 @@
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
 							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Fortaleciendo de las áreas marinas protegidas</a></li>
+								<li><a href="">Fortaleciendo áreas marinas protegidas</a></li>
 							</ul>
 
 							<a href="#" class="xs-post-title xs-mb-30" align="justify">Diseño e implementación del sistema de monitoreo de los ecosistemas marinos</a>
@@ -370,12 +370,12 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-feature-image">
-						<img src="assets/images/features_1.jpg" alt="">
+						<img src="assets/images/caracteristicas_1.jpg" alt="">
 					</div><!-- .xs-feature-image END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-feature-image">
-						<img src="assets/images/features_2.jpg" alt="">
+						<img src="assets/images/caracteristicas_2.jpg" alt="">
 					</div><!-- .xs-feature-image END -->
 				</div>
 			</div><!-- .row end -->
@@ -384,7 +384,7 @@
 @endsection
 
 @section('descripcion')
-	<section class="" style="background-image: url('assets/images/backgrounds/background-img.png')">
+	<section class="" style="background-image: url('assets/images/backgrounds/background-img.jpg')">
 		<div class="container-fulid">
 			<div class="xs-feature-content">
 				<h2 class="color-white">
@@ -443,7 +443,7 @@
 	<section class="xs-section-padding">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
-				<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba y comunidades vecinas del CBCH. </h2>
+				<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba <br>y comunidades vecinas del CBCH. </h2>
 			</div>
 			
 			<div class="row">
@@ -481,7 +481,7 @@
 @endsection
 
 @section('voluntarios')
-	<section class="parallax-window xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/volunteer-bg.jpg')">
+	<section class="parallax-window xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-7">
