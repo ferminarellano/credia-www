@@ -80,7 +80,7 @@
 				</a>
 			</div> <!-- .nav-header END -->
 			
-			<div class="nav-menus-wrapper row">
+			<div class="nav-menus-wrapper row" style="width:100%;">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
 						<img src="assets/images/logo.png" alt="">

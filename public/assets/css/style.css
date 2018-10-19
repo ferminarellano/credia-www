@@ -801,8 +801,10 @@ blockquote {
 
 .header-transparent .nav-menu,
 .xs-box .nav-menu {
-  text-align: center; 
-  padding-left: 0px;}
+  text-align: center;
+  padding-left: 30px;
+  padding-top:3px;}
+  
   .header-transparent .nav-menu li,
   .xs-box .nav-menu li {
     float: none; }
