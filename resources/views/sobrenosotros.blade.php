@@ -18,8 +18,7 @@
 @endsection
 
 @section('video_sn')
-	<main class="xs-main">
-		<!-- video popup section section -->
+	<!-- video popup section section -->
 	<div class="xs-video-popup-section">
 		<div class="container">
 			<div class="row">
@@ -285,4 +284,3 @@
 		</div><!-- .container end -->
 	</section>	<!-- End partners section -->
 @endsection
-</main>

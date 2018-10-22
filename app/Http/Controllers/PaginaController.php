@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Slider;
+use View;
 
 class PaginaController extends Controller
 {
 	public function inicio()
 	{
-		return view('index');
+		$sliders = Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
+		
+		
+		$data = array(
+			"sliders" => $sliders,
+		);
+		
+		return View::make('index')->with($data);
 	}
 	
 	public function snosotros()

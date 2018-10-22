@@ -5,7 +5,6 @@
 |------------------------------------------------------------------------*/
 
 Route::get('/', ['as' => 'index', 'uses' => 'PaginaController@inicio']);
-
 Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'PaginaController@snosotros']);
 Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'PaginaController@proyecto']);
 Route::get('/eventos', ['as' => 'evento', 'uses' => 'PaginaController@evento']);
