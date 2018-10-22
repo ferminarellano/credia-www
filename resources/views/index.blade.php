@@ -443,7 +443,7 @@
 	<section class="xs-section-padding">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
-				<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba <br>y comunidades vecinas del CBCH. </h2>
+				<h2 class="xs-mb-0 xs-title-sv">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba <br>y comunidades vecinas del CBCH. </h2>
 			</div>
 			
 			<div class="row">

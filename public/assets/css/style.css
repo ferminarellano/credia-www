@@ -86,6 +86,17 @@ ul, li {
   z-index: 1;
   text-align: justify;
   margin-bottom: 7px; }
+  
+  .xs-heading .xs-title-sv {
+  color: #011b58;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 7px; }
+  
   .xs-heading .xs-title:before {
     position: absolute;
     content: attr(data-title);
@@ -781,6 +792,16 @@ blockquote {
   min-height: 100px;
   max-height: 100px;
   line-height: 100px; }
+  
+.nav-opacity{
+	margin-top:50px;
+	margin-left:280px;
+	position:absolute;
+	height:45px;
+	background-color:rgba(255,255,255,4%);
+	border-top:1px solid rgba(255,255,255,7%);
+	border-bottom: 1px solid rgba(255,255,255,7%);
+}
 
 .xs-header .nav-menu li a {
   font-size: 14px;
@@ -3680,7 +3701,7 @@ svg {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0; }
   .xs-black-overlay.bg-aqua {
     background-color: rgba(24, 191, 195, 0.8); }
