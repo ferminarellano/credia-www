@@ -80,14 +80,17 @@
 				</a>
 			</div> <!-- .nav-header END -->
 			
-			<div class="nav-menus-wrapper row">
+			<div class="nav-menus-wrapper row" style="width:100%;position: relative;">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
 						<img src="assets/images/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
+			    
+				<div class="col-lg-8 nav-opacity"></div> <!-- .nav-opacity END -->
+				
 				<div class="col-lg-8">
-					<ul class="nav-menu">
+					<ul class="nav-menu" style="">
 						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
 						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
