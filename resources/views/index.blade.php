@@ -2,12 +2,7 @@
 
 @section('title','')
 
-@section('welcomeindex')
-	
-	<?php
-		$sliders = App\Models\Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
-	?>
-	
+@section('welcomeindex')	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
@@ -19,7 +14,7 @@
 						</div><!-- .xs-welcome-wraper END -->
 					</div><!-- .container end -->
 					<div class="xs-black-overlay"></div>
-				</div><!-- .xs-welcome-content END -->
+				</div>
 			@endforeach
 		</div>
 	</section>

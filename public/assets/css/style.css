@@ -1842,8 +1842,7 @@ blockquote {
   position: relative;
   background-position: center right;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../images/backgrounds/footer_map.png"); }
+  background-repeat: no-repeat;}
 
 .xs-footer-top-layer {
   padding-top: 110px;
@@ -1855,7 +1854,12 @@ blockquote {
 
 .xs-footer-logo {
   display: inline-block;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;}
+  
+.xs-footer-logo img{
+	width:150px;
+	height:90px;
+}
 
 .footer-widget p {
   color: #FFFFFF;
@@ -3536,7 +3540,7 @@ svg {
   transition: all .4s ease; }
 
 .xs-section-padding {
-  padding: 120px 0; }
+  padding: 100px 0; }
 
 .xs-content-section-padding {
   padding: 100px 0px; }
