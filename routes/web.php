@@ -4,7 +4,13 @@
 | Web Routes
 |------------------------------------------------------------------------*/
 
+Auth::routes();
+
+Route::get('/home', 'PaginaController@inicio')->name('index');
+
 Route::get('/', ['as' => 'index', 'uses' => 'PaginaController@inicio']);
+Route::post('/','PaginaController@store_voluntario');
+
 Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'PaginaController@snosotros']);
 Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'PaginaController@proyecto']);
 Route::get('/eventos', ['as' => 'evento', 'uses' => 'PaginaController@evento']);

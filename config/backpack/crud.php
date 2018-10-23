@@ -2,7 +2,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Backpack\CRUD preferences
@@ -22,7 +21,7 @@ return [
     'show_save_action_change' => true, //options: true, false
 
     // When using tabbed forms (create & update), what kind of tabs would you like?
-    'tabs_type' => 'horizontal', //options: horizontal, vertical
+    'tabs_type' => 'vertical', //options: horizontal, vertical
 
     // How would you like the validation errors to be shown?
     'show_grouped_errors' => true,
