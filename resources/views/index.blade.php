@@ -484,30 +484,32 @@
 						<h2>Se un voluntario del CREDIA</h2>
 						<br><br><br>
 						<p>Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. Y así, estarás listo para comenzar.</p>
-						<form action="#" method="POST" id="volunteer-form" class="xs-volunteer-form">
+						
+						<form action="{{URL::to('/')}}" method="post" id="volunteer-form" class="xs-volunteer-form" enctype="multipart/form-data">
+							 {{ csrf_field() }}
 							<div class="row">
 								<div class="col-lg-6">
-									<input type="text" id="volunteer_name" class="form-control" placeholder="Su nombre">
+									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Su nombre">
+								</div>
+								<div class="col-lg-6">	
+									<input type="text" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Su correo">
 								</div>
 								<div class="col-lg-6">
-									<input type="email" id="volunteer_email" class="form-control" placeholder="Su correo">
-								</div>
-								<div class="col-lg-6">
-									<select name="branch" class="form-control" id="volunteer_brach">
-										<option value="">Seleccionar</option>	
-										<option value="">Senderismo</option>
-										<option value="">Charlas</option>
-										<option value="">Capacitaciones</option>
+									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" >
+											<option value="">Seleccionar</option>
+										@foreach($actividades as $actividad)
+											<option value="{{$actividad->id}}">{{$actividad->actividad}}</option>
+										@endforeach
 									</select>
 								</div>
 								<div class="col-lg-6 xs-mb-20">
 									<div class="xs-fileContainer">
-										<input type="file" id="volunteer_cv" class="form-control" name="file">
+										<input type="file" name="archivo" id="archivo" value="{{ old('archivo') }}" class="form-control">
 										<label for="volunteer_cv">Sube tu CV</label>
 									</div>
 								</div>
 							</div><!-- .row end -->
-							<textarea name="massage" id="massage" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
+							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
 							<button type="submit" class="btn btn-secondary btn-color-alt">aplica ya</button>
 						</form><!-- #volunteer-form .xs-volunteer-form END -->
 					</div>
