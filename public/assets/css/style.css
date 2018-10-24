@@ -3519,9 +3519,9 @@ svg {
 
 .xs-bg-property, .header-transparent .nav-brand,
 .xs-box .nav-brand {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center top; }
 
 .content-center {
   text-align: center;

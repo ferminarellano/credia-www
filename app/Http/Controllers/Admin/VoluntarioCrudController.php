@@ -18,7 +18,7 @@ class VoluntarioCrudController extends CrudController
 		
 		$this->crud->addColumn([
 			'name' => 'nombre',
-			'label' => 'Nombre',
+			'label' => 'Nombre de aspirante',
 		]);
 		
 		$this->crud->addColumn([
@@ -38,6 +38,59 @@ class VoluntarioCrudController extends CrudController
 		$this->crud->addColumn([
 			'name' => 'created_at',
 			'label' => 'Fecha de registro',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'nombre',
+			'label' => "Nombre de aspirante",
+			'type' => 'text',
+			'attributes' => [
+				'disabled' => 'disabled',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-8',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'actividad_id',
+			'label' => "Actividad a participar",
+			'type' => 'select',
+			'entity' => 'actividad',
+			'attribute' => "actividad",
+			'model' => "App\Models\Actividad",
+			'attributes' => [
+				'disabled' => 'disabled', 
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-4',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'correo',
+			'label' => "Correo de aspirante",
+			'type' => 'text',
+			'attributes' => [
+				'disabled' => 'disabled',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-8',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'descripcion',
+			'label' => "Descripción de aspirante",
+			'type' => 'textarea',
+			'attributes' => [
+				'disabled' => 'disabled',
+				'style' => 'text-align:justify;resize:vertical;',
+				'rows' => '4'
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			], 
 		]);
     }
 

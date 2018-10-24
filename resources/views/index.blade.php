@@ -2,7 +2,7 @@
 
 @section('title','')
 
-@section('welcomeindex')	
+@section('welcome_in')	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
@@ -20,7 +20,7 @@
 	</section>
 @endsection
 
-@section('mision')
+@section('mision_in')
 	<!-- misión section -->
 	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
@@ -91,7 +91,7 @@
 	</section><!-- End archive section -->
 @endsection
 
-@section('proyectos')
+@section('proyectos_in')
 	<section class="bg-gray waypoint-tigger xs-section-padding">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
@@ -344,10 +344,10 @@
 				<!--</div>-->
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-</section>
+	</section>
 @endsection
 
-@section('textoimagen') 
+@section('texto_in') 
 	<!-- text with image section -->
 	<section class="xs-section-padding">
 		<div class="container">
@@ -378,7 +378,7 @@
 	</section><!-- End text with image section -->
 @endsection
 
-@section('descripcion')
+@section('descripcion_in')
 	<section class="" style="background-image: url('assets/images/backgrounds/background-img.jpg')">
 		<div class="container-fulid">
 			<div class="xs-feature-content">
@@ -393,14 +393,14 @@
 	</section>
 @endsection
 
-@section('caracteristicas')
+@section('unete_in')
 	<section class="xs-feature-box-fulid">
 		<div class="container-fulid">
 			<div class="row xs-feature-box-wraper">
 				<div class="col-md-12 col-lg-4 xs-feature-box">
 					<div class="xs-feature-box-content">
 						<h3 class="color-white">La tarea aun no termina, por eso necesitamos de ti</h3>
-						<a href="#" class="btn btn-secondary btn-color-alt">
+						<a href="{{ URL::route('voluntario') }}" class="btn btn-secondary btn-color-alt">
 							Apoyanos
 						</a>
 					</div><!-- .xs-feature-box-content END -->
@@ -412,7 +412,7 @@
 							Con tu patrocinio puedes llegar a difundir la percepción de la población hacia la conservación
 							de los recursos naturales y de las áreas protegidas del Corredor Biológico del Caribe Hondureño y sus ecosistemas.
 						</p>
-						<a href="#" class="btn btn-secondary btn-color-alt">
+						<a href="{{ URL::route('donacion') }}" class="btn btn-secondary btn-color-alt">
 							Patrocina
 						</a>
 					</div> <!-- .xs-feature-box-content end -->
@@ -434,7 +434,7 @@
 	</section>
 @endsection
 
-@section('servicios')
+@section('actividades_in')
 	<section class="xs-section-padding">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
@@ -475,7 +475,7 @@
 	</section>
 @endsection
 
-@section('voluntarios')
+@section('voluntarios_in')
 	<section class="parallax-window xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">
@@ -507,6 +507,7 @@
 										<input type="file" name="archivo" id="archivo" value="{{ old('archivo') }}" class="form-control">
 										<label for="volunteer_cv">Sube tu CV</label>
 									</div>
+									<small style="padding-left:85px;color:white;">Formato <b>PDF</b> 100kb máximo.</small>
 								</div>
 							</div><!-- .row end -->
 							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
@@ -519,7 +520,7 @@
 	</section>
 @endsection
 
-@section('eventos')
+@section('eventos_in')
 	<section class="xs-section-padding">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
@@ -623,7 +624,7 @@
 	</section>
 @endsection
 
-@section('afiliados')
+@section('patrocinadores_in')
 	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
 			<div class="row">
@@ -657,7 +658,7 @@
 	</section>
 @endsection
 
-@section('diario')
+@section('revista_in')
 	<section class="xs-section-padding">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">

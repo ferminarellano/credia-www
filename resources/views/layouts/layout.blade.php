@@ -129,17 +129,17 @@
 	</header>
 
 <!--   CONTENIDO INDEX   -->
-	@yield('welcomeindex')
-	@yield('mision')
-	@yield('proyectos')
-	@yield('textoimagen')
-	@yield('descripcion')
-	@yield('caracteristicas')
-	@yield('servicios')
-	@yield('voluntarios')
-	@yield('eventos')
-	@yield('afiliados')
-	{{--@yield('diario')--}}
+	@yield('welcome_in')
+	@yield('mision_in')
+	@yield('proyectos_in')
+	@yield('texto_in')
+	@yield('descripcion_in')
+	@yield('unete_in')
+	@yield('actividades_in')
+	@yield('voluntarios_in')
+	@yield('eventos_in')
+	@yield('patrocinadores_in')
+	{{--@yield('revista_in')--}}
 <!-- END CONTENIDO INDEX -->
 
 <!--   CONTENIDO SOBRE NOSOTROS   -->
@@ -213,8 +213,9 @@
 <!-- END CONTENIDO EQUIPO -->
 
 <!--   CONTENIDO VOLUNTARIOS   -->
-	@yield('welcomevoluntario')
-	@yield('volunteer')
+	@yield('welcome_vol')
+	@yield('voluntarios_vol')
+	@yield('team_vol')
 <!-- END CONTENIDO VOLUNTARIOS -->
 
 <!--   CONTENIDO CONTACTO   -->

@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use App\Models\Slider;
 use App\Models\Voluntario;
 use App\Models\Actividad;
 use View;
 
-class PaginaController extends Controller
+class IndexController extends Controller
 {
-	public function inicio()
+	public function index()
 	{
 		$sliders = Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
 		$actividades = Actividad::where('estado','=','1')->get();
@@ -108,11 +107,6 @@ class PaginaController extends Controller
 	public function equipo()
 	{
 		return view('equipo');
-	}
-	
-	public function voluntario()
-	{
-		return view('voluntario');
 	}
 	
 	public function contacto()
