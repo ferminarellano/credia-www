@@ -8,6 +8,6 @@ class VoluntarioController extends Controller
 {
 	public function voluntario()
 	{
-		return view('voluntario');
+		return view('contenido.voluntario');
 	}
 }
