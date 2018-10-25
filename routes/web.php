@@ -7,10 +7,7 @@
 Auth::routes();
 
 Route::get('/home', 'IndexController@index')->name('index');
-
 Route::get('/', ['as' => 'index', 'uses' => 'IndexController@index']);
-Route::post('/','IndexController@store_voluntario');
-
 Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'ConoceController@snosotros']);
 Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'ProyectoController@proyecto']);
 Route::get('/eventos', ['as' => 'evento', 'uses' => 'EventoController@evento']);
@@ -26,3 +23,6 @@ Route::get('/actividades', ['as' => 'servicio', 'uses' => 'IndexController@servi
 Route::get('/equipo', ['as' => 'equipo', 'uses' => 'EquipoController@equipo']);
 Route::get('/voluntarios', ['as' => 'voluntario', 'uses' => 'VoluntarioController@voluntario']);
 Route::get('/contacto', ['as' => 'contacto', 'uses' => 'ContactoController@contacto']);
+
+Route::post('/','IndexController@store');
+Route::post('/voluntarios','VoluntarioController@store');

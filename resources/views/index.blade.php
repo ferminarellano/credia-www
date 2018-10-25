@@ -444,7 +444,7 @@
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position:bottom;"></span>
 						<h5>Jardín botánico y Sendero<br> Gerardo Rodríguez</h5>
 						<p>Ofrece un recorrido interpretado por un guía especializado que ofrece conocimiento acerca de las diversas especies de flora, aves, pequeños mamíferos y anfibios de diversas clases que habitan el Jardín del CREDIA.</p>
 					</div><!-- .xs-service-promo END -->
@@ -458,7 +458,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position:bottom;"></span>
 						<h5>Forestería comunitaria y<br>Cambio Climático</h5>
 						<p>Mediante la realización de charlas, y visitas a la parcela demostrativa dentro del Jardín Botánico se concientiza acerca de la implementación de métodos amigables para mitigar los efectos del cambio climático.</p>
 					</div><!-- .xs-service-promo END -->
@@ -483,16 +483,19 @@
 					<div class="xs-volunteer-form-wraper bg-aqua">
 						<h2>Se un voluntario del CREDIA</h2>
 						<br><br><br>
-						<p>Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. Y así, estarás listo para comenzar.</p>
+						<p>
+							Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. 
+							Y así, estarás listo para comenzar.
+						</p>
 						
 						<form action="{{URL::to('/')}}" method="post" id="volunteer-form" class="xs-volunteer-form" enctype="multipart/form-data">
 							 {{ csrf_field() }}
 							<div class="row">
 								<div class="col-lg-6">
-									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Su nombre">
+									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo">
 								</div>
 								<div class="col-lg-6">	
-									<input type="text" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Su correo">
+									<input type="text" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
 								</div>
 								<div class="col-lg-6">
 									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" >
@@ -505,7 +508,7 @@
 								<div class="col-lg-6 xs-mb-20">
 									<div class="xs-fileContainer">
 										<input type="file" name="archivo" id="archivo" value="{{ old('archivo') }}" class="form-control">
-										<label for="volunteer_cv">Sube tu CV</label>
+										<label for="archivo">Sube tu CV</label>
 									</div>
 									<small style="padding-left:85px;color:white;">Formato <b>PDF</b> 100kb máximo.</small>
 								</div>

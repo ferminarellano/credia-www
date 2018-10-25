@@ -7,47 +7,46 @@
 	<div class="xs-black-overlay"></div>
 	<div class="container">
 		<div class="color-white xs-inner-banner-content">
-			<h2>Donate Now</h2>
-			<p>Give a helping hand for poor people</p>
-			<ul class="xs-breadcumb">
-				<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Donación</li>
-			</ul>
+			<h2>Conviertete en patrocinador</h2>
+			<p>Engrandece tu empresa, apoyando nuestros proyectos</p>
+			<!-- <ul class="xs-breadcumb"> -->
+				<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Donación</li> -->
+			<!-- </ul> -->
 		</div>
 	</div>
 </section>
 @endsection
 
 @section('promo')
-	<main class="xs-main">
 	<!-- box promo section -->
 	<section class="xs-what-we-do-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo box-color bg-light-red">
-						<span class="icon-water"></span>
-						<h5>Pure Water <br>For Poor People</h5>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
+						<h5>Jardín botánico<br><small>Sendero Gerardo Rodríguez</small></h5>
 						<p>663 million people drink dirty water. Learn how access to clean water.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo box-color bg-green">
-						<span class="icon-groceries"></span>
-						<h5>Healty Food <br>For Poor People</h5>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/pasaporte.png') no-repeat;"></span>
+						<h5>Pasaporte Verde<br><small>Corredor Biológico</small></h5>
 						<p>663 million people drink dirty water. Learn how access to clean water.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo box-color bg-blue">
-						<span class="icon-heartbeat"></span>
-						<h5>Medical <br>Facilities for People</h5>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
+						<h5>Forestería comunitaria<br><small>Cambio Climático</small></h5>
 						<p>663 million people drink dirty water. Learn how access to clean water.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo box-color bg-purple">
-						<span class="icon-open-book"></span>
-						<h5>Pure Education <br>For Every Children</h5>
+						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
+						<h5>Videos sobre el ambiente<br><small>Proyecciones en 3D</small></h5>
 						<p>663 million people drink dirty water. Learn how access to clean water.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
@@ -186,5 +185,4 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End donation form section -->
-	</main>
 @endsection

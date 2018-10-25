@@ -3,63 +3,18 @@
 @section('title', 'Voluntarios -')
 
 @section('welcome_vol')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/volunteer_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/voluntarios_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Volunteer</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Voluntarios</li>
-				</ul>
+				<h2>Voluntarios</h2>
+				<p>Conviertete en uno más, se parte de nuestro voluntariado.</p>
+				<!-- <ul class="xs-breadcumb"> -->
+					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Voluntarios</li> -->
+				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
-@endsection
-
-@section('voluntarios_vol')
-	<!-- Volunteer section -->
-	<section class="xs-section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="xs-volunteer-form-wraper volunteer-version-2">
-						<h2>Become a Volunteer</h2>
-						<p>It only takes a minute to set up a campaign. Decide what to do. Pick a name. Pick a photo. And just like that, you’ll be ready to start raising money.</p>
-						<form action="{{URL::to('/voluntarios')}}" method="POST" id="volunteer-form" class="xs-volunteer-form">
-							<div class="row">
-								<div class="col-lg-6">
-									<input type="text" id="volunteer_name" class="form-control" placeholder="Your Name">
-								</div>
-								<div class="col-lg-6">
-									<input type="email" id="volunteer_email" class="form-control" placeholder="Your Email">
-								</div>
-								<div class="col-lg-6">
-									<select name="branch" class="form-control" id="volunteer_brach">
-										<option value="">Select</option>	
-										<option value="">Branch</option>
-										<option value="">New york</option>
-										<option value="">washington</option>
-									</select>
-								</div>
-								<div class="col-lg-6 xs-mb-20">
-									<div class="xs-fileContainer">
-										<input type="file" id="volunteer_cv" class="form-control" name="file">
-										<label for="volunteer_cv">Upload Your CV</label>
-									</div>
-								</div>
-							</div><!-- .row end -->
-							<textarea name="massage" id="massage" placeholder="Enter your massage" cols="30" class="form-control" rows="10"></textarea>
-							<button type="submit" class="btn btn-secondary">apply now</button>
-						</form><!-- #volunteer-form .xs-volunteer-form .v2 END -->
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<img src="assets/images/volunteer.png" alt="">
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End Volunteer section -->
 @endsection
 
 @section('team_vol')
@@ -68,9 +23,13 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Our Volunteers</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>It allows you to gather monthly subscriptions from fans to help fund your creative projects. They also encourage their users to offer rewards to fans as a way to repay them for their support.</p>
+					<h2 class="xs-title">Nuestros voluntarios</h2>
+					<!-- <span class="xs-separetor dashed"></span> -->
+					<h2 class="xs-line-title" style="margin-top:25px;">¿Por qué hacer voluntariado?</h2>
+					<p>
+						Cuando te conviertes en voluntario o voluntaria te sientes útil. Te das cuenta de que tus acciones,
+						tus tareas como voluntario/a tienen un objetivo y ayudan a otras personas o al medio ambiente.
+					</p>
 				</div><!-- .xs-heading-title END -->
 			</div><!-- .row end -->
 			<div class="row">
@@ -88,7 +47,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_2.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Mr. Aladin</h4>
 							<small>General Manager</small>
@@ -100,7 +59,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_3.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Zummon Khan</h4>
 							<small>Volunteer</small>
@@ -112,7 +71,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_4.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Harista Pro</h4>
 							<small>Volunteer</small>
@@ -124,7 +83,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_5.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Banana Halim</h4>
 							<small>Volunteer</small>
@@ -136,7 +95,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_6.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Kumiriano Li</h4>
 							<small>Volunteer</small>
@@ -148,7 +107,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_7.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Tom Rahabi</h4>
 							<small>Volunteer</small>
@@ -160,7 +119,7 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-single-team">
-						<img src="assets/images/team/team_8.png" alt="">
+						<img src="assets/images/team/team_1.png" alt="">
 						<div class="xs-team-content">
 							<h4>Join Now</h4>
 							<small>Want to join with us</small>
@@ -173,4 +132,52 @@
 			</div><!-- .row END -->
 		</div><!-- .container end -->
 	</section>	<!-- End team section -->
+@endsection
+
+@section('voluntarios_vol')
+	<section class="parallax-window xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-lg-7">
+					<div class="xs-volunteer-form-wraper bg-aqua">
+						<h2>Se un voluntario del CREDIA</h2>
+						<br><br><br>
+						<p>
+							Solo lleva un minuto decidir en que participar. Decida qué hacer. Elige un nombre, elige una foto. 
+							Y así, estarás listo para comenzar.
+						</p>
+						
+						<form action="{{URL::to('/voluntarios')}}" method="post" id="volunteer-form" class="xs-volunteer-form" enctype="multipart/form-data">
+							 {{ csrf_field() }}
+							<div class="row">
+								<div class="col-lg-6">
+									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo">
+								</div>
+								<div class="col-lg-6">	
+									<input type="text" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
+								</div>
+								<div class="col-lg-6">
+									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" >
+											<option value="">Seleccionar</option>
+										@foreach($actividades as $actividad)
+											<option value="{{$actividad->id}}">{{$actividad->actividad}}</option>
+										@endforeach
+									</select>
+								</div>
+								<div class="col-lg-6 xs-mb-20">
+									<div class="xs-fileContainer">
+										<input type="file" name="archivo" id="archivo" value="{{ old('archivo') }}" class="form-control">
+										<label for="archivo">Sube tu CV</label>
+									</div>
+									<small style="padding-left:85px;color:white;">Formato <b>PDF</b> 100kb máximo.</small>
+								</div>
+							</div><!-- .row end -->
+							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
+							<button type="submit" class="btn btn-secondary btn-color-alt">aplica ya</button>
+						</form><!-- #volunteer-form .xs-volunteer-form END -->
+					</div>
+				</div>
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</section>
 @endsection

@@ -23,7 +23,7 @@ class IndexController extends Controller
 		return View::make('index')->with($data);
 	}
 	
-	public function store_voluntario(Request $request)
+	public function store(Request $request)
     {
 		$voluntario = new Voluntario;
 

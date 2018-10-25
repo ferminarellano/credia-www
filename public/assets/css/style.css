@@ -128,9 +128,13 @@ ul, li {
 
 .xs-heading p {
   margin-bottom: 0;
-  font-size: 1.14286em; }
-  .xs-heading p.small {
-    font-size: 1em; }
+  font-size: 1.14286em; 
+  color: #626c84;
+  margin-top: 25px;
+  text-align:justify;}
+  
+.xs-heading p.small {
+	font-size: 1em; }
 
 .xs-heading .xs-btn-wraper {
   text-align: right;
