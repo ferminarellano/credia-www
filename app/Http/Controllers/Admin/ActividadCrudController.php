@@ -37,7 +37,9 @@ class ActividadCrudController extends CrudController
 			'name' => 'actividad',
 			'label' => "Nombre de actividad",
 			'type' => 'text',
-			'placeholder' => "Ingrese el nombre de la actividad",
+			'attributes' => [
+				'placeholder' => "Ingrese el nombre de la actividad",
+			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			], 

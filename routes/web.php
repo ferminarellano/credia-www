@@ -6,23 +6,23 @@
 
 Auth::routes();
 
-Route::get('/home', 'PaginaController@inicio')->name('index');
+Route::get('/home', 'IndexController@index')->name('index');
 
-Route::get('/', ['as' => 'index', 'uses' => 'PaginaController@inicio']);
-Route::post('/','PaginaController@store_voluntario');
+Route::get('/', ['as' => 'index', 'uses' => 'IndexController@index']);
+Route::post('/','IndexController@store_voluntario');
 
-Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'PaginaController@snosotros']);
-Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'PaginaController@proyecto']);
-Route::get('/eventos', ['as' => 'evento', 'uses' => 'PaginaController@evento']);
-Route::get('/eventodetalles', ['as' => 'eventodetalle', 'uses' => 'PaginaController@eventodetalle']);
-Route::get('/blog', ['as' => 'blog', 'uses' => 'PaginaController@blog']);
-Route::get('/blogdetalles', ['as' => 'blogdetalle', 'uses' => 'PaginaController@blogdetalle']);
-Route::get('/donaciones', ['as' => 'donacion', 'uses' => 'PaginaController@donacion']);
-Route::get('/preguntasfrecuentes', ['as' => 'faq', 'uses' => 'PaginaController@faq']);
-Route::get('/nuestramision', ['as' => 'mision', 'uses' => 'PaginaController@mision']);
-Route::get('/galeria', ['as' => 'galeria', 'uses' => 'PaginaController@galeria']);
-Route::get('/precios', ['as' => 'precio', 'uses' => 'PaginaController@precio']);
-Route::get('/servicio', ['as' => 'servicio', 'uses' => 'PaginaController@servicio']);
-Route::get('/equipo', ['as' => 'equipo', 'uses' => 'PaginaController@equipo']);
-Route::get('/voluntarios', ['as' => 'voluntario', 'uses' => 'PaginaController@voluntario']);
-Route::get('/contacto', ['as' => 'contacto', 'uses' => 'PaginaController@contacto']);
+Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'IndexController@snosotros']);
+Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'IndexController@proyecto']);
+Route::get('/eventos', ['as' => 'evento', 'uses' => 'IndexController@evento']);
+Route::get('/eventodetalles', ['as' => 'eventodetalle', 'uses' => 'IndexController@eventodetalle']);
+Route::get('/blog', ['as' => 'blog', 'uses' => 'IndexController@blog']);
+Route::get('/blogdetalles', ['as' => 'blogdetalle', 'uses' => 'IndexController@blogdetalle']);
+Route::get('/donaciones', ['as' => 'donacion', 'uses' => 'IndexController@donacion']);
+Route::get('/preguntasfrecuentes', ['as' => 'faq', 'uses' => 'IndexController@faq']);
+Route::get('/nuestramision', ['as' => 'mision', 'uses' => 'IndexController@mision']);
+Route::get('/galeria', ['as' => 'galeria', 'uses' => 'IndexController@galeria']);
+Route::get('/precios', ['as' => 'precio', 'uses' => 'IndexController@precio']);
+Route::get('/servicio', ['as' => 'servicio', 'uses' => 'IndexController@servicio']);
+Route::get('/equipo', ['as' => 'equipo', 'uses' => 'IndexController@equipo']);
+Route::get('/voluntarios', ['as' => 'voluntario', 'uses' => 'VoluntarioController@voluntario']);
+Route::get('/contacto', ['as' => 'contacto', 'uses' => 'IndexController@contacto']);

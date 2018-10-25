@@ -2,7 +2,7 @@
 
 @section('title', 'Voluntarios -')
 
-@section('welcomevoluntario')
+@section('welcome_vol')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/volunteer_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -17,9 +17,8 @@
 	</section>
 @endsection
 
-@section('volunteer')
-	<main class="xs-main">
-		<!-- Volunteer section -->
+@section('voluntarios_vol')
+	<!-- Volunteer section -->
 	<section class="xs-section-padding">
 		<div class="container">
 			<div class="row">
@@ -27,7 +26,7 @@
 					<div class="xs-volunteer-form-wraper volunteer-version-2">
 						<h2>Become a Volunteer</h2>
 						<p>It only takes a minute to set up a campaign. Decide what to do. Pick a name. Pick a photo. And just like that, you’ll be ready to start raising money.</p>
-						<form action="#" method="POST" id="volunteer-form" class="xs-volunteer-form">
+						<form action="{{URL::to('/voluntarios')}}" method="POST" id="volunteer-form" class="xs-volunteer-form">
 							<div class="row">
 								<div class="col-lg-6">
 									<input type="text" id="volunteer_name" class="form-control" placeholder="Your Name">
@@ -61,9 +60,11 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End Volunteer section -->
+@endsection
 
-		<!-- team section -->
-		<section class="xs-section-padding bg-gray">
+@section('team_vol')
+	<!-- team section -->
+	<section class="xs-section-padding bg-gray">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
@@ -172,5 +173,4 @@
 			</div><!-- .row END -->
 		</div><!-- .container end -->
 	</section>	<!-- End team section -->
-	</main>
 @endsection
