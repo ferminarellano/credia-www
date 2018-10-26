@@ -214,8 +214,8 @@
 
 <!--   CONTENIDO VOLUNTARIOS   -->
 	@yield('welcome_vol')
-	@yield('voluntarios_vol')
 	@yield('team_vol')
+	@yield('voluntarios_vol')
 <!-- END CONTENIDO VOLUNTARIOS -->
 
 <!--   CONTENIDO CONTACTO   -->
