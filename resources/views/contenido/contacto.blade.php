@@ -3,7 +3,7 @@
 @section('title', 'Contacto -')
 
 @section('welcomecontacto')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/contact_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/contacto_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">

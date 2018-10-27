@@ -3,7 +3,7 @@
 @section('title', 'Eventos -')
 
 @section('welcomeevento')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/event_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/eventos_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
