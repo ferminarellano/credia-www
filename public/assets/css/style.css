@@ -1091,7 +1091,12 @@ blockquote {
   padding-bottom: 100px;
   position: relative;
   z-index: 2; }
-
+  
+.xs-single-causes img{
+	height:227px;
+	width:100%;
+}
+  
 .xs-single-causes {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
@@ -1124,7 +1129,8 @@ blockquote {
 .xs-causes-footer {
   text-align: center;
   padding: 30px;
-  color: #041D57; }
+  color: #677eb4; 
+  height: 250px;}
   .xs-causes-footer p {
     margin-bottom: 0; }
   .xs-causes-footer h2 {
@@ -1384,6 +1390,11 @@ blockquote {
     margin-bottom: 30px;
 	width: 98px;
 	height: 82px;}
+	.xs-service-promo-p span {
+    display: inline-block;
+    margin-bottom: 30px;
+	width: 98px;
+	height: 82px;}
   .xs-service-promo .color-orange {
     color: #f7a900; }
   .xs-service-promo .color-red {
@@ -1398,14 +1409,42 @@ blockquote {
     color: #011b58;
     line-height: 1.4;
     margin-bottom: 20px; }
-  .xs-service-promo p {
-    margin-bottom: 0; }
+	.xs-service-promo-p h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #011b58;
+    line-height: 1.4;
+    margin-bottom: 20px; }
+  .xs-service-promo-p p {
+    margin-bottom: 0; 
+	text-align:justify;
+	font-size: 13px;}
+	.xs-service-promo p {
+		margin-bottom: 0; 
+		text-align:justify;
+	}
   .xs-service-promo.box-color {
     padding: 40px 30px;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+	
+	.xs-service-promo-p.box-color {
+    padding: 40px 30px;
+	height: 362px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
     .xs-service-promo.box-color span,
-    .xs-service-promo.box-color h5,
+    .xs-service-promo.box-color h5{
+		color: #011b58;
+	}
+	 .xs-service-promo-p.box-color span{
+		margin-left: 45px;
+	 }
+    .xs-service-promo-p.box-color h5{
+		text-align: center;
+	}
+	.xs-service-promo-p.box-color p {
+      color: #FFFFFF; }
     .xs-service-promo.box-color p {
       color: #FFFFFF; }
   .xs-service-promo.box-image {
@@ -3632,6 +3671,11 @@ svg {
 
 .color-purple {
   color: #9064bf; }
+  
+  .color-blue-dark {
+  color: #011b58; 
+  font-size: 22px;
+  font-weight: 700;}
 
 .color-light-green {
   color: #2cc391; }
@@ -3676,14 +3720,17 @@ svg {
 .bg-green {
   background-color: #3ac798; }
 
+.bg-light-green {
+  background-color: #fa575d; } 
+ 
 .bg-light-red {
   background-color: #fa575d; }
 
 .bg-purple {
   background-color: #9064bf; }
 
-.bg-light-green {
-  background-color: #2cc391; }
+.bg-light-c-green {
+  background-color: #a6ce39 }
 
 .bg-orange {
   background-color: #f7a900; }
@@ -3762,8 +3809,9 @@ h1, h2, h3 {
 .parallax-window {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
+  background-position: center top;
+  background-size: 1349px 600px; 
+  height:600px;}
   
 .fi {
   padding: 45px 0;

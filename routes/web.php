@@ -14,7 +14,7 @@ Route::get('/eventos', ['as' => 'evento', 'uses' => 'EventoController@evento']);
 Route::get('/eventodetalles', ['as' => 'eventodetalle', 'uses' => 'EventoController@eventodetalle']);
 Route::get('/blog', ['as' => 'blog', 'uses' => 'BlogController@blog']);
 Route::get('/blogdetalles', ['as' => 'blogdetalle', 'uses' => 'BlogController@blogdetalle']);
-Route::get('/donaciones', ['as' => 'donacion', 'uses' => 'DonacionController@donacion']);
+Route::get('/patrocinar', ['as' => 'donacion', 'uses' => 'PatrocinadorController@donacion']);
 Route::get('/preguntasfrecuentes', ['as' => 'faq', 'uses' => 'IndexController@faq']);
 Route::get('/nuestra-mision', ['as' => 'mision', 'uses' => 'MisionController@mision']);
 Route::get('/galeria', ['as' => 'galeria', 'uses' => 'GaleriaController@galeria']);

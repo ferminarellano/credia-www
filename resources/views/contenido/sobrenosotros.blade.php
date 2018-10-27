@@ -3,7 +3,7 @@
 @section('title', 'Sobre nosotros -')
 
 @section('welcomesn')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/about_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/nosotros_bg.jpg')">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">

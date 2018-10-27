@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Donación ahora -')
+@section('title', 'Patrocina -')
 
 @section('welcomedonacion')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/about_bg.jpg')">
@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="color-white xs-inner-banner-content">
 			<h2>Conviertete en patrocinador</h2>
-			<p>Engrandece tu empresa, apoyando nuestros proyectos</p>
+			<p>Engrandece tu empresa, apoyando nuestras actividades</p>
 			<!-- <ul class="xs-breadcumb"> -->
 				<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Donación</li> -->
 			<!-- </ul> -->
@@ -23,31 +23,39 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo box-color bg-light-red">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
+					<div class="xs-service-promo-p box-color bg-light-c-green">
+						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/jardin_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Jardín botánico<br><small>Sendero Gerardo Rodríguez</small></h5>
-						<p>663 million people drink dirty water. Learn how access to clean water.</p>
+						<p>
+							Recorrido interpretado por un guía especializado en el Jardín del CREDIA.
+						</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo box-color bg-green">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/pasaporte.png') no-repeat;"></span>
+					<div class="xs-service-promo-p box-color bg-light-c-green">
+						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/pasaporte_w.png') no-repeat;"></span>
 						<h5>Pasaporte Verde<br><small>Corredor Biológico</small></h5>
-						<p>663 million people drink dirty water. Learn how access to clean water.</p>
+						<p>
+							Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH.
+						</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo box-color bg-blue">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
+					<div class="xs-service-promo-p box-color bg-light-c-green">
+						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/foresteria_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Forestería comunitaria<br><small>Cambio Climático</small></h5>
-						<p>663 million people drink dirty water. Learn how access to clean water.</p>
+						<p>
+							Concientización de métodos para mitigar los efectos del cambio climático.
+						</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo box-color bg-purple">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
+					<div class="xs-service-promo-p box-color bg-light-c-green">
+						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/videos_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Videos sobre el ambiente<br><small>Proyecciones en 3D</small></h5>
-						<p>663 million people drink dirty water. Learn how access to clean water.</p>
+						<p>
+							Enriqueciendo la experiencia de la visita en temas de importancia.
+						</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->
@@ -59,8 +67,8 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-6 mx-auto text-center">
-					<h2 class="xs-title">Helped Childrens</h2>
-					<p>Millions of children around the world are in need of a loving family. As a full-service agency</p>
+					<h2 class="xs-title">Otras actividades</h2>
+					<p>Excursiones, charlas, foros, senderismo y demás atracciones que te ofrecemos para planificar y aprovechar al máximo tu tiempo y enriquecer el aprendizaje.</p>
 					<span class="xs-separetor v3"></span>
 				</div>
 			</div><!-- .row end -->

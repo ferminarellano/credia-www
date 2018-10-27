@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DonacionController extends Controller
+class PatrocinadorController extends Controller
 {
 	public function donacion()
 	{
-		return view('contenido.donacion');
+		return view('contenido.patrocinador');
 	}
 	
 	public function precio()

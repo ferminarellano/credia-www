@@ -40,10 +40,10 @@
 						<h5>Nuestros componentes estratégicos actuales:</h5>
 						
 						<ul class="xs-unorder-list arrow">
-							<li>Observatorio Nacional de Cambio Climático para el Desarrollo Sostenible (ODS).</li>
-							<li>Centro de Documentación.</li>
-							<li>Educación Ambiental.</li>
-							<li>Innovación de la información y servicios técnicos.</li>
+							<li>Adaptación, Agua, Bosques y Suelos.</li>
+							<li>Cambio Climatico y Gestión Integral de Riesgos.</li>
+							<li>Interpretación y Educación Ambiental.</li>
+							<li>Observatorio de Desarrollo Sostenible (ODS).</li>
 						</ul>
 						
 						<ul class="xs-funfact-list">
