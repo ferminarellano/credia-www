@@ -3,12 +3,12 @@
 @section('title', 'Sobre nosotros -')
 
 @section('welcomesn')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/nosotros_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Sobre Nosotros</h2>
-				<p>Conoce más sobre la fundación</p>
+				<h2>{{$titulo}}</h2>
+				<p>{{$contenido}}</p>
 				<!-- <ul class="xs-breadcumb"> -->
 					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Conócenos</li> -->
 				<!-- </ul> -->

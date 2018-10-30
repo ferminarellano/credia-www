@@ -4,13 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contacto;
+use App\Models\Banner;
 use View;
 
 class ContactoController extends Controller
 {
 	public function contacto()
 	{
-		return View::make('contenido.contacto');
+		$banner = Banner::where([['indicador','=','contacto']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
+		
+		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
+		);
+		
+		return view('contenido.contacto')->with($data);
 	}
 	
 	public function store(Request $request)

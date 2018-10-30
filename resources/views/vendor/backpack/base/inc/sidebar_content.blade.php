@@ -4,7 +4,8 @@
 	<li class="treeview">
 		<a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Backgrounds</span> <i class="fa fa-angle-left pull-right"></i></a>
 		<ul class="treeview-menu">
-			<li><a href="{{ backpack_url('slider') }}"><i class="fa fa-picture-o"></i> <span>Slider</span></a></li>
+			<li><a href="{{ backpack_url('slider') }}"><i class="fa fa-picture-o"></i> <span>Slider index</span></a></li>
+			<li><a href="{{ backpack_url('banner') }}"><i class="fa fa-picture-o"></i> <span>Banner</span></a></li>
 		</ul>
 	</li>
 	
