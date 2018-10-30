@@ -26,26 +26,29 @@
 					<div class="col-lg-6">
 						<div class="xs-contact-form-wraper">
 							<h4>Escríbanos</h4>
-							<form action="#" method="POST" id="xs-contact-form" class="xs-contact-form contact-form-v2">
-								<div class="input-group">
-									<input type="text" name="name" id="xs-name" class="form-control" placeholder="Nombre completo">
-									<div class="input-group-append">
-										<div class="input-group-text"><i class="fa fa-user"></i></div>
-									</div>
-								</div><!-- .input-group END -->
-								<div class="input-group">
-									<input type="email" name="email" id="xs-email" class="form-control" placeholder="Correo">
-									<div class="input-group-append">
-										<div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
-									</div>
-								</div><!-- .input-group END -->
-								<div class="input-group massage-group">
-									<textarea name="massage" placeholder="Ingrese su mensaje" id="xs-massage" class="form-control" cols="30" rows="10"></textarea>
-									<div class="input-group-append">
-										<div class="input-group-text"><i class="fa fa-pencil"></i></div>
-									</div>
-								</div><!-- .input-group END -->
-								<button class="btn btn-success" type="submit" id="xs-submit">Enviar</button>
+							<form action="{{URL::to('/contactos')}}" method="post" class="xs-contact-form contact-form-v2">
+								{{ csrf_field() }}
+								<div class="row">
+									<div class="col-lg-12 input-group">
+										<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo">
+										<div class="input-group-append">
+											<div class="input-group-text"><i class="fa fa-user"></i></div>
+										</div>
+									</div><!-- .input-group END -->
+									<div class="col-lg-12 input-group">
+										<input type="email" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
+										<div class="input-group-append">
+											<div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
+										</div>
+									</div><!-- .input-group END -->
+									<div class="col-lg-12 input-group massage-group">
+										<textarea name="mensaje" id="mensaje" value="{{ old('mensaje') }}" placeholder="Ingrese su mensaje" class="form-control" cols="30" rows="10"></textarea>
+										<div class="input-group-append">
+											<div class="input-group-text"><i class="fa fa-pencil"></i></div>
+										</div>
+									</div><!-- .input-group END -->
+								</div><!-- .row end -->
+								<button type="submit" class="btn btn-success">Enviar</button>
 							</form><!-- .xs-contact-form #xs-contact-form END -->
 						</div><!-- .xs-contact-form-wraper END -->
 					</div>

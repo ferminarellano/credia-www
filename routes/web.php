@@ -22,7 +22,8 @@ Route::get('/precios', ['as' => 'precio', 'uses' => 'DonacionController@precio']
 Route::get('/actividades', ['as' => 'servicio', 'uses' => 'IndexController@servicio']);
 Route::get('/equipo', ['as' => 'equipo', 'uses' => 'EquipoController@equipo']);
 Route::get('/voluntarios', ['as' => 'voluntario', 'uses' => 'VoluntarioController@voluntario']);
-Route::get('/contacto', ['as' => 'contacto', 'uses' => 'ContactoController@contacto']);
+Route::get('/contactos', ['as' => 'contacto', 'uses' => 'ContactoController@contacto']);
 
 Route::post('/','IndexController@store');
 Route::post('/voluntarios','VoluntarioController@store');
+Route::post('/contactos','ContactoController@store');
