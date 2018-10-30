@@ -495,7 +495,7 @@
 									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo">
 								</div>
 								<div class="col-lg-6">	
-									<input type="text" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
+									<input type="email" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
 								</div>
 								<div class="col-lg-6">
 									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" >

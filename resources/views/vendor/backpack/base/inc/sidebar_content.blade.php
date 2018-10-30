@@ -16,3 +16,17 @@
 		</ul>
 	</li>
 	
+	<li class="treeview">
+		<a href="#"><i class="fa fa-folder" aria-hidden="true"></i> <span>Contacto</span> <i class="fa fa-angle-left pull-right"></i></a>
+		<ul class="treeview-menu">
+			<li><a href="{{ backpack_url('contacto') }}"><i class="fa fa-envelope"></i> <span>Mensajes</span></a></li>
+		</ul>
+	</li>
+	
+	<li class="treeview">
+		<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> <span>Redes sociales</span> <i class="fa fa-angle-left pull-right"></i></a>
+		<ul class="treeview-menu">
+			<li><a href="{{ backpack_url('social') }}"><i class="fa fa-tasks"></i> <span>Social</span></a></li>
+		</ul>
+	</li>
+	

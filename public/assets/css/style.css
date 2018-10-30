@@ -302,12 +302,14 @@ ul, li {
     color: #FFFFFF; }
 
 .btn-success {
-  background-color: #2cc391; }
+  background-color: #18bfc3; }
+  
   .btn-success:hover:before, .btn-success:hover:after {
-    background-color: #18bfc3; }
+	background-color: #a6ce39;}
+	
   .btn-success:hover {
-    background-color: #2cc391;
-    color: #FFFFFF; }
+    background-color: #18bfc3; 
+    color: black; }
 
 .btn-color-alt:hover {
   color: #000000; }
