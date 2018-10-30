@@ -3,15 +3,12 @@
 @section('title', 'Proyectos -')
 
 @section('welcomeproyecto')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/proyectos_bg.jpg')">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Proyectos</h2>
-				<!-- <p>Give a helping hand for poor people</p> -->
-				<!-- <ul class="xs-breadcumb"> -->
-					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Proyectos</li> -->
-				<!-- </ul> -->
+				<h2>{{$titulo}}</h2>
+				<p>{{$contenido}}</p>
 			</div>
 		</div>
 	</section>
