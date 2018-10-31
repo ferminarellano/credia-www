@@ -3811,9 +3811,11 @@ h1, h2, h3 {
 .parallax-window {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 1349px 600px; 
-  height:600px;}
+  background-position: center center;
+  background-size: cover; 
+  /* background-size: 1349px 600px;  */
+  /* height:600px; */
+  }
   
   .parallax-window-index {
   background-attachment: fixed;
