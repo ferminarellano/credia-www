@@ -1,33 +1,29 @@
-@extends('layouts.layout')
+@extends('layouts.layout_other')
 
 @section('title', 'Blog detalles -')
 
-@section('welcomebdetalle')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/blog_details_header_bg.jpg')">
-		<div class="xs-black-overlay"></div>
-		<div class="container">
-			<div class="color-white xs-inner-banner-content">
-				<h2>Blog Details</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Detalles</li>
-				</ul>
-			</div>
-		</div>
+@section('welcomebdetalle') <!--  background-image:url({{$articulo->first()->foto}}) -->
+	<section class="xs-banner-inner-section-other">
+		<!-- <div class="xs-black-overlay"></div> -->
+		<!-- <div class="container"> -->
+			<!-- <div class="color-white xs-inner-banner-content"> -->
+				<!-- <h2>{{$articulo->first()->titulo}}</h2> -->
+				<!-- <p>{{$articulo->first()->subtitulo}}</p> -->
+			<!-- </div> -->
+		<!-- </div> -->
 	</section>
 @endsection
 
 @section('blogdetalle')
-	<main class="xs-main">
-		<!-- blog single post -->
+	<!-- blog single post -->
 	<div class="xs-content-section-padding xs-blog-single">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-lg-8">
+				<div class="col-md-12 col-lg-8 estilo">
 					<!-- format standard -->
 					<article class="post format-standard hentry xs-blog-post-details">
 						<div class="post-media post-image">
-							<img src="assets/images/blog/news-1.jpg" class="img-responsive" alt="">
+							<img src="{{$articulo->first()->foto}}" class="img-responsive" alt="">
 						</div><!-- .post-media END -->
 
 						<div class="post-body xs-border xs-padding-40">
@@ -37,15 +33,15 @@
 										<span class="post-meta-date"><b>29</b> June</span>
 									</div>
 									<div class="col-md-10 d-flex align-items-end xs-post-meta-list">
-										<span class="post-cat">
-											<i class="fa fa-folder-open"></i><a href="#"> Funding consultancy</a>
-										</span>
+										<!-- <span class="post-cat"> -->
+											<!-- <i class="fa fa-folder-open"></i><a href="#"> Funding consultancy</a> -->
+										<!-- </span> -->
 
-										<span class="tags-links">
-											<i class="fa fa-tags"></i>
-											<a href="#" rel="tag">Fund</a>, 
-											<a href="#" rel="tag">Crowd</a>
-										</span>
+										<!-- <span class="tags-links"> -->
+											<!-- <i class="fa fa-tags"></i> -->
+											<!-- <a href="#" rel="tag">Fund</a>,  -->
+											<!-- <a href="#" rel="tag">Crowd</a> -->
+										<!-- </span> -->
 
 										<span class="post-comment">
 											<i class="fa fa-envelope-o"></i>
@@ -54,30 +50,12 @@
 									</div>
 								</div><!-- .row end -->
 								<h2 class="entry-title xs-post-entry-title">
-									<a href="#">Creative Footprint - Support NYC's first ever NightCamp!</a>
+									<a href="#">{{$articulo->first()->titulo}}</a>
 								</h2>
 							</div><!-- header end -->
 							
 							<div class="entry-content">
-								<p>Founded by berlin's clubcommissioner alongside amsterdam's with nightori mayor, the creative footprint works with our partner Poor Advisor, local nyc scene experts and researchers to gather data need for regular life. </p>
-
-								<p>Throw myself down teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary grow familiar with the countless indescribable forms of the insects and flies.  </p>
-
-								<blockquote>
-									Welcome to MONTH #4 of my Song of the Month project! In case you missed months one three, here's a little background on what I'm trying to do: I've released 6 albums list here available.
-								</blockquote>
-
-								<p>Throw myself down teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary grow familiar with the countless indescribable forms of the insects and flies.  </p>
-								
-								<h3 class="entry-sub-title">Farm-to-table selfies labore leggings:</h3>
-
-								<ul class="xs-unorder-list play">
-									<li>Plaid fashion axe semiotics skateboard</li>
-									<li>Mixtape fap Intelligentsia small batch placeat labore</li>
-									<li>Gleams steal into the inner sanctuary grow</li>
-									<li>Like these sweet mornings of spring which</li>
-								</ul>
-
+								{!! $articulo->first()->contenido_1 !!}
 							</div><!-- .xs-entry-content END -->
 
 							<div class="post-footer">
@@ -287,7 +265,7 @@
 								<textarea placeholder="Enter Comments *" name="comment" cols="45" rows="8"></textarea>
 								
 								<div class="text-right">
-									<button type="submit" class="btn btn-primary" name="submit">Post Comment</button>
+									<button type="submit" class="btn btn-primary" name="submit">Publicar comentario</button>
 								</div>
 							</form><!-- .comment-form END -->
 						</div>
@@ -295,152 +273,159 @@
 					</div>
 					<!-- end post comment -->
 				</div>
+				
 				<div class="col-md-12 col-lg-4">
-					<!-- sidebar content -->
+							<!-- sidebar content -->
 					<div class="sidebar sidebar-right">
-		<!-- search bar start -->
-		<div class="widget widget_search">	
-			<form class="xs-serachForm" method="get" action="GET">
-				<input type="search" name="search" placeholder="Type keywords...">
-				<input type="submit" value="">
-			</form>
-		</div>
-		<!-- search bas stop -->
-		<!-- recent post start -->
-		<div class="widget recent-posts xs-sidebar-widget">
-			<h3 class="widget-title">Trending Post</h3>
-			<ul class="xs-recent-post-widget">
-				<li>
-					<div class="posts-thumb float-left"> 
-						<a href="#">
-							<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
-							<div class="xs-entry-date">
-								<span class="entry-date d-block">21</span>
-								<span class="entry-month d-block">dec</span>
-							</div>
-							<div class="xs-black-overlay bg-aqua"></div>
-						</a>
-					</div><!-- .posts-thumb END -->
-					<div class="post-info">
-						<h4 class="entry-title">
-							<a href="#">Child Care Centers</a>
-						</h4>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="#">300 Comments</a>
-							</span><!-- .comments-link -->
+						<!-- search bar start -->
+						<div class="widget widget_search">	
+							<form class="xs-serachForm" method="get" action="GET">
+								<input type="search" name="search" placeholder="Escriba palabras clave...">
+								<input type="submit" value="">
+							</form>
 						</div>
-					</div><!-- .post-info END -->
-					<div class="clearfix"></div>
-				</li><!-- 1st post end-->
-				<li>
-					<div class="posts-thumb float-left"> 
-						<a href="#">
-							<img alt="img" class="img-responsive" src="assets/images/news_feeds_2.jpg">
-							<div class="xs-entry-date">
-								<span class="entry-date d-block">23</span>
-								<span class="entry-month d-block">sep</span>
-							</div>
-							<div class="xs-black-overlay bg-aqua"></div>
-						</a>
-					</div><!-- .posts-thumb END -->
-					<div class="post-info">
-						<h4 class="entry-title">
-							<a href="#">Disaster Relief</a>
-						</h4>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="#">35 Comments</a>
-							</span><!-- .comments-link -->
+						<!-- search bas stop -->
+						<!-- recent post start -->
+						<div class="widget recent-posts xs-sidebar-widget">
+							<h3 class="widget-title">Trending Post</h3>
+							<ul class="xs-recent-post-widget">
+								<li>
+									<div class="posts-thumb float-left"> 
+										<a href="#">
+											<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+											<div class="xs-entry-date">
+												<span class="entry-date d-block">21</span>
+												<span class="entry-month d-block">dec</span>
+											</div>
+											<div class="xs-black-overlay bg-aqua"></div>
+										</a>
+									</div><!-- .posts-thumb END -->
+									<div class="post-info">
+										<h4 class="entry-title">
+											<a href="#">Child Care Centers</a>
+										</h4>
+										<div class="post-meta">
+											<span class="comments-link">
+												<i class="fa fa-comments-o"></i>
+												<a href="#">300 Comments</a>
+											</span><!-- .comments-link -->
+										</div>
+									</div><!-- .post-info END -->
+									<div class="clearfix"></div>
+								</li><!-- 1st post end-->
+								<li>
+									<div class="posts-thumb float-left"> 
+										<a href="#">
+											<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+											<div class="xs-entry-date">
+												<span class="entry-date d-block">23</span>
+												<span class="entry-month d-block">sep</span>
+											</div>
+											<div class="xs-black-overlay bg-aqua"></div>
+										</a>
+									</div><!-- .posts-thumb END -->
+									<div class="post-info">
+										<h4 class="entry-title">
+											<a href="#">Disaster Relief</a>
+										</h4>
+										<div class="post-meta">
+											<span class="comments-link">
+												<i class="fa fa-comments-o"></i>
+												<a href="#">35 Comments</a>
+											</span><!-- .comments-link -->
+										</div>
+									</div><!-- .post-info END -->
+									<div class="clearfix"></div>
+								</li><!-- 2nd post end-->
+							</ul>
 						</div>
-					</div><!-- .post-info END -->
-					<div class="clearfix"></div>
-				</li><!-- 2nd post end-->
-			</ul>
-		</div>
-		<!-- recent post end -->
-		<!-- categories start -->
-		<div class="widget widget_categories xs-sidebar-widget">
-			<h3 class="widget-title">Categories</h3>
-			<ul class="xs-side-bar-list">
-				<li><a href="#"><span>Adoption</span><span>(33)</span></a></li>
-				<li><a href="#"><span>Fundrise</span><span>(97)</span></a></li>
-				<li><a href="#"><span>Bolunteer</span><span>(89)</span></a></li>
-				<li><a href="#"><span>Water</span><span>(82)</span></a></li>
-				<li><a href="#"><span>Foods</span><span>(76)</span></a></li>
-				<li><a href="#"><span>Health</span><span>(93)</span></a></li>
-			</ul>
-		</div>
-		<!-- categories end -->
-		<!-- call to action start -->
-		<div class="widget widget_call_to_action">
-			<a href="#" class="d-block">
-				<img src="assets/images/side_add_baner.jpg" alt="">
-			</a>
-		</div>
-		<!-- call to action end -->
-		<!-- insta feed -->
-		<div class="widget widget_instafeed xs-sidebar-widget">
-			<h3 class="widget-title">Instagram Feeds</h3>
-			<ul class="xs-demoFeed clearfix"></ul>
-		</div>
-		<!-- insta feed closed -->
-		<!-- widget tags -->
-		<div class="widget widget_tags xs-sidebar-widget">
-			<h3 class="widget-title">Popular Tags</h3>
+						
+						<!-- recent post end -->
+						<!-- categories start -->
+						<div class="widget widget_categories xs-sidebar-widget">
+							<h3 class="widget-title">Categories</h3>
+							<ul class="xs-side-bar-list">
+								<li><a href="#"><span>Adoption</span><span>(33)</span></a></li>
+								<li><a href="#"><span>Fundrise</span><span>(97)</span></a></li>
+								<li><a href="#"><span>Bolunteer</span><span>(89)</span></a></li>
+								<li><a href="#"><span>Water</span><span>(82)</span></a></li>
+								<li><a href="#"><span>Foods</span><span>(76)</span></a></li>
+								<li><a href="#"><span>Health</span><span>(93)</span></a></li>
+							</ul>
+						</div>
+						<!-- categories end -->
+						<!-- call to action start -->
+						<div class="widget widget_call_to_action">
+							<a href="#" class="d-block">
+								<img src="assets/images/side_add_baner.jpg" alt="">
+							</a>
+						</div>
+						
+						<!-- call to action end -->
+						<!-- insta feed -->
+						<!-- <div class="widget widget_instafeed xs-sidebar-widget"> -->
+							<!-- <h3 class="widget-title">Instagram Feeds</h3> -->
+							<!-- <ul class="xs-demoFeed clearfix"></ul> -->
+						<!-- </div> -->
+						
+						<!-- insta feed closed -->
+						<!-- widget tags -->
+						<!-- <div class="widget widget_tags xs-sidebar-widget"> -->
+							<!-- <h3 class="widget-title">Popular Tags</h3> -->
 
-			<div class="xs-blog-post-tag">
-				<a href="#">Crowdfunding</a>
-				<a href="#">Fundrise</a>
-				<a href="#">70</a>
-				<a href="#">Medicine</a>
-				<a href="#">Food</a>
-				<a href="#">7</a>
-				<a href="#">Greeny</a>
-				<a href="#">Fundrising</a>
-				<a href="#">Hopes</a>
-				<a href="#">Medical</a>
-				<a href="#">Help</a>
-			</div>
-		</div>
-		<!-- widget tags closed -->
-		<!-- widget tags -->
-		<div class="widget widget_social_share xs-sidebar-widget">
-			<h3 class="widget-title">Social Share</h3>
+							<!-- <div class="xs-blog-post-tag"> -->
+								<!-- <a href="#">Crowdfunding</a> -->
+								<!-- <a href="#">Fundrise</a> -->
+								<!-- <a href="#">70</a> -->
+								<!-- <a href="#">Medicine</a> -->
+								<!-- <a href="#">Food</a> -->
+								<!-- <a href="#">7</a> -->
+								<!-- <a href="#">Greeny</a> -->
+								<!-- <a href="#">Fundrising</a> -->
+								<!-- <a href="#">Hopes</a> -->
+								<!-- <a href="#">Medical</a> -->
+								<!-- <a href="#">Help</a> -->
+							<!-- </div> -->
+						<!-- </div> -->
+						
+						<!-- widget tags closed -->
+						<!-- widget tags -->
+						<!-- <div class="widget widget_social_share xs-sidebar-widget"> -->
+							<!-- <h3 class="widget-title">Social Share</h3> -->
 
-			<ul class="xs-social-list boxed">
-				<li><a href="#" class="color-facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
-				<li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i>twitter</a></li>
-				<li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i>Pinterest</a></li>
-				<li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i>Dribbble</a></li>
-				<li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i>Instagram</a></li>
-				<li><a href="#" class="color-linkedin"><i class="fa fa-linkedin"></i>Linkedin</a></li>
-			</ul>
-		</div>
-		<!-- widget tags closed -->
-		<!-- widget archives -->
-		<div class="widget widget_categories xs-sidebar-widget">
-			<h3 class="widget-title">Archives</h3>
-			<ul class="xs-side-bar-list">
-				<li><a href="#"><span>2018 January</span><span>(6733)</span></a></li>
-				<li><a href="#"><span>2017 January</span><span>(5897)</span></a></li>
-				<li><a href="#"><span>2015 January</span><span>(4589)</span></a></li>
-				<li><a href="#"><span>2014 January</span><span>(3082)</span></a></li>
-				<li><a href="#"><span>2013 January</span><span>(2676)</span></a></li>
-				<li><a href="#"><span>2012 January</span><span>(1995)</span></a></li>
-			</ul>
-		</div>
-		<!-- widget archives closed -->
-	</div>				<!-- End sidebar content -->
+							<!-- <ul class="xs-social-list boxed"> -->
+								<!-- <li><a href="#" class="color-facebook"><i class="fa fa-facebook"></i>Facebook</a></li> -->
+								<!-- <li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i>twitter</a></li> -->
+								<!-- <li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i>Pinterest</a></li> -->
+								<!-- <li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i>Dribbble</a></li> -->
+								<!-- <li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i>Instagram</a></li> -->
+								<!-- <li><a href="#" class="color-linkedin"><i class="fa fa-linkedin"></i>Linkedin</a></li> -->
+							<!-- </ul> -->
+						<!-- </div> -->
+						
+						<!-- widget tags closed -->
+						<!-- widget archives -->
+						<!-- <div class="widget widget_categories xs-sidebar-widget"> -->
+							<!-- <h3 class="widget-title">Archives</h3> -->
+							<!-- <ul class="xs-side-bar-list"> -->
+								<!-- <li><a href="#"><span>2018 January</span><span>(6733)</span></a></li> -->
+								<!-- <li><a href="#"><span>2017 January</span><span>(5897)</span></a></li> -->
+								<!-- <li><a href="#"><span>2015 January</span><span>(4589)</span></a></li> -->
+								<!-- <li><a href="#"><span>2014 January</span><span>(3082)</span></a></li> -->
+								<!-- <li><a href="#"><span>2013 January</span><span>(2676)</span></a></li> -->
+								<!-- <li><a href="#"><span>2012 January</span><span>(1995)</span></a></li> -->
+							<!-- </ul> -->
+						<!-- </div>--><!-- widget archives closed -->
+					</div><!-- End sidebar content -->
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</div>	<!-- End blog single post -->
+@endsection
 
-		<!-- journal section -->
-		<section class="xs-section-padding bg-gray">
+@section('bd_revista')
+	<!-- journal section -->
+	<section class="xs-section-padding bg-gray">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-9 col-xl-9">
@@ -573,5 +558,4 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End journal section -->
-	</main>
 @endsection

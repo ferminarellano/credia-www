@@ -271,9 +271,13 @@ ul, li {
 
 .btn-primary {
   background-color: #6acaf0; }
+ .btn-other {
+  background-color: #011b58; }
   .btn-primary:hover:before, .btn-primary:hover:after {
     background-color: #011b58;
 	color: #FFFFFF;	}
+	.btn-other:hover:before, .btn-other:hover:after {
+    background-color: #6acaf0;}
   .btn-primary:hover {
     background-color: #18bfc3;
     color: #FFFFFF; }
@@ -800,11 +804,21 @@ blockquote {
   line-height: 100px; }
   
 .nav-opacity{
-	margin-top:50px;
-	margin-left:280px;
+	margin-top:48.5px;
+	margin-left:185px;
 	position:absolute;
-	height:45px;
+	height:44.5px;
 	background-color:rgba(255,255,255,4%);
+	border-top:1px solid rgba(255,255,255,7%);
+	border-bottom: 1px solid rgba(255,255,255,7%);
+}
+
+.nav-opacity-other{
+	margin-top:51px;
+	margin-left:185px;
+	position:absolute;
+	height:43px;
+	background-color:rgba(1,27,88,10%);
 	border-top:1px solid rgba(255,255,255,7%);
 	border-bottom: 1px solid rgba(255,255,255,7%);
 }
@@ -833,6 +847,19 @@ blockquote {
   max-height: 140px;
   line-height: 110px;
   text-align: center; }
+  
+.header-transparent-other .nav-brand,
+.xs-box .nav-brand {
+  display: block;
+  position: relative;
+  z-index: 1;
+  background-image: url("../images/logo-bg.png");
+  -webkit-filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(8px 0px 16px rgba(0, 0, 0, 0.2));
+  min-height: 140px;
+  max-height: 140px;
+  line-height: 110px;
+  text-align: center; }
 
 .xs-nav-logo {
   display: none; }
@@ -841,12 +868,21 @@ blockquote {
 .xs-box .nav-menu {
   text-align: center;
   padding-left: 30px;
+  padding-top:23px;}
+
+.header-transparent-other .nav-menu,
+.xs-box .nav-menu {
+  text-align: center;
+  padding-left: 30px;
   padding-top:3px;}
   
   .header-transparent .nav-menu li,
   .xs-box .nav-menu li {
     float: none; }
-    .header-transparent .nav-menu li a,
+	.header-transparent-other .nav-menu li,
+  .xs-box .nav-menu li {
+    float: none; }
+    .header-transparent-other .nav-menu li a,
     .xs-box .nav-menu li a {
       padding: 60px 15px; }
 
@@ -856,12 +892,25 @@ blockquote {
   left: 0;
   width: 100%;
   z-index: 9999; }
+  .header-transparent-other {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; }
   .header-transparent .xs-top-bar {
+    margin-left: -15px;
+    margin-right: -15px; }
+	.header-transparent-other .xs-top-bar {
     margin-left: -15px;
     margin-right: -15px; }
   .header-transparent .nav-menu li a {
     color: #FFFFFF; }
+  .header-transparent-other .nav-menu li a {
+    color: #011b58; }
     .header-transparent .nav-menu li a .submenu-indicator-chevron {
+      border-color: transparent #FFFFFF #FFFFFF transparent; }
+	.header-transparent-other .nav-menu li a .submenu-indicator-chevron {
       border-color: transparent #FFFFFF #FFFFFF transparent; }
 
 /* nav bar v2 */
@@ -3053,6 +3102,11 @@ svg {
   padding-top: 245px;
   padding-bottom: 279px;
   position: relative; }
+  
+.xs-banner-inner-section-other{
+background-color:#F9F9F9;
+height:150px;
+position: relative; }
 
 .xs-inner-banner-content {
   position: relative;
@@ -3446,7 +3500,12 @@ svg {
     font-style: italic; }
 
 .widget {
-  margin-bottom: 40px; }
+  margin-bottom: 40px; 
+  background-color:#FFFFFF;}
+  
+  .widget-footer {
+  margin-bottom: 40px; 
+  background-color:#011b58;}
 
 .sidebar-right .widget {
   margin-left: 10px; }
@@ -3567,6 +3626,12 @@ svg {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top; }
+ 
+ .xs-bg-property, .header-transparent-other .nav-brand,
+.xs-box .nav-brand {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top; }
 
 .content-center {
   text-align: center;
@@ -3588,7 +3653,8 @@ svg {
   padding: 100px 0; }
 
 .xs-content-section-padding {
-  padding: 100px 0px; }
+  padding: 90px 0px; 
+  background-color:#F9F9F9;}
 
 .xs-content-padding {
   padding: 30px 30px; }
@@ -3760,6 +3826,16 @@ svg {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0; }
+
+.xs-black-overlay-other {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  z-index: 0; }  
+  
   .xs-black-overlay.bg-aqua {
     background-color: rgba(24, 191, 195, 0.8); }
   .xs-black-overlay.bg-navy-blue {
@@ -3822,6 +3898,11 @@ h1, h2, h3 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+  
+  .estilo {
+	padding: 15px;
+	background-color: #FFFFFF;
+  }
   
 .fi {
   padding: 45px 0;

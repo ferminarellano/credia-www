@@ -32,6 +32,14 @@
 	</li>
 	
 	<li class="treeview">
+		<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+		<ul class="treeview-menu">
+			<li><a href="{{ backpack_url('blog') }}"><i class="fa fa-rss"></i> <span>Nuevos artículos</span></a></li>
+			<li><a href="{{ backpack_url('categoria') }}"><i class="fa fa-tasks"></i> <span>Categorías</span></a></li>
+		</ul>
+	</li>
+	
+	<li class="treeview">
     <a href="#"><i class="fa fa-group"></i> <span>Gestión de usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
     <ul class="treeview-menu">
       <li><a href="{{ backpack_url('user') }}"><i class="fa fa-user"></i> <span>Usuarios</span></a></li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Banner;
+use App\Models\Blog;
 
 class BlogController extends Controller
 {
@@ -14,10 +15,13 @@ class BlogController extends Controller
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
 		
+		$articulo = Blog::where([['id','=','2']])->get();
+		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
+			"articulo" => $articulo,
 		);
 		
 		return view('contenido.blog')->with($data);
@@ -25,6 +29,12 @@ class BlogController extends Controller
 	
 	public function blogdetalle()
 	{
-		return view('contenido.blogdetalle');
+		$articulo = Blog::where([['id','=','2']])->get();
+		
+		$data = array(
+			"articulo" => $articulo,
+		);
+		
+		return view('contenido.blogdetalle')->with($data);
 	}
 }

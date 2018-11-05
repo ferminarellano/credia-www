@@ -70,7 +70,7 @@
 		</div>
 	</div>-->
 
-	<header class="xs-header header-transparent">
+	<header class="xs-header header-transparent-other">
 		<div class="container">
 		<nav class="xs-menus">
 			<div class="nav-header">
@@ -87,7 +87,7 @@
 					</a>
 				</div><!-- .xs-logo-wraper END -->
 			    
-				<div class="col-lg-9 nav-opacity"></div> <!-- .nav-opacity END -->
+				<div class="col-lg-9 nav-opacity-other"></div> <!-- .nav-opacity END -->
 				
 				<div class="col-lg-8">
 					<ul class="nav-menu" style="">
@@ -121,7 +121,7 @@
 					</ul><!-- .nav-menu END -->
 				</div>
 				<div class="xs-navs-button d-flex-center-end col-lg-2">
-					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
+					<a href="{{ URL::route('contacto') }}" class="btn btn-primary btn-other">Contacto</a>
 				</div><!-- .xs-navs-button END -->
 			</div><!-- .nav-menus-wrapper .row END -->
 		</nav><!-- .xs-menus .fundpress-menu END -->
@@ -175,6 +175,7 @@
 <!--   CONTENIDO BLOG DETALLE   -->
 	@yield('welcomebdetalle')
 	@yield('blogdetalle')
+	{{--@yield('bd_revista')--}}
 <!-- END CONTENIDO BLOG DETALLE -->
 
 <!--   CONTENIDO DONACION-NOW   -->
