@@ -4,46 +4,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\Builder;
 
-class Slider extends Model
+class Evento extends Model
 {
     use CrudTrait;
-	use \Venturecraft\Revisionable\RevisionableTrait;
 
-    protected $table = 'sliders';
+    protected $table = 'eventos';
     protected $primaryKey = 'id';
+    public $timestamps = true;
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['foto','indicador','titulo','contenido','secuencia'];
+    protected $fillable = ['titulo','subtitulo','foto','fecha','contenido','organizador',
+						   'horaInicio','horaFinal','direccion','telefono','correo',
+						   'latitud','longitud','mision','vision','objetivo'];
     // protected $hidden = [];
     // protected $dates = [];
-	public $timestamps = true;
 	protected $visible = ['foto'];
-	
-	protected $revisionCreationsEnabled = true;
-	protected $revisionFormattedFieldNames = array(
-		'foto' => 'foto',
-		'titulo' => 'título',
-		'contenido' => 'contenido',
-		'secuencia' => 'secuencia',
-	);
 
-    /*------------------------------------------------------------------------
+    /*-------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
-		
+	
 	public static function boot()
-	{
+    {
 		parent::boot();
-		
-		self::creating(function($model)
-		{	
-			$indicador = "inicio";
-			
-			$model->indicador = $indicador;
-		});
 		
 		self::deleting(function($obj) {
 			if (count((array)$obj->fotos)) {
@@ -52,12 +36,22 @@ class Slider extends Model
 				}
 			}
 		});
-	}
-		
+    }
+	
     /*-------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
-
+	
+	public function patrocinadores()
+	{
+		return $this->belongsToMany('App\Models\Patrocinador', 'evento_patrocinador','evento_id') ;
+	}
+	
+	public function contacto_eventos()
+	{
+		return $this-> hasMany('App\Models\ContactoEvento');
+	}
+	
     /*-------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
@@ -74,7 +68,7 @@ class Slider extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos";
+		$destination_path = "images/fotos-detalle-eventos";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

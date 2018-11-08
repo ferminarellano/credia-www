@@ -807,6 +807,7 @@ blockquote {
 	margin-top:48.5px;
 	margin-left:185px;
 	position:absolute;
+	width:850px;
 	height:44.5px;
 	background-color:rgba(255,255,255,4%);
 	border-top:1px solid rgba(255,255,255,7%);
@@ -818,6 +819,7 @@ blockquote {
 	margin-left:185px;
 	position:absolute;
 	height:43px;
+	width:850px;
 	background-color:rgba(1,27,88,10%);
 	border-top:1px solid rgba(255,255,255,7%);
 	border-bottom: 1px solid rgba(255,255,255,7%);
