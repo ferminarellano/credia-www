@@ -6,23 +6,26 @@
 
 Auth::routes();
 
+
+
 Route::get('/home', 'IndexController@index')->name('index');
-Route::get('/', ['as' => 'index', 'uses' => 'IndexController@index']);
-Route::get('/conocenos', ['as' => 'sobrenosotros', 'uses' => 'ConoceController@snosotros']);
-Route::get('/proyectos', ['as' => 'proyecto', 'uses' => 'ProyectoController@proyecto']);
-Route::get('/eventos', ['as' => 'evento', 'uses' => 'EventoController@evento']);
-Route::get('/eventodetalles', ['as' => 'eventodetalle', 'uses' => 'EventoController@eventodetalle']);
-Route::get('/blog', ['as' => 'blog', 'uses' => 'BlogController@blog']);
-Route::get('/blogdetalles', ['as' => 'blogdetalle', 'uses' => 'BlogController@blogdetalle']);
-Route::get('/patrocinar', ['as' => 'donacion', 'uses' => 'PatrocinadorController@donacion']);
-Route::get('/preguntasfrecuentes', ['as' => 'faq', 'uses' => 'IndexController@faq']);
-Route::get('/nuestra-mision', ['as' => 'mision', 'uses' => 'MisionController@mision']);
-Route::get('/galeria', ['as' => 'galeria', 'uses' => 'GaleriaController@galeria']);
-Route::get('/precios', ['as' => 'precio', 'uses' => 'DonacionController@precio']);
-Route::get('/actividades', ['as' => 'servicio', 'uses' => 'IndexController@servicio']);
-Route::get('/equipo', ['as' => 'equipo', 'uses' => 'EquipoController@equipo']);
-Route::get('/voluntarios', ['as' => 'voluntario', 'uses' => 'VoluntarioController@voluntario']);
-Route::get('/contactos', ['as' => 'contacto', 'uses' => 'ContactoController@contacto']);
+Route::get('/','IndexController@index')->name('index');
+Route::get('/conocenos', 'ConoceController@snosotros')->name('sobrenosotros');
+Route::get('/proyectos', 'ProyectoController@proyecto')->name('proyecto');
+Route::get('/eventos', 'EventoController@evento')->name('evento');
+Route::get('/eventodetalles', 'EventoController@eventodetalle')->name('eventodetalle');
+Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::get('/patrocinar', 'PatrocinadorController@donacion')->name('donacion');
+Route::get('/preguntasfrecuentes','IndexController@faq')->name('faq');
+Route::get('/nuestra-mision', 'MisionController@mision')->name('mision');
+Route::get('/galeria', 'GaleriaController@galeria')->name('galeria');
+Route::get('/precios', 'DonacionController@precio')->name('precio');
+Route::get('/actividades', 'IndexController@servicio')->name('servicio');
+Route::get('/equipo', 'EquipoController@equipo')->name('equipo');
+Route::get('/voluntarios','VoluntarioController@voluntario')->name('voluntario');
+Route::get('/contactos', 'ContactoController@contacto')->name('contacto');
+
+Route::get('blog/{id}', 'BlogController@blogdetalle')->name('blogdetalle');
 
 Route::post('/','IndexController@store');
 Route::post('/voluntarios','VoluntarioController@store');

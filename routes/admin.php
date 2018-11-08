@@ -6,4 +6,6 @@
 	CRUD::resource('actividad', 'ActividadCrudController');
 	CRUD::resource('contacto', 'ContactoCrudController');
 	CRUD::resource('social', 'SocialCrudController');
+	CRUD::resource('blog', 'BlogCrudController');
+	CRUD::resource('categoria', 'CategoriaCrudController');
 	
