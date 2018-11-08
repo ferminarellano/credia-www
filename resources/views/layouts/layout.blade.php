@@ -96,26 +96,26 @@
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 						<li><a href="{{ URL::route('evento') }}">Eventos</a>
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> -->
-								<!-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> -->
+								{{-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> --}}
+								{{-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> --}}
 							<!-- </ul> -->
 						</li>
-						<li><a href="{{ URL::route('blog') }}">Blog</a>
+							<li><a href="{{ URL::route('blog') }}">Blog</a>
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> -->
-								<!-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> -->
+								{{-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> --}}
+								{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
 							<!-- </ul> -->
 						</li>
 						<!-- <li><a href="#">Páginas</a> -->
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> -->
-								<!-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> -->
-								<!-- <li><a href="{{ URL::route('mision') }}">misión</a></li> -->
-								<!-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> -->
-								<!-- <li><a href="{{ URL::route('precio') }}">precio</a></li> -->
-								<!-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> -->
-								<!-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> -->
-								<!-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> -->
+								{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
+								{{-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> --}}
+								{{-- <li><a href="{{ URL::route('mision') }}">misión</a></li> --}}
+								{{-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> --}}
+								{{-- <li><a href="{{ URL::route('precio') }}">precio</a></li> --}}
+								{{-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> --}}
+								{{-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> --}}
+								{{-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> --}}
 							<!-- </ul> -->
 						<!-- </li> -->
 					</ul><!-- .nav-menu END -->

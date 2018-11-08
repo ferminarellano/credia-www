@@ -1846,6 +1846,10 @@ blockquote {
     background-color: #f3f3f3; }
   .xs-single-journal .entry-thumbnail {
     position: relative; }
+  .entry-thumbnail .img-height{
+	height:208px;  
+	width:100%;
+  }
     .xs-single-journal .entry-thumbnail .author-name a {
       font-size: 0.85714em;
       color: #FFFFFF;
@@ -1888,13 +1892,14 @@ blockquote {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
   .xs-single-journal .entry-header {
-    padding: 40px 30px 30px 30px; }
+    padding: 40px 30px 30px 30px; 
+	height:200px;}
   .xs-single-journal:hover.xs-box-shadow {
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
   .xs-single-journal .entry-header span a {
     color: #18bfc3;
-    font-size: 1.14286em;
+    font-size: 11px;
     display: inline-block;
     line-height: 1; }
   .xs-single-journal .entry-header .entry-meta {
@@ -3604,9 +3609,9 @@ position: relative; }
     .xs-side-bar-list li a span {
       display: table-cell;
       width: 50%; }
-      .xs-side-bar-list li a span:first-child {
+      .xs-side-bar-list li a .first {
         text-align: left; }
-      .xs-side-bar-list li a span:last-child {
+      .xs-side-bar-list li a .last {
         text-align: right; }
     .xs-side-bar-list li a:hover {
       color: #18bfc3; }

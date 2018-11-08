@@ -9,7 +9,7 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto+Slab:400,700" rel="stylesheet">
 
-		<link rel="icon" type="image/png" href="favicon.ico"> 
+		<link rel="icon" type="image/png" href="/favicon.ico"> 
 		
 		<!-- Place favicon.ico in the root directory -->
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -76,14 +76,14 @@
 			<div class="nav-header">
 				<div class="nav-toggle"></div>
 				<a href="{{ URL::route('index') }}" class="nav-logo">
-					<img src="assets/images/logo.png" alt="CREDIA">
+					<img src="/assets/images/logo.png" alt="CREDIA">
 				</a>
 			</div> <!-- .nav-header END -->
 			
 			<div class="nav-menus-wrapper row" style="width:100%;position: relative;">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
-						<img src="assets/images/logo.png" alt="">
+						<img src="/assets/images/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
 			    
@@ -96,26 +96,26 @@
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 						<li><a href="{{ URL::route('evento') }}">Eventos</a>
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> -->
-								<!-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> -->
+								{{-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> --}}
+								{{-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> --}}
 							<!-- </ul> -->
 						</li>
-						<li><a href="{{ URL::route('blog') }}">Blog</a>
+							<li><a href="{{ URL::route('blog') }}">Blog</a>
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> -->
-								<!-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> -->
+								{{-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> --}}
+								{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
 							<!-- </ul> -->
 						</li>
 						<!-- <li><a href="#">Páginas</a> -->
 							<!-- <ul class="nav-dropdown"> -->
-								<!-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> -->
-								<!-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> -->
-								<!-- <li><a href="{{ URL::route('mision') }}">misión</a></li> -->
-								<!-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> -->
-								<!-- <li><a href="{{ URL::route('precio') }}">precio</a></li> -->
-								<!-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> -->
-								<!-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> -->
-								<!-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> -->
+								{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
+								{{-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> --}}
+								{{-- <li><a href="{{ URL::route('mision') }}">misión</a></li> --}}
+								{{-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> --}}
+								{{-- <li><a href="{{ URL::route('precio') }}">precio</a></li> --}}
+								{{-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> --}}
+								{{-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> --}}
+								{{-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> --}}
 							<!-- </ul> -->
 						<!-- </li> -->
 					</ul><!-- .nav-menu END -->
@@ -230,7 +230,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-6 footer-widget xs-pr-20">
 						<a href="{{ URL::route('index') }}" class="xs-footer-logo">
-							<img src="assets/images/footer_logo.png" style="">
+							<img src="/assets/images/footer_logo.png" style="">
 						</a>
 						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">
@@ -258,7 +258,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">21</span>
 													<span class="entry-month d-block">dec</span>
@@ -282,7 +282,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">23</span>
 													<span class="entry-month d-block">sep</span>
