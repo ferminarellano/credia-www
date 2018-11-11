@@ -8,4 +8,6 @@
 	CRUD::resource('social', 'SocialCrudController');
 	CRUD::resource('blog', 'BlogCrudController');
 	CRUD::resource('categoria', 'CategoriaCrudController');
+	CRUD::resource('evento', 'EventoCrudController');
+	CRUD::resource('patrocinador', 'PatrocinadorCrudController');
 	

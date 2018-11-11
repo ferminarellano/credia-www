@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Banner;
+use App\Models\Evento;
+use View;
 
 class EventoController extends Controller
 {
@@ -14,17 +16,26 @@ class EventoController extends Controller
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
 		
+		$eventos = Evento::all();
+		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
+			"eventos" => $eventos,
 		);
 		
-		return view('contenido.evento')->with($data);
+		return View::make('contenido.evento')->with($data);
 	}
 	
-	public function eventodetalle()
+	public function eventodetalle($id)
 	{
-		return view('contenido.eventodetalle');
+		$evento = Evento::where([['id',$id]])->get();
+		
+		$data = array(
+			"evento" => $evento,
+		);
+		
+		return View::make('contenido.eventodetalle')->with($data);
 	}
 }

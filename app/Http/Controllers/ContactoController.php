@@ -22,7 +22,7 @@ class ContactoController extends Controller
 			"contenido" => $contenido,
 		);
 		
-		return view('contenido.contacto')->with($data);
+		return View::make('contenido.contacto')->with($data);
 	}
 	
 	public function store(Request $request)

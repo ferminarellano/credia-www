@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use View;
 
 class PatrocinadorController extends Controller
 {
 	public function donacion()
 	{
-		return view('contenido.patrocinador');
+		return View::make('contenido.patrocinador');
 	}
 	
 	public function precio()
 	{
-		return view('contenido.precio');
+		return View::make('contenido.precio');
 	}
 }

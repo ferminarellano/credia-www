@@ -4,46 +4,28 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\Builder;
 
-class Slider extends Model
+class Patrocinador extends Model
 {
     use CrudTrait;
-	use \Venturecraft\Revisionable\RevisionableTrait;
 
-    protected $table = 'sliders';
+    protected $table = 'patrocinadores';
     protected $primaryKey = 'id';
+    public $timestamps = true;
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['foto','indicador','titulo','contenido','secuencia'];
+    protected $fillable = ['nombre','foto'];
     // protected $hidden = [];
     // protected $dates = [];
-	public $timestamps = true;
 	protected $visible = ['foto'];
-	
-	protected $revisionCreationsEnabled = true;
-	protected $revisionFormattedFieldNames = array(
-		'foto' => 'foto',
-		'titulo' => 'título',
-		'contenido' => 'contenido',
-		'secuencia' => 'secuencia',
-	);
 
-    /*------------------------------------------------------------------------
+    /*-------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
-		
+	
 	public static function boot()
-	{
+    {
 		parent::boot();
-		
-		self::creating(function($model)
-		{	
-			$indicador = "inicio";
-			
-			$model->indicador = $indicador;
-		});
 		
 		self::deleting(function($obj) {
 			if (count((array)$obj->fotos)) {
@@ -52,12 +34,17 @@ class Slider extends Model
 				}
 			}
 		});
-	}
-		
+    }
+	
     /*-------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
-
+	
+	public function eventos()
+	{
+		return $this->belongsToMany('App\Models\Evento', 'evento_patrocinador','patrocinador_id');
+	}
+	
     /*-------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
@@ -74,7 +61,7 @@ class Slider extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/fotos";
+		$destination_path = "images/fotos-patrocinadores";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 }

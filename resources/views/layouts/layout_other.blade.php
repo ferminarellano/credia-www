@@ -80,7 +80,7 @@
 				</a>
 			</div> <!-- .nav-header END -->
 			
-			<div class="nav-menus-wrapper row" style="width:100%;position: relative;">
+			<div class="nav-menus-wrapper row" style="width:100%;">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
 						<img src="/assets/images/logo.png" alt="">
@@ -163,7 +163,6 @@
 <!-- END CONTENIDO EVENTOS -->
 
 <!--   CONTENIDO EVENTO DETALLE   -->
-	@yield('welcomeedetalle')
 	@yield('eventodetalle')
 <!-- END CONTENIDO EVENTO DETALLE -->
 
@@ -173,7 +172,6 @@
 <!-- END CONTENIDO BLOG -->
 
 <!--   CONTENIDO BLOG DETALLE   -->
-	@yield('welcomebdetalle')
 	@yield('blogdetalle')
 	{{--@yield('bd_revista')--}}
 <!-- END CONTENIDO BLOG DETALLE -->
