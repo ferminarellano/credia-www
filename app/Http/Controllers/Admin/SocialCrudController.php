@@ -11,7 +11,6 @@ class SocialCrudController extends CrudController
 {
     public function setup()
     {
-
         $this->crud->setModel('App\Models\Social');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/social');
         $this->crud->setEntityNameStrings('social', 'socials');
@@ -22,8 +21,13 @@ class SocialCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
-			'name' => 'link',
+			'name' => 'url',
 			'label' => 'Dirección url',
+		]);
+		
+		$this->crud->addColumn([
+			'name' => 'created_at',
+			'label' => 'Fecha de creación',
 		]);
 		
 		$this->crud->addField([
@@ -39,7 +43,7 @@ class SocialCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'link',
+			'name' => 'url',
 			'label' => "Dirección de url",
 			'type' => 'text',
 			'attributes' => [
@@ -47,7 +51,7 @@ class SocialCrudController extends CrudController
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],
 		]);
     }
 

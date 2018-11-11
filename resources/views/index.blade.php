@@ -444,11 +444,9 @@
 					<div class="xs-feature-box-content">
 						<h3 class="color-white">Conéctate con nosotros en las redes sociales</h3>
 						<ul class="xs-social-list">
-							<li><a href="https://www.facebook.com/crediahonduras/"><i class="fa fa-facebook"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href=""><i class="fa fa-instagram"></i></a></li>
-							<li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
-							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							@foreach($redes as $red)
+								<li><a href="{{ $red->url }}" target="_blank"><i class="fa fa-{{ $red->red }}"></i></a></li>
+							@endforeach
 						</ul><!-- .xs-social-list END -->
 					</div><!-- .xs-feature-box-content END -->
 				</div><!-- .xs-feature-box END -->

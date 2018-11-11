@@ -233,10 +233,9 @@
 						</a>
 						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">
-							<li><a href="https://www.facebook.com/crediahonduras/" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCLk28-2HjGIf13dW6cD7u1A" class="color-youtube"><i class="fa fa-youtube"></i></a></li>
-							<li><a href="" class="color-instagram"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li>
+							@foreach($redes as $red)
+							<li><a href="{{ $red->url }}" target="_blank" class="color-{{ $red->red }}"><i class="fa fa-{{ $red->red }}"></i></a></li>
+							@endforeach
 						</ul><!-- .xs-social-list END -->
 					</div>
 					<div class="col-lg-2 col-md-6 footer-widget">
