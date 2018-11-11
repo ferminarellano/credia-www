@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Categoria;
+use App\Models\Social;
 use View;
 
 class BlogController extends Controller
@@ -16,6 +17,7 @@ class BlogController extends Controller
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
+		$redes = Social::all();
 		
 		$articulos = Blog::all();
 		
@@ -24,6 +26,7 @@ class BlogController extends Controller
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"articulos" => $articulos,
+			"redes" => $redes,
 		);
 		
 		return View::make('contenido.blog')->with($data);
@@ -33,10 +36,12 @@ class BlogController extends Controller
 	{
 		$articulo = Blog::where([['id',$id],['estado','0']])->get();
 		$categorias = Categoria::all();
+		$redes = Social::all();
 		
 		$data = array(
 			"articulo" => $articulo,
 			"categorias" => $categorias,
+			"redes" => $redes,
 		);
 		
 		return View::make('contenido.blogdetalle')->with($data);

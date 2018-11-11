@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Voluntario;
 use App\Models\Actividad;
+use App\Models\Social;
 use View;
 
 class VoluntarioController extends Controller
@@ -13,9 +14,11 @@ class VoluntarioController extends Controller
 	{
 		
 		$actividades = Actividad::where('estado','=','1')->get();
+		$redes = Social::all();
 		
 		$data = array(
 			"actividades" => $actividades,
+			"redes" => $redes,
 		);
 		
 		return View::make('contenido.voluntario')->with($data);

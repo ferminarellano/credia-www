@@ -7,6 +7,7 @@ use App\Models\Slider;
 use App\Models\Voluntario;
 use App\Models\Actividad;
 use App\Models\Evento;
+use App\Models\Social;
 use View;
 
 class IndexController extends Controller
@@ -16,11 +17,13 @@ class IndexController extends Controller
 		$sliders = Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
 		$actividades = Actividad::where('estado','=','1')->get();
 		$eventos = Evento::all();
+		$redes = Social::all();
 		
 		$data = array(
 			"sliders" => $sliders,
 			"actividades" => $actividades,
 			"eventos" => $eventos,
+			"redes" => $redes,
 		);
 		
 		return View::make('index')->with($data);
