@@ -255,10 +255,10 @@ $(document).ready(function() {
 
 			$this.countdown(finalDate, function(event) {
 			var $this = $(this).html(event.strftime(' ' 
-			+ '<span class="timer-count">%-D <span class="timer-title">Days</span></span>  ' 
-			+ '<span class="timer-count">%H <span class="timer-title">Hours</span></span> ' 
-			+ '<span class="timer-count">%M <span class="timer-title">Minutes</span></span> ' 
-			+ '<span class="timer-count">%S <span class="timer-title">Secods</span></span>'));
+			+ '<span class="timer-count">%-D <span class="timer-title">Días</span></span>  ' 
+			+ '<span class="timer-count">%H <span class="timer-title">Horas</span></span> ' 
+			+ '<span class="timer-count">%M <span class="timer-title">Minutos</span></span> ' 
+			+ '<span class="timer-count">%S <span class="timer-title">Segundos</span></span>'));
 		});
 	});
 

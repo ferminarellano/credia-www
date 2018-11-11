@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Categoria;
+use View;
 
 class BlogController extends Controller
 {
@@ -25,7 +26,7 @@ class BlogController extends Controller
 			"articulos" => $articulos,
 		);
 		
-		return view('contenido.blog')->with($data);
+		return View::make('contenido.blog')->with($data);
 	}
 	
 	public function blogdetalle($id)
@@ -38,6 +39,6 @@ class BlogController extends Controller
 			"categorias" => $categorias,
 		);
 		
-		return view('contenido.blogdetalle')->with($data);
+		return View::make('contenido.blogdetalle')->with($data);
 	}
 }

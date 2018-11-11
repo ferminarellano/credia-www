@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\Voluntario;
 use App\Models\Actividad;
+use App\Models\Evento;
 use View;
 
 class IndexController extends Controller
@@ -14,10 +15,12 @@ class IndexController extends Controller
 	{
 		$sliders = Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
 		$actividades = Actividad::where('estado','=','1')->get();
+		$eventos = Evento::all();
 		
 		$data = array(
 			"sliders" => $sliders,
 			"actividades" => $actividades,
+			"eventos" => $eventos,
 		);
 		
 		return View::make('index')->with($data);
@@ -46,7 +49,7 @@ class IndexController extends Controller
 
 	public function faq()
 	{
-		return view('contenido.faq');
+		return View::make('contenido.faq');
 	}
 	
 }

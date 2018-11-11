@@ -163,7 +163,6 @@
 <!-- END CONTENIDO EVENTOS -->
 
 <!--   CONTENIDO EVENTO DETALLE   -->
-	@yield('welcomeedetalle')
 	@yield('eventodetalle')
 <!-- END CONTENIDO EVENTO DETALLE -->
 
@@ -173,7 +172,6 @@
 <!-- END CONTENIDO BLOG -->
 
 <!--   CONTENIDO BLOG DETALLE   -->
-	@yield('welcomebdetalle')
 	@yield('blogdetalle')
 	{{--@yield('bd_revista')--}}
 <!-- END CONTENIDO BLOG DETALLE -->

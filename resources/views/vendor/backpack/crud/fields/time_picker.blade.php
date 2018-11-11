@@ -1,6 +1,6 @@
 <!-- bootstrap timepicker input -->
 <div @include('crud::inc.field_wrapper_attributes') >
-{{-- <input type="text" name="{{ $field['name'] }}" value="{{ old($field['name']) ? old($field['name']) : (isset($field['value']) ? $field['value'] : (isset($field['default']) ? $field['default'] : '' )) }}"> --}}
+	<input type="text" class="hidden" name="{{ $field['name'] }}" value="{{ old($field['name']) ? old($field['name']) : (isset($field['value']) ? $field['value'] : (isset($field['default']) ? $field['default'] : '' )) }}">
     <label>{!! $field['label'] !!}</label>
     <div class="input-group bootstrap-timepicker timepicker">
         <input

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Banner;
+use View;
 
 class ConoceController extends Controller
 {
@@ -20,6 +21,6 @@ class ConoceController extends Controller
 			"contenido" => $contenido,
 		);
 		
-		return view('contenido.sobrenosotros')->with($data);
+		return View::make('contenido.sobrenosotros')->with($data);
 	}
 }

@@ -24,19 +24,10 @@
 
 @section('title', 'Blog detalles -')
 
-@section('welcomebdetalle')
-	<section class="xs-banner-inner-section-other">
-		<!-- <div class="xs-black-overlay"></div> -->
-		<!-- <div class="container"> -->
-			<!-- <div class="color-white xs-inner-banner-content"> -->
-				{{-- <h2>{{$articulo->first()->titulo}}</h2> --}}
-				{{-- <p>{{$articulo->first()->subtitulo}}</p> --}}
-			<!-- </div> -->
-		<!-- </div> -->
-	</section>
-@endsection
-
 @section('blogdetalle')
+	
+	<section class="xs-banner-inner-section-other"></section>
+
 	<!-- blog single post -->
 	<div class="xs-content-section-padding xs-blog-single">
 		<div class="container">
