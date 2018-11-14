@@ -43,6 +43,8 @@
 		
 		<!-- use only color version -->
 		<!-- <link rel='stylesheet' type='text/css' href='assets/css/colors/color-1.css' > -->
+		
+		@stack('scripts_blogdetalle')
 	</head>
 	<body>
 	<!--[if lt IE 10]>
