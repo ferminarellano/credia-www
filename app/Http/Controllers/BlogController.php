@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\BlogCommentRequest;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\BlogComment;
@@ -25,8 +24,13 @@ class BlogController extends Controller
 		$redes = Social::all();
 		
 		$articulos = Blog::orderBy('id','desc')->paginate(6);
-		$id_articulo = $articulos->first()->id;
-		$comentarios = BlogComment::where([['blog_post_id',$id_articulo]])->count();
+		
+		if(count($articulos) > 0){
+			$id_articulo = $articulos->first()->id;
+			$comentarios = BlogComment::where([['blog_post_id',$id_articulo]])->count();
+		}else{
+			$comentarios = 0;
+		}
 		
 		$data = array(
 			"foto" => $foto,
