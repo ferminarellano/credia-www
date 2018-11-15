@@ -31,7 +31,7 @@ class EventoController extends Controller
 		return View::make('contenido.evento')->with($data);
 	}
 	
-	public function eventodetalle($id)
+	public function eventodetalle($slug,$id)
 	{
 		$evento = Evento::where([['id',$id]])->get();
 		$redes = Social::all();

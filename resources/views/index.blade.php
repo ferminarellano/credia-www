@@ -497,6 +497,7 @@
 @endsection
 
 @section('voluntarios_in')
+
 	<section class="-index xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">
@@ -556,8 +557,8 @@
 			</div>
 			<div class="row">
 				@if(count($eventos) === 0)
-					<div class="col-lg-12" style="color:#011b58;font-size:48px;font-weight:bold;text-align:center;padding-top:40px;">
-						NO HAY PUBLICACIONES DISPONIBLES
+					<div class="col-lg-12">
+						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
 					</div>
 				@endif
 				@foreach($eventos as $evento)
@@ -574,10 +575,10 @@
 						</div>
 						<div class="col-md-7">
 							<div class="xs-event-content-event">
-								<a href="{{ URL::route('eventodetalle',['id' => $evento->id]) }}">{{ $evento->titulo }}</a>
+								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}">{{ $evento->titulo }}</a>
 								<p>{{ $evento->subtitulo }}</p>
 								<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
-								<a href="{{ URL::route('eventodetalle',['id' => $evento->id]) }}" class="btn btn-primary">
+								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary">
 									Aprende más
 								</a>
 							</div><!-- .xs-event-content END -->

@@ -5,7 +5,9 @@ Author: XpeedStudio
 Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 */
 
-/* Portrait tablets and medium desktops */
+	
+
+/* Tabletas de retratos y escritorios medianos. */
 @media (min-width: 992px) and (max-width: 1199px) {
 	body {
 		font-size: 14px;;
@@ -14,14 +16,19 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-box .nav-menu li a {
 		padding: 60px 9px;
 	}
+	
+	#myBtn{
+		margin-right:30px;
+	}
 }
 
-/* Portrait tablets and small desktops */
+/* Tabletas de retratos y escritorios pequeños. */
 @media  (max-width: 992px) {
 	html {
 		font-size: 90%;
 	}
-	/* margin bottom list  */
+	
+	/* margen inferior de la lista */
 	.xs-btn-wraper a ,
 	.xs-archive-content ,
 	.xs-archive-image img ,
@@ -53,7 +60,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-archive-image .xs-mb-30 {
 		margin-bottom: 0;
 	}
-	/* ipad overlay */
+	/* superposición de ipad */
 	.xs-ipad-overlay {
 		position: relative;
 	}
@@ -77,6 +84,9 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs_nav-portrait .nav-menus-wrapper {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.nav-menus-wrapper .btn{
+		margin-right:40vw;
 	}
 	.xs_nav-portrait .nav-menus-wrapper-close-button {
 		margin: 0 0 0 auto;
@@ -123,16 +133,24 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		text-align: left;
 	}
 	.xs-heading .xs-title {
-		font-size: 2.28571em;
+		font-size: 1.50000em;
 	}
 	/* section padding */
 	.xs-section-padding ,
 	.xs-about-v2 ~ .xs-popularCauses-v2 {
 		padding: 60px 0;
 	}
+	.xs-section-padding h1{
+		font-size:5vw;
+	}
 	.xs-content-section-padding {
 		padding: 50px 0;
 	}
+	
+	.xs-content-section-padding h1{
+		font-size:5vw;
+	}
+	
 	/* archive */
 	.xs-archive-content {
 		padding-left: 0;
@@ -358,11 +376,12 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		padding-bottom: 20px;
 	}
 }
-/* Landscape phones and portrait tablets */
+/* Teléfonos de paisaje y tabletas retrato */
 @media (max-width: 767px) {
 	html {
 		font-size: 80%;
 	}
+	
 	/* menus */
 	/* header top bar */
 	.xs-header.xs-box .xs_nav-portrait {
@@ -410,7 +429,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 }
 
-/* Landscape phones and smaller */
+/* Telefonos de paisaje y mas pequeños. */
 @media (max-width: 480px) {
 	html {
 		font-size: 65%;

@@ -78,18 +78,19 @@
 							</div>
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a class="color-light-red" href="">Proyecto Fondo De Adaptación (PFA)</a></li>
-							</ul>
+							<div class="xs-margin-1">
+								<ul class="xs-simple-tag xs-mb-20">
+									<li><a class="color-light-red" href="">Proyecto Fondo De Adaptación (PFA)</a></li>
+								</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30" style="text-align:justify;">Incrementar la resiliencia de la población más vulnerable en Honduras</a>
+								<a href="#" class="xs-post-title xs-mb-30" style="text-align:justify;">Incrementar la resiliencia de la población más vulnerable en Honduras</a>
 
-							<ul class="xs-list-with-content">
-								<li>L67,000<span>Prometido</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span>% <span>Financiado</span></li>
-								<li>3<span>Días</span></li>
-							</ul>
-										
+								<ul class="xs-list-with-content">
+									<li>L67,000<span>Prometido</span></li>
+									<li><span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span>% <span>Financiado</span></li>
+									<li>3<span>Días</span></li>
+								</ul>
+							</div>
 							<span class="xs-separetor"></span>
 							
 							<div class="row xs-margin-0">
@@ -117,17 +118,19 @@
 							</div>
 						</div><!-- .xs-item-header END -->
 						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a class="color-purple" href="">Cambio Climático</a></li>
-							</ul>
+							<div class="xs-margin-1">
+								<ul class="xs-simple-tag xs-mb-20">
+									<li><a class="color-purple" href="">Cambio Climático</a></li>
+								</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30" style="text-align:justify;">Introducir en el concepto de Cambio Climático a los niños y niñas.</a>
+								<a href="#" class="xs-post-title xs-mb-30" style="text-align:justify;">Introducir en el concepto de Cambio Climático a los niños y niñas.</a>
 
-							<ul class="xs-list-with-content">
-								<li>L33,600<span>Prometido</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>Financiado</span></li>
-								<li>10<span>Días</span></li>
-							</ul>
+								<ul class="xs-list-with-content">
+									<li>L33,600<span>Prometido</span></li>
+									<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>Financiado</span></li>
+									<li>10<span>Días</span></li>
+								</ul>
+							</div>
 							
 							<span class="xs-separetor"></span>
 							

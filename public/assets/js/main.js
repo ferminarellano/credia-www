@@ -4,15 +4,15 @@
 /*------------------------------------------------------------------
 [Table of contents]
 
-custom function
-portfolio gird
+Funciones personalizadas
+cuadrícula de cartera
 banner slider
 single item slider
-number counter and skill bar animation
-skill bar and number counter
+contador de números y barra de habilidades de animación
+barra de habilidades y contador de números
 mega navigation menu init
 countdown timer
-back to top
+volver arriba
 insta feed
 video popup
 image popup
@@ -27,7 +27,7 @@ XpeedStudio Maps
 -------------------------------------------------------------------*/
 
 /*==========================================================
-			custom function
+			Funciones personalizadas
 ======================================================================*/
 function xsFunction() {
 	var xsContact = $('.xs-contact-form-wraper'),
@@ -50,9 +50,9 @@ $(window).on('load', function() {
 		$('#preloader').fadeOut();
 	}, 500);
 
-	/*==========================================================
-			portfolio gird
-	======================================================================*/
+/*==========================================================
+					cuadrícula de cartera
+==========================================================*/
 	if($('.xs-portfolio-grid').length >0) {
 		var $portfolioGrid = $('.xs-portfolio-grid'),
 		colWidth = function () {
@@ -105,9 +105,9 @@ $(document).ready(function() {
 	// custom xs function init
 	xsFunction();
 
-	/*==========================================================
-			banner slider
-	======================================================================*/
+/*==========================================================
+					banner slider
+==========================================================*/
 	if ( $( '.xs-banner-slider' ).length > 0 ) {
 		var bannerSlider = $( ".xs-banner-slider" );
 		bannerSlider.owlCarousel( {
@@ -140,9 +140,9 @@ $(document).ready(function() {
 		});
 	}
 
-	/*==========================================================
+/*==========================================================
 				single item slider
-	======================================================================*/
+==========================================================*/
 	if ( $( '.xs-single-item-slider' ).length > 0 ) {
 		var singleItemSlider = $( ".xs-single-item-slider" );
 		singleItemSlider.owlCarousel( {
@@ -176,9 +176,9 @@ $(document).ready(function() {
 	}
 	
 
-	/*==========================================================
-			number counter and skill bar animation
-	=======================================================================*/
+/*==========================================================
+	contador de números y barra de habilidades de animación
+==========================================================*/
 
 	var number_percentage = $(".number-percentage");
 	function animateProgressBar(){
@@ -202,9 +202,9 @@ $(document).ready(function() {
 		});
 	}
 
-	/*==========================================================
-			skill bar and number counter
-	=======================================================================*/
+/*==========================================================
+	 barra de habilidades y contador de números
+==========================================================*/
 
 	$.fn.animateNumbers = function(stop, commas, duration, ease) {
 		return this.each(function() {
@@ -237,18 +237,18 @@ $(document).ready(function() {
 	};
 
 
-	/*==========================================================
+/*==========================================================
 			mega navigation menu init
-	======================================================================*/
+==========================================================*/
 	if ($('.xs-menus').length > 0) {
 		$('.xs-menus').xs_nav({
 			mobileBreakpoint: 992,
 		});
 	}
 	
-	/*==========================================================
+/*==========================================================
 			countdown timer
-	======================================================================*/
+==========================================================*/
 	$('.xs-countdown-timer[data-countdown]').each(function() {
 		var $this = $(this), 
 			finalDate = $(this).data('countdown');
@@ -262,9 +262,9 @@ $(document).ready(function() {
 		});
 	});
 
-	/*==========================================================
-			back to top
-	======================================================================*/ 
+/*==========================================================
+			volver arriba
+==========================================================*/ 
 	window.onscroll = function() {scrollFunction()};
 
 	function scrollFunction() {
@@ -280,9 +280,9 @@ $(document).ready(function() {
 		document.documentElement.scrollTop = 0;
 	}
 
-	/*=============================================================
+/*=============================================================
 					insta feed
-	=========================================================================*/
+=============================================================*/
 	if ($('.xs-demoFeed').length > 0) {
 		$.fn.spectragram.accessData = {
 			accessToken: '1764162550.ba4c844.679392a432894982bf6a31ec20d8acb0',
@@ -295,9 +295,9 @@ $(document).ready(function() {
 		});
 	}
 
-	/*=============================================================
+/*=============================================================
 					video popup
-	=========================================================================*/
+=============================================================*/
 	if ($('.xs-video-popup').length > 0) {
 		$('.xs-video-popup').magnificPopup({
 			disableOn: 700,
@@ -309,9 +309,9 @@ $(document).ready(function() {
 		});
 	}
 
-	/*=============================================================
+/*=============================================================
 					image popup
-	=========================================================================*/
+=============================================================*/
 	$('.xs-image-popup').magnificPopup({
 		type: 'image',
 		closeOnContentClick: false,
@@ -327,9 +327,9 @@ $(document).ready(function() {
 		
 	});
 
-	/*==========================================================
+/*==========================================================
 			map window opener add class
-	======================================================================*/
+==========================================================*/
 	$(document).on('click', '.xs-window-opener', function() {
 		// body...
 		event.preventDefault();
@@ -344,9 +344,9 @@ $(document).ready(function() {
 		}
 	});
 
-	/*=====================================================
+/*=====================================================
 			Contact From dynamic
-	 =====================================================*/
+=====================================================*/
 	if ($('#xs-contact-form').length > 0) {
 		$('#xs-contact-form').on('submit', function(event) {
 			event.preventDefault();
@@ -423,7 +423,7 @@ $(window).on('resize', function() {
 
 /*==========================================================
 			XpeedStudio multipile Maps
-======================================================================*/
+==========================================================*/
 
 if (($('#xs-multiple-map-1').length > 0) && ($('#xs-multiple-map-2').length > 0) && ($('#xs-multiple-map-3').length > 0)) {
 

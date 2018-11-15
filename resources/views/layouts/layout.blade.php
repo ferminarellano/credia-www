@@ -76,14 +76,14 @@
 			<div class="nav-header">
 				<div class="nav-toggle"></div>
 				<a href="{{ URL::route('index') }}" class="nav-logo">
-					<img src="assets/images/logo.png" alt="CREDIA">
+					<img src="/assets/images/logo.png" alt="CREDIA">
 				</a>
 			</div> <!-- .nav-header END -->
 			
 			<div class="nav-menus-wrapper row" style="width:100%;">
 				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 					<a class="nav-brand" href="{{ URL::route('index') }}">
-						<img src="assets/images/logo.png" alt="">
+						<img src="/assets/images/logo.png" alt="">
 					</a>
 				</div><!-- .xs-logo-wraper END -->
 			    
@@ -229,7 +229,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-6 footer-widget xs-pr-20">
 						<a href="{{ URL::route('index') }}" class="xs-footer-logo">
-							<img src="assets/images/footer_logo.png" style="">
+							<img src="/assets/images/footer_logo.png" style="">
 						</a>
 						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">
@@ -256,7 +256,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">21</span>
 													<span class="entry-month d-block">dec</span>
@@ -280,7 +280,7 @@
 									<li>
 										<div class="posts-thumb float-left"> 
 											<a href="#">
-												<img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg">
+												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
 												<div class="xs-entry-date">
 													<span class="entry-date d-block">23</span>
 													<span class="entry-month d-block">sep</span>

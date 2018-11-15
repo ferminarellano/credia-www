@@ -84,7 +84,7 @@
 									<div class="share-items">
 										<h5 class="xs-post-sub-heading">Compartir</h5>
 										<ul class="xs-social-list square">
-											<li><a href="#" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="https://www.facebook.com/sharer/sharer.php?u={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" target="_blank" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i></a></li>
 											<li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i></a></li>
 											<li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li>
@@ -148,73 +148,50 @@
 						<!-- start comment -->
 						<ul class="comment-list">
 							<li class="comment">
-								<!-- <div class="comment-body"> -->
-									<!-- <div class="comment-meta"> -->
-										<!-- <div class="comment-author"> -->
-											<!-- <img alt="avatar" src="/assets/images/avatar/avatar_9.jpg" class="avatar"> -->
-											<!-- <b>Jhony WIlliamson</b> -->
-										<!-- </div> --><!-- .comment-author --> 
-										<!-- <div class="comment-metadata"> -->
-											<!-- <a href="#"> -->
-												<!-- <time datetime="2018-08-17T04:24:26+00:00">17th August 2018</time> -->
-											<!-- </a> -->
-										<!-- </div> --><!-- .comment-metadata --> 
-									<!-- </div> --><!-- .comment-meta --> 
+								@foreach($comentarios as $comentario)
+									<div class="comment-body">
+										<div class="comment-meta">
+											<div class="comment-author">
+												<img alt="avatar" src="/assets/images/avatar/avatar_7.jpg" class="avatar">
+												<b>{{ $comentario->nombre }}</b>
+											</div>
+											<div class="comment-metadata">
+												<a href="#">
+													<time datetime="2018-08-17T04:24:26+00:00">{{ $comentario->created_at }}</time>
+												</a>
+											</div> 
+										</div>
 
-									<!-- <div class="comment-content"> -->
-										<!-- <p>On the evening of November 10th, the audience at New York’s Metry opolitiona era was treated to the briefest of delights.</p> -->
-									<!-- </div> --><!-- .comment-content --> 
-									<!-- <div class="reply"> -->
-										<!-- <a href="#">  -->
-											<!-- <i class="fa fa-mail-forward"></i> -->
-											<!-- Reply -->
-										<!-- </a> -->
-									<!-- </div> -->
-								<!-- </div> --><!-- .comment-body --> 
-							</li><!-- #comment-## -->
-							<li class="comment">
-								<div class="comment-body">
-									<!-- <div class="comment-meta"> -->
-										<!-- <div class="comment-author"> -->
-											<!-- <img alt="avatar" src="/assets/images/avatar/avatar_7.jpg" class="avatar"> -->
-											<!-- <b>William Smith</b> -->
-										<!-- </div> --><!-- .comment-author --> 
-										<!-- <div class="comment-metadata"> -->
-											<!-- <a href="#"> -->
-												<!-- <time datetime="2018-08-17T04:24:26+00:00">17th August 2018</time> -->
-											<!-- </a> -->
-										<!-- </div> --><!-- .comment-metadata --> 
-									<!-- </div> --><!-- .comment-meta --> 
-
-									<!-- <div class="comment-content"> -->
-										<!-- <p>On the evening of November 10th, the audience at New York’s Metry opolitiona era was treated to the briefest of delights.</p> -->
-									<!-- </div> --><!-- .comment-content --> 
-									<!-- <div class="reply"> -->
-										<!-- <a href="#">  -->
-											<!-- <i class="fa fa-mail-forward"></i> -->
-											<!-- Reply -->
-										<!-- </a> -->
-									<!-- </div> -->
-								</div><!-- .comment-body -->
-								<ul class="children">
-									<li class="comment">
+										<div class="comment-content">
+											<p>{{ $comentario->comentario }}</p>
+										</div>
+										<div class="reply">
+											<a href=""> 
+												<i class="fa fa-mail-forward"></i>
+												Respuesta
+											</a>
+										</div>
+									</div><!-- .comment-body -->
+								@endforeach
+								<!-- <ul class="children"> -->
+									<!-- <li class="comment"> -->
 										<!-- <div class="comment-body"> -->
 											<!-- <div class="comment-meta"> -->
 												<!-- <div class="comment-author"> -->
 													<!-- <img alt="" src="/assets/images/avatar/avatar_8.jpg" class="avatar"> -->
 													<!-- <b>Julian Jenny</b>  -->
-												<!-- </div> --> <!-- .comment-author --> 
+												<!-- </div> -->
 
 												<!-- <div class="comment-metadata"> -->
 													<!-- <a href="#"> -->
 														<!-- <time datetime="2018-08-17T04:24:41+00:00">17th August 2018</time> -->
 													<!-- </a> -->
-												<!-- </div> --><!-- .comment-metadata --> 
-											<!-- </div> --><!-- .comment-meta --> 
+												<!-- </div> -->
+											<!-- </div> -->
 
 											<!-- <div class="comment-content"> -->
 												<!-- <p>On the evening of November 10th, the audience at New York’s Metry opolitans Opera was treated to the briefest of delights.</p> -->
-											<!-- </div> --><!-- .comment-content --> 
+											<!-- </div> -->
 
 											<!-- <div class="reply"> -->
 												<!-- <a href="#">  -->
@@ -222,40 +199,9 @@
 													<!-- Respuesta -->
 												<!-- </a> -->
 											<!-- </div> -->
-										<!-- </div> --><!-- .comment-body --> 
-									</li><!-- #comment-## -->
-									<li>
-										<ul>
-											<li class="comment">
-												<!-- <div class="comment-body"> -->
-													<!-- <div class="comment-meta"> -->
-														<!-- <div class="comment-author"> -->
-															<!-- <img alt="" src="/assets/images/avatar/avatar_10.jpg" class="avatar"> -->
-															<!-- <b>Julian Jenny</b>  -->
-														<!-- </div> --><!-- .comment-author --> 
-
-														<!-- <div class="comment-metadata"> -->
-															<!-- <a href="#"> -->
-																<!-- <time datetime="2018-08-17T04:24:41+00:00">17th August 2018</time> -->
-															<!-- </a> -->
-														<!-- </div> --><!-- .comment-metadata --> 
-													<!-- </div> --><!-- .comment-meta --> 
-
-													<!-- <div class="comment-content"> -->
-														<!-- <p>On the evening of November 10th, the audience at New York’s Metry opolitans Opera was treated to the briefest of delights.</p> -->
-													<!-- </div> --><!-- .comment-content --> 
-
-													<!-- <div class="reply"> -->
-														<!-- <a href="#">  -->
-															<!-- <i class="fa fa-mail-forward"></i> -->
-															<!-- Respuesta -->
-														<!-- </a> -->
-													<!-- </div> -->
-												<!-- </div> --><!-- .comment-body --> 
-											</li><!-- #comment-## -->
-										</ul><!-- .children -->
-									</li>
-								</ul><!-- .children -->
+										<!-- </div> -->
+									<!-- </li> -->
+								<!-- </ul> -->
 							</li><!-- #comment-## -->
 						</ul>
 						<!-- end comment -->
@@ -263,23 +209,24 @@
 						<!-- start respond form -->
 						<div class="comment-respond">
 							<h3 class="comment-reply-title">Deja un comentario</h3>
-										
-							<form action="POST" method="post" class="comment-form">
-								<input placeholder="Nombre *" name="author" type="text">
+							@include('alertas.warning_comentario')	
+							<form action="{{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" id="form-comment" name="form-comment" method="post" class="comment-form">
+								{{ csrf_field() }}
+								<input placeholder="Nombre *" name="nombre" value="{{ old('nombre') }}" type="text">
 								
 								<div class="row">
 									<div class="col-lg-6">
-										<input placeholder="Correo *" name="email" type="email">
+										<input placeholder="Correo *" name="correo" value="{{ old('correo') }}" type="email">
 									</div>
 									<div class="col-lg-6">
 										<input placeholder="Enter Website" name="url" type="url">
 									</div>
 								</div><!-- .comment-info END -->
 
-								<textarea placeholder="Ingrese su comentario *" name="comment" cols="45" rows="8"></textarea>
+								<textarea placeholder="Ingrese su comentario *" name="comentario" value="{{ old('comentario') }}" cols="45" rows="8"></textarea>
 								
 								<div class="text-right">
-									<button type="submit" class="btn btn-primary" name="submit">Publicar comentario</button>
+									<button type="submit" class="btn btn-primary">Publicar comentario</button>
 								</div>
 							</form><!-- .comment-form END -->
 						</div>
@@ -361,7 +308,12 @@
 							<h3 class="widget-title">Categorías</h3>
 							<ul class="xs-side-bar-list">
 								@foreach($categorias as $categoria)
-									<li><a href="#"><span class="first">{{ $categoria->nombre }}</span><!--<span class="last">(33)</span>--></a></li>
+										<li>
+											<a href="{{URL::route('categoria_blog',['categoria' => str_slug($categoria->nombre,'-'),'categoria_id' => $categoria->id])}}">
+												<span class="first">{{ $categoria->nombre }}</span>
+												<span class="last">{{ $categoria->blogs()->count() }}</span>
+											</a>
+										</li>
 								@endforeach
 							</ul>
 						</div>
@@ -572,4 +524,28 @@
 		</div><!-- .container end -->
 	</section>	<!-- End journal section -->
 @endsection
+
+@push('scripts_blogdetalle')
+    <script>
+		// $(document).ready(function(){   
+			// $(document).on('submit', '#form-comment', function() { 
+
+				// Obtenemos datos formulario.
+				// var data = $(this).serialize(); 
+
+				// AJAX.
+				// $.ajax({  
+					// type : 'POST',
+					// url  : "{{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}",
+					// data:  data, 
+
+					// success:function(data) {  
+						// $('#respuesta').html(data).fadeIn();
+					// }  
+				// });
+				// return false;
+		   // });
+		// });
+	</script>
+@endpush
 

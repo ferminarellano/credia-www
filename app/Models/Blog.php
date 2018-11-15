@@ -16,7 +16,7 @@ class Blog extends Model
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['foto','titulo','subtitulo','fecha','contenido_1',
-						   'estado','categoria_id','user_id'];
+						   'estado','categoria_id','user_id','total_vista'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];

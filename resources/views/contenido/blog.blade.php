@@ -20,12 +20,14 @@
 		
 		return $arr[$palabra];
 	}
+	
+	$pagination_range = 2;
 ?>
 
 @section('title', 'Blog -')
 
 @section('welcomeblog')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -51,63 +53,88 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="xs-box-shadow xs-single-journal xs-mb-30">
 							<div class="entry-thumbnail ">
-								<img class="img-height" src="{{$articulo->foto}}">
+								<img class="img-height" src="/{{$articulo->foto}}">
 								<div class="post-author">
 									<span class="xs-round-avatar">
-										<img class="img-responsive" src="assets/images/avatar/avatar_1.jpg">
+										<img class="img-responsive" src="/assets/images/avatar/avatar_1.jpg">
 									</span>
 									<span class="author-name">
-										<a href="#">Por {{ $articulo->get()->first()->user()->get()->first()->name }}</a>
+										<a>Por {{ $articulo->get()->first()->user()->get()->first()->name }}</a>
 									</span>
 								</div>
 							</div><!-- .xs-item-header END -->
 							<div class="entry-header">
 								<div class="entry-meta">
 									<span class="date">
-										<a href=""  rel="bookmark" class="entry-date">
+										<a rel="bookmark" class="entry-date">
 											{{date('d', strtotime($articulo->fecha))}} DE {{diccionario(date('m', strtotime($articulo->fecha)))}} DE {{date('Y', strtotime($articulo->fecha))}}
 										</a>
 									</span>
 								</div>
 								
 								<h4 class="entry-title">
-									<a href="{{URL::route('blogdetalle',['id' => $articulo->id])}}">{{$articulo->titulo}}</a>
+									<a href="{{URL::route('blogdetalle',['slug' => str_slug($articulo->titulo,'-'),'id' => $articulo->id])}}">{{$articulo->titulo}}</a>
 								</h4>
 							</div><!-- .xs-entry-header END --> 
 							<span class="xs-separetor"></span>
 							<div class="post-meta meta-style-color">
 								<span class="comments-link">
 									<i class="fa fa-comments-o"></i>
-									<a href="">300 comentarios</a>
+									<a>{{ $comentarios }} comentarios</a>
 								</span><!-- .comments-link -->
 								<span class="view-link">
 									<i class="fa fa-eye"></i>
-									<a href="">1000 vistas</a>
+									<a>{{ $articulo->total_vista }} vistas</a>
+									<!-- <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=credia.hn/blog&digit=style/plain/3/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://bestfatburner.biz" target="_blank">vistas</a> -->
 								</span>
 							</div><!-- .post-meta END -->
 						</div><!-- .xs-from-journal END -->
 					</div>
 				@endforeach
-				
-				<!-- pagination -->
-				<!-- <ul class="pagination justify-content-center xs-pagination"> -->
-					<!-- <li class="page-item disabled"> -->
-						<!-- <a class="page-link" href="#" aria-label="Previous"> -->
-							<!-- <i class="fa fa-angle-left"></i> -->
-						<!-- </a> -->
-					<!-- </li> -->
-					<!-- <li class="page-item"><a class="page-link active" href="#">1</a></li> -->
-					<!-- <li class="page-item"><a class="page-link" href="#">2</a></li> -->
-					<!-- <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-					<!-- <li class="page-item disabled"><a class="page-link" href="#">...</a></li> -->
-					<!-- <li class="page-item"><a class="page-link" href="#">12</a></li> -->
-					<!-- <li class="page-item"> -->
-						<!-- <a class="page-link" href="#" aria-label="Next"> -->
-							<!-- <i class="fa fa-angle-right"></i> -->
-						<!-- </a> -->
-					<!-- </li> -->
-				<!-- </ul>--><!-- End pagination --> 
 			</div><!-- .row end -->
+			<div>
+				<!-- pagination -->
+				<ul class="pagination justify-content-center xs-pagination">
+					<li class="page-item {{ $articulos->previousPageUrl() == null ? 'disabled' : '' }}">
+						<a class="page-link" href="{{ $articulos->previousPageUrl() ?? '#' }}" aria-label="Previous">
+							<i class="fa fa-angle-left"></i>
+						</a>
+					</li>
+					@if ($articulos->currentPage() > 1+$pagination_range )
+						<li class="page-item">
+							<a class="page-link" href="{{ $articulos->url(1) ?? '#' }}">{{ 1 }}</a>
+						</li>
+
+						@if ($articulos->currentPage() > 1+$pagination_range+1 )
+							<li class="page-item disabled">
+								<span class="page-link">&hellip;</span>
+							</li>
+						@endif
+					@endif
+					@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+						@if ($articulos->currentPage()+$i > 0 && $articulos->currentPage()+$i <= $articulos->lastPage())
+							<li class="page-item {{ $i==0 ? 'active' : '' }}">
+								<a class="page-link" href="{{ $articulos->url($articulos->currentPage()+$i) }}">{{ $articulos->currentPage()+$i }}</a>
+							</li>
+						@endif
+					@endfor
+					@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range )	
+						@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range-1 )
+							<li class="page-item disabled">
+								<span class="page-link">&hellip;</span>
+							</li>
+						@endif
+						<li class="page-item">
+							<a class="page-link" href="{{ $articulos->url($articulos->lastPage()) ?? '#' }}">{{ $articulos->lastPage() }}</a>
+						</li>
+					@endif
+					<li class="page-item {{ $articulos->nextPageUrl()==null ? 'disabled' : '' }}">
+						<a class="page-link " href="{{ $articulos->nextPageUrl() ?? '#' }}" aria-label="Next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</li>
+				</ul><!-- End pagination -->
+			</div>
 		</div><!-- .container end -->
 	</section><!-- End blog section -->
 @endsection
