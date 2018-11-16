@@ -15,7 +15,7 @@ class Blog extends Model
     public $timestamps = true;
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['foto','titulo','subtitulo','fecha','contenido_1',
+    protected $fillable = ['foto','titulo','fecha','contenido_1',
 						   'estado','categoria_id','user_id','total_vista'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -59,7 +59,7 @@ class Blog extends Model
 	
 	public function blogcomments()
 	{
-		return $this-> hasMany('App\Models\BlogComment');
+		return $this->hasMany('App\Models\BlogComment');
 	}
 	
 	public function user()

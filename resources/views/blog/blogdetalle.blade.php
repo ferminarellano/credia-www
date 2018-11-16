@@ -46,9 +46,12 @@
 										<span class="post-meta-date"><b>{{date('d', strtotime($articulo->first()->fecha))}}</b>{{diccionario(date('m', strtotime($articulo->first()->fecha)))}}</span>
 									</div>
 									<div class="col-md-10 d-flex align-items-end xs-post-meta-list">
-										<!-- <span class="post-cat"> -->
-											<!-- <i class="fa fa-folder-open"></i><a href="#"> Funding consultancy</a> -->
-										<!-- </span> -->
+										<span class="post-cat">
+											<i class="fa fa-folder-open"></i>
+											<a href="{{URL::route('categoria_blog',['categoria' => str_slug($archive,'-'),'categoria_id' => $articulo->first()->categoria_id])}}">
+												{{ $archive }}
+											</a>
+										</span>
 
 										<!-- <span class="tags-links"> -->
 											<!-- <i class="fa fa-tags"></i> -->
@@ -58,7 +61,7 @@
 
 										<span class="post-comment">
 											<i class="fa fa-envelope-o"></i>
-											<a href="#">39 Comentarios</a>
+											<a href="#">{{ $comentarios->count() }} Comentarios</a>
 										</span>
 									</div>
 								</div><!-- .row end -->
@@ -84,11 +87,23 @@
 									<div class="share-items">
 										<h5 class="xs-post-sub-heading">Compartir</h5>
 										<ul class="xs-social-list square">
-											<li><a href="https://www.facebook.com/sharer/sharer.php?u={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" target="_blank" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i></a></li>
-											<li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li>
-											<li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i></a></li>
+											<li>
+												<a href="http://www.facebook.com/share.php?u={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" class="color-facebook" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+													<i class="fa fa-facebook"></i>
+												</a>
+											</li>
+											<li>
+												<a href="https://twitter.com/share?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" target="_blank" class="color-twitter">
+													<i class="fa fa-twitter"></i>
+												</a>
+											</li>
+											<li>
+												<a href="https://plus.google.com/share?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" target="_blank" class="color-google-plus">
+													<i class="fa fa-google-plus"></i>
+												</a>
+											</li>
+											<!-- <li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li> -->
+											<!-- <li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i></a></li> -->
 										</ul>
 									</div><!-- Share items end -->
 									<div class="clearfix"></div>
@@ -152,12 +167,16 @@
 									<div class="comment-body">
 										<div class="comment-meta">
 											<div class="comment-author">
-												<img alt="avatar" src="/assets/images/avatar/avatar_7.jpg" class="avatar">
+												<img alt="avatar" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($comentario->correo))).'?s=50&d=monsterid' }}" class="avatar">
 												<b>{{ $comentario->nombre }}</b>
 											</div>
 											<div class="comment-metadata">
 												<a href="#">
-													<time datetime="2018-08-17T04:24:26+00:00">{{ $comentario->created_at }}</time>
+													<time>
+														{{ date('d', strtotime($comentario->created_at)) }} DE {{ diccionario(date('m', strtotime($comentario->created_at))) }} 
+														DE {{ date('Y', strtotime($comentario->created_at)) }} - {{ date('h:i A', strtotime($comentario->created_at)) }}
+													</time>
+													
 												</a>
 											</div> 
 										</div>
@@ -239,14 +258,14 @@
 							<!-- sidebar content -->
 					<div class="sidebar sidebar-right">
 						<!-- search bar start -->
-						<div class="widget widget_search">	
-							<form class="xs-serachForm" name="search">
-								<input type="search" name="string" placeholder="Escriba palabras clave...">
-								<input type="submit" value="">
-							</form>
-						</div>
-						
+						<!-- <div class="widget widget_search">	 -->
+							<!-- <form class="xs-serachForm" name="search"> -->
+								<!-- <input type="search" name="string" placeholder="Escriba palabras clave..."> -->
+								<!-- <input type="submit" value=""> -->
+							<!-- </form> -->
+						<!-- </div> -->						
 						<!-- search bas stop -->
+						
 						<!-- recent post start -->
 						<!-- <div class="widget recent-posts xs-sidebar-widget"> -->
 							<!-- <h3 class="widget-title">Trending Post</h3> -->
@@ -300,9 +319,9 @@
 									<!-- <div class="clearfix"></div> -->
 								<!-- </li>--><!-- 2nd post end--> 
 							<!-- </ul> -->
-						<!-- </div> -->
-						
+						<!-- </div> -->					
 						<!-- recent post end -->
+						
 						<!-- categories start -->
 						<div class="widget widget_categories xs-sidebar-widget">
 							<h3 class="widget-title">Categorías</h3>
@@ -316,27 +335,20 @@
 										</li>
 								@endforeach
 							</ul>
-						</div>
+						</div><!-- categories end -->
 						
-						<!-- categories end -->
+						
 						<!-- call to action start -->
 						<!-- <div class="widget widget_call_to_action"> -->
 							<!-- <a href="#" class="d-block"> -->
 								<!-- <img src="/assets/images/side_add_baner.jpg" alt=""> -->
 							<!-- </a> -->
 						<!-- </div> -->
-						
 						<!-- call to action end -->
-						<!-- insta feed -->
-						<!-- <div class="widget widget_instafeed xs-sidebar-widget"> -->
-							<!-- <h3 class="widget-title">Instagram Feeds</h3> -->
-							<!-- <ul class="xs-demoFeed clearfix"></ul> -->
-						<!-- </div> -->
 						
-						<!-- insta feed closed -->
-						<!-- widget tags -->
+						<!-- widget Populares -->
 						<!-- <div class="widget widget_tags xs-sidebar-widget"> -->
-							<!-- <h3 class="widget-title">Popular Tags</h3> -->
+							<!-- <h3 class="widget-title">Populares</h3> -->
 
 							<!-- <div class="xs-blog-post-tag"> -->
 								<!-- <a href="#">Crowdfunding</a> -->
@@ -352,26 +364,49 @@
 								<!-- <a href="#">Help</a> -->
 							<!-- </div> -->
 						<!-- </div> -->
-						
 						<!-- widget tags closed -->
+						
 						<!-- widget tags -->
-						<!-- <div class="widget widget_social_share xs-sidebar-widget"> -->
-							<!-- <h3 class="widget-title">Social Share</h3> -->
+						<div class="widget widget_social_share xs-sidebar-widget">
+							<h3 class="widget-title">Compartir</h3>
 
-							<!-- <ul class="xs-social-list boxed"> -->
-								<!-- <li><a href="#" class="color-facebook"><i class="fa fa-facebook"></i>Facebook</a></li> -->
-								<!-- <li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i>twitter</a></li> -->
-								<!-- <li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i>Pinterest</a></li> -->
-								<!-- <li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i>Dribbble</a></li> -->
-								<!-- <li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i>Instagram</a></li> -->
-								<!-- <li><a href="#" class="color-linkedin"><i class="fa fa-linkedin"></i>Linkedin</a></li> -->
-							<!-- </ul> -->
-						<!-- </div> -->
-						
-						<!-- widget tags closed -->
+							<ul class="xs-social-list boxed">
+								<li>
+									<a href="http://www.facebook.com/share.php?u={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" class="color-facebook" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+										<i class="fa fa-facebook"></i>
+										Facebook
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/share?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" target="_blank" class="color-twitter">
+									<i class="fa fa-twitter"></i>
+										twitter
+									</a>
+								</li>
+								<li>
+									<a href="https://plus.google.com/share?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" target="_blank" class="color-google-plus">
+										<i class="fa fa-google-plus"></i>
+										Google
+									</a>
+								</li>
+								<li>
+									<a href="http://www.linkedin.com/shareArticle?mini=true&url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" target="_blank" class="color-linkedin">
+										<i class="fa fa-linkedin"></i>
+										Linkedin
+									</a>
+								</li>
+								<li>
+									<a href="https://www.pinterest.com/pin/find/?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" target="_blank" class="color-pinterest">
+										<i class="fa fa-pinterest"></i>
+										Pinterest
+									</a>
+								</li>
+							</ul>
+						</div><!-- widget tags closed -->
+		
 						<!-- widget archives -->
 						<!-- <div class="widget widget_categories xs-sidebar-widget"> -->
-							<!-- <h3 class="widget-title">Archives</h3> -->
+							<!-- <h3 class="widget-title">Años</h3> -->
 							<!-- <ul class="xs-side-bar-list"> -->
 								<!-- <li><a href="#"><span>2018 January</span><span>(6733)</span></a></li> -->
 								<!-- <li><a href="#"><span>2017 January</span><span>(5897)</span></a></li> -->
@@ -380,7 +415,8 @@
 								<!-- <li><a href="#"><span>2013 January</span><span>(2676)</span></a></li> -->
 								<!-- <li><a href="#"><span>2012 January</span><span>(1995)</span></a></li> -->
 							<!-- </ul> -->
-						<!-- </div>--><!-- widget archives closed -->
+						<!-- </div> -->
+						<!-- widget archives closed -->
 					</div><!-- End sidebar content -->
 				</div>
 			</div><!-- .row end -->
@@ -527,25 +563,7 @@
 
 @push('scripts_blogdetalle')
     <script>
-		// $(document).ready(function(){   
-			// $(document).on('submit', '#form-comment', function() { 
-
-				// Obtenemos datos formulario.
-				// var data = $(this).serialize(); 
-
-				// AJAX.
-				// $.ajax({  
-					// type : 'POST',
-					// url  : "{{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}",
-					// data:  data, 
-
-					// success:function(data) {  
-						// $('#respuesta').html(data).fadeIn();
-					// }  
-				// });
-				// return false;
-		   // });
-		// });
+		
 	</script>
 @endpush
 

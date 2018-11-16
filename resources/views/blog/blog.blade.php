@@ -56,10 +56,10 @@
 								<img class="img-height" src="/{{$articulo->foto}}">
 								<div class="post-author">
 									<span class="xs-round-avatar">
-										<img class="img-responsive" src="/assets/images/avatar/avatar_1.jpg">
+										<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
 									</span>
 									<span class="author-name">
-										<a>Por {{ $articulo->get()->first()->user()->get()->first()->name }}</a>
+										<a>Por {{ $articulo->user->get()->first()->name }}</a>
 									</span>
 								</div>
 							</div><!-- .xs-item-header END -->
@@ -85,7 +85,6 @@
 								<span class="view-link">
 									<i class="fa fa-eye"></i>
 									<a>{{ $articulo->total_vista }} vistas</a>
-									<!-- <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=credia.hn/blog&digit=style/plain/3/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://bestfatburner.biz" target="_blank">vistas</a> -->
 								</span>
 							</div><!-- .post-meta END -->
 						</div><!-- .xs-from-journal END -->
