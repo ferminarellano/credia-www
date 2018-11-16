@@ -32,14 +32,12 @@ class Blog extends Model
         self::creating(function($model)
 		{
 			$user_id = Auth::id();
-			
 			$model->user_id = $user_id;
         });
 		
 		self::updating(function($model)
 		{
 			$user_id = Auth::id();
-
 			$model->user_id = $user_id;
         });
 		
