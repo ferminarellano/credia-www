@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class User extends Authenticatable
 {
     use Notifiable;
-	use CrudTrait; 
-    use HasRoles;
+	// use CrudTrait; 
+    // use HasRoles;
 	
 	protected $primaryKey = 'id';
 	
