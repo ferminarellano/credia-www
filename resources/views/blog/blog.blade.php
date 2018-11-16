@@ -59,7 +59,7 @@
 										<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
 									</span>
 									<span class="author-name">
-										<a>Por {{ $articulo->user->get()->first()->name }}</a>
+										<a>Por {{ $articulo->user()->get()->first()->name }}</a>
 									</span>
 								</div>
 							</div><!-- .xs-item-header END -->

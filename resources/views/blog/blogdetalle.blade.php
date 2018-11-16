@@ -82,7 +82,7 @@
 											<!-- <a href="#">Hopes</a> -->
 											<!-- <a href="#">Medical</a> -->
 										<!-- </div> -->
-									<!-- </div> --><!-- Post tags end --> 
+									<!-- </div> --><!-- Post tags end -->
 
 									<div class="share-items">
 										<h5 class="xs-post-sub-heading">Compartir</h5>
