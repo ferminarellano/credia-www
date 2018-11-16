@@ -32,7 +32,7 @@ class Categoria extends Model
 	
 	public function blogs()
 	{
-		return $this-> hasMany('App\Models\Blog');
+		return $this->hasMany('App\Models\Blog');
 	}
 	
     /*------------------------------------------------------------------------

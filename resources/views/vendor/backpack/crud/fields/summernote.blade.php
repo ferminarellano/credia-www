@@ -4,7 +4,7 @@
 	<label>{!! $field['label'] !!}</label>
     @include('crud::inc.field_translatable_icon')
     <textarea
-        name="{{ $field['name'] }}"
+        name="{{ $field['name'] }}" style="height:400px;"
         @include('crud::inc.field_attributes', ['default_class' =>  'form-control summernote'])
         >{{ old($field['name']) ? old($field['name']) : (isset($field['value']) ? $field['value'] : (isset($field['default']) ? $field['default'] : '' )) }}</textarea>
 

@@ -43,21 +43,28 @@ class BlogCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'titulo',
-			'label' => "Título",
-			'type' => 'text',
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			], 
+			'name' => 'foto',
+			'label' => "Fotografía",
+			'type' => 'upload',
+			'upload' => true,
 		]);
 		
 		$this->crud->addField([
-			'name' => 'subtitulo',
-			'label' => "Subtítulo",
+			'name' => 'separator0',
+			'type' => 'custom_html',
+			'value' => '<hr>',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'titulo',
+			'label' => "Título",
 			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el título del artículo *',
+			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],		
 		]);
 		
 		$this->crud->addField([
@@ -83,20 +90,19 @@ class BlogCrudController extends CrudController
 				'todayBtn' => true,
 				'format' => 'dd-mm-yyyy',
 				'language' => 'es'
-			],			
+			],
+		]);
+		
+		$this->crud->addField([
+			'name' => 'separator1',
+			'type' => 'custom_html',
+			'value' => '<hr>',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'contenido_1',
-			'label' => "Segundo parrafo",
+			'label' => "Contenido del artículo",
 			'type' => 'summernote',
-		]);
-		
-		$this->crud->addField([
-			'name' => 'foto',
-			'label' => "Fotografía",
-			'type' => 'upload',
-			'upload' => true,
 		]);
     }
 
