@@ -15,7 +15,7 @@ class BlogRequest extends FormRequest
     public function rules()
     {
         return [
-			'foto' => 'required|image|max:1024',
+			'foto' => 'image|max:1024',
             'titulo' => 'required|min:1|max:30',
             'fecha' => 'required|date',
             'contenido_1' => 'required',
@@ -34,7 +34,7 @@ class BlogRequest extends FormRequest
             'titulo.required' => 'Es necesario agregar el título del artículo.',
             'titulo.min' => 'La cantidad mínima para el título es de: 1 palabra.',
 			'titulo.max' => 'La cantidad máxima para el título es de: 30 palabras.',
-			'foto.required' => 'Es necesario agregar la foto del artículo.',
+			// 'foto.required' => 'Es necesario agregar la foto del artículo.',
 			'foto.image' => 'El archivo seleccionado debe ser una imagen.',
 			'foto.max' => 'El tamaño de la fotografía no es valido. Máximo 1MB.',
 			'fecha.required' => 'Es necesario agregar la fecha del artículo.',

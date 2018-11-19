@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\Builder;
 
 class Blog extends Model
 {
@@ -31,12 +30,6 @@ class Blog extends Model
         parent::boot();
 		
         self::creating(function($model)
-		{
-			$user_id = Auth::id();
-			$model->user_id = $user_id;
-        });
-		
-		self::updating(function($model)
 		{
 			$user_id = Auth::id();
 			$model->user_id = $user_id;
