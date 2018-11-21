@@ -137,19 +137,21 @@
 									<!-- <div class="clearfix"></div> -->
 								<!-- </div> -->
 								
-								<nav class="navigation post-navigation" role="navigation">
-									<div class="nav-links float-left w-50">
-										<a href="#" rel="prev" class="prev">
+								<!-- <nav class="navigation post-navigation" role="navigation"> -->
+									<!-- <div class="nav-links float-left w-50"> -->
+										<!-- <a href="#" rel="prev" class="prev"> -->
 											<!-- <h5>Crowdfunding resource</h5> -->
-											<span class="meta-nav"><i class="fa fa-angle-left"></i>Anterior</span>
-										</a>
-									</div><!-- .nav-links -->
-									<div class="nav-links float-right w-50 text-right">
-										<a href="#" rel="next" class="next">
+											<!-- <span class="meta-nav"><i class="fa fa-angle-left"></i>Anterior</span> -->
+										<!-- </a> -->
+									<!-- </div> -->
+									<!-- .nav-links -->
+									<!-- <div class="nav-links float-right w-50 text-right"> -->
+										<!-- <a href="#" rel="next" class="next"> -->
 											<!-- <h5>Funding means life</h5> -->
-											<span class="meta-nav">Siguiente<i class="fa fa-angle-right"></i></span>
-										</a>
-									</div><!-- .nav-links -->
+											<!-- <span class="meta-nav">Siguiente<i class="fa fa-angle-right"></i></span> -->
+										<!-- </a> -->
+									<!-- </div> -->
+									<!-- .nav-links -->
 									<div class="clearfix"></div>
 								</nav>
 							</div>
@@ -184,12 +186,12 @@
 										<div class="comment-content">
 											<p>{{ $comentario->comentario }}</p>
 										</div>
-										<div class="reply">
-											<a href=""> 
-												<i class="fa fa-mail-forward"></i>
-												Respuesta
-											</a>
-										</div>
+										<!-- <div class="reply"> -->
+											<!-- <a href="">  -->
+												<!-- <i class="fa fa-mail-forward"></i> -->
+												<!-- Respuesta -->
+											<!-- </a> -->
+										<!-- </div> -->
 									</div><!-- .comment-body -->
 								@endforeach
 								<!-- <ul class="children"> -->
@@ -395,12 +397,12 @@
 										Linkedin
 									</a>
 								</li>
-								<li>
+							{{-- <li>
 									<a href="https://www.pinterest.com/pin/find/?url={{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}&text={{$articulo->first()->id}}" target="_blank" class="color-pinterest">
 										<i class="fa fa-pinterest"></i>
 										Pinterest
 									</a>
-								</li>
+								</li> --}}
 							</ul>
 						</div><!-- widget tags closed -->
 		

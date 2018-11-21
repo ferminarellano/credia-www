@@ -24,6 +24,6 @@ class ProyectoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.proyecto')->with($data);
+		return View::make('proyectos.proyecto')->with($data);
 	}
 }

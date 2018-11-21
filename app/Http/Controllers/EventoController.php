@@ -28,7 +28,7 @@ class EventoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.evento')->with($data);
+		return View::make('eventos.evento')->with($data);
 	}
 	
 	public function eventodetalle($slug,$id)
@@ -41,6 +41,6 @@ class EventoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.eventodetalle')->with($data);
+		return View::make('eventos.eventodetalle')->with($data);
 	}
 }
