@@ -51,7 +51,7 @@ class Blog extends Model
 	
 	public function blogcomments()
 	{
-		return $this->hasMany('App\Models\BlogComment');
+		return $this->hasMany('App\Models\BlogComment','blog_post_id');
 	}
 	
 	public function user()

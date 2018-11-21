@@ -80,7 +80,7 @@
 							<div class="post-meta meta-style-color">
 								<span class="comments-link">
 									<i class="fa fa-comments-o"></i>
-									<a>{{ $comentarios }} comentarios</a>
+										<a>{{ $articulo->blogcomments()->count() }} comentarios</a>
 								</span><!-- .comments-link -->
 								<span class="view-link">
 									<i class="fa fa-eye"></i>

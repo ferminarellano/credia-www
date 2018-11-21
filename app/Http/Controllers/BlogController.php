@@ -25,20 +25,12 @@ class BlogController extends Controller
 		
 		$articulos = Blog::orderBy('id','desc')->paginate(6);
 		
-		if(count($articulos) > 0){
-			$id_articulo = $articulos->first()->id;
-			$comentarios = BlogComment::where([['blog_post_id',$id_articulo]])->count();
-		}else{
-			$comentarios = 0;
-		}
-		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"articulos" => $articulos,
 			"redes" => $redes,
-			"comentarios" => $comentarios,
 		);
 		
 		return View::make('blog.blog')->with($data);
@@ -54,18 +46,12 @@ class BlogController extends Controller
 
 		$articulos = Blog::where([['categoria_id',$id]])->orderBy('id','desc')->paginate(6);
 		
-		if(count($articulos) >= 0){
-			$id_articulo = $articulos->find('id');
-			$comentarios = BlogComment::where([['blog_post_id',$id_articulo]])->count();
-		}	
-		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
 			"articulos" => $articulos,
-			"comentarios" => $comentarios,
 		);
 		
 		return View::make('blog.blog')->with($data);
