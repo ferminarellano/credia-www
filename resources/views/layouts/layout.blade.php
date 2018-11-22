@@ -155,6 +155,7 @@
 <!--   CONTENIDO PROYECTOS   -->
 	@yield('welcomeproyecto')
 	@yield('proyectosection')
+	@yield('proyectodetalle')
 <!-- END CONTENIDO PROYECTOS -->
 
 <!--   CONTENIDO EVENTOS   -->

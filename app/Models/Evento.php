@@ -44,7 +44,7 @@ class Evento extends Model
 	
 	public function patrocinadores()
 	{
-		return $this->belongsToMany('App\Models\Patrocinador', 'evento_patrocinador','evento_id') ;
+		return $this->belongsToMany('App\Models\Patrocinador', 'evento_patrocinador','evento_id');
 	}
 	
 	public function contacto_eventos()

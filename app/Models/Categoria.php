@@ -35,6 +35,11 @@ class Categoria extends Model
 		return $this->hasMany('App\Models\Blog');
 	}
 	
+	public function proyectos()
+	{
+		return $this->hasMany('App\Models\Proyecto');
+	}
+	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/

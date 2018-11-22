@@ -25,8 +25,11 @@ Route::get('contactos', 'ContactoController@contacto')->name('contacto');
 Route::get('blog/{slug}/{id}', 'BlogController@blogdetalle')->name('blogdetalle');
 Route::get('eventos/{slug}/{id}', 'EventoController@eventodetalle')->name('eventodetalle');
 Route::get('blog/categoria/{categoria}/{categoria_id}', 'BlogController@search_categoria_blog')->name('categoria_blog');
+Route::get('proyectos/{slug}/{id}', 'ProyectoController@proyectodetalle')->name('proyectodetalle'); 
+Route::get('proyectos/categoria/{categoria}/{categoria_id}', 'ProyectoController@search_categoria_proyecto')->name('categoria_proyecto');
 
 Route::post('/','IndexController@store');
 Route::post('/voluntarios','VoluntarioController@store');
 Route::post('/contactos','ContactoController@store');
 Route::post('blog/{slug}/{id}','BlogController@store');
+// Route::post('eventos/{slug}/{id}','EventoController@store');

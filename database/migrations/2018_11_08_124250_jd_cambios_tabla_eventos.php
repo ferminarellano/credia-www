@@ -21,7 +21,6 @@ class JdCambiosTablaEventos extends Migration
 			$table->longText('mision')->nullable()->after('longitud');
 			$table->longText('vision')->nullable()->after('mision');
 			$table->longText('objetivo')->nullable()->after('vision');
-			
         });
 		
 		Schema::table('eventos', function (Blueprint $table) {
