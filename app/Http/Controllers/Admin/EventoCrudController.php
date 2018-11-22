@@ -43,6 +43,7 @@ class EventoCrudController extends CrudController
 			'label' => "Fotografía",
 			'type' => 'upload',
 			'upload' => true,
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -50,35 +51,49 @@ class EventoCrudController extends CrudController
 			'label' => "Título de evento",
 			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue el título del evento',
+				'placeholder' => 'Agregue el título *',
 			],
+			'suffix' => '<span class="glyphicon glyphicon-star"></span>',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'subtitulo',
-			'label' => "Descripción de evento",
+			'label' => "Subtitulo de evento",
 			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue la descripción del evento',
+				'placeholder' => 'Agregue el subtitulo *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],
+			'tab' => 'Datos generales',			
 		]);
 		
 		$this->crud->addField([
 			'name' => 'contenido',
-			'label' => "Segundo parrafo",
+			'label' => "Contenido",
 			'type' => 'summernote',
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'separator0',
+			'type' => 'custom_html',
+			'value' => '<hr>',
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'fecha',
 			'label' => "Fecha",
 			'type' => 'date_picker',
+			'attributes' => [
+				'placeholder' => 'Agregue la fecha *',
+			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
@@ -86,34 +101,69 @@ class EventoCrudController extends CrudController
 				'todayBtn' => true,
 				'format' => 'dd-mm-yyyy',
 				'language' => 'es'
-			],			
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'horaInicio',
-			'label' => "Hora inicio evento",
+			'label' => "Hora inicio",
 			'type' => 'time_picker',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-6',
-			],			
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'horaFinal',
-			'label' => "Hora finalización evento",
+			'label' => "Hora finalización",
 			'type' => 'time_picker',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-6',
-			],			
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
-			'name' => 'direccion',
-			'label' => 'Dirección de evento',
-			'type' => 'address',
+			'label' => "Patrocinadores",
+			'type' => 'select2_multiple',
+			'name' => 'patrocinadores',
+			'entity' => 'patrocinadores',
+			'attribute' => 'nombre', 
+			'model' => "App\Models\Patrocinador",
+			'pivot' => true, 
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			],			
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'organizador',
+			'label' => "Organizador",
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el organizador *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			],
+			'tab' => 'Datos de contacto',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'correo',
+			'label' => 'Correo de contacto',
+			'type' => 'email',
+			'attributes' => [
+				'placeholder' => 'Correo * Ej: credia@gmail.com',
+			],
+			'suffix' => '@',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos de contacto',			
 		]);
 		
 		$this->crud->addField([
@@ -121,32 +171,26 @@ class EventoCrudController extends CrudController
 			'label' => "Télefono de contacto",
 			'type' => 'number',
 			'attributes' => [
-				'placeholder' => 'Agregue télefono de contacto',
+				'placeholder' => 'Télefono *',
 			],
+			'suffix' => '<span class="glyphicon glyphicon-earphone"></span>',
 			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			], 
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos de contacto',
 		]);
 		
 		$this->crud->addField([
-			'name' => 'correo',
-			'label' => 'Correo de contacto',
+			'name' => 'direccion',
+			'label' => 'Dirección de evento',
 			'type' => 'address',
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],			
-		]);
-		
-		$this->crud->addField([
-			'name' => 'organizador',
-			'label' => "Organizador de evento",
-			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue el nombre del organizador',
+				'placeholder' => 'Agregue la dirección del evento *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],
+			'tab' => 'Datos de contacto',
 		]);
 		
 		$this->crud->addField([
@@ -156,7 +200,8 @@ class EventoCrudController extends CrudController
 			'attributes' => ["step" => "any"],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-6',
-			],			
+			],
+			'tab' => 'Datos de contacto',			
 		]);
 		
 		$this->crud->addField([
@@ -166,14 +211,21 @@ class EventoCrudController extends CrudController
 			'attributes' => ["step" => "any"],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-6',
-			],			
+			],
+			'tab' => 'Datos de contacto',
 		]);
 		
-		$this->crud->addField([
-			'name' => 'mision',
-			'label' => "Información relevante sobre el evento",
-			'type' => 'summernote',
-		]);
+		// $this->crud->addField([
+			// 'name' => 'map_widget_crear',
+			// 'type' => 'map_widget_crear',
+			// 'tab' => 'Datos de contacto',
+		// ],'create');
+		
+		// $this->crud->addField([
+			// 'name' => 'map_widget_edit',
+			// 'type' => 'map_widget_edit',
+			// 'tab' => 'Datos de contacto',
+		// ],'update');
     }
 
     public function store(StoreRequest $request)

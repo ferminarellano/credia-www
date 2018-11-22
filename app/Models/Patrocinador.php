@@ -42,7 +42,7 @@ class Patrocinador extends Model
 	
 	public function eventos()
 	{
-		return $this->belongsToMany('App\Models\Evento', 'evento_patrocinador','patrocinador_id');
+		return $this->belongsToMany('App\Models\Evento','evento_patrocinador','patrocinador_id');
 	}
 	
     /*-------------------------------------------------------------------------

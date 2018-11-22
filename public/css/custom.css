@@ -17,6 +17,11 @@ body {
 	border-left-color: #a6ce39!important;
 }
 
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #000;
+    background-color: white;
+}
+
 .box-header.with-border {
     border-bottom: 1px solid #f4f4f4;
 }
@@ -29,3 +34,30 @@ body {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+
+/*===================		MAPAS		=======================*/
+
+#evento_map_crear { 
+	height: 250px;
+	width: 100%;
+}
+
+.evento_map_container_crear{
+	border: 1px solid #f4f4f4;
+    height: 250px;
+	width:100%;
+}
+
+#evento_map_edit { 
+	height: 250px;
+	width: 100%;
+}
+
+.evento_map_container_edit {
+	border: 1px solid #f4f4f4;
+    height: 250px;
+	width:100%;
+}
+
+/*=============================================================*/

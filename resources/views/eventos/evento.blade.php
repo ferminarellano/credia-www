@@ -21,6 +21,8 @@
 		
 		return $arr[$palabra];
 	}
+	
+	$pagination_range = 2;
 ?>
 
 @section('title', 'Eventos -')
@@ -51,7 +53,7 @@
 					<div class="col-lg-6 row xs-single-event event-blue">
 						<div class="col-md-5">
 							<div class="xs-event-image">
-								<img src="/assets/images/event/event_1.jpg" alt="">
+								<img src="/{{$evento->foto}}" alt="">
 								<div class="xs-entry-date">
 									<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
 									<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>
@@ -72,6 +74,49 @@
 					</div><!-- .xs-single-event END -->
 				@endforeach
 			</div><!-- .row end -->
+			<!-- pagination -->
+			<div>
+				<ul class="pagination justify-content-center xs-pagination">
+					<li class="page-item {{ $eventos->previousPageUrl() == null ? 'disabled' : '' }}">
+						<a class="page-link" href="{{ $eventos->previousPageUrl() ?? '#' }}" aria-label="Previous">
+							<i class="fa fa-angle-left"></i>
+						</a>
+					</li>
+					@if ($eventos->currentPage() > 1+$pagination_range )
+						<li class="page-item">
+							<a class="page-link" href="{{ $eventos->url(1) ?? '#' }}">{{ 1 }}</a>
+						</li>
+
+						@if ($eventos->currentPage() > 1+$pagination_range+1 )
+							<li class="page-item disabled">
+								<span class="page-link">&hellip;</span>
+							</li>
+						@endif
+					@endif
+					@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+						@if ($eventos->currentPage()+$i > 0 && $eventos->currentPage()+$i <= $eventos->lastPage())
+							<li class="page-item {{ $i==0 ? 'active' : '' }}">
+								<a class="page-link" href="{{ $eventos->url($eventos->currentPage()+$i) }}">{{ $eventos->currentPage()+$i }}</a>
+							</li>
+						@endif
+					@endfor
+					@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range )	
+						@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range-1 )
+							<li class="page-item disabled">
+								<span class="page-link">&hellip;</span>
+							</li>
+						@endif
+						<li class="page-item">
+							<a class="page-link" href="{{ $eventos->url($eventos->lastPage()) ?? '#' }}">{{ $eventos->lastPage() }}</a>
+						</li>
+					@endif
+					<li class="page-item {{ $eventos->nextPageUrl()==null ? 'disabled' : '' }}">
+						<a class="page-link " href="{{ $eventos->nextPageUrl() ?? '#' }}" aria-label="Next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</li>
+				</ul>
+			</div><!-- End pagination -->
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
 
