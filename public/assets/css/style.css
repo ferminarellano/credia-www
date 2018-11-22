@@ -148,7 +148,7 @@ ul, li {
 .xs-heading p {
   margin-bottom: 0;
   font-size: 1.14286em; 
-  color: #626c84;
+  color: #011b58;
   margin-top: 25px;
   text-align:justify;}
   
@@ -389,7 +389,7 @@ a.xs-post-title:hover {
   -ms-flex-item-align: center;
       align-self: center; }
   .xs-avatar-title a {
-    color: #041D57;
+    color: #011b58;
     margin: 0;
     line-height: 1;
     font-size: 0.85714em;
@@ -1292,10 +1292,11 @@ blockquote {
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    color: #041D57;
+    color: #011b58;
     font-weight: 600;
     line-height: 1.7;
-    font-size: 1.14286em; }
+    font-size: 15px; 
+	text-align:center;}
     .xs-list-with-content li:last-child {
       margin: 0; }
     .xs-list-with-content li span {
@@ -2928,6 +2929,11 @@ svg {
 .xs-event-banner {
   margin-bottom: 53px; }
   
+ .xs-event-banner img {
+	max-height: 400px;
+    width: 100%;
+ }
+  
 .event-slyle{
   padding-top:15px;
 }
@@ -3035,6 +3041,11 @@ svg {
   float: left;
   border-bottom: 1px solid #dbdbdb;
   }
+  
+  .xs-event-sponsor img {
+	max-height:50px;
+  }
+  
   .xs-event-sponsor li:nth-child(1), .xs-event-sponsor li:nth-child(3) {
     border-left: 0px solid #000; }
   .xs-event-sponsor li:nth-child(3), .xs-event-sponsor li:nth-child(4) {
@@ -3838,7 +3849,7 @@ position: relative; }
   color: #ffca0a; }
 
 .bg-gray {
-  background-color: #F9F9F9; }
+  background-color: #F9FFF9; }
 
 .bg-gray-2 {
   background-color: #f8f8f8; }

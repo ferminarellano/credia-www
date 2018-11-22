@@ -74,49 +74,51 @@
 					</div><!-- .xs-single-event END -->
 				@endforeach
 			</div><!-- .row end -->
-			<!-- pagination -->
-			<div>
-				<ul class="pagination justify-content-center xs-pagination">
-					<li class="page-item {{ $eventos->previousPageUrl() == null ? 'disabled' : '' }}">
-						<a class="page-link" href="{{ $eventos->previousPageUrl() ?? '#' }}" aria-label="Previous">
-							<i class="fa fa-angle-left"></i>
-						</a>
-					</li>
-					@if ($eventos->currentPage() > 1+$pagination_range )
-						<li class="page-item">
-							<a class="page-link" href="{{ $eventos->url(1) ?? '#' }}">{{ 1 }}</a>
+			@if($eventos->count() > 0)
+				<!-- pagination -->
+				<div>
+					<ul class="pagination justify-content-center xs-pagination">
+						<li class="page-item {{ $eventos->previousPageUrl() == null ? 'disabled' : '' }}">
+							<a class="page-link" href="{{ $eventos->previousPageUrl() ?? '#' }}" aria-label="Previous">
+								<i class="fa fa-angle-left"></i>
+							</a>
 						</li>
+						@if ($eventos->currentPage() > 1+$pagination_range )
+							<li class="page-item">
+								<a class="page-link" href="{{ $eventos->url(1) ?? '#' }}">{{ 1 }}</a>
+							</li>
 
-						@if ($eventos->currentPage() > 1+$pagination_range+1 )
-							<li class="page-item disabled">
-								<span class="page-link">&hellip;</span>
+							@if ($eventos->currentPage() > 1+$pagination_range+1 )
+								<li class="page-item disabled">
+									<span class="page-link">&hellip;</span>
+								</li>
+							@endif
+						@endif
+						@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+							@if ($eventos->currentPage()+$i > 0 && $eventos->currentPage()+$i <= $eventos->lastPage())
+								<li class="page-item {{ $i==0 ? 'active' : '' }}">
+									<a class="page-link" href="{{ $eventos->url($eventos->currentPage()+$i) }}">{{ $eventos->currentPage()+$i }}</a>
+								</li>
+							@endif
+						@endfor
+						@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range )	
+							@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range-1 )
+								<li class="page-item disabled">
+									<span class="page-link">&hellip;</span>
+								</li>
+							@endif
+							<li class="page-item">
+								<a class="page-link" href="{{ $eventos->url($eventos->lastPage()) ?? '#' }}">{{ $eventos->lastPage() }}</a>
 							</li>
 						@endif
-					@endif
-					@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
-						@if ($eventos->currentPage()+$i > 0 && $eventos->currentPage()+$i <= $eventos->lastPage())
-							<li class="page-item {{ $i==0 ? 'active' : '' }}">
-								<a class="page-link" href="{{ $eventos->url($eventos->currentPage()+$i) }}">{{ $eventos->currentPage()+$i }}</a>
-							</li>
-						@endif
-					@endfor
-					@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range )	
-						@if ($eventos->currentPage() < $eventos->lastPage()-$pagination_range-1 )
-							<li class="page-item disabled">
-								<span class="page-link">&hellip;</span>
-							</li>
-						@endif
-						<li class="page-item">
-							<a class="page-link" href="{{ $eventos->url($eventos->lastPage()) ?? '#' }}">{{ $eventos->lastPage() }}</a>
+						<li class="page-item {{ $eventos->nextPageUrl()==null ? 'disabled' : '' }}">
+							<a class="page-link " href="{{ $eventos->nextPageUrl() ?? '#' }}" aria-label="Next">
+								<i class="fa fa-angle-right"></i>
+							</a>
 						</li>
-					@endif
-					<li class="page-item {{ $eventos->nextPageUrl()==null ? 'disabled' : '' }}">
-						<a class="page-link " href="{{ $eventos->nextPageUrl() ?? '#' }}" aria-label="Next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</li>
-				</ul>
-			</div><!-- End pagination -->
+					</ul>
+				</div><!-- End pagination -->
+			@endif
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
 

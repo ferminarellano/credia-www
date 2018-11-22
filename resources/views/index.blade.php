@@ -565,7 +565,7 @@
 					<div class="col-lg-6 row xs-single-event event-blue">
 						<div class="col-md-5">
 							<div class="xs-event-image">
-								<img src="assets/images/event/event_1.jpg" alt="">
+								<img src="/{{$evento->foto}}" alt="">
 								<div class="xs-entry-date">
 									<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
 									<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>

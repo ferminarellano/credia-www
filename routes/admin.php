@@ -10,4 +10,5 @@
 	CRUD::resource('categoria', 'CategoriaCrudController');
 	CRUD::resource('evento', 'EventoCrudController');
 	CRUD::resource('patrocinador', 'PatrocinadorCrudController');
+	CRUD::resource('proyecto', 'ProyectoCrudController');
 	

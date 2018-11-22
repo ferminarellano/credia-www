@@ -63,26 +63,26 @@
 									
 									<div class="tab-pane" id="contactUs" role="tabpanel">
 										<div class="xs-contact-form-wraper">
-											<form action="#" method="POST" id="xs-contact-form" class="xs-contact-form">
+											<form action="{{URL::to('eventos',['slug' => str_slug($eventos->first()->titulo,'-'),'id' => $eventos->first()->id])}}" method="post" class="xs-contact-form">
 												<div class="input-group">
-													<input type="text" name="name" id="xs-name" class="form-control" placeholder="Introduzca su nombre.....">
+													<input type="text" name="name" id="name" class="form-control" placeholder="Introduzca su nombre.....">
 													<div class="input-group-append">
 														<div class="input-group-text"><i class="fa fa-user"></i></div>
 													</div>
 												</div><!-- .input-group END -->
 												<div class="input-group">
-													<input type="email" name="email" id="xs-email" class="form-control" placeholder="Introduzca su correo electrónico.....">
+													<input type="email" name="email" id="email" class="form-control" placeholder="Introduzca su correo electrónico.....">
 													<div class="input-group-append">
 														<div class="input-group-text"><i class="fa fa-envelope-o"></i></div>
 													</div>
 												</div><!-- .input-group END -->
 												<div class="input-group massage-group">
-													<textarea name="massage" placeholder="Introduzca su mensaje....." id="xs-massage" class="form-control" cols="30" rows="10"></textarea>
+													<textarea name="mensaje" placeholder="Introduzca su mensaje....." id="massage" class="form-control" cols="30" rows="10"></textarea>
 													<div class="input-group-append">
 														<div class="input-group-text"><i class="fa fa-pencil"></i></div>
 													</div>
 												</div><!-- .input-group END -->
-												<button class="btn btn-success" type="submit" id="xs-submit">Enviar</button>
+												<button class="btn btn-success" type="submit">Enviar</button>
 											</form><!-- .xs-contact-form #xs-contact-form END -->
 										</div>
 									</div><!-- #contactUs END -->
@@ -144,7 +144,7 @@
 										<li><a><img src="/{{ $evento->foto }}" alt=""></a></li>
 									@endforeach
 								</ul>
-							</div><!-- .xs-event-schedule-widget END -->						<!-- End horizontal tab -->
+							</div><!-- .xs-event-schedule-widget END -->
 						</div>
 					</div>
 				</div>

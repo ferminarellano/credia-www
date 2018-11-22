@@ -7,6 +7,11 @@ use App\Models\Banner;
 use App\Models\Evento;
 use App\Models\Social;
 use View;
+use Mail;
+use Session;
+use Redirect;
+
+
 
 class EventoController extends Controller
 {
@@ -43,4 +48,16 @@ class EventoController extends Controller
 		
 		return View::make('eventos.eventodetalle')->with($data);
 	}
+	
+	public function store(Request $request,$slug,$id)
+    {	
+		Mail::send('emails.contacto',$request->all(), function($msj){
+			$msj->subject('correo de Contacto');
+			$msj->to('josedgregorio07@gmail.com');
+		});
+		
+		Session::flash('message','Mensaje enviado correctamente');
+					
+		return redirect()->route('eventodetalle',['slug' => $slug,'id' => $id]);
+    }
 }

@@ -32,10 +32,16 @@
 	</li>
 	
 	<li class="treeview">
+		<a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Proyectos</span> <i class="fa fa-angle-left pull-right"></i></a>
+		<ul class="treeview-menu">
+			<li><a href="{{ backpack_url('proyecto') }}"><i class="fa fa-folder"></i> <span>Proyectos</span></a></li>
+		</ul>
+	</li>
+	
+	<li class="treeview">
 		<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> <span>Eventos</span> <i class="fa fa-angle-left pull-right"></i></a>
 		<ul class="treeview-menu">
 			<li><a href="{{ backpack_url('evento') }}"><i class="fa fa-calendar-plus-o"></i> <span>Eventos</span></a></li>
-			<li><a href="{{ backpack_url('patrocinador') }}"><i class="fa fa-handshake-o"></i> <span>Patrocinadores</span></a></li>
 		</ul>
 	</li>
 	
@@ -43,6 +49,13 @@
 		<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
 		<ul class="treeview-menu">
 			<li><a href="{{ backpack_url('blog') }}"><i class="fa fa-rss"></i> <span>Artículos</span></a></li>
+		</ul>
+	</li>
+	
+	<li class="treeview">
+		<a href="#"><i class="fa fa-cog" aria-hidden="true"></i> <span>Administrar</span> <i class="fa fa-angle-left pull-right"></i></a>
+		<ul class="treeview-menu">
+			<li><a href="{{ backpack_url('patrocinador') }}"><i class="fa fa-handshake-o"></i> <span>Patrocinadores</span></a></li>
 			<li><a href="{{ backpack_url('categoria') }}"><i class="fa fa-tasks"></i> <span>Categorías</span></a></li>
 		</ul>
 	</li>

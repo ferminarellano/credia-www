@@ -45,8 +45,8 @@
 		<div class="container">
 			<div class="row xs-mb-50">
 				@if(count($articulos) === 0)
-					<div class="col-lg-12" style="color:#011b58;font-size:48px;font-weight:bold;text-align:center;padding-top:40px;">
-						NO HAY PUBLICACIONES DISPONIBLES
+					<div class="col-lg-12">
+						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
 					</div>
 				@endif
 				@foreach($articulos as $articulo)
@@ -91,49 +91,51 @@
 					</div>
 				@endforeach
 			</div><!-- .row end -->
-			<div>
+			@if($articulos->count() > 0)
 				<!-- pagination -->
-				<ul class="pagination justify-content-center xs-pagination">
-					<li class="page-item {{ $articulos->previousPageUrl() == null ? 'disabled' : '' }}">
-						<a class="page-link" href="{{ $articulos->previousPageUrl() ?? '#' }}" aria-label="Previous">
-							<i class="fa fa-angle-left"></i>
-						</a>
-					</li>
-					@if ($articulos->currentPage() > 1+$pagination_range )
-						<li class="page-item">
-							<a class="page-link" href="{{ $articulos->url(1) ?? '#' }}">{{ 1 }}</a>
+				<div>
+					<ul class="pagination justify-content-center xs-pagination">
+						<li class="page-item {{ $articulos->previousPageUrl() == null ? 'disabled' : '' }}">
+							<a class="page-link" href="{{ $articulos->previousPageUrl() ?? '#' }}" aria-label="Previous">
+								<i class="fa fa-angle-left"></i>
+							</a>
 						</li>
+						@if ($articulos->currentPage() > 1+$pagination_range )
+							<li class="page-item">
+								<a class="page-link" href="{{ $articulos->url(1) ?? '#' }}">{{ 1 }}</a>
+							</li>
 
-						@if ($articulos->currentPage() > 1+$pagination_range+1 )
-							<li class="page-item disabled">
-								<span class="page-link">&hellip;</span>
+							@if ($articulos->currentPage() > 1+$pagination_range+1 )
+								<li class="page-item disabled">
+									<span class="page-link">&hellip;</span>
+								</li>
+							@endif
+						@endif
+						@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+							@if ($articulos->currentPage()+$i > 0 && $articulos->currentPage()+$i <= $articulos->lastPage())
+								<li class="page-item {{ $i==0 ? 'active' : '' }}">
+									<a class="page-link" href="{{ $articulos->url($articulos->currentPage()+$i) }}">{{ $articulos->currentPage()+$i }}</a>
+								</li>
+							@endif
+						@endfor
+						@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range )	
+							@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range-1 )
+								<li class="page-item disabled">
+									<span class="page-link">&hellip;</span>
+								</li>
+							@endif
+							<li class="page-item">
+								<a class="page-link" href="{{ $articulos->url($articulos->lastPage()) ?? '#' }}">{{ $articulos->lastPage() }}</a>
 							</li>
 						@endif
-					@endif
-					@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
-						@if ($articulos->currentPage()+$i > 0 && $articulos->currentPage()+$i <= $articulos->lastPage())
-							<li class="page-item {{ $i==0 ? 'active' : '' }}">
-								<a class="page-link" href="{{ $articulos->url($articulos->currentPage()+$i) }}">{{ $articulos->currentPage()+$i }}</a>
-							</li>
-						@endif
-					@endfor
-					@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range )	
-						@if ($articulos->currentPage() < $articulos->lastPage()-$pagination_range-1 )
-							<li class="page-item disabled">
-								<span class="page-link">&hellip;</span>
-							</li>
-						@endif
-						<li class="page-item">
-							<a class="page-link" href="{{ $articulos->url($articulos->lastPage()) ?? '#' }}">{{ $articulos->lastPage() }}</a>
+						<li class="page-item {{ $articulos->nextPageUrl()==null ? 'disabled' : '' }}">
+							<a class="page-link " href="{{ $articulos->nextPageUrl() ?? '#' }}" aria-label="Next">
+								<i class="fa fa-angle-right"></i>
+							</a>
 						</li>
-					@endif
-					<li class="page-item {{ $articulos->nextPageUrl()==null ? 'disabled' : '' }}">
-						<a class="page-link " href="{{ $articulos->nextPageUrl() ?? '#' }}" aria-label="Next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</li>
-				</ul><!-- End pagination -->
-			</div>
+					</ul>
+				</div><!-- End pagination -->
+			@endif
 		</div><!-- .container end -->
 	</section><!-- End blog section -->
 @endsection
