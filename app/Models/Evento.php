@@ -16,10 +16,10 @@ class Evento extends Model
 	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['titulo','subtitulo','foto','fecha','contenido','organizador',
 						   'horaInicio','horaFinal','direccion','telefono','correo',
-						   'latitud','longitud','mision','vision','objetivo'];
+						   'latitud','longitud'];
     // protected $hidden = [];
     // protected $dates = [];
-	protected $visible = ['foto'];
+	protected $visible = ['foto','latitud','longitud'];
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS
@@ -49,7 +49,7 @@ class Evento extends Model
 	
 	public function contacto_eventos()
 	{
-		return $this-> hasMany('App\Models\ContactoEvento');
+		return $this->hasMany('App\Models\ContactoEvento');
 	}
 	
     /*-------------------------------------------------------------------------

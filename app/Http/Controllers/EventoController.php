@@ -17,7 +17,7 @@ class EventoController extends Controller
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
 		
-		$eventos = Evento::all();
+		$eventos = Evento::orderBy('id','desc')->paginate(6);
 		$redes = Social::all();
 		
 		$data = array(
@@ -33,11 +33,11 @@ class EventoController extends Controller
 	
 	public function eventodetalle($slug,$id)
 	{
-		$evento = Evento::where([['id',$id]])->get();
+		$eventos = Evento::where([['id',$id]])->get();
 		$redes = Social::all();
 		
 		$data = array(
-			"evento" => $evento,
+			"eventos" => $eventos,
 			"redes" => $redes,
 		);
 		

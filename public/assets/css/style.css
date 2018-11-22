@@ -1775,6 +1775,8 @@ blockquote {
 
 .xs-event-image {
   position: relative; }
+  .xs-event-image img {
+    height: 226px; }
   .xs-event-image .xs-entry-date {
     color: #FFFFFF;
     position: absolute;
@@ -3022,22 +3024,25 @@ svg {
   font-weight: 700;
   color: #041D57;
   line-height: 1;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  }
 
 .xs-event-sponsor li {
-  width: 50%;
+  width: 40%;
+  padding: 15px;
+  margin-left: 17.5px;
   display: inline-block;
   float: left;
   border-bottom: 1px solid #dbdbdb;
-  border-left: 1px solid #dbdbdb; }
+  }
   .xs-event-sponsor li:nth-child(1), .xs-event-sponsor li:nth-child(3) {
     border-left: 0px solid #000; }
   .xs-event-sponsor li:nth-child(3), .xs-event-sponsor li:nth-child(4) {
     border-bottom: 0px solid #000; }
   .xs-event-sponsor li a {
-    min-height: 140px;
+    min-height: 50px;
     display: block;
-    line-height: 140px;
+    line-height: 50px;
     text-align: center; }
 
 .xs-horizontal-tabs .nav-tabs {
