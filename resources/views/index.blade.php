@@ -21,6 +21,25 @@
 		
 		return $arr[$palabra];
 	}
+	
+	function porcentaje($total,$utilizado){
+		$resultado = 0;
+		$division = 0;
+		
+		$division = $utilizado/$total;
+		$resultado = $division*100;
+		
+		return $resultado;
+	}
+	
+	function cant_dias($fecha11,$fecha22){
+		$fecha1= new DateTime($fecha11);
+		$fecha2= new DateTime($fecha22);
+		
+		$diff = $fecha1->diff($fecha2);
+		
+		return $diff->days;
+	}
 ?>
 
 @section('title','')
@@ -29,11 +48,11 @@
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
-				<div class="xs-welcome-content" style="background-image: url({{$slide->foto}});">
+				<div class="xs-welcome-content" style="background-image: url({{ $slide->foto }});">
 					<div class="container">
 						<div class="xs-welcome-wraper color-white">
-							<h2>{{$slide->titulo}}</h2>
-							<p>{{$slide->contenido}}</p>
+							<h2>{{ $slide->titulo }}</h2>
+							<p>{{ $slide->descripcion }}</p>
 						</div><!-- .xs-welcome-wraper END -->
 					</div><!-- .container end -->
 					<div class="xs-black-overlay"></div>
@@ -118,253 +137,60 @@
 	<section class="bg-gray waypoint-tigger xs-section-padding">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Proyectos</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>Principales proyectos.</p>
-				</div><!-- .xs-heading-title END -->
-				<div class="col-xl-3 col-md-3 xs-btn-wraper">
-					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">todos los proyectos</a>
+				<div class="col-md-10 col-xl-10">
+					<h2 class="xs-title">Proyectos recientes</h2>
+				</div>
+				<div class="col-xl-2 col-md-2">
+					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
 				</div><!-- .xs-btn-wraper END -->
 			</div><!-- .row end -->
 			<div class="row">
-				
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
+				@if(count($proyectos) === 0)
+					<div class="col-lg-12">
+						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
+					</div>
+				@endif
+				@foreach($proyectos as $proyecto)
+					<div class="col-lg-4 col-md-6">
+						<div class="xs-popular-item xs-box-shadow">
+							<div class="xs-item-header">
 
-							<img src="assets/images/proyectos/proyectos_4.jpg" alt="">
+								<img src="/{{$proyecto->foto}}" alt="">
 
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="90" data-animation-duration="3500">0</span>%</p>
+								<div class="xs-skill-bar">
+									<div class="xs-skill-track bg-light-red">
+										<p><span class="number-percentage-count number-percentage" data-value="{{ porcentaje($proyecto->presupuesto,$proyecto->utilizado) }}" data-animation-duration="3500">0</span>%</p>
+									</div>
 								</div>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Proyecto Fondo de Adaptación (PFA)</a></li>
-							</ul>
+							</div><!-- .xs-item-header END -->
+							<div class="xs-item-content">
+								<div class="xs-margin-1">
+									<ul class="xs-simple-tag xs-mb-20">
+										<li><a class="color-light-red" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->titulo }}</a></li>
+									</ul>
 
-							<a href="#" class="xs-post-title xs-mb-30" align="justify">Incrementar la resiliencia de la población más vulnerable en Honduras</a>
+									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->subtitulo }}</a>
 
-							<ul class="xs-list-with-content" align="center">
-								<li>$67,000<span>Prometido</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="60" data-animation-duration="3500">0</span>% <span>financiado</span></li>
-								<li>3<span>Días para ir</span></li>
-							</ul>
-										
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_1.jpg" alt="">
+									<ul class="xs-list-with-content">
+										<li>L. {{ number_format($proyecto->presupuesto,2) }}<span>Prometido</span></li>
+										<li><span class="number-percentage-count number-percentage" data-value="{{ porcentaje($proyecto->presupuesto,$proyecto->utilizado) }}" data-animation-duration="3500">0</span>% <span>Utilizado</span></li>
+										<li>{{ cant_dias($proyecto->fecha_inicio,$proyecto->fecha_finalizacion) }}<span>total días</span></li>
+									</ul>
 								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>Por</span>Fundación CREDIA</a>
+								<span class="xs-separetor"></span>
+								
+								<div class="row xs-margin-0">
+									<div class="xs-round-avatar">
+										<img src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($proyecto->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
+									</div>
+									<div class="xs-avatar-title">
+										<a style="color: #011b58;"><span>Por</span>{{ $proyecto->user()->get()->first()->name }}</a>
+									</div>
 								</div>
-							</div>
-						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
-
-				
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
-
-							<img src="assets/images/proyectos/proyectos_5.jpg" alt="">
-
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>%</p>
-								</div>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Cambio climático</a></li>
-							</ul>
-
-							<a href="#" class="xs-post-title xs-mb-30" align="justify">Introducir en el concepto de Cambio Climático a los niños y niñas del CBCH.</a>
-
-							<ul class="xs-list-with-content" align="center">
-								<li>$33,600<span>Prometido</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="59" data-animation-duration="3500">0</span>% <span>financiado</span></li>
-								<li>10<span>Días para ir</span></li>
-							</ul>
-							
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_2.jpg" alt="">
-								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>Por</span>Fundación CREDIA</a>
-								</div>
-							</div>
-						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
-
-							<img src="assets/images/proyectos/proyectos_6.jpg" alt="">
-
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>%</p>
-								</div>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Fortaleciendo áreas marinas protegidas</a></li>
-							</ul>
-
-							<a href="#" class="xs-post-title xs-mb-30" align="justify">Diseño e implementación del sistema de monitoreo de los ecosistemas marinos</a>
-
-							<ul class="xs-list-with-content" align="center">
-								<li>$12,760<span>Prometido</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="35" data-animation-duration="3500">0</span>% <span>financiado</span></li>
-								<li>66<span>Días para ir</span></li>
-							</ul>
-							
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_3.jpg" alt="">
-								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>Por</span>Fundación CREDIA</a>
-								</div>
-							</div>
-						</div><!-- .xs-item-content END -->
-					</div><!-- .xs-popular-item END -->
-				</div>
-
-				<!--<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
-
-							<img src="assets/images/causes/causes_7.jpg" alt="">
-
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="85" data-animation-duration="3500">0</span>%</p>
-								</div>
-							</div>
-						</div>
-						<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Charity</a></li>
-							</ul>
-
-							<a href="#" class="xs-post-title xs-mb-30">DACBerry PRO – Professional Soundcard for Raspberry Pi</a>
-
-							<ul class="xs-list-with-content">
-								<li>$99,980<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="85" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>2<span>Days to go</span></li>
-							</ul>
-							
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_4.jpg" alt="">
-								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Jhung Li</a>
-								</div>
-							</div>
-						</div>-->
-						<!-- .xs-item-content END -->
-					<!--</div>-->
-					<!-- .xs-popular-item END -->
-				<!--</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
-
-							<img src="assets/images/causes/causes_8.jpg" alt="">
-
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="74" data-animation-duration="3500">0</span>%</p>
-								</div>
-							</div>
-						</div>--><!-- .xs-item-header END -->
-						<!--<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Cave</a></li>
-							</ul>
-
-							<a href="#" class="xs-post-title xs-mb-30">BIKI: First Bionic Wireless Under water Fish Drone</a>
-
-							<ul class="xs-list-with-content">
-								<li>$40,000<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="74" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>70<span>Days to go</span></li>
-							</ul>
-							
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_5.jpg" alt="">
-								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Chirstina Perry</a>
-								</div>
-							</div>
-						</div>--><!-- .xs-item-content END -->
-					<!--</div>--><!-- .xs-popular-item END -->
-				<!--</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-header">
-
-							<img src="assets/images/causes/causes_11.jpg" alt="">
-
-							<div class="xs-skill-bar">
-								<div class="xs-skill-track">
-									<p><span class="number-percentage-count number-percentage" data-value="89" data-animation-duration="3500">0</span>%</p>
-								</div>
-							</div>
-						</div>--><!-- .xs-item-header END -->
-						<!--<div class="xs-item-content">
-							<ul class="xs-simple-tag xs-mb-20">
-								<li><a href="">Watar</a></li>
-							</ul>
-
-							<a href="#" class="xs-post-title xs-mb-30">Brilliant After All, A New Album by Rebecca: Help poor people</a>
-
-							<ul class="xs-list-with-content">
-								<li>$98,980<span>Pledged</span></li>
-								<li><span class="number-percentage-count number-percentage" data-value="89" data-animation-duration="3500">0</span>% <span>Funded</span></li>
-								<li>2<span>Days to go</span></li>
-							</ul>
-							
-							<span class="xs-separetor"></span>
-							
-							<div class="row xs-margin-0">
-								<div class="xs-round-avatar">
-									<img src="assets/images/avatar/avatar_6.jpg" alt="">
-								</div>
-								<div class="xs-avatar-title">
-									<a href="#"><span>By</span>Prekina William</a>
-								</div>
-							</div>
-						</div><!-- .xs-item-content END -->
-					<!--</div>--><!-- .xs-popular-item END -->
-				<!--</div>-->
+							</div><!-- .xs-item-content END -->
+						</div><!-- .xs-popular-item END -->
+					</div>
+				@endforeach
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>

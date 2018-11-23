@@ -92,7 +92,7 @@
 				<div class="col-lg-9 nav-opacity-other"></div> <!-- .nav-opacity END -->
 				
 				<div class="col-lg-8">
-					<ul class="nav-menu" style="">
+					<ul class="nav-menu">
 						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
 						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
 						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>

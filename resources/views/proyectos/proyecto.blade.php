@@ -27,7 +27,7 @@
 @section('title', 'Proyectos -')
 
 @section('welcomeproyecto')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-md-6 col-lg-4">
 					<div class="xs-single-causes">
-						<img src="assets/images/causes/causes_4.jpg" alt="">
+						<img src="/assets/images/causes/causes_4.jpg" alt="">
 						<div class="xs-causes-footer">
 							<h2 class="color-blue-dark">Adpatación, Agua, Bosques y suelos.</h2>
 							<p style="text-align:justify;">Incrementar la resiliencia de la población más vulnerable de las zonas rurales del Corredor Biológico del Caribe Hondureño.</p>
@@ -55,7 +55,7 @@
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="xs-single-causes">
-						<img src="assets/images/causes/causes_5.jpg" alt="">
+						<img src="/assets/images/causes/causes_5.jpg" alt="">
 						<div class="xs-causes-footer">
 							<h2 class="color-blue-dark">Educación</h2>
 							<p style="text-align:justify;">Introducir en el concepto de Cambio Climático a los niños y niñas del municipio de La Ceiba y aledaños, enriqueciendo a más de 250 escuelas y 10,000 niños.</p>
@@ -64,7 +64,7 @@
 				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="xs-single-causes">
-						<img src="assets/images/causes/causes_2.jpg" alt="">
+						<img src="/assets/images/causes/causes_2.jpg" alt="">
 						<div class="xs-causes-footer">
 							<h2 class="color-blue-dark">Forestería</h2>
 							<p style="text-align:justify;">Desarrollo de las comunidades rurales, donde a partir del uso responsable y sostenible del bosque éstas generan beneficios económicos, ecológicos y sociales que contribuyen a mejorar su calidad de vida.</p>

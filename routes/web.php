@@ -32,4 +32,3 @@ Route::post('/','IndexController@store');
 Route::post('/voluntarios','VoluntarioController@store');
 Route::post('/contactos','ContactoController@store');
 Route::post('blog/{slug}/{id}','BlogController@store');
-// Route::post('eventos/{slug}/{id}','EventoController@store');

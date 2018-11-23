@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Slider;
+use App\Models\Banner;
 use App\Models\Voluntario;
 use App\Models\Actividad;
 use App\Models\Evento;
+use App\Models\Proyecto;
 use App\Models\Social;
 use View;
 
@@ -14,16 +15,18 @@ class IndexController extends Controller
 {
 	public function index()
 	{
-		$sliders = Slider::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
+		$sliders = Banner::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
 		$actividades = Actividad::where('estado','=','1')->get();
-		$eventos = Evento::all();
+		$eventos = Evento::orderBy('id','desc')->take(3)->get();
 		$redes = Social::all();
+		$proyectos = Proyecto::orderBy('id','desc')->take(3)->get();
 		
 		$data = array(
 			"sliders" => $sliders,
 			"actividades" => $actividades,
 			"eventos" => $eventos,
 			"redes" => $redes,
+			"proyectos" => $proyectos,
 		);
 		
 		return View::make('index')->with($data);

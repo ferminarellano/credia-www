@@ -20,12 +20,11 @@ class BannerCrudController extends CrudController
 			'name' => 'indicador',
 			'label' => 'Pertenece',
 			'type' => 'select_from_array',
-			'options' => ['fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 'eventos' => 'Eventos', 'blog' => 'Blog',
-						  'contacto'=> 'Contacto','voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador',
-						  'equipo'=> 'Equipo','evento_detalle'=> 'Evento detalle','blog_detalle'=> 'Blog detalle',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes','precio'=> 'Precios',
-						  'servicio'=> 'Servicio'
-						  ],
+			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
+						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
+						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
+						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
+						  'servicio'=> 'Servicio'],
 		]);
 		
 		$this->crud->addColumn([
@@ -55,12 +54,11 @@ class BannerCrudController extends CrudController
 			'name' => 'indicador',
 			'label' => "Página",
 			'type' => 'select_from_array',
-			'options' => ['fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 'eventos' => 'Eventos', 'blog' => 'Blog',
-						  'contacto'=> 'Contacto','voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador',
-						  'equipo'=> 'Equipo','evento_detalle'=> 'Evento detalle','blog_detalle'=> 'Blog detalle',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes','precio'=> 'Precios',
-						  'servicio'=> 'Servicio'
-						  ],
+			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
+						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
+						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
+						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
+						  'servicio'=> 'Servicio'],
 			'allows_null' => true,
 		]);
 		
@@ -69,7 +67,16 @@ class BannerCrudController extends CrudController
 			'label' => "Título",
 			'type' => 'text',
 			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
+				'class' => 'form-group col-md-8',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'secuencia',
+			'label' => "Secuencia",
+			'type' => 'number',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-4',
 			], 
 		]);
 		

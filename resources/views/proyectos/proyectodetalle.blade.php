@@ -17,20 +17,11 @@
 					<div class="row event-slyle">
 						<div class="col-lg-8 xs-event-wraper">
 							<div class="xs-event-content">
-								<h4>Detalle de evento</h4>
+								<h4>Detalle de proyecto</h4>
+								<h5 style="text-align:justify;">{{ $proyecto->first()->subtitulo }}</h5>
+								<br>
 								{!! $proyecto->first()->contenido !!} 
 							</div>
-							<!-- End horizontal tab -->
-							<!-- <div class="row xs-mb-12 margin-event-style"> -->
-								<!-- <div class="col-md-6 xs-about-feature"> -->
-									<!-- <h3>Event Mission</h3> -->
-									<!-- <p>663 million people drink dirty water. Learn how it access to clean water can improve health, boost local econom mies. Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p> -->
-								<!-- </div> -->
-								<!-- <div class="col-md-6 xs-about-feature"> -->
-									<!-- <h3>Event Vission</h3> -->
-									<!-- <p>663 million people drink dirty water. Learn how it access to clean water can improve health, boost local econom mies. Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p> -->
-								<!-- </div> -->
-							<!-- </div> -->
 						</div>
 						<div class="col-lg-4">
 							<!-- categories start -->
