@@ -72,60 +72,60 @@
 
 	<header class="xs-header header-transparent">
 		<div class="container">
-		<nav class="xs-menus">
-			<div class="nav-header">
-				<div class="nav-toggle"></div>
-				<a href="{{ URL::route('index') }}" class="nav-logo">
-					<img src="/assets/images/logo.png" alt="CREDIA">
-				</a>
-			</div> <!-- .nav-header END -->
-			
-			<div class="nav-menus-wrapper row" style="width:100%;">
-				<div class="xs-logo-wraper col-lg-2 xs-padding-0">
-					<a class="nav-brand" href="{{ URL::route('index') }}">
-						<img src="/assets/images/logo.png" alt="">
+			<nav class="xs-menus">
+				<div class="nav-header">
+					<div class="nav-toggle"></div>
+					<a href="{{ URL::route('index') }}" class="nav-logo">
+						<img src="/assets/images/logo.png" alt="CREDIA">
 					</a>
-				</div><!-- .xs-logo-wraper END -->
-			    
-				<div class="col-lg-9 nav-opacity"></div> <!-- .nav-opacity END -->
+				</div> <!-- .nav-header END -->
 				
-				<div class="col-lg-8">
-					<ul class="nav-menu" style="">
-						<li><a href="{{ URL::route('index') }}">Inicio</a></li>
-						<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
-						<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
-						<li><a href="{{ URL::route('evento') }}">Eventos</a>
-							<!-- <ul class="nav-dropdown"> -->
-								{{-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> --}}
-								{{-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> --}}
-							<!-- </ul> -->
-						</li>
-							<li><a href="{{ URL::route('blog') }}">Blog</a>
-							<!-- <ul class="nav-dropdown"> -->
-								{{-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> --}}
-								{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
-							<!-- </ul> -->
-						</li>
-						<!-- <li><a href="#">Páginas</a> -->
-							<!-- <ul class="nav-dropdown"> -->
-								{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
-								{{-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> --}}
-								{{-- <li><a href="{{ URL::route('mision') }}">misión</a></li> --}}
-								{{-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> --}}
-								{{-- <li><a href="{{ URL::route('precio') }}">precio</a></li> --}}
-								{{-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> --}}
-								{{-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> --}}
-								{{-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> --}}
-							<!-- </ul> -->
-						<!-- </li> -->
-					</ul><!-- .nav-menu END -->
-				</div>
-				<div class="xs-navs-button d-flex-center-end col-lg-2">
-					<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
-				</div><!-- .xs-navs-button END -->
-			</div><!-- .nav-menus-wrapper .row END -->
-		</nav><!-- .xs-menus .fundpress-menu END -->
-	</div><!-- .container end -->
+				<div class="nav-menus-wrapper row" style="width:100%;">
+					<div class="xs-logo-wraper col-lg-2 xs-padding-0">
+						<a class="nav-brand" href="{{ URL::route('index') }}">
+							<img src="/assets/images/logo.png" alt="">
+						</a>
+					</div><!-- .xs-logo-wraper END -->
+					
+					<div class="nav-opacity"></div> <!-- .nav-opacity END -->
+					
+					<div class="col-lg-8">
+						<ul class="nav-menu" style="">
+							<li><a href="{{ URL::route('index') }}">Inicio</a></li>
+							<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
+							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
+							<li><a href="{{ URL::route('evento') }}">Eventos</a>
+								<!-- <ul class="nav-dropdown"> -->
+									{{-- <li><a href="{{ URL::route('evento') }}">Eventos</a></li> --}}
+									{{-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> --}}
+								<!-- </ul> -->
+							</li>
+								<li><a href="{{ URL::route('blog') }}">Blog</a>
+								<!-- <ul class="nav-dropdown"> -->
+									{{-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> --}}
+									{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
+								<!-- </ul> -->
+							</li>
+							<!-- <li><a href="#">Páginas</a> -->
+								<!-- <ul class="nav-dropdown"> -->
+									{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
+									{{-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> --}}
+									{{-- <li><a href="{{ URL::route('mision') }}">misión</a></li> --}}
+									{{-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> --}}
+									{{-- <li><a href="{{ URL::route('precio') }}">precio</a></li> --}}
+									{{-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> --}}
+									{{-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> --}}
+									{{-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> --}}
+								<!-- </ul> -->
+							<!-- </li> -->
+						</ul><!-- .nav-menu END -->
+					</div>
+					<div class="xs-navs-button d-flex-center-end col-lg-2">
+						<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
+					</div><!-- .xs-navs-button END -->
+				</div><!-- .nav-menus-wrapper .row END -->
+			</nav><!-- .xs-menus .fundpress-menu END -->
+		</div><!-- .container end -->
 	</header>
 
 <!--   CONTENIDO INDEX   -->
@@ -149,7 +149,6 @@
 	@yield('funfacts_sn')
 	@yield('quehacemos_sn')
 	@yield('team_sn')
-	@yield('partners_sn')
 <!-- END CONTENIDO SOBRE NOSOTROS -->
 
 <!--   CONTENIDO PROYECTOS   -->
@@ -230,7 +229,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-6 footer-widget xs-pr-20">
 						<a href="{{ URL::route('index') }}" class="xs-footer-logo">
-							<img src="/assets/images/footer_logo.png" style="">
+							<img src="/assets/images/footer_logo.png">
 						</a>
 						<p>Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.</p>
 						<ul class="xs-social-list-v2">

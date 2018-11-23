@@ -35,7 +35,7 @@ class ProyectoController extends Controller
 	
 	public function search_categoria_proyecto($categoria,$id)
 	{
-		$banner = Banner::where([['indicador','=','blog']])->get();
+		$banner = Banner::where([['indicador','=','Proyectos']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;

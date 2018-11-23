@@ -14,7 +14,7 @@ class Banner extends Model
     public $timestamps = true;
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['foto','indicador','titulo','descripcion'];
+    protected $fillable = ['foto','indicador','titulo','descripcion','secuencia'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];

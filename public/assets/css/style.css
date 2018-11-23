@@ -828,7 +828,7 @@ blockquote {
   
 .nav-opacity{
 	margin-top:48.5px;
-	margin-left:185px;
+	margin-left:150px;
 	position:absolute;
 	width:850px;
 	height:44.5px;
@@ -839,7 +839,7 @@ blockquote {
 
 .nav-opacity-other{
 	margin-top:51px;
-	margin-left:185px;
+	margin-left:150px;
 	position:absolute;
 	height:43px;
 	width:850px;
@@ -3849,7 +3849,7 @@ position: relative; }
   color: #ffca0a; }
 
 .bg-gray {
-  background-color: #F9FFF9; }
+  background-color: #F9F9F9; }
 
 .bg-gray-2 {
   background-color: #f8f8f8; }
@@ -3920,7 +3920,7 @@ position: relative; }
   
   .resp{
 	  color:#011b58;
-	  font-size:48px;
+	  font-size:4.3vw;
 	  font-weight:bold;
 	  text-align:center;
 	  padding-top:40px;
