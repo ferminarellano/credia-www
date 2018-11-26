@@ -95,9 +95,9 @@
 							<!-- <li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li> -->
 							<li><a href="">Fundación</a>
 								<ul class="nav-dropdown">
-									<li><a href="{{ URL::route('equipo') }}">Equipo</a></li>
+									{{--<li><a href="{{ URL::route('equipo') }}">Equipo</a></li>--}}
 									<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
-									<li><a href="{{ URL::route('mision') }}">misión</a></li>
+									{{--<li><a href="{{ URL::route('mision') }}">misión</a></li>--}}
 								</ul>
 							</li>
 							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
