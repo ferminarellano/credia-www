@@ -20,6 +20,7 @@ class Evento extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto','latitud','longitud'];
+	protected $guard_name = 'web';
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS

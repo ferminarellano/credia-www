@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\ProyectoRequest as StoreRequest;
 use App\Http\Requests\ProyectoRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class ProyectoCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
 

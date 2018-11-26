@@ -16,6 +16,7 @@ class Social extends Model
     protected $fillable = ['red','url'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

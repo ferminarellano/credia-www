@@ -7,10 +7,15 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\CategoriaRequest as StoreRequest;
 use App\Http\Requests\CategoriaRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class CategoriaCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
+		
         $this->crud->setModel('App\Models\Categoria');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/categoria');
         $this->crud->setEntityNameStrings('categoria', 'categorias');

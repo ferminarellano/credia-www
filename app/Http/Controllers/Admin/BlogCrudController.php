@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\BlogRequest as StoreRequest;
 use App\Http\Requests\BlogRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class BlogCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
 

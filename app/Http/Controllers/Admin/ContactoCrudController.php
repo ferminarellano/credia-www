@@ -7,11 +7,15 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\ContactoRequest as StoreRequest;
 use App\Http\Requests\ContactoRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class ContactoCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
-
+		
         $this->crud->setModel('App\Models\Contacto');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/contacto');
         $this->crud->setEntityNameStrings('contacto', 'contactos');

@@ -1,5 +1,7 @@
 <?php
 	
+	Route::get('crear-permisos/','PermissionCrudController@crear_permisos');
+	
 	CRUD::resource('banner', 'BannerCrudController');
 	CRUD::resource('voluntario', 'VoluntarioCrudController');
 	CRUD::resource('actividad', 'ActividadCrudController');
@@ -10,4 +12,7 @@
 	CRUD::resource('evento', 'EventoCrudController');
 	CRUD::resource('patrocinador', 'PatrocinadorCrudController');
 	CRUD::resource('proyecto', 'ProyectoCrudController');
+	
+	CRUD::resource('user', 'UserCrudController');
+	CRUD::resource('role', 'RoleCrudController');
 	

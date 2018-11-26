@@ -20,6 +20,7 @@ class Actividad extends Model
     protected $fillable = ['actividad'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

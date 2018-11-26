@@ -16,6 +16,7 @@ class Categoria extends Model
     protected $fillable = ['nombre','descripcion'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

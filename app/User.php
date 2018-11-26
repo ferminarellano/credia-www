@@ -13,12 +13,27 @@ class User extends Authenticatable
     use Notifiable;
 	use CrudTrait; 
     use HasRoles;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 	
 	protected $primaryKey = 'id';
 	
     protected $fillable = ['name','email','password'];
 
     protected $hidden = ['password','remember_token'];
+	
+	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'name' => 'nombre usuario',
+		'email' => 'correo',
+		'password' => 'contraseña',
+		'institucion_id' => 'institución',
+	);
+
+    /*-------------------------------------------------------------------------
+    | FUNCTIONS
+    |------------------------------------------------------------------------*/
 	
 	public function blogs(){
 		return $this->hasMany('App\Models\Blog');

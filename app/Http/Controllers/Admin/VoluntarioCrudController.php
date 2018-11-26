@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\VoluntarioRequest as StoreRequest;
 use App\Http\Requests\VoluntarioRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class VoluntarioCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
 
