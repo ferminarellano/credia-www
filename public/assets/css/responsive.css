@@ -14,6 +14,13 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-box .nav-menu li a {
 		padding: 60px 9px;
 	}
+	.nav-opacity{
+		display:none;
+	}
+	
+	.nav-opacity-other{
+		display:none;
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -50,6 +57,19 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.nav-menu {
 		margin-bottom: 30px;
 	}
+	
+	.right{
+		margin-right:100px;
+	}
+	
+	.nav-opacity{
+		display:none;
+	}
+	
+	.nav-opacity-other{
+		display:none;
+	}
+	
 	.xs-archive-image .xs-mb-30 {
 		margin-bottom: 0;
 	}
@@ -364,6 +384,19 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		font-size: 80%;
 	}
 	/* menus */
+	
+	.right{
+		margin-right:100px;
+	}
+	
+	.nav-opacity{
+		display:none;
+	}
+	
+	.nav-opacity-other{
+		display:none;
+	}
+	
 	/* header top bar */
 	.xs-header.xs-box .xs_nav-portrait {
 		height: 64px;
@@ -415,10 +448,34 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	html {
 		font-size: 65%;
 	}
+	
+	.right{
+		margin-right:100px;
+	}
+	
+	.nav-opacity{
+		display:none;
+	}
+	
+	.nav-opacity-other{
+		display:none;
+	}
 }
 
 @media (max-width: 320px) {
 	html {
 		font-size: 60.5%;
+	}
+	
+	.right{
+		margin-right:100px;
+	}
+	
+	.nav-opacity{
+		display:none;
+	}
+	
+	.nav-opacity-other{
+		display:none;
 	}
 }

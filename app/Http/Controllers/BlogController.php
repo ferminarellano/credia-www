@@ -23,7 +23,7 @@ class BlogController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$articulos = Blog::orderBy('id','desc')->paginate(6);
+		$articulos = Blog::where([['estado','=','1']])->orderBy('id','desc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
@@ -44,7 +44,7 @@ class BlogController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 
-		$articulos = Blog::where([['categoria_id',$id]])->orderBy('id','desc')->paginate(6);
+		$articulos = Blog::where([['categoria_id',$id],['estado','=','1']])->orderBy('id','desc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
@@ -59,7 +59,7 @@ class BlogController extends Controller
 	
 	public function blogdetalle($slug,$id)
 	{
-		$articulo = Blog::where([['id',$id],['estado','0']])->get();
+		$articulo = Blog::where([['id',$id],['estado','1']])->get();
 		$redes = Social::all();
 		$comentarios = BlogComment::where([['blog_post_id',$id]])->get();
 		$archive = $articulo->first()->categoria()->get()->first()->nombre;
@@ -85,13 +85,13 @@ class BlogController extends Controller
 		return View::make('blog.blogdetalle')->with($data);
 	}
 	
-	public function previo($slug,$id){
-		return Blog::where('id', '<', $this->id)->orderBy('id', 'desc')->first();
-	}
+	// public function previo($slug,$id){
+		// return Blog::where('id', '<', $this->id)->orderBy('id', 'desc')->first();
+	// }
 	
-	public function siguiente($slug,$id){
-		return Blog::where('id', '>', $this->id)->orderBy('id', 'asc')->first();
-	}
+	// public function siguiente($slug,$id){
+		// return Blog::where('id', '>', $this->id)->orderBy('id', 'asc')->first();
+	// }
 	
 	public function store(BlogCommentRequest $request,$slug,$id)
     {	

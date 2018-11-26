@@ -8,6 +8,7 @@ use App\Http\Requests\BlogRequest as StoreRequest;
 use App\Http\Requests\BlogRequest as UpdateRequest;
 
 use App\Authorizable;
+use Auth;
 
 class BlogCrudController extends CrudController
 {
@@ -15,7 +16,8 @@ class BlogCrudController extends CrudController
 	
     public function setup()
     {
-
+		$user = Auth::user();
+		
         $this->crud->setModel('App\Models\Blog');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/blog');
         $this->crud->setEntityNameStrings('blog', 'blogs');
@@ -39,12 +41,25 @@ class BlogCrudController extends CrudController
 			'label' => 'Fecha'
 		]);
 		
-		$this->crud->addColumn([
-			'name' => 'estado',
-			'label' => 'Estado',
-			'type' => 'boolean',
-			'options' => [0 => 'Borrador', 1 => 'Públicado'],
-		]);
+		if($user->hasRole('Administrador'))
+		{
+			$this->crud->addColumn([
+				'name' => 'estado',
+				'label' => 'Estado',
+				'type' => 'boolean',
+				'options' => [0 => 'Borrador', 1 => 'Públicado'],
+			]);
+				
+			$this->crud->addField([
+				'name' => 'estado',
+				'label' => '',
+				'type' => 'toggleButtom_blog',
+				'options' => [ 
+							0 => "Borrador",
+							1 => "Publicado",
+						],
+			],'update');
+		}
 		
 		$this->crud->addField([
 			'name' => 'foto',

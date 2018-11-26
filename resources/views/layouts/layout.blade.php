@@ -80,19 +80,26 @@
 					</a>
 				</div> <!-- .nav-header END -->
 				
-				<div class="nav-menus-wrapper row" style="width:100%;">
+				<div class="nav-menus-wrapper row">
 					<div class="xs-logo-wraper col-lg-2 xs-padding-0">
 						<a class="nav-brand" href="{{ URL::route('index') }}">
 							<img src="/assets/images/logo.png" alt="">
 						</a>
 					</div><!-- .xs-logo-wraper END -->
 					
-					<div class="nav-opacity"></div> <!-- .nav-opacity END -->
+					<div class="nav-opacity hidden-xs"></div>
 					
 					<div class="col-lg-8">
-						<ul class="nav-menu" style="">
+						<ul class="nav-menu">
 							<li><a href="{{ URL::route('index') }}">Inicio</a></li>
-							<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
+							<!-- <li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li> -->
+							<li><a href="">Fundación</a>
+								<ul class="nav-dropdown">
+									<li><a href="{{ URL::route('equipo') }}">Equipo</a></li>
+									<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
+									<li><a href="{{ URL::route('mision') }}">misión</a></li>
+								</ul>
+							</li>
 							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 							<li><a href="{{ URL::route('evento') }}">Eventos</a>
 								<!-- <ul class="nav-dropdown"> -->
@@ -100,7 +107,7 @@
 									{{-- <li><a href="{{ URL::route('eventodetalle') }}">Evento detalle</a></li> --}}
 								<!-- </ul> -->
 							</li>
-								<li><a href="{{ URL::route('blog') }}">Blog</a>
+							<li><a href="{{ URL::route('blog') }}">Blog</a>
 								<!-- <ul class="nav-dropdown"> -->
 									{{-- <li><a href="{{ URL::route('blog') }}">Blog</a></li> --}}
 									{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
@@ -109,19 +116,16 @@
 							<!-- <li><a href="#">Páginas</a> -->
 								<!-- <ul class="nav-dropdown"> -->
 									{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
-									{{-- <li><a href="{{ URL::route('faq') }}">FAQ</a></li> --}}
-									{{-- <li><a href="{{ URL::route('mision') }}">misión</a></li> --}}
 									{{-- <li><a href="{{ URL::route('galeria') }}">galería</a></li> --}}
 									{{-- <li><a href="{{ URL::route('precio') }}">precio</a></li> --}}
 									{{-- <li><a href="{{ URL::route('servicio') }}">servicios</a></li> --}}
-									{{-- <li><a href="{{ URL::route('equipo') }}">equipo</a></li> --}}
 									{{-- <li><a href="{{ URL::route('voluntario') }}">voluntarios</a></li> --}}
 								<!-- </ul> -->
 							<!-- </li> -->
 						</ul><!-- .nav-menu END -->
 					</div>
 					<div class="xs-navs-button d-flex-center-end col-lg-2">
-						<a href="{{ URL::route('contacto') }}" class="btn btn-primary">Contacto</a>
+						<a href="{{ URL::route('contacto') }}" class="btn btn-primary right">Contacto</a>
 					</div><!-- .xs-navs-button END -->
 				</div><!-- .nav-menus-wrapper .row END -->
 			</nav><!-- .xs-menus .fundpress-menu END -->
@@ -154,7 +158,6 @@
 <!--   CONTENIDO PROYECTOS   -->
 	@yield('welcomeproyecto')
 	@yield('proyectosection')
-	@yield('proyectodetalle')
 <!-- END CONTENIDO PROYECTOS -->
 
 <!--   CONTENIDO EVENTOS   -->
@@ -164,7 +167,6 @@
 
 <!--   CONTENIDO EVENTO DETALLE   -->
 	@yield('welcomeedetalle')
-	@yield('eventodetalle')
 <!-- END CONTENIDO EVENTO DETALLE -->
 
 <!--   CONTENIDO BLOG   -->
@@ -174,7 +176,6 @@
 
 <!--   CONTENIDO BLOG DETALLE   -->
 	@yield('welcomebdetalle')
-	@yield('blogdetalle')
 <!-- END CONTENIDO BLOG DETALLE -->
 
 <!--   CONTENIDO DONACION-NOW   -->
