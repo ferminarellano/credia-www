@@ -14,7 +14,7 @@ use Auth;
 
 class UserCrudController extends CrudController
 {
-	// use Authorizable;
+	use Authorizable;
 	
     public function setup()
     {
