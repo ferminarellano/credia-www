@@ -12,7 +12,7 @@ use App\Authorizable;
 
 class RoleCrudController extends CrudController
 {
-	// use Authorizable;
+	use Authorizable;
 	
     public function setup()
     {

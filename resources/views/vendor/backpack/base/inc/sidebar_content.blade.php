@@ -2,7 +2,7 @@
 	
 	<li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 	
-	{{--@role('Administrador')--}}
+	@role('Administrador')
 		<li class="treeview">
 			<a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Voluntariado</span> <i class="fa fa-angle-left pull-right"></i></a>
 			<ul class="treeview-menu">
@@ -51,5 +51,5 @@
 				<li><a href="{{ backpack_url('role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
 			</ul>
 		</li>
-		{{--@endrole--}}
+	@endrole
 @endif
