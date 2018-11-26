@@ -16,6 +16,7 @@ class Contacto extends Model
     protected $fillable = ['nombre','correo','mensaje'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

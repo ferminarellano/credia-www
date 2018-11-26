@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\SocialRequest as StoreRequest;
 use App\Http\Requests\SocialRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class SocialCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
         $this->crud->setModel('App\Models\Social');

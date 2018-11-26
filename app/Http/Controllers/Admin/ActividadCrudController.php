@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\ActividadRequest as StoreRequest;
 use App\Http\Requests\ActividadRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class ActividadCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
 		

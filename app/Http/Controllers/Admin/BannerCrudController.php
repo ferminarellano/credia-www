@@ -7,8 +7,12 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\BannerRequest as StoreRequest;
 use App\Http\Requests\BannerRequest as UpdateRequest;
 
+use App\Authorizable;
+
 class BannerCrudController extends CrudController
 {
+	use Authorizable;
+	
     public function setup()
     {
 

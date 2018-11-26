@@ -16,6 +16,7 @@ class BlogComment extends Model
     protected $fillable = ['blog_post_id','nombre','correo','estado','comentario','parent'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

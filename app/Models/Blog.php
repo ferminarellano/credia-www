@@ -20,6 +20,7 @@ class Blog extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];
+	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
     | FUNCTIONS
