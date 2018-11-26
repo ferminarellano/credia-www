@@ -2,14 +2,14 @@
    <div @include('crud::inc.field_wrapper_attributes')>
 		
 		<?php
-			$avaluos = App\Models\Avaluo::where([['id',"=",$id]])->get(['estado']); 
+			$articulos = App\Models\Blog::where([['id',"=",$id]])->get(['estado']);
 		?>
 		
 		<div class="smart-button-container">
 			<div class="smart-button">
-				@foreach( $avaluos as $ava)
+				@foreach( $articulos as $art)
 					<div class="btn-group" data-toggle="buttons">
-						@if($ava->estado === 0)
+						@if($art->estado === 0)
 							<label class="btn btn-default btn-off btn1 active">
 							<input type="radio" value="0" name="estado" checked="checked">Borrador</label>
 							<label class="btn btn-default btn-on btn1">
@@ -43,7 +43,7 @@
 				.smart-button-container
 				{
 					text-align:right;
-					padding-right: 20px;
+					padding-right: 0px;
 					padding-bottom: 10px;
 				}
 				

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Banner;
 use App\Models\Voluntario;
 use App\Models\Actividad;
 use App\Models\Social;
@@ -12,11 +13,17 @@ class VoluntarioController extends Controller
 {
 	public function voluntario()
 	{
-		
+		$banner = Banner::where([['indicador','=','voluntario']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
 		$actividades = Actividad::where('estado','=','1')->get();
 		$redes = Social::all();
 		
 		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
 			"actividades" => $actividades,
 			"redes" => $redes,
 		);

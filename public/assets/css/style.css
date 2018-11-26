@@ -828,7 +828,7 @@ blockquote {
   
 .nav-opacity{
 	margin-top:48.5px;
-	margin-left:150px;
+	margin-left:185px;
 	position:absolute;
 	width:850px;
 	height:44.5px;
@@ -839,7 +839,7 @@ blockquote {
 
 .nav-opacity-other{
 	margin-top:51px;
-	margin-left:150px;
+	margin-left:185px;
 	position:absolute;
 	height:43px;
 	width:850px;
@@ -856,7 +856,15 @@ blockquote {
   height: auto;
   color: #000000; }
   
-.xs-header .nav-menu > li:hover a{
+.xs-header-other .nav-menu li a {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px 15px;
+  height: auto;
+  color: #000000; }
+  
+.xs-header-other .nav-menu > li:hover a{
    color: #a6ce39;
 }
 
@@ -899,7 +907,7 @@ blockquote {
 .xs-box .nav-menu {
   text-align: center;
   padding-left: 30px;
-  padding-top:3px;}
+  padding-top:42px;}
   
   .header-transparent .nav-menu li,
   .xs-box .nav-menu li {
@@ -907,9 +915,6 @@ blockquote {
 	.header-transparent-other .nav-menu li,
   .xs-box .nav-menu li {
     float: none; }
-    .header-transparent-other .nav-menu li a,
-    .xs-box .nav-menu li a {
-      padding: 60px 15px; }
 
 .header-transparent {
   position: absolute;
