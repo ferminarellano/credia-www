@@ -51,6 +51,9 @@ class RoleCrudController extends CrudController
             'name'  => 'name',
             'label' => trans('backpack::permissionmanager.name'),
             'type'  => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el rol *',
+			],
 			'tab' => 'Datos generales',
         ]);
         $this->crud->addField([
