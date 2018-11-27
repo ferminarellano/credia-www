@@ -17,7 +17,7 @@ class User extends Authenticatable
 	
 	protected $primaryKey = 'id';
 	
-    protected $fillable = ['name','email','password'];
+    protected $fillable = ['name','email','password','institucion_id'];
 
     protected $hidden = ['password','remember_token'];
 	
@@ -42,4 +42,15 @@ class User extends Authenticatable
 	public function proyectos(){
 		return $this->hasMany('App\Models\Proyecto');
 	}
+	
+	public function indicadores()
+	{
+		return $this->belongsToMany('App\Models\Indicador','indicador_user','user_id');
+	}
+	
+	public function institucion()
+	{
+		return $this->belongsTo('App\Models\Institucion', 'institucion_id');
+	}
+	
 }

@@ -63,24 +63,45 @@ class UserCrudController extends CrudController
                 'name'  => 'name',
                 'label' => trans('backpack::permissionmanager.name'),
                 'type'  => 'text',
+				'attributes' => [
+					'placeholder' => 'Agregue el nombre *',
+				],
 				'tab' => 'Datos generales',
             ],
             [
                 'name'  => 'email',
                 'label' => trans('backpack::permissionmanager.email'),
                 'type'  => 'email',
+				'attributes' => [
+					'placeholder' => 'Agregue el correo *',
+				],
 				'tab' => 'Datos generales',
             ],
+			[
+                'label' => "Institucion",
+				'type' => 'select2',
+				'name' => 'institucion_id', 
+				'entity' => 'institucion', 
+				'attribute' => 'nombre',
+				'model' => "App\Models\Institucion",
+				'tab' => 'Datos generales',
+			],
             [
                 'name'  => 'password',
                 'label' => trans('backpack::permissionmanager.password'),
                 'type'  => 'password',
+				'attributes' => [
+					'placeholder' => 'Agregue la contraseña *',
+				],
 				'tab' => 'Datos generales',
             ],
             [
                 'name'  => 'password_confirmation',
                 'label' => trans('backpack::permissionmanager.password_confirmation'),
                 'type'  => 'password',
+				'attributes' => [
+					'placeholder' => 'Confirme la contraseña *',
+				],
 				'tab' => 'Datos generales',
             ],
             [

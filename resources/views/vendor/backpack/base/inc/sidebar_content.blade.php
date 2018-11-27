@@ -2,7 +2,7 @@
 	
 	<li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 	
-	@role('Administrador')
+	@role('Super Administrador')
 		<li class="treeview">
 			<a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Voluntariado</span> <i class="fa fa-angle-left pull-right"></i></a>
 			<ul class="treeview-menu">
@@ -41,6 +41,15 @@
 				<li><a href="{{ backpack_url('patrocinador') }}"><i class="fa fa-handshake-o"></i> <span>Patrocinadores</span></a></li>
 				<li><a href="{{ backpack_url('social') }}"><i class="fa fa-share-alt"></i> <span>Social</span></a></li>
 				<li><a href="{{ backpack_url('slider') }}"><i class="fa fa-picture-o"></i> <span>Slider index</span></a></li>
+			</ul>
+		</li>
+		
+		<li class="treeview">
+			<a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> <span>Indicadores</span> <i class="fa fa-angle-left pull-right"></i></a>
+			<ul class="treeview-menu">
+			{{--<li><a href="{{ backpack_url('indicador') }}"><i class="fa fa-building"></i> <span>Indicadores</span></a></li>--}}
+				<li><a href="{{ backpack_url('institucion') }}"><i class="fa fa-building"></i> <span>Instituciones</span></a></li>
+				<li><a href="{{ backpack_url('unidad_medida') }}"><i class="fa fa-sort-numeric-desc"></i> <span>Unidad de medidas</span></a></li>
 			</ul>
 		</li>
 		

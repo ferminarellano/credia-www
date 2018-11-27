@@ -5,13 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class User extends Model
+class Indicador extends Model
 {
     use CrudTrait;
 
-    protected $table = 'users';
-    protected $guarded = ['id'];
-    protected $fillable = ['name','email'];
+    protected $table = 'indicadores';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+    // protected $guarded = ['id'];
+    protected $fillable = ['nombre','descripcion','frecuencia','frecuencia_posteo',
+						   'protocolo_recoleccion','calculo_indicador','estado',
+						   'tipo_indicador','evaluacion_tipo','valor','unidad_medida_id',
+						   'institucion_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
@@ -20,22 +25,43 @@ class User extends Model
     | FUNCTIONS
     |------------------------------------------------------------------------*/
 	
+	public function users()
+	{
+		return $this->belongsToMany('App\User', 'indicador_user','indicador_id');
+	}
+	
+	public static function boot()
+    {
+		parent::boot();
+    }
+	
+	public function identifiableName()
+    {
+        return $this->nombre;
+    }
+	
     /*-------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
 	
-    public function user() {
-        return $this->belongsTo(User::class, 'id');
-    }
+	public function unidades_medidas()
+	{
+		return $this->belongsTo('App\Models\UnidadMedida', 'unidad_medida_id');
+	}
+	
+	public function institucion()
+	{
+		return $this->belongsTo('App\Models\Institucion', 'institucion_id');
+	}
 	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
-	
+
     /*------------------------------------------------------------------------
     | ACCESORS
     |------------------------------------------------------------------------*/
-	
+
     /*------------------------------------------------------------------------
     | MUTATORS
     |------------------------------------------------------------------------*/

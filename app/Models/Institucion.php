@@ -5,37 +5,55 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class User extends Model
+class Institucion extends Model
 {
     use CrudTrait;
-
-    protected $table = 'users';
-    protected $guarded = ['id'];
-    protected $fillable = ['name','email'];
+	
+    protected $table = 'instituciones';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+    // protected $guarded = ['id'];
+    protected $fillable = ['nombre'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
-
+	
     /*-------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
+	
+	public static function boot()
+    {
+		parent::boot();
+    }
+	
+	public function identifiableName()
+    {
+        return $this->nombre;
+    }
 	
     /*-------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
 	
-    public function user() {
-        return $this->belongsTo(User::class, 'id');
-    }
+	public function users()
+	{
+		return $this->hasMany('App\User');
+	}
+	
+	public function indicadores()
+	{
+		return $this->hasMany('App\Models\Indicador');
+	}
 	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
-	
+
     /*------------------------------------------------------------------------
     | ACCESORS
     |------------------------------------------------------------------------*/
-	
+
     /*------------------------------------------------------------------------
     | MUTATORS
     |------------------------------------------------------------------------*/
