@@ -7,50 +7,29 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class IndicadorRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
     public function authorize()
     {
-        // only allow updates if the user is logged in
         return backpack_auth()->check();
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'nombre' => 'required',
+            'tipo_indicador' => 'required',
         ];
     }
 
-    /**
-     * Get the validation attributes that apply to the request.
-     *
-     * @return array
-     */
     public function attributes()
     {
-        return [
-            //
-        ];
+        return [];
     }
 
-    /**
-     * Get the validation messages that apply to the request.
-     *
-     * @return array
-     */
     public function messages()
     {
         return [
-            //
+            'nombre.required' => 'Necesita agregar el nombre de indicador.',
+            'tipo_indicador.required' => 'Necesita seleccionar el tipo de indicador.',
         ];
     }
 }

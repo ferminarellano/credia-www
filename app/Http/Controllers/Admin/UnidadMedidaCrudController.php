@@ -16,7 +16,7 @@ class UnidadMedidaCrudController extends CrudController
     public function setup()
     {
         $this->crud->setModel('App\Models\UnidadMedida');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/unidad_medida');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/unidadmedida');
         $this->crud->setEntityNameStrings('unidad de medidas', 'Unidad Medidas');
 
 		$this->crud->addColumn([
