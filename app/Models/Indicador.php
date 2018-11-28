@@ -15,7 +15,7 @@ class Indicador extends Model
     // protected $guarded = ['id'];
     protected $fillable = ['nombre','descripcion','frecuencia','frecuencia_posteo',
 						   'protocolo_recoleccion','calculo_indicador','estado',
-						   'tipo_indicador','evaluacion_tipo','valor','unidad_medida_id',
+						   'tipo_indicador','evaluacion_tipo','unidad_medida_id',
 						   'institucion_id'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -44,7 +44,7 @@ class Indicador extends Model
     | RELATIONS
     |------------------------------------------------------------------------*/
 	
-	public function unidades_medidas()
+	public function unidad_medida()
 	{
 		return $this->belongsTo('App\Models\UnidadMedida', 'unidad_medida_id');
 	}

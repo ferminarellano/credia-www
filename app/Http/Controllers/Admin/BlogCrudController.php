@@ -41,7 +41,7 @@ class BlogCrudController extends CrudController
 			'label' => 'Fecha'
 		]);
 		
-		if($user->hasRole('Administrador'))
+		if($user->hasRole('Super Administrador'))
 		{
 			$this->crud->addColumn([
 				'name' => 'estado',
@@ -53,7 +53,7 @@ class BlogCrudController extends CrudController
 			$this->crud->addField([
 				'name' => 'estado',
 				'label' => '',
-				'type' => 'toggleButtom_blog',
+				'type' => 'toggleButtom_estado',
 				'options' => [ 
 							0 => "Borrador",
 							1 => "Publicado",

@@ -16,8 +16,8 @@
 	CRUD::resource('user', 'UserCrudController');
 	CRUD::resource('role', 'RoleCrudController');
 	
-	// CRUD::resource('indicador', 'IndicadorCrudController');
+	CRUD::resource('indicador', 'IndicadorCrudController');
 	CRUD::resource('institucion', 'InstitucionCrudController');
-	CRUD::resource('unidad_medida', 'UnidadMedidaCrudController');
+	CRUD::resource('unidadmedida', 'UnidadMedidaCrudController');
 	
 	
