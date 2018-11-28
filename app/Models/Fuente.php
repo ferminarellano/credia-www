@@ -5,30 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Indicador extends Model
+class Fuente extends Model
 {
     use CrudTrait;
 
-    protected $table = 'indicadores';
+    protected $table = 'fuentes';
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['nombre','descripcion','frecuencia','frecuencia_posteo',
-						   'protocolo_recoleccion','calculo_indicador',
-						   'tipo_indicador','evaluacion_tipo','unidad_medida_id',
-						   'institucion_id'];
+    protected $fillable = ['fuente','institucion_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
 
-    /*-------------------------------------------------------------------------
+	/*-------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
-	
-	public function users()
-	{
-		return $this->belongsToMany('App\User', 'indicador_user','indicador_id');
-	}
 	
 	public static function boot()
     {
@@ -37,17 +29,12 @@ class Indicador extends Model
 	
 	public function identifiableName()
     {
-        return $this->nombre;
+        return $this->fuente;
     }
 	
     /*-------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
-	
-	public function unidad_medida()
-	{
-		return $this->belongsTo('App\Models\UnidadMedida', 'unidad_medida_id');
-	}
 	
 	public function institucion()
 	{
@@ -59,7 +46,7 @@ class Indicador extends Model
 		return $this->hasMany('App\Models\DataIndicador');
 	}
 	
-    /*------------------------------------------------------------------------
+	/*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
 

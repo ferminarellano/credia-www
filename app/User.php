@@ -53,4 +53,9 @@ class User extends Authenticatable
 		return $this->belongsTo('App\Models\Institucion', 'institucion_id');
 	}
 	
+	public function data_indicadores()
+	{
+		return $this->hasMany('App\Models\DataIndicador');
+	}
+	
 }

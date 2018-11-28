@@ -19,5 +19,7 @@
 	CRUD::resource('indicador', 'IndicadorCrudController');
 	CRUD::resource('institucion', 'InstitucionCrudController');
 	CRUD::resource('unidadmedida', 'UnidadMedidaCrudController');
+	CRUD::resource('fuente', 'FuenteCrudController');
+	CRUD::resource('dataindicador', 'DataIndicadorCrudController');
 	
 	
