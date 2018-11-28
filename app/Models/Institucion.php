@@ -46,6 +46,16 @@ class Institucion extends Model
 		return $this->hasMany('App\Models\Indicador');
 	}
 	
+	public function fuentes()
+	{
+		return $this->hasMany('App\Models\Fuente');
+	}
+	
+	public function data_indicadores()
+	{
+		return $this->hasMany('App\Models\DataIndicador');
+	}
+	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/

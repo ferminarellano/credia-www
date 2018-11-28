@@ -34,33 +34,10 @@ class IndicadorCrudController extends CrudController
 			'options' => ['impacto' => 'Impacto', 'proceso' => 'Proceso','resultado' => 'Resultado'],
 		]);
 		
-		if($user->hasRole('Super Administrador'))
-		{
-			$this->crud->addColumn([
-				'name' => 'estado',
-				'label' => 'Estado',
-				'type' => 'boolean',
-				'options' => [0 => 'Borrador', 1 => 'Públicado'],
-			]);
-		}
-		
 		$this->crud->addColumn([
 			'name' => 'created_at',
 			'label' => 'Fecha de elaboración',
 		]);
-
-		if($user->hasRole('Super Administrador'))
-		{
-			$this->crud->addField([
-				'name' => 'estado',
-				'label' => '',
-				'type' => 'toggleButtom_estado',
-				'options' => [ 
-							0 => "Borrador",
-							1 => "Publicado",
-						],
-			],'update');
-		}
 		
 		$this->crud->addField([
 			'name' => 'nombre',
@@ -69,7 +46,6 @@ class IndicadorCrudController extends CrudController
 			'attributes' => [
 				'placeholder' => 'Agregue el nombre del indicador *',
 			],
-			'suffix' => '<span class="glyphicon glyphicon-star"></span>',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],		
@@ -150,7 +126,7 @@ class IndicadorCrudController extends CrudController
 		]);
 				
 		$this->crud->addField([
-			'label' => 'Organización',
+			'label' => 'Institución',
 			'type' => 'select2',
 			'name' => 'institucion_id', 
 			'entity' => 'institucion', 

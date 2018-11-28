@@ -53,7 +53,7 @@ class BlogCrudController extends CrudController
 			$this->crud->addField([
 				'name' => 'estado',
 				'label' => '',
-				'type' => 'toggleButtom_estado',
+				'type' => 'toggleButtom_blog',
 				'options' => [ 
 							0 => "Borrador",
 							1 => "Publicado",
