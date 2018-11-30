@@ -5,7 +5,6 @@
       <section class="sidebar">
         <!-- Sidebar user panel -->
         @include('backpack::inc.sidebar_user_panel')
-
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           {{-- <li class="header">{{ trans('backpack::base.administration') }}</li> --}}
@@ -20,5 +19,13 @@
         </ul>
       </section>
       <!-- /.sidebar -->
+    </aside>
+@else
+    <aside class="main-sidebar">
+      <section class="sidebar">
+		<div class="logo-container">
+			<img src="/assets/images/logo_bs.png" class="responsive" alt="Logo credia">
+		</div>
+      </section>
     </aside>
 @endif

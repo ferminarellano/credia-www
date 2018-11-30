@@ -61,12 +61,15 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="{{ url('') }}" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini">{!! config('backpack.base.logo_mini') !!}</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg">{!! config('backpack.base.logo_lg') !!}</span>
-        </a>
+		<a href="{{ url('') }}" class="logo">
+			@if (backpack_auth()->check())
+				<!-- mini logo for sidebar mini 50x50 pixels -->
+				<span class="logo-mini">{!! config('backpack.base.logo_mini') !!}</span>
+				<!-- logo for regular state and mobile devices -->
+				<span class="logo-lg">{!! config('backpack.base.logo_lg') !!}</span>
+			@endif
+		</a>
+		
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -82,9 +85,9 @@
       </header>
 
       <!-- =============================================== -->
-
+	  
       @include('backpack::inc.sidebar')
-
+	  
       <!-- =============================================== -->
 	
       <!-- Content Wrapper. Contains page content -->
@@ -106,7 +109,7 @@
 
       <footer class="main-footer">
 
-        Copyright © <?php echo date("Y"); ?> Consultoria de Riesgo Financiero S. de R.L.
+        © <?php echo date("Y"); ?>
       </footer>
     </div>
     <!-- ./wrapper -->

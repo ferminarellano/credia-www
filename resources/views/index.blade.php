@@ -21,25 +21,6 @@
 		
 		return $arr[$palabra];
 	}
-	
-	function porcentaje($total,$utilizado){
-		$resultado = 0;
-		$division = 0;
-		
-		$division = $utilizado/$total;
-		$resultado = $division*100;
-		
-		return $resultado;
-	}
-	
-	function cant_dias($fecha11,$fecha22){
-		$fecha1= new DateTime($fecha11);
-		$fecha2= new DateTime($fecha22);
-		
-		$diff = $fecha1->diff($fecha2);
-		
-		return $diff->days;
-	}
 ?>
 
 @section('title','')
@@ -138,7 +119,7 @@
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-10 col-xl-10">
-					<h2 class="xs-title">Proyectos recientes</h2>
+					<h2 class="xs-title">Proyectos</h2>
 				</div>
 				<div class="col-xl-2 col-md-2">
 					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
@@ -158,34 +139,18 @@
 								<img src="/{{$proyecto->foto}}" alt="">
 
 								<div class="xs-skill-bar">
-									<div class="xs-skill-track bg-light-red">
-										<p><span class="number-percentage-count number-percentage" data-value="{{ porcentaje($proyecto->presupuesto,$proyecto->utilizado) }}" data-animation-duration="3500">0</span>%</p>
+									<div class="xs-skill-track bg-light-green">
+										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
 									</div>
 								</div>
 							</div><!-- .xs-item-header END -->
 							<div class="xs-item-content">
 								<div class="xs-margin-1">
 									<ul class="xs-simple-tag xs-mb-20">
-										<li><a class="color-light-red" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->titulo }}</a></li>
+										<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
 									</ul>
-
-									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->subtitulo }}</a>
-
-									<ul class="xs-list-with-content">
-										<li>L. {{ number_format($proyecto->presupuesto,2) }}<span>Prometido</span></li>
-										<li><span class="number-percentage-count number-percentage" data-value="{{ porcentaje($proyecto->presupuesto,$proyecto->utilizado) }}" data-animation-duration="3500">0</span>% <span>Utilizado</span></li>
-										<li>{{ cant_dias($proyecto->fecha_inicio,$proyecto->fecha_finalizacion) }}<span>total días</span></li>
-									</ul>
-								</div>
-								<span class="xs-separetor"></span>
-								
-								<div class="row xs-margin-0">
-									<div class="xs-round-avatar">
-										<img src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($proyecto->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
-									</div>
-									<div class="xs-avatar-title">
-										<a style="color: #011b58;"><span>Por</span>{{ $proyecto->user()->get()->first()->name }}</a>
-									</div>
+									<span class="xs-separetor"></span>
+									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
 								</div>
 							</div><!-- .xs-item-content END -->
 						</div><!-- .xs-popular-item END -->

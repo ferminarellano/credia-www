@@ -21,8 +21,8 @@ class ProyectoRequest extends FormRequest
             'subtitulo' => 'required|min:5|max:255',
 			'contenido' => 'required',
 			'fecha_convenio' => 'required|date',
-			'presupuesto' => 'numeric',
-			'utilizado' => 'numeric',
+			// 'presupuesto' => 'numeric',
+			// 'utilizado' => 'numeric',
 			'categoria_id' => 'required',
         ];
     }
@@ -46,8 +46,8 @@ class ProyectoRequest extends FormRequest
 			'contenido.required' => 'Es necesario agregar el contenido principal del evento.',
 			'fecha_convenio.required' => 'Es necesario agregar la fecha del evento.',
 			'fecha_convenio.date' => 'Es necesario que sea en formato de fecha.',
-			'presupuesto.numeric' => 'Es necesario que solo se ingresen numeros.',
-			'utilizado.numeric' => 'Es necesario que solo se ingresen numeros.',
+			// 'presupuesto.numeric' => 'Es necesario que solo se ingresen numeros.',
+			// 'utilizado.numeric' => 'Es necesario que solo se ingresen numeros.',
 			'categoria_id.required' => 'Es necesario seleccionar la categoría a la que pertenece el proyecto.',
         ];
     }
