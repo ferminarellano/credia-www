@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Auth;
 
 class Proyecto extends Model
 {
@@ -15,8 +16,8 @@ class Proyecto extends Model
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['titulo','subtitulo','foto','fecha_convenio','contenido','presupuesto',
-						   'utilizado','fecha_inicio','fecha_finalizacion','estado','categoria_id',
-						   'user_id'];
+						   'avance','utilizado','fecha_inicio','fecha_finalizacion','estado',
+						   'categoria_id','user_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];
@@ -29,6 +30,12 @@ class Proyecto extends Model
 	public static function boot()
     {
         parent::boot();
+		
+		self::creating(function($model)
+		{
+			$user_id = Auth::id();
+			$model->user_id = $user_id;
+        });
 		
 		self::deleting(function($obj) {
 			if (count((array)$obj->fotos)) {

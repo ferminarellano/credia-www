@@ -11,22 +11,23 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="xs-event-banner">
-						<img src="/{{ $proyecto->first()->foto }}">
-					</div>
+					<!-- <div class="xs-event-banner"> -->
+					{{--<img src="/{{ $proyecto->first()->foto }}">--}}
+					<!-- </div> -->
 					<div class="row event-slyle">
 						<div class="col-lg-8 xs-event-wraper">
 							<div class="xs-event-content">
-								<h4>Detalle de proyecto</h4>
-								<h5 style="text-align:justify;">{{ $proyecto->first()->subtitulo }}</h5>
+								<h4 style="text-align:justify;font-size: 20px;">{{ $proyecto->first()->titulo }}</h4>
+								<span class="xs-separetor"></span>
+								<h5 style="text-align:justify;color:#a6ce39;">{{ $proyecto->first()->subtitulo }}</h5>
 								<br>
-								{!! $proyecto->first()->contenido !!} 
+								{!! $proyecto->first()->contenido !!}
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<!-- categories start -->
 							<div class="widget widget_categories xs-sidebar-widget">
-								<h3 class="widget-title">Categorías</h3>
+								<h3 class="widget-title">Categor&iacute;as</h3>
 								<ul class="xs-side-bar-list">
 									@foreach($categorias as $categoria)
 											<li>

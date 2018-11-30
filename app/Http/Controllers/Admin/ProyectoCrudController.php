@@ -15,7 +15,6 @@ class ProyectoCrudController extends CrudController
 	
     public function setup()
     {
-
         $this->crud->setModel('App\Models\Proyecto');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/proyecto');
         $this->crud->setEntityNameStrings('proyecto', 'proyectos');
@@ -122,6 +121,18 @@ class ProyectoCrudController extends CrudController
 			'type' => 'number',
 			'prefix' => "L",
 			'spinner' => False,
+			'attributes' => [
+				'placeholder' => 'Agregue la cantidad *',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'avance',
+			'label' => 'Avence de proyecto',
+		    'type' => 'range',
+		    'min' => '0',
+		    'max' => '100',
 			'attributes' => [
 				'placeholder' => 'Agregue la cantidad *',
 			],

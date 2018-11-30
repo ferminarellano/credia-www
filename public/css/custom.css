@@ -40,6 +40,26 @@ body {
 	box-shadow: 0 0px 0px rgba(0,0,0,0.1);
 }
 
+.logo-container{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 50px;
+}
+
+.responsive{
+	width: 100%;
+	height: auto;
+}
+
+@media{
+	.logo-container {
+		display: contents;
+	}
+}
+
+.dimension{
+	width: 100%;
+}
 
 /*===================		MAPAS		=======================*/
 

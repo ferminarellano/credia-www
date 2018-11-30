@@ -351,21 +351,11 @@ ul, li {
     font-size: 0.85714em;
     color: #18bfc3;
     text-transform: capitalize; }
-    .xs-simple-tag li a.color-light-red {
-      color: #fa575d; }
-    .xs-simple-tag li a.color-purple {
-      color: #9064bf; }
-    .xs-simple-tag li a.color-blue {
-      color: #369ff4; }
-    .xs-simple-tag li a.color-burntOrange {
-      color: #fe813a; }
-    .xs-simple-tag li a.color-riptide {
-      color: #8ed4cc; }
-    .xs-simple-tag li a.color-orange {
-      color: #f7a900; }
+    .xs-simple-tag li a.color-light-black {
+      color: #000000; }
 
 .xs-post-title {
-  font-size: 1.10000em;
+  font-size: 1.28571em;
   font-weight: 600;
   color: #041D57;
   display: block;
@@ -936,6 +926,8 @@ blockquote {
     margin-right: -15px; }
   .header-transparent .nav-menu li a {
     color: #FFFFFF; }
+  .header-transparent .nav-menu li a:hover {
+    color: #a6ce39; }
   .header-transparent-other .nav-menu li a {
     color: #011b58; }
     .header-transparent .nav-menu li a .submenu-indicator-chevron {
@@ -1245,24 +1237,9 @@ blockquote {
     overflow: visible !important;
     width: calc(40px - 13px);
     position: relative; }
-    .xs-skill-bar .xs-skill-track.bg-light-red,
-    .xs-skill-bar .xs-skill-track.bg-light-red p {
-      background-color: #fa575d; }
-    .xs-skill-bar .xs-skill-track.bg-purple,
-    .xs-skill-bar .xs-skill-track.bg-purple p {
-      background-color: #9064bf; }
-    .xs-skill-bar .xs-skill-track.bg-blue,
-    .xs-skill-bar .xs-skill-track.bg-blue p {
-      background-color: #369ff4; }
-    .xs-skill-bar .xs-skill-track.bg-burntOrange,
-    .xs-skill-bar .xs-skill-track.bg-burntOrange p {
-      background-color: #fe813a; }
-    .xs-skill-bar .xs-skill-track.bg-riptide,
-    .xs-skill-bar .xs-skill-track.bg-riptide p {
-      background-color: #8ed4cc; }
-    .xs-skill-bar .xs-skill-track.bg-orange,
-    .xs-skill-bar .xs-skill-track.bg-orange p {
-      background-color: #f7a900; }
+    .xs-skill-bar .xs-skill-track.bg-light-green,
+    .xs-skill-bar .xs-skill-track.bg-light-green p {
+      background-color: #a6ce39;}
   .xs-skill-bar p {
     position: absolute;
     right: 0;
@@ -1318,7 +1295,7 @@ blockquote {
 
 .xs-item-content {
   padding: 30px; 
-  height: 334px;}
+  height: 370px;}
   .xs-item-content .xs-separetor {
     margin-top: 30px;
     margin-bottom: 20px; }
@@ -3758,7 +3735,7 @@ position: relative; }
   
 .xs-margin-1 {
   margin: 0; 
-  height: 180px;}
+  height: 320px;}
 
 .xs-mb-0 {
   margin-bottom: 0; }
