@@ -305,13 +305,13 @@
 							 {{ csrf_field() }}
 							<div class="row">
 								<div class="col-lg-6">
-									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo">
+									<input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}" class="form-control" placeholder="Nombre completo" required>
 								</div>
 								<div class="col-lg-6">	
-									<input type="email" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo">
+									<input type="email" name="correo" id="correo" value="{{ old('correo') }}" class="form-control" placeholder="Correo" required>
 								</div>
 								<div class="col-lg-6">
-									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" >
+									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" required>
 											<option value="">Seleccionar</option>
 										@foreach($actividades as $actividad)
 											<option value="{{$actividad->id}}">{{$actividad->actividad}}</option>
@@ -320,13 +320,13 @@
 								</div>
 								<div class="col-lg-6 xs-mb-20">
 									<div class="xs-fileContainer">
-										<input type="file" name="archivo" id="archivo" value="{{ old('archivo') }}" class="form-control">
+										<input type="file" name="file" class="form-control">
 										<label for="archivo">Sube tu CV</label>
 									</div>
 									<small style="padding-left:85px;color:white;">Formato <b>PDF</b> 100kb máximo.</small>
 								</div>
 							</div><!-- .row end -->
-							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10"></textarea>
+							<textarea name="descripcion" id="descripcion" value="{{ old('descripcion') }}" placeholder="Ingrese su mensaje" cols="30" class="form-control" rows="10" required></textarea>
 							<button type="submit" class="btn btn-secondary btn-color-alt">aplica ya</button>
 						</form><!-- #volunteer-form .xs-volunteer-form END -->
 					</div>

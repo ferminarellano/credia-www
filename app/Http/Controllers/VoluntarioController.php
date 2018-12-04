@@ -9,6 +9,9 @@ use App\Models\Actividad;
 use App\Models\Social;
 use View;
 
+use Storage;
+use File;
+
 class VoluntarioController extends Controller
 {
 	public function voluntario()
@@ -38,12 +41,12 @@ class VoluntarioController extends Controller
         $voluntario->nombre = $request->nombre;
         $voluntario->correo = $request->correo;
 		
-        //$file = $request->file('archivo');
-		//$file_name = $file->getClientOriginalName();
+        $file = $request->file('file');
+		$file_name = $file->getClientOriginalName();
 		
-		//\Storage::disk('local')->put($file_name,  \File::get($file));
+		Storage::disk('public')->put('curriculums/'.$file_name, File::get($file));
 		
-		//$voluntario->descripcion = $file_name;
+        $voluntario->archivo =  Storage::url('uploads/curriculums/'.$file_name);
         $voluntario->descripcion = $request->descripcion;
         $voluntario->actividad_id = $request->actividad_id;
 					
