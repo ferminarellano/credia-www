@@ -113,6 +113,7 @@
 									{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
 								<!-- </ul> -->
 							</li>
+							<li><a href="{{ URL::route('index') }}">Sistemas</a></li>
 							<!-- <li><a href="#">Páginas</a> -->
 								<!-- <ul class="nav-dropdown"> -->
 									{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}

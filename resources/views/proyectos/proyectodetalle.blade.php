@@ -1,6 +1,6 @@
 @extends('layouts.layout_other')
 
-@section('title', 'Proyecto detalles -')
+@section('title', 'Proyecto -')
 
 @section('proyectodetalle')
 	
@@ -39,14 +39,17 @@
 									@endforeach
 								</ul>
 							</div><!-- categories end -->
-							<div class="xs-event-schedule-widget">
-								<h3 class="widget-title">Patrocinadores</h3>
-								<ul class="xs-event-sponsor clearfix">
-									@foreach($proyecto->first()->patrocinadores()->get() as $proyect)
-										<li><a><img src="/{{ $proyect->foto }}" alt=""></a></li>
-									@endforeach
-								</ul>
-							</div><!-- .xs-event-schedule-widget END -->
+							
+							@if(count($proyecto->first()->patrocinadores()->get()) > 0)
+								<div class="xs-event-schedule-widget">
+									<h3 class="widget-title">Patrocinadores</h3>
+									<ul class="xs-event-sponsor clearfix">
+										@foreach($proyecto->first()->patrocinadores()->get() as $proyect)
+											<li><a><img src="/{{ $proyect->foto }}" alt=""></a></li>
+										@endforeach
+									</ul>
+								</div><!-- .xs-event-schedule-widget END -->
+							@endif
 						</div>
 					</div>
 				</div>
