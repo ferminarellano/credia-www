@@ -17,7 +17,7 @@ class FaqCrudController extends CrudController
     {
         $this->crud->setModel('App\Models\Faq');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/faq');
-        $this->crud->setEntityNameStrings('faq', 'preguntas frecuentes');
+        $this->crud->setEntityNameStrings('pregunta', 'preguntas frecuentes');
 
         $this->crud->addColumn([
 			'name' => 'pregunta',

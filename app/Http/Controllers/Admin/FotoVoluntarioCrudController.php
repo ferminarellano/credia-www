@@ -17,7 +17,7 @@ class FotoVoluntarioCrudController extends CrudController
     {
         $this->crud->setModel('App\Models\FotoVoluntario');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/fotovoluntario');
-        $this->crud->setEntityNameStrings('fotovoluntario', 'información de voluntarios');
+        $this->crud->setEntityNameStrings('información', 'información de voluntarios');
 
         $this->crud->addColumn([
 			'name' => 'nombre',

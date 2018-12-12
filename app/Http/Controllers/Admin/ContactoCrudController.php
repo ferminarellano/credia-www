@@ -18,7 +18,7 @@ class ContactoCrudController extends CrudController
 		
         $this->crud->setModel('App\Models\Contacto');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/contacto');
-        $this->crud->setEntityNameStrings('contacto', 'contactos');
+        $this->crud->setEntityNameStrings('contacto', 'mensaje de contacto');
 		$this->crud->allowAccess(['show']);
 		$this->crud->denyAccess(['update','revisions']);
 		$this->crud->removeButton('create');

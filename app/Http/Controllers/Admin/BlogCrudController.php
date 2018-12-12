@@ -20,7 +20,7 @@ class BlogCrudController extends CrudController
 		
         $this->crud->setModel('App\Models\Blog');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/blog');
-        $this->crud->setEntityNameStrings('blog', 'blogs');
+        $this->crud->setEntityNameStrings('artículo', 'artículos de blog');
 		
 		$this->crud->addColumn([
 			'name' => 'titulo',
