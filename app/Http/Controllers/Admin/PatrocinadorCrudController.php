@@ -18,7 +18,7 @@ class PatrocinadorCrudController extends CrudController
 
         $this->crud->setModel('App\Models\Patrocinador');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/patrocinador');
-        $this->crud->setEntityNameStrings('patrocinador', 'patrocinadors');
+        $this->crud->setEntityNameStrings('patrocinador', 'patrocinadores');
 		
 		$this->crud->addColumn([
 			'name' => 'nombre',

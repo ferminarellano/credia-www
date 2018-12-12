@@ -17,7 +17,7 @@ class SocialCrudController extends CrudController
     {
         $this->crud->setModel('App\Models\Social');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/social');
-        $this->crud->setEntityNameStrings('social', 'socials');
+        $this->crud->setEntityNameStrings('red social', 'redes sociales');
 		
 		$this->crud->addColumn([
 			'name' => 'red',
