@@ -85,14 +85,6 @@ class BlogController extends Controller
 		return View::make('blog.blogdetalle')->with($data);
 	}
 	
-	// public function previo($slug,$id){
-		// return Blog::where('id', '<', $this->id)->orderBy('id', 'desc')->first();
-	// }
-	
-	// public function siguiente($slug,$id){
-		// return Blog::where('id', '>', $this->id)->orderBy('id', 'asc')->first();
-	// }
-	
 	public function store(BlogCommentRequest $request,$slug,$id)
     {	
 		$comentario = new BlogComment;

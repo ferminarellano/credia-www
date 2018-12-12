@@ -6,6 +6,7 @@
 		<title>@yield('title') CREDIA</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="_token" content="{{ csrf_token() }}">
 		
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto+Slab:400,700" rel="stylesheet">
 
@@ -43,6 +44,7 @@
 		
 		<!-- use only color version -->
 		<!-- <link rel='stylesheet' type='text/css' href='assets/css/colors/color-1.css' > -->
+		
 	</head>
 	<body>
 	<!--[if lt IE 10]>
@@ -96,7 +98,7 @@
 							<li><a href="">Fundación</a>
 								<ul class="nav-dropdown">
 									{{--<li><a href="{{ URL::route('equipo') }}">Equipo</a></li>--}}
-									<li><a href="{{ URL::route('sobrenosotros') }}">Fundación</a></li>
+									<li><a href="{{ URL::route('sobrenosotros') }}">¿Quiénes somos?</a></li>
 									{{--<li><a href="{{ URL::route('mision') }}">misión</a></li>--}}
 								</ul>
 							</li>
@@ -113,7 +115,7 @@
 									{{-- <li><a href="{{ URL::route('blogdetalle') }}">Blog detalle</a></li> --}}
 								<!-- </ul> -->
 							</li>
-							<li><a href="{{ URL::route('index') }}">Sistemas</a></li>
+							{{--<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>--}}
 							<!-- <li><a href="#">Páginas</a> -->
 								<!-- <ul class="nav-dropdown"> -->
 									{{-- <li><a href="{{ URL::route('donacion') }}">donación</a></li> --}}
@@ -132,99 +134,102 @@
 			</nav><!-- .xs-menus .fundpress-menu END -->
 		</div><!-- .container end -->
 	</header>
+	
+	<main class="xs-main">
+		<!--   CONTENIDO INDEX   -->
+		@yield('welcome_in')
+		@yield('mision_in')
+		@yield('proyectos_in')
+		@yield('texto_in')
+		@yield('descripcion_in')
+		@yield('unete_in')
+		@yield('actividades_in')
+		@yield('voluntarios_in')
+		@yield('eventos_in')
+		@yield('patrocinadores_in')
+		@yield('blog_recent')
+		<!-- END CONTENIDO INDEX -->
 
-<!--   CONTENIDO INDEX   -->
-	@yield('welcome_in')
-	@yield('mision_in')
-	@yield('proyectos_in')
-	@yield('texto_in')
-	@yield('descripcion_in')
-	@yield('unete_in')
-	@yield('actividades_in')
-	@yield('voluntarios_in')
-	@yield('eventos_in')
-	@yield('patrocinadores_in')
-	{{--@yield('revista_in')--}}
-<!-- END CONTENIDO INDEX -->
+		<!--   CONTENIDO SOBRE NOSOTROS   -->
+		@yield('welcomesn')
+		@yield('video_sn')
+		@yield('contenido_video_sn')
+		@yield('widget_sn')
+		@yield('quehacemos_sn')
+		@yield('equipo_sn')
+		<!-- END CONTENIDO SOBRE NOSOTROS -->
 
-<!--   CONTENIDO SOBRE NOSOTROS   -->
-	@yield('welcomesn')
-	@yield('video_sn')
-	@yield('contenido_video_sn')
-	@yield('funfacts_sn')
-	@yield('quehacemos_sn')
-	@yield('team_sn')
-<!-- END CONTENIDO SOBRE NOSOTROS -->
+		<!--   CONTENIDO PROYECTOS   -->
+		@yield('welcomeproyecto')
+		@yield('proyectosection')
+		<!-- END CONTENIDO PROYECTOS -->
 
-<!--   CONTENIDO PROYECTOS   -->
-	@yield('welcomeproyecto')
-	@yield('proyectosection')
-<!-- END CONTENIDO PROYECTOS -->
+		<!--   CONTENIDO EVENTOS   -->
+		@yield('welcomeevento')
+		@yield('eventosection')
+		<!-- END CONTENIDO EVENTOS -->
 
-<!--   CONTENIDO EVENTOS   -->
-	@yield('welcomeevento')
-	@yield('eventosection')
-<!-- END CONTENIDO EVENTOS -->
+		<!--   CONTENIDO EVENTO DETALLE   -->
+		@yield('welcomeedetalle')
+		<!-- END CONTENIDO EVENTO DETALLE -->
 
-<!--   CONTENIDO EVENTO DETALLE   -->
-	@yield('welcomeedetalle')
-<!-- END CONTENIDO EVENTO DETALLE -->
+		<!--   CONTENIDO BLOG   -->
+		@yield('welcomeblog')
+		@yield('blogsection')
+		<!-- END CONTENIDO BLOG -->
 
-<!--   CONTENIDO BLOG   -->
-	@yield('welcomeblog')
-	@yield('blogsection')
-<!-- END CONTENIDO BLOG -->
+		<!--   CONTENIDO BLOG DETALLE   -->
+		@yield('welcomebdetalle')
+		<!-- END CONTENIDO BLOG DETALLE -->
 
-<!--   CONTENIDO BLOG DETALLE   -->
-	@yield('welcomebdetalle')
-<!-- END CONTENIDO BLOG DETALLE -->
+		<!--   CONTENIDO DONACION-NOW   -->
+		@yield('welcomedonacion')
+		@yield('promo')
+		<!-- END CONTENIDO DONACION-NOW -->
 
-<!--   CONTENIDO DONACION-NOW   -->
-	@yield('welcomedonacion')
-	@yield('promo')
-<!-- END CONTENIDO DONACION-NOW -->
+		<!--   CONTENIDO FAQ   -->
+		@yield('welcomefaq')
+		@yield('newsletter')
+		<!-- END CONTENIDO FAQ -->
 
-<!--   CONTENIDO FAQ   -->
-	@yield('welcomefaq')
-	@yield('newsletter')
-<!-- END CONTENIDO FAQ -->
+		<!--   CONTENIDO MISION   -->
+		@yield('welcomemision')
+		@yield('loquehacemos')
+		<!-- END CONTENIDO MISION -->
 
-<!--   CONTENIDO MISION   -->
-	@yield('welcomemision')
-	@yield('loquehacemos')
-<!-- END CONTENIDO MISION -->
+		<!--   CONTENIDO GALERIA   -->
+		@yield('welcomegaleria')
+		@yield('galeria')
+		<!-- END CONTENIDO GALERIA -->
 
-<!--   CONTENIDO GALERIA   -->
-	@yield('welcomegaleria')
-	@yield('galeria')
-<!-- END CONTENIDO GALERIA -->
+		<!--   CONTENIDO PRECIO   -->
+		@yield('welcomeprecio')
+		@yield('emergente')
+		<!-- END CONTENIDO PRECIO -->
 
-<!--   CONTENIDO PRECIO   -->
-	@yield('welcomeprecio')
-	@yield('emergente')
-<!-- END CONTENIDO PRECIO -->
+		<!--   CONTENIDO SERVICIO   -->
+		@yield('welcomeservicio')
+		@yield('promocionservicio')
+		<!-- END CONTENIDO SERVICIO -->
 
-<!--   CONTENIDO SERVICIO   -->
-	@yield('welcomeservicio')
-	@yield('promocionservicio')
-<!-- END CONTENIDO SERVICIO -->
+		<!--   CONTENIDO EQUIPO   -->
+		@yield('welcome_eq')
+		@yield('equipo_eq')
+		@yield('principios_eq')
+		<!-- END CONTENIDO EQUIPO -->
 
-<!--   CONTENIDO EQUIPO   -->
-	@yield('welcometeam')
-	@yield('team')
-<!-- END CONTENIDO EQUIPO -->
+		<!--   CONTENIDO VOLUNTARIOS   -->
+		@yield('welcome_vol')
+		@yield('team_vol')
+		@yield('voluntarios_vol')
+		<!-- END CONTENIDO VOLUNTARIOS -->
 
-<!--   CONTENIDO VOLUNTARIOS   -->
-	@yield('welcome_vol')
-	@yield('team_vol')
-	@yield('voluntarios_vol')
-<!-- END CONTENIDO VOLUNTARIOS -->
-
-<!--   CONTENIDO CONTACTO   -->
-	@yield('welcomecontacto')
-	@yield('contacto')
-<!-- END CONTENIDO CONTACTO -->
-
+		<!--   CONTENIDO CONTACTO   -->
+		@yield('welcomecontacto')
+		@yield('contacto')
+		<!-- END CONTENIDO CONTACTO -->
+	</main>
+	
 	<footer class="xs-footer-section">
 		<div class="container">
 			<div class="xs-footer-top-layer">
@@ -251,61 +256,6 @@
 								<li><a href="#">Sostenibilidad</a></li>
 							</ul>
 					</div>
-					<div class="col-lg-3 col-md-6 footer-widget">
-						<div class="widget-footer recent-posts">
-							<h3 class="widget-title">Tendencias</h3> 
-								<ul class="xs-recent-post-widget">
-									<li>
-										<div class="posts-thumb float-left"> 
-											<a href="#">
-												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
-												<div class="xs-entry-date">
-													<span class="entry-date d-block">21</span>
-													<span class="entry-month d-block">dec</span>
-												</div>
-												<div class="xs-black-overlay bg-aqua"></div>
-											</a>
-										</div><!-- .posts-thumb END -->
-										<div class="post-info">
-											<h4 class="entry-title">
-												<a href="#">Child Care Centers</a>
-											</h4>
-											<div class="post-meta">
-												<span class="comments-link">
-													<i class="fa fa-comments-o"></i>
-													<a href="">300 Comments</a>
-												</span><!-- .comments-link -->
-											</div>
-										</div><!-- .post-info END -->
-											<div class="clearfix"></div>
-									</li><!-- 1st post end-->
-									<li>
-										<div class="posts-thumb float-left"> 
-											<a href="#">
-												<img alt="img" class="img-responsive" src="/assets/images/news_feeds_1.jpg">
-												<div class="xs-entry-date">
-													<span class="entry-date d-block">23</span>
-													<span class="entry-month d-block">sep</span>
-												</div>
-												<div class="xs-black-overlay bg-aqua"></div>
-											</a>
-										</div><!-- .posts-thumb END -->
-										<div class="post-info">
-											<h4 class="entry-title">
-												<a href="#">Disaster Relief</a>
-											</h4>
-											<div class="post-meta">
-												<span class="comments-link">
-													<i class="fa fa-comments-o"></i>
-													<a href="">35 Comments</a>
-												</span><!-- .comments-link -->
-											</div>
-										</div><!-- .post-info END -->
-										<div class="clearfix"></div>
-									</li><!-- 2nd post end-->
-								</ul>
-						</div>
-					</div>
 					<div class="col-lg-4 col-md-6 footer-widget">
 						<h3 class="widget-title">Contáctenos</h3>
 							<ul class="xs-info-list">
@@ -313,6 +263,23 @@
 								<li><i class="fa fa-phone"></i>(+504) 2442-2610</li>
 								<li><i class="fa fa-envelope-o"></i><a href="mailto:administracionyeventos@credia.hn">administracionyeventos@credia.hn</a></li>
 							</ul><!-- .xs-list-with-icon END -->
+					</div>
+					<div class="col-lg-3 col-md-6 footer-widget">
+						<div class="xs-contact-details">
+							<div class="xs-widnow-wraper">
+								<div class="xs-window-top">
+									<img src="assets/images/contacto/contacto-img-1.jpg" alt="">
+								</div>
+								<div class="xs-window-back">
+									<div id="xs-multiple-map-1" class="xs-map"></div>
+								</div>
+								<div class="xs-window-nav">
+									<a href="#" class="xs-window-opener">
+										<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -329,15 +296,12 @@
 						<nav class="xs-footer-menu">
 							<ul>
 								<li><a href="{{ URL::route('faq') }}">Preguntas frecuentes</a></li>
-								<li><a href="#">Ayuda</a></li>
-								<li><a href="#">Soporte</a></li>
+								<li><a href="{{ URL::route('faq') }}">Ayuda</a></li>
+								<li><a href="{{ URL::route('faq') }}">Soporte</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
-				<!--<div class="xs-back-to-top-wraper">
-					<a href="#" class="xs-back-to-top"><i class="fa fa-angle-up"></i></a>
-				</div>-->
 				
 				<div class="xs-back-to-top-wraper">
 					<a href="#"  onclick="topFunction()" id="myBtn"><i class="fa fa-angle-up"></i></a>
@@ -361,5 +325,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
 
 		<script src="{{ asset('assets/js/main.js') }}"></script>
+		
+		@stack('scripts')
 	</body>
 </html>

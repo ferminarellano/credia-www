@@ -52,6 +52,9 @@
 				<li><a href="{{ backpack_url('actividad') }}"><i class="fa fa-dot-circle-o"></i> <span>Actividades</span></a></li>
 				<li><a href="{{ backpack_url('banner') }}"><i class="fa fa-picture-o"></i> <span>Banner</span></a></li>
 				<li><a href="{{ backpack_url('categoria') }}"><i class="fa fa-tasks"></i> <span>Categorías</span></a></li>
+				<li><a href="{{ backpack_url('equipo') }}"><i class="fa fa-users"></i> <span>Equipo de trabajo</span></a></li>
+				<li><a href="{{ backpack_url('fotovoluntario') }}"><i class="fa fa-users"></i> <span>Fotos de voluntarios</span></a></li>
+				<li><a href="{{ backpack_url('faq') }}"><i class="fa fa-question-circle-o"></i> <span>Preguntas frecuentes</span></a></li>
 				<li><a href="{{ backpack_url('contacto') }}"><i class="fa fa-envelope"></i> <span>Mensajes</span></a></li>
 				<li><a href="{{ backpack_url('patrocinador') }}"><i class="fa fa-handshake-o"></i> <span>Patrocinadores</span></a></li>
 				<li><a href="{{ backpack_url('social') }}"><i class="fa fa-share-alt"></i> <span>Social</span></a></li>
@@ -68,7 +71,6 @@
 			</ul>
 		</li>
 		
-		<!-- ======================================= -->
         <li class="header">{{ trans('backpack::base.user') }}</li>
         <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>
 	@endrole

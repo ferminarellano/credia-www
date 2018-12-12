@@ -425,14 +425,12 @@ $(window).on('resize', function() {
 			XpeedStudio multipile Maps
 ==========================================================*/
 
-if (($('#xs-multiple-map-1').length > 0) && ($('#xs-multiple-map-2').length > 0) && ($('#xs-multiple-map-3').length > 0)) {
+if (($('#xs-multiple-map-1').length > 0)) {
 
-	var latlng = new google.maps.LatLng(28.561287,-81.444465),
-		latlng2 = new google.maps.LatLng(28.507561,-81.482359),
-		latlng3 = new google.maps.LatLng(29.125285,-82.048823);
+	var latlng = new google.maps.LatLng(15.782841, -86.781540);
 
 	var myOptions = {
-		zoom: 3,
+		zoom: 15,
 		center: latlng,
 		scrollwheel: false,
 		navigationControl: false,
@@ -443,51 +441,12 @@ if (($('#xs-multiple-map-1').length > 0) && ($('#xs-multiple-map-2').length > 0)
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 	};
 
-	var myOptions2 = {
-		zoom: 3,
-		center: latlng,
-		scrollwheel: false,
-		navigationControl: false,
-		mapTypeControl: true,
-		scaleControl: false,
-		draggable: true,
-		disableDefaultUI: true,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-	};
-
-	var myOptions3 = {
-		zoom: 3,
-		center: latlng,
-		scrollwheel: false,
-		navigationControl: false,
-		mapTypeControl: true,
-		scaleControl: false,
-		draggable: true,
-		disableDefaultUI: true,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-	};
-
-
-	var map = new google.maps.Map(document.getElementById("xs-multiple-map-1"), myOptions),
-		map2 = new google.maps.Map(document.getElementById("xs-multiple-map-2"), myOptions2),
-		map3 = new google.maps.Map(document.getElementById("xs-multiple-map-3"), myOptions3);
+	var map = new google.maps.Map(document.getElementById("xs-multiple-map-1"), myOptions);
 
 	var myMarker = new google.maps.Marker({
 		position: latlng,
 		map: map,
-		title:"Barnett Park"
-	});
-
-	var myMarker2 = new google.maps.Marker({
-		position: latlng2,
-		map: map2,
-		title:"Bill Fredrick Park at Turkey Lake"
-	});
-
-	var myMarker3 = new google.maps.Marker( {
-		position: latlng3,
-		map: map3,
-		title:"Dogwood Park"
+		title:"Centro Regional de Documentación e Interpretación Ambiental"
 	});
 }
 

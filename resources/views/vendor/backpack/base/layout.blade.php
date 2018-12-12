@@ -61,7 +61,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-		<a href="{{ url('') }}" class="logo">
+		<a href="{{ backpack_url('dashboard') }}" class="logo">
 			@if (backpack_auth()->check())
 				<!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini">{!! config('backpack.base.logo_mini') !!}</span>
@@ -178,8 +178,6 @@
     @stack('after_scripts')
 
     <!-- JavaScripts -->
-    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
     <script src="{{ asset('js/custom.js') }}"></script>
-	{{-- <script type="text/javascript" src="{{ asset('jquery.js') }}"></script>--}}
 </body>
 </html>

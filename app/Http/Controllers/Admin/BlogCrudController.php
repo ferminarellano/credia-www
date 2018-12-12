@@ -81,7 +81,6 @@ class BlogCrudController extends CrudController
 			'attributes' => [
 				'placeholder' => 'Agregue el título del artículo *',
 			],
-			'suffix' => '<span class="glyphicon glyphicon-star"></span>',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],		

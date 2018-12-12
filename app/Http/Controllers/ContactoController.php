@@ -23,7 +23,6 @@ class ContactoController extends Controller
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
-			
 		);
 		
 		return View::make('contenido.contacto')->with($data);
@@ -39,6 +38,6 @@ class ContactoController extends Controller
 					
 		$contacto->save();
 					
-		return redirect('/contactos');
+		return redirect('/contactos#formcontacto');
     }
 }

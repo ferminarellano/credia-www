@@ -18,8 +18,7 @@
 @endsection
 
 @section('galeria')
-	<main class="xs-main">
-		<!-- portfolio section -->
+	<!-- portfolio section -->
 	<div class="xs-content-section-padding">
 		<div class="container">
 			<div class="xs-portfolio-grid">
@@ -74,5 +73,4 @@
 			</div><!-- .xs-portfolio-grid END -->
 		</div><!-- .container end -->
 	</div>	<!-- End portfolio section -->
-	</main>
 @endsection
