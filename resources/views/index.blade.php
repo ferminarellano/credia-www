@@ -410,12 +410,12 @@
 				</div>
 				<div class="col-md-7">
 					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/partner/client_1.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_2.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_3.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_4.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_5.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_3.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_4.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_5.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
 					</ul>
 				</div>
 			</div><!-- .row end -->
