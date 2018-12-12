@@ -5,17 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Categoria extends Model
+class FotoVoluntario extends Model
 {
     use CrudTrait;
 
-    protected $table = 'categorias';
+    /*
+    |--------------------------------------------------------------------------
+    | GLOBAL VARIABLES
+    |--------------------------------------------------------------------------
+    */
+
+    protected $table = 'foto_voluntarios';
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['nombre','descripcion'];
+	protected $casts = ['fotos' => 'array'];
+    protected $fillable = ['foto','nombre','cargo'];
     // protected $hidden = [];
     // protected $dates = [];
+	protected $visible = ['foto'];
 	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
@@ -25,36 +33,38 @@ class Categoria extends Model
 	public static function boot()
     {
         parent::boot();
-    }
+		
+		self::deleting(function($obj) {
+            if (count((array)$obj->fotos)) {
+                foreach ($obj->fotos as $file_path) {
+					\Storage::disk('public_folder')->delete($obj->image);
+                }
+            }
+        });
+		
+	}
 	
     /*------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
 	
-	public function blogs()
-	{
-		return $this->hasMany('App\Models\Blog');
-	}
-	
-	public function proyectos()
-	{
-		return $this->hasMany('App\Models\Proyecto');
-	}
-	
-	public function faqs()
-	{
-		return $this->hasMany('App\Models\Faq');
-	}
-	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
 
-    /*------------------------------------------------------------------------
+    /*-------------------------------------------------------------------------
     | ACCESORS
     |------------------------------------------------------------------------*/
 
-    /*------------------------------------------------------------------------
+    /*-------------------------------------------------------------------------
     | MUTATORS
     |------------------------------------------------------------------------*/
+	
+	public function setFotoAttribute($value)
+	{
+		$attribute_name = "foto";
+		$disk = "public";
+		$destination_path = "images/voluntarios-photos";
+		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+	}
 }

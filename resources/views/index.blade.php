@@ -3,7 +3,7 @@
 <?php
 
 	function diccionario($palabra)
-	{	
+	{
 		$arr = array();
 		
 		$arr["01"] = "Ene";
@@ -34,6 +34,14 @@
 						<div class="xs-welcome-wraper color-white">
 							<h2>{{ $slide->titulo }}</h2>
 							<p>{{ $slide->descripcion }}</p>
+							
+							@if($slide->estado === 1)
+								<div class="xs-btn-wraper">
+									<a href="{{ $slide->url }}" class="btn btn-outline-primary">
+										{{ $slide->accion }}
+									</a>
+								</div><!-- .xs-btn-wraper END -->
+							@endif
 						</div><!-- .xs-welcome-wraper END -->
 					</div><!-- .container end -->
 					<div class="xs-black-overlay"></div>
@@ -415,139 +423,56 @@
 	</section>
 @endsection
 
-@section('revista_in')
-	<section class="xs-section-padding">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">From the Journal</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>It allows you to gather monthly subscriptions from fans to help fund your creative projects. They also encourage their users to offer rewards to fans as a way to repay them for their support.</p>
-				</div><!-- .xs-heading-title END -->
-				<div class="col-xl-3 col-md-3 xs-btn-wraper">
-					<a href="" class="btn btn-primary">all Causes</a>
-				</div><!-- .xs-btn-wraper END -->
-			</div><!-- .row end -->
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_1.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="assets/images/avatar/avatar_1.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By Simona</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										27th August 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">Brilliant After All, A New Album by Rebecca: Help poor people</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_2.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="assets/images/avatar/avatar_2.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By Julian</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										02 May 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">South african pre primary school build for children</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_3.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="assets/images/avatar/avatar_3.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By David Willy</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										13 January 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">Provide pure water for syrian poor people</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>
+@section('blog_recent')
+	@if(count($articulos) > 0)
+		<!-- blog section -->	
+		<section class="xs-content-section-padding" style="background-color:white;">
+			<div class="container">
+				<div class="row xs-mb-50">
+					@foreach($articulos as $articulo)
+						<div class="col-lg-4 col-md-6">
+							<div class="xs-box-shadow xs-single-journal xs-mb-30">
+								<div class="entry-thumbnail ">
+									<img class="img-height" src="/{{$articulo->foto}}">
+									<div class="post-author">
+										<span class="xs-round-avatar">
+											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
+										</span>
+										<span class="author-name">
+											<a>Por {{ $articulo->user()->get()->first()->name }}</a>
+										</span>
+									</div>
+								</div><!-- .xs-item-header END -->
+								<div class="entry-header">
+									<div class="entry-meta">
+										<span class="date">
+											<a rel="bookmark" class="entry-date">
+												{{date('d', strtotime($articulo->fecha))}} DE {{diccionario(date('m', strtotime($articulo->fecha)))}} DE {{date('Y', strtotime($articulo->fecha))}}
+											</a>
+										</span>
+									</div>
+									
+									<h4 class="entry-title">
+										<a href="{{URL::route('blogdetalle',['slug' => str_slug($articulo->titulo,'-'),'id' => $articulo->id])}}">{{$articulo->titulo}}</a>
+									</h4>
+								</div><!-- .xs-entry-header END --> 
+								<span class="xs-separetor"></span>
+								<div class="post-meta meta-style-color">
+									<span class="comments-link">
+										<i class="fa fa-comments-o"></i>
+											<a>{{ $articulo->blogcomments()->count() }} comentarios</a>
+									</span><!-- .comments-link -->
+									<span class="view-link">
+										<i class="fa fa-eye"></i>
+										<a>{{ $articulo->total_vista }} vistas</a>
+									</span>
+								</div><!-- .post-meta END -->
+							</div><!-- .xs-from-journal END -->
+						</div>
+					@endforeach
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section><!-- End blog section -->
+	@endif
 @endsection
 

@@ -8,7 +8,9 @@ use App\Models\Voluntario;
 use App\Models\Actividad;
 use App\Models\Evento;
 use App\Models\Proyecto;
+use App\Models\Categoria;
 use App\Models\Social;
+use App\Models\Blog;
 use View;
 
 use Storage;
@@ -23,6 +25,7 @@ class IndexController extends Controller
 		$eventos = Evento::orderBy('id','desc')->take(3)->get();
 		$redes = Social::all();
 		$proyectos = Proyecto::orderBy('id','desc')->take(3)->get();
+		$articulos = Blog::where([['estado','=','1']])->orderBy('id','desc')->take(3)->get();
 		
 		$data = array(
 			"sliders" => $sliders,
@@ -30,6 +33,7 @@ class IndexController extends Controller
 			"eventos" => $eventos,
 			"redes" => $redes,
 			"proyectos" => $proyectos,
+			"articulos" => $articulos,
 		);
 		
 		return View::make('index')->with($data);
@@ -55,10 +59,4 @@ class IndexController extends Controller
 					
 		return redirect('/');
     }
-
-	public function faq()
-	{
-		return View::make('contenido.faq');
-	}
-	
 }

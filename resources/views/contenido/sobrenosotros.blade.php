@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Sobre nosotros -')
+@section('title', 'conocenos -')
 
 @section('welcomesn')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
@@ -9,9 +9,6 @@
 			<div class="color-white xs-inner-banner-content">
 				<h2>{{$titulo}}</h2>
 				<p>{{$contenido}}</p>
-				<!-- <ul class="xs-breadcumb"> -->
-					<!-- <li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Conócenos</li> -->
-				<!-- </ul> -->
 			</div>
 		</div>
 	</section>
@@ -39,12 +36,12 @@
 
 @section('contenido_video_sn')
 	<!-- video popup section section -->
-	<section class="xs-content-section-padding">
+	<section class="xs-content-section-padding-conocenos">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-11 content-center">
 					<div class="xs-heading xs-mb-100 text-center">
-						<h2 class="xs-mb-0 xs-title">Somos una organización sin fines de lucro <span class="color-green">apoyamos</span> buenas causas y cambios positivos para la población de Honduras.</h2>
+						<h2 class="xs-mb-0 xs-title" style="text-align:center;">Somos una organización sin fines de lucro <span class="color-green">apoyamos</span> buenas causas y cambios positivos para la población de Honduras.</h2>
 					</div>
 				</div>
 			</div><!-- .row end -->
@@ -66,27 +63,13 @@
 					</div>
 				</div>
 			</div><!-- .row end -->
-			<!-- <div style="padding-top: 50px;" class="row"> -->
-					<!-- <div class="col-md-4"> -->
-						<!-- <div class="xs-about-feature"> -->
-							<!-- <h3>Nuestros Valores</h3> -->
-							<!-- <ul class="xs-unorder-list play green-icon"> -->
-								<!-- <li>Laboriosidad</li> -->
-								<!-- <li>Respeto</li> -->
-								<!-- <li>Justicia y Responsabilidad</li> -->
-								<!-- <li>Honestidad</li> -->
-								<!-- <li>Creatividad</li> -->
-							<!-- </ul> -->
-						<!-- </div> -->
-					<!-- </div> -->
-			<!-- </div> -->
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
 @endsection
 
-@section('funfacts_sn')
+@section('widget_sn')
 	<!-- funfacts section -->
-	<div class="xs-funfact-section xs-content-section-padding waypoint-tigger parallax-window" style="background-image: url('assets/images/backgrounds/parallax_1.jpg')">
+	<div class="xs-funfact-section xs-content-section-padding waypoint-tigger parallax-window" style="background-color:#011b58;">
 		<div class="container">
 			<div class="row col-lg-10 xs-heading mx-auto">
 				<h2 align="center" class="xs-title color-white small">Nuestra fundación ha estado presente por más de 7 años. Hacemos lo mejor para todos.</h2>
@@ -133,7 +116,7 @@
 			<!-- .xs-heading row -->
 			<div class="xs-heading row xs-mb-60"> 
 				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title" style="color:#a6ce39;">Qué hacemos</h2>
+					<h2 class="xs-title" style="color:#a6ce39;">¿Qué hacemos?</h2>
 					<hr style="width:220px;float:left;margin-bottom:20px;margin-top:10px;">
 				</div>
 				<div class="xs-heading xs-mb-70 text-center">
@@ -175,112 +158,40 @@
 	</section>	<!-- End what we do section -->
 @endsection
 
-@section('team_sn')
-	<!-- team section -->
-	<section class="xs-section-padding bg-gray">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title" style="color:#a6ce39;">Nuestro equipo</h2>
-					<!-- <span class="xs-separetor dashed"></span> -->
-					<p style="color:#011b58;text-align:justify;">Nuestra fundación esta compuesta por el personal adecuado, los mejores profesionales en su labor, unete se parte de esta gran familia con voluntariados y más.</p>
-				</div><!-- .xs-heading-title END -->
-			</div><!-- .row end -->
-			<div class="row xs-mb-60">
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Lic. Roberto Calix</h4>
-							<small>Director Ejecutivo</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-red" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Lic. Mirian López</h4>
-							<small>Administración</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-purple" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Lic. Cenaida Moncada</h4>
-							<small>Educación Ambiental</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-blue" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Ing. Fermin Arellano</h4>
-							<small>Centro de Documentación</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-orange" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-			</div><!-- .row END -->
-			<!-- <div class="text-center"> -->
-				<!-- <a href="#" class="btn btn-success"> -->
-					<!-- Unete a nosotros -->
-				<!-- </a> -->
-			<!-- </div> -->
-		</div><!-- .container end -->
-	</section>	<!-- End team section -->
-@endsection
-
-@section('partners_sn')
-	<!-- partners section -->
-	<section class="xs-partner-section" style="background-image: url('assets/images/map.png');">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<div class="xs-partner-content">
-						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">Principios <span class="color-green">institucionales.</span></h2>
+@section('equipo_sn')
+	@if(count($empleados) > 0)
+		<!-- equipo section -->
+		<section class="xs-section-padding bg-gray">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-md-12 col-xl-12">
+						<h2 class="xs-title" style="color:#a6ce39;">Nuestro equipo</h2>
+						<!-- <span class="xs-separetor dashed"></span> -->
+						<p style="color:#011b58;text-align:justify;">Nuestra fundación esta compuesta por el personal adecuado, los mejores profesionales en su labor, unete se parte de esta gran familia.</p>
+					</div><!-- .xs-heading-title END -->
+				</div><!-- .row end -->
+				<div class="row xs-mb-60">
+					@foreach($empleados as $empleado)
+						<div class="col-md-6 col-lg-3">
+							<div class="xs-single-team">
+								<img src="{{ $empleado->foto }}" alt="">
+								<div class="xs-team-content">
+									<h4>{{ $empleado->nombre }}</h4>
+									<small>{{ $empleado->cargo }}</small>
+									<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
+										<path class="fill-green" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
+									</svg>
+								</div><!-- .xs-team-content END -->
+							</div><!-- .xs-single-team END -->
 						</div>
-						<p align="justify">Los principios que guian el accionar de la fundación en cuanto a conducta por parte de cada uno de los miembros de esta gran familia son los siguientes.</p>
-						
-						<ul style="padding-bottom:35px;" class="xs-unorder-list play green-icon">
-							<li>Compromiso Socio-ambiental</li>
-							<li>Democracia</li>
-							<li>Transparencia</li>
-							<li>Flexibilidad e innovación</li>
-							<li>Eticidad</li>
-							<li>Pluralismo</li>
-						</ul>
-						
-						<!-- <a href="#" class="btn btn-primary bg-orange"> -->
-							<!-- Únete a nosotros ahora -->
-						<!-- </a> -->
-					</div>
+					@endforeach
+				</div><!-- .row END -->
+				<div class="text-center">
+					<a href="{{ URL::route('equipo') }}" class="btn btn-success">
+						Ver más
+					</a>
 				</div>
-				<div class="col-lg-7">
-					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/partner/client_1.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_2.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_3.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_4.png" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_5.png" alt=""></a></li>
-					</ul>
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End partners section -->
+			</div><!-- .container end -->
+		</section>	<!-- End team section -->
+	@endif
 @endsection

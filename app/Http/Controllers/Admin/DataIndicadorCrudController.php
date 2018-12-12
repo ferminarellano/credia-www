@@ -50,6 +50,8 @@ class DataIndicadorCrudController extends CrudController
 		$this->crud->addColumn([
 			'name' => 'fecha_aprovacion',
 			'label' => 'Fecha aprobación',
+			'type' => "date",
+			'format' => 'l j F Y',
 		]);
 		
 	/*============================================================*/

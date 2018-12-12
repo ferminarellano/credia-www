@@ -7,6 +7,7 @@ use App\Models\Banner;
 use App\Models\Voluntario;
 use App\Models\Actividad;
 use App\Models\Social;
+use App\Models\FotoVoluntario;
 use View;
 
 use Storage;
@@ -23,12 +24,15 @@ class VoluntarioController extends Controller
 		$actividades = Actividad::where('estado','=','1')->get();
 		$redes = Social::all();
 		
+		$voluntarios = FotoVoluntario::all();
+		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"actividades" => $actividades,
 			"redes" => $redes,
+			"voluntarios" => $voluntarios,
 		);
 		
 		return View::make('contenido.voluntario')->with($data);

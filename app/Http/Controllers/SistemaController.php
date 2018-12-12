@@ -4,19 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Banner;
+use App\Models\Voluntario;
+use App\Models\Actividad;
 use App\Models\Social;
-use App\Models\Equipo;
 use View;
 
-class ConoceController extends Controller
+use Storage;
+use File;
+
+class SistemaController extends Controller
 {
-    public function snosotros()
+	public function sistema()
 	{
-		$banner = Banner::where([['indicador','=','fundacion']])->get();
+		$banner = Banner::where([['indicador','=','sistema']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
-		$empleados = Equipo::orderBy('id','asc')->take(4)->get();
 		$redes = Social::all();
 		
 		$data = array(
@@ -24,9 +27,9 @@ class ConoceController extends Controller
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
-			"empleados" => $empleados,
 		);
 		
-		return View::make('contenido.sobrenosotros')->with($data);
+		return View::make('contenido.sistema')->with($data);
 	}
+	
 }

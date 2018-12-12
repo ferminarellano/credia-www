@@ -34,15 +34,22 @@ class DataIndicador extends Model
 		self::creating(function($model)
 		{
 			$user_id = Auth::id();
+			$user = User::where([['id',$user_id]])->get();
+			$institucion_id = $user->first()->institucion_id;
 			
 			$model->created_user_id = $user_id;
 			$model->updated_user_id = $user_id;
+			$model->institucion_id = $institucion_id;
         });
 		
 		self::updating(function($model)
 		{
 			$user_id = Auth::id();
 			$model->updated_user_id = $user_id;
+			
+			if($model->estado == 1){
+				$model->fecha_aprovacion = now();
+			}
         });
     }
 	

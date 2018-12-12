@@ -12,6 +12,9 @@
 	CRUD::resource('evento', 'EventoCrudController');
 	CRUD::resource('patrocinador', 'PatrocinadorCrudController');
 	CRUD::resource('proyecto', 'ProyectoCrudController');
+	CRUD::resource('faq', 'FaqCrudController');
+	CRUD::resource('equipo', 'EquipoCrudController');
+	CRUD::resource('fotovoluntario', 'FotoVoluntarioCrudController');
 	
 	CRUD::resource('user', 'UserCrudController');
 	CRUD::resource('role', 'RoleCrudController');

@@ -5,28 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Social;
-use App\Models\Equipo;
+use App\Models\Faq;
+
 use View;
 
-class ConoceController extends Controller
+class FaqController extends Controller
 {
-    public function snosotros()
+	public function faq()
 	{
-		$banner = Banner::where([['indicador','=','fundacion']])->get();
+		$banner = Banner::where([['indicador','=','faq']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
-		$empleados = Equipo::orderBy('id','asc')->take(4)->get();
 		$redes = Social::all();
+		
+		$faqs = Faq::orderBy('id','desc')->paginate(8);
 		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
-			"empleados" => $empleados,
+			"faqs" => $faqs,
 		);
 		
-		return View::make('contenido.sobrenosotros')->with($data);
+		return View::make('contenido.faq')->with($data);
 	}
 }

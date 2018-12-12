@@ -21,6 +21,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.nav-opacity-other{
 		display:none;
 	}
+	
+	.xs-post-title{
+		font-size: 1.1em;
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -28,6 +32,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	html {
 		font-size: 90%;
 	}
+	
+	.xs-post-title{
+		font-size: 1.1em;
+	}
+	
 	/* margin bottom list  */
 	.xs-btn-wraper a ,
 	.xs-archive-content ,
@@ -427,6 +436,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		float: none;
 		width: 100%;
 	}
+	
+	.xs-post-title{
+		font-size: 3.5vw;
+	}
+	
 	.xs-post-footer .share-items, 
 	.xs-post-footer .post-content, 
 	.xs-author-block .share-items, 
@@ -459,6 +473,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	
 	.nav-opacity-other{
 		display:none;
+	}
+	
+	.xs-post-title{
+		font-size: 4.5vw;
 	}
 }
 

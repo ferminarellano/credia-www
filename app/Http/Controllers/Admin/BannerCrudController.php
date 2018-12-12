@@ -28,7 +28,7 @@ class BannerCrudController extends CrudController
 						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
 						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
 						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
-						  'servicio'=> 'Servicio'],
+						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
 		]);
 		
 		$this->crud->addColumn([
@@ -42,6 +42,60 @@ class BannerCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
+			'name'  => 'estado',
+			'label' => 'Agregar Botón',
+			'type'  => 'fieldhidden',
+			'options' => [
+                    0 => "No",
+                    1 => "Si",
+            ],
+			'inline' => true,
+			'hide_when' => [
+					0 => ['url','separato2','accion'],
+			],
+			'default' => false,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		
+		$this->crud->addField([
+			'name' => 'separator1',
+			'type' => 'custom_html',
+			'value' => '<hr>'
+		]);
+		
+		$this->crud->addField([
+			'name' => 'url',
+			'label' => 'Agregue URL',
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue la url de redirección *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'accion',
+			'label' => "Texto acción de botón",
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el texto descriptivo de acción del botón *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			], 
+		]);
+		
+		$this->crud->addField([
+			'name' => 'separator2',
+			'type' => 'custom_html',
+			'value' => '<hr name="separato2">'
+		]);
+		
+		$this->crud->addField([
 			'name' => 'foto',
 			'label' => "Fotografía",
 			'type' => 'upload',
@@ -49,20 +103,20 @@ class BannerCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'separator',
+			'name' => 'separator3',
 			'type' => 'custom_html',
 			'value' => '<hr>'
 		]);
 		
 		$this->crud->addField([
 			'name' => 'indicador',
-			'label' => "Página",
+			'label' => 'Página',
 			'type' => 'select_from_array',
 			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
 						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
 						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
 						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
-						  'servicio'=> 'Servicio'],
+						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
 			'allows_null' => true,
 		]);
 		

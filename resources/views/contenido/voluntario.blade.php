@@ -19,113 +19,37 @@
 	<section class="xs-section-padding bg-gray">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
+				<div class="col-md-12 col-xl-12">
 					<h2 class="xs-title">Nuestros voluntarios</h2>
 					<!-- <span class="xs-separetor dashed"></span> -->
 					<h2 class="xs-line-title" style="margin-top:25px;">¿Por qué hacer voluntariado?</h2>
 					<p>
-						Cuando te conviertes en voluntario o voluntaria te sientes útil. Te das cuenta de que tus acciones,
-						tus tareas como voluntario/a tienen un objetivo y ayudan a otras personas o al medio ambiente.
+						Cuando te conviertes en voluntario te sientes útil. Te das cuenta de que tus acciones,
+						tus tareas como voluntario tienen un objetivo y ayudan a otras personas o al medio ambiente.
 					</p>
 				</div><!-- .xs-heading-title END -->
 			</div><!-- .row end -->
 			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>William Khanna</h4>
-							<small>CEO & Founder</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-red" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Mr. Aladin</h4>
-							<small>General Manager</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-purple" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Zummon Khan</h4>
-							<small>Volunteer</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-blue" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team xs-mb-50">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Harista Pro</h4>
-							<small>Volunteer</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-orange" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Banana Halim</h4>
-							<small>Volunteer</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-riptide" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Kumiriano Li</h4>
-							<small>Volunteer</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-yellow" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Tom Rahabi</h4>
-							<small>Volunteer</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-green" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-single-team">
-						<img src="assets/images/team/team_1.png" alt="">
-						<div class="xs-team-content">
-							<h4>Join Now</h4>
-							<small>Want to join with us</small>
-							<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-								<path class="fill-navy-blue" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
-							</svg>
-						</div><!-- .xs-team-content END -->
-					</div><!-- .xs-single-team END -->
-				</div>
+				@if(count($voluntarios) === 0)
+					<div class="col-lg-12">
+						<h1 class="resp">ACTUALMENTE NO SE HAN INGRESADO LOS VOLUNTARIOS<h1>
+					</div>
+				@else
+					@foreach($voluntarios as $voluntario)
+						<div class="col-md-6 col-lg-3">
+							<div class="xs-single-team xs-mb-50">
+								<img src="{{ $voluntario->foto }}" alt="">
+								<div class="xs-team-content">
+									<h4>{{ $voluntario->nombre }}</h4>
+									<small>{{ $voluntario->cargo }}</small>
+									<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
+										<path class="fill-blue" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
+									</svg>
+								</div><!-- .xs-team-content END -->
+							</div><!-- .xs-single-team END -->
+						</div>
+					@endforeach
+				@endif
 			</div><!-- .row END -->
 		</div><!-- .container end -->
 	</section>	<!-- End team section -->
