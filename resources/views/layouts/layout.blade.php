@@ -268,7 +268,7 @@
 						<div class="xs-contact-details">
 							<div class="xs-widnow-wraper">
 								<div class="xs-window-top">
-									<img src="assets/images/contacto/contacto-img-1.jpg" alt="">
+									<img src="/assets/images/contacto/contacto-img-1.jpg" alt="">
 								</div>
 								<div class="xs-window-back">
 									<div id="xs-multiple-map-1" class="xs-map"></div>

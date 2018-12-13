@@ -2822,7 +2822,8 @@ svg {
     width: 100%;
     z-index: 9; }
     .xs-widnow-wraper .xs-window-top img {
-      height: 100%; }
+      height: 100%; 
+	  width: 100%;}
   .xs-widnow-wraper .xs-window-nav {
     position: absolute;
     right: 0;
