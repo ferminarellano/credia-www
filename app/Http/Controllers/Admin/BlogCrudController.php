@@ -22,6 +22,11 @@ class BlogCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/blog');
         $this->crud->setEntityNameStrings('artículo', 'artículos de blog');
 		
+		if($user->hasRole('Creador de articulos'))
+		{
+			$this->crud->denyAccess(['update', 'delete','revisions']);
+		}
+		
 		$this->crud->addColumn([
 			'name' => 'titulo',
 			'label' => 'Título'
@@ -41,7 +46,7 @@ class BlogCrudController extends CrudController
 			'label' => 'Fecha'
 		]);
 		
-		if($user->hasRole('Super Administrador'))
+		if($user->hasRole('Super Administrador|Administrador Web|Editor de articulos'))
 		{
 			$this->crud->addColumn([
 				'name' => 'estado',

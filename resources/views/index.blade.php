@@ -6,18 +6,18 @@
 	{
 		$arr = array();
 		
-		$arr["01"] = "Ene";
-		$arr["02"] = "Feb";
-		$arr["03"] = "Mar";
-		$arr["04"] = "Abr";
-		$arr["05"] = "May";
-		$arr["06"] = "Jun";
-		$arr["07"] = "Jul";
-		$arr["08"] = "Ago";
-		$arr["09"] = "Sep";
-		$arr["10"] = "Oct";
-		$arr["11"] = "Nov";
-		$arr["12"] = "Dic";
+		$arr["01"] = "ENE";
+		$arr["02"] = "FEB";
+		$arr["03"] = "MAR";
+		$arr["04"] = "ABR";
+		$arr["05"] = "MAY";
+		$arr["06"] = "JUN";
+		$arr["07"] = "JUL";
+		$arr["08"] = "AGO";
+		$arr["09"] = "SEP";
+		$arr["10"] = "OCT";
+		$arr["11"] = "NOV";
+		$arr["12"] = "DIC";
 		
 		return $arr[$palabra];
 	}
@@ -49,6 +49,153 @@
 			@endforeach
 		</div>
 	</section>
+@endsection
+
+@section('blog_recent')
+	@if(count($articulos) > 0)
+		<!-- blog section -->	
+		<section class="xs-section-padding" style="background-color:white;">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-md-9 col-xl-9">
+						<h2 class="xs-title">Art&iacute;culos recientes</h2>
+					</div><!-- .xs-heading-title END -->
+					<div class="col-xl-3 col-md-3 xs-btn-wraper">
+						<a href="{{ URL::route('blog') }}" class="btn btn-primary">Ver todos</a>
+					</div><!-- .xs-btn-wraper END -->
+				</div><!-- .row end -->
+				<div class="row">
+					@foreach($articulos as $articulo)
+						<div class="col-lg-4 col-md-6">
+							<div class="xs-box-shadow xs-single-journal xs-mb-30">
+								<div class="entry-thumbnail ">
+									<img class="img-height" src="/{{$articulo->foto}}">
+									<div class="post-author">
+										<span class="xs-round-avatar">
+											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
+										</span>
+										<span class="author-name">
+											<a>Por {{ $articulo->user()->get()->first()->name }}</a>
+										</span>
+									</div>
+								</div><!-- .xs-item-header END -->
+								<div class="entry-header">
+									<div class="entry-meta">
+										<span class="date">
+											<a rel="bookmark" class="entry-date">
+												{{date('d', strtotime($articulo->fecha))}} DE {{diccionario(date('m', strtotime($articulo->fecha)))}} DE {{date('Y', strtotime($articulo->fecha))}}
+											</a>
+										</span>
+									</div>
+									
+									<h4 class="entry-title">
+										<a href="{{URL::route('blogdetalle',['slug' => str_slug($articulo->titulo,'-'),'id' => $articulo->id])}}">{{$articulo->titulo}}</a>
+									</h4>
+								</div><!-- .xs-entry-header END --> 
+								<span class="xs-separetor"></span>
+								<div class="post-meta meta-style-color">
+									<span class="comments-link">
+										<i class="fa fa-comments-o"></i>
+											<a>{{ $articulo->blogcomments()->count() }} comentarios</a>
+									</span><!-- .comments-link -->
+									<span class="view-link">
+										<i class="fa fa-eye"></i>
+										<a>{{ $articulo->total_vista }} vistas</a>
+									</span>
+								</div><!-- .post-meta END -->
+							</div><!-- .xs-from-journal END -->
+						</div>
+					@endforeach
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section><!-- End blog section -->
+	@endif
+@endsection
+
+@section('eventos_in')
+	@if(count($eventos) > 0)
+		<section class="xs-section-padding">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-md-9 col-xl-9">
+						<h2 class="xs-title">Nuestros eventos</h2>
+						<!--<span class="xs-separetor dashed"></span>-->
+						<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
+					</div><!-- .xs-heading-title END -->
+				</div>
+				<div class="row">
+					@foreach($eventos as $evento)
+						<div class="col-lg-6 row xs-single-event event-blue">
+							<div class="col-md-5">
+								<div class="xs-event-image">
+									<img src="/{{$evento->foto}}" alt="">
+									<div class="xs-entry-date">
+										<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
+										<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>
+									</div>
+									<div class="xs-black-overlay"></div>
+								</div><!-- .xs-event-image END -->
+							</div>
+							<div class="col-md-7">
+								<div class="xs-event-content-event">
+									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}">{{ $evento->titulo }}</a>
+									<p>{{ $evento->subtitulo }}</p>
+									<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
+									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary">
+										Aprende más
+									</a>
+								</div><!-- .xs-event-content END -->
+							</div>
+						</div><!-- .xs-single-event END -->
+					@endforeach
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>
+	@endif
+@endsection
+
+@section('proyectos_in')
+	@if(count($proyectos) > 0)
+		<section class="bg-gray waypoint-tigger xs-section-padding">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-md-10 col-xl-10">
+						<h2 class="xs-title">Proyectos</h2>
+					</div>
+					<div class="col-xl-2 col-md-2">
+						<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
+					</div><!-- .xs-btn-wraper END -->
+				</div><!-- .row end -->
+				<div class="row">
+					@foreach($proyectos as $proyecto)
+						<div class="col-lg-4 col-md-6">
+							<div class="xs-popular-item xs-box-shadow">
+								<div class="xs-item-header">
+
+									<img src="/{{$proyecto->foto}}" alt="">
+
+									<div class="xs-skill-bar">
+										<div class="xs-skill-track bg-light-green">
+											<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
+										</div>
+									</div>
+								</div><!-- .xs-item-header END -->
+								<div class="xs-item-content">
+									<div class="xs-margin-1">
+										<ul class="xs-simple-tag xs-mb-20">
+											<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
+										</ul>
+										<span class="xs-separetor"></span>
+										<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
+									</div>
+								</div><!-- .xs-item-content END -->
+							</div><!-- .xs-popular-item END -->
+						</div>
+					@endforeach
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>
+	@endif
 @endsection
 
 @section('mision_in')
@@ -120,53 +267,6 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section><!-- End archive section -->
-@endsection
-
-@section('proyectos_in')
-	<section class="bg-gray waypoint-tigger xs-section-padding">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-10 col-xl-10">
-					<h2 class="xs-title">Proyectos</h2>
-				</div>
-				<div class="col-xl-2 col-md-2">
-					<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
-				</div><!-- .xs-btn-wraper END -->
-			</div><!-- .row end -->
-			<div class="row">
-				@if(count($proyectos) === 0)
-					<div class="col-lg-12">
-						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
-					</div>
-				@endif
-				@foreach($proyectos as $proyecto)
-					<div class="col-lg-4 col-md-6">
-						<div class="xs-popular-item xs-box-shadow">
-							<div class="xs-item-header">
-
-								<img src="/{{$proyecto->foto}}" alt="">
-
-								<div class="xs-skill-bar">
-									<div class="xs-skill-track bg-light-green">
-										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
-									</div>
-								</div>
-							</div><!-- .xs-item-header END -->
-							<div class="xs-item-content">
-								<div class="xs-margin-1">
-									<ul class="xs-simple-tag xs-mb-20">
-										<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
-									</ul>
-									<span class="xs-separetor"></span>
-									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
-								</div>
-							</div><!-- .xs-item-content END -->
-						</div><!-- .xs-popular-item END -->
-					</div>
-				@endforeach
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>
 @endsection
 
 @section('texto_in') 
@@ -344,51 +444,6 @@
 	</section>
 @endsection
 
-@section('eventos_in')
-	<section class="xs-section-padding">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">Nuestros eventos</h2>
-					<!--<span class="xs-separetor dashed"></span>-->
-					<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
-				</div><!-- .xs-heading-title END -->
-			</div>
-			<div class="row">
-				@if(count($eventos) === 0)
-					<div class="col-lg-12">
-						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
-					</div>
-				@endif
-				@foreach($eventos as $evento)
-					<div class="col-lg-6 row xs-single-event event-blue">
-						<div class="col-md-5">
-							<div class="xs-event-image">
-								<img src="/{{$evento->foto}}" alt="">
-								<div class="xs-entry-date">
-									<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
-									<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>
-								</div>
-								<div class="xs-black-overlay"></div>
-							</div><!-- .xs-event-image END -->
-						</div>
-						<div class="col-md-7">
-							<div class="xs-event-content-event">
-								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}">{{ $evento->titulo }}</a>
-								<p>{{ $evento->subtitulo }}</p>
-								<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
-								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary">
-									Aprende más
-								</a>
-							</div><!-- .xs-event-content END -->
-						</div>
-					</div><!-- .xs-single-event END -->
-				@endforeach
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>
-@endsection
-
 @section('patrocinadores_in')
 	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
@@ -422,57 +477,3 @@
 		</div><!-- .container end -->
 	</section>
 @endsection
-
-@section('blog_recent')
-	@if(count($articulos) > 0)
-		<!-- blog section -->	
-		<section class="xs-content-section-padding" style="background-color:white;">
-			<div class="container">
-				<div class="row xs-mb-50">
-					@foreach($articulos as $articulo)
-						<div class="col-lg-4 col-md-6">
-							<div class="xs-box-shadow xs-single-journal xs-mb-30">
-								<div class="entry-thumbnail ">
-									<img class="img-height" src="/{{$articulo->foto}}">
-									<div class="post-author">
-										<span class="xs-round-avatar">
-											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->user()->get()->first()->email))).'?s=50&d=monsterid' }}">
-										</span>
-										<span class="author-name">
-											<a>Por {{ $articulo->user()->get()->first()->name }}</a>
-										</span>
-									</div>
-								</div><!-- .xs-item-header END -->
-								<div class="entry-header">
-									<div class="entry-meta">
-										<span class="date">
-											<a rel="bookmark" class="entry-date">
-												{{date('d', strtotime($articulo->fecha))}} DE {{diccionario(date('m', strtotime($articulo->fecha)))}} DE {{date('Y', strtotime($articulo->fecha))}}
-											</a>
-										</span>
-									</div>
-									
-									<h4 class="entry-title">
-										<a href="{{URL::route('blogdetalle',['slug' => str_slug($articulo->titulo,'-'),'id' => $articulo->id])}}">{{$articulo->titulo}}</a>
-									</h4>
-								</div><!-- .xs-entry-header END --> 
-								<span class="xs-separetor"></span>
-								<div class="post-meta meta-style-color">
-									<span class="comments-link">
-										<i class="fa fa-comments-o"></i>
-											<a>{{ $articulo->blogcomments()->count() }} comentarios</a>
-									</span><!-- .comments-link -->
-									<span class="view-link">
-										<i class="fa fa-eye"></i>
-										<a>{{ $articulo->total_vista }} vistas</a>
-									</span>
-								</div><!-- .post-meta END -->
-							</div><!-- .xs-from-journal END -->
-						</div>
-					@endforeach
-				</div><!-- .row end -->
-			</div><!-- .container end -->
-		</section><!-- End blog section -->
-	@endif
-@endsection
-
