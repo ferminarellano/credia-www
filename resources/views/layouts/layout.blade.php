@@ -138,16 +138,16 @@
 	<main class="xs-main">
 		<!--   CONTENIDO INDEX   -->
 		@yield('welcome_in')
-		@yield('mision_in')
+		@yield('blog_recent')
+		@yield('eventos_in')
 		@yield('proyectos_in')
+		@yield('mision_in')
 		@yield('texto_in')
 		@yield('descripcion_in')
 		@yield('unete_in')
 		@yield('actividades_in')
 		@yield('voluntarios_in')
-		@yield('eventos_in')
 		@yield('patrocinadores_in')
-		@yield('blog_recent')
 		<!-- END CONTENIDO INDEX -->
 
 		<!--   CONTENIDO SOBRE NOSOTROS   -->
