@@ -24,7 +24,7 @@ class BlogCrudController extends CrudController
 		
 		if($user->hasRole('Creador de articulos'))
 		{
-			$this->crud->denyAccess(['update', 'delete','revisions']);
+			$this->crud->denyAccess(['delete','revisions']);
 		}
 		
 		$this->crud->addColumn([
