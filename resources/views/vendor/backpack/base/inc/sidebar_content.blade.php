@@ -15,7 +15,7 @@
 				<li><a href="{{ backpack_url('unidadmedida') }}"><i class="fa fa-percent"></i> <span>Unidades de medida</span></a></li>
 			</ul>
 		</li>
-		@role('Administrador Web')
+		@role('Super Administrador|Administrador Web')
 			<li class="header">CONFIGURACIÓN PÁGINA</li>
 			
 			<li class="treeview">
