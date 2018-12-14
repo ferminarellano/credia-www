@@ -14,7 +14,6 @@ class Proyecto extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['titulo','subtitulo','foto','fecha_convenio','contenido','presupuesto',
 						   'avance','utilizado','fecha_inicio','fecha_finalizacion','estado',
 						   'categoria_id','user_id'];
@@ -38,11 +37,7 @@ class Proyecto extends Model
         });
 		
 		self::deleting(function($obj) {
-			if (count((array)$obj->fotos)) {
-				foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
-				}
-			}
+			\Storage::disk('public_folder')->delete($obj->foto);
 		});
     }
 	

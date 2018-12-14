@@ -13,7 +13,6 @@ class Equipo extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['foto','nombre','cargo'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -29,11 +28,7 @@ class Equipo extends Model
         parent::boot();
 		
 		self::deleting(function($obj) {
-            if (count((array)$obj->fotos)) {
-                foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
-                }
-            }
+           \Storage::disk('public_folder')->delete($obj->foto);
         });
 		
 	}
@@ -58,7 +53,7 @@ class Equipo extends Model
 	{
 		$attribute_name = "foto";
 		$disk = "public";
-		$destination_path = "images/equipo-photos";
+		$destination_path = "images/fotos-equipo-de-trabajo";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 	

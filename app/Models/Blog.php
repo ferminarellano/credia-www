@@ -16,10 +16,10 @@ class Blog extends Model
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['foto','titulo','fecha','contenido_1',
-						   'estado','categoria_id','user_id','total_vista'];
+						   'estado','fotos','categoria_id','user_id','total_vista'];
     // protected $hidden = [];
     // protected $dates = [];
-	protected $visible = ['foto'];
+	protected $visible = ['foto','fotos'];
 	protected $guard_name = 'web';
 
     /*------------------------------------------------------------------------
@@ -36,10 +36,12 @@ class Blog extends Model
 			$model->user_id = $user_id;
         });
 		
-        self::deleting(function($obj) {
+		self::deleting(function($obj) {	
+			\Storage::disk('public_folder')->delete($obj->foto);
+			
             if (count((array)$obj->fotos)) {
                 foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
+                    \Storage::disk('public_folder')->delete($file_path);
                 }
             }
         });
@@ -83,4 +85,12 @@ class Blog extends Model
 		$destination_path = "images/blog-articles-photos";
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
+	
+	public function setFotosAttribute($value)
+    {
+        $attribute_name = "fotos";
+        $disk = "public";
+        $destination_path = "images/blog-articles-photos/gallery";
+        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
+    }
 }

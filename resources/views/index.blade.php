@@ -387,7 +387,7 @@
 					<div class="xs-service-promo">
 						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
 						<h5>Videos sobre el ambiente<br>y proyecciones en 3D</h5>
-						<p>La sala de proyecciones audiovisuales enriquese la experiencia de la visita con la presentación de videos, e imagenes 3D basados en temas de importancia para la conservación del ambiete.</p>
+						<p>La sala de proyecciones audiovisuales enriquese la experiencia de la visita con la presentación de videos, e imagenes 3D basados en temas de importancia para la conservación del ambiente.</p>
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->

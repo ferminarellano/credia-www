@@ -30,10 +30,12 @@ body {
     border-radius: 5px;
 }
 
-.input-group .input-group-addon {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
+.input-group .form-control:not(:first-child):not(:last-child),
+ .input-group-addon:not(:first-child):not(:last-child), 
+ .input-group-btn:not(:first-child):not(:last-child){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+ }
 
 .box{
     border-top: 0px;

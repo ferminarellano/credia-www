@@ -13,7 +13,6 @@ class Banner extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['foto','indicador','titulo','descripcion','secuencia','estado','url','accion'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -34,11 +33,7 @@ class Banner extends Model
 		});
 		
 		self::deleting(function($obj) {
-			if (count((array)$obj->fotos)) {
-				foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
-				}
-			}
+			\Storage::disk('public_folder')->delete($obj->foto);
 		});
 	}
 	

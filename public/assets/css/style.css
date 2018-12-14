@@ -542,14 +542,14 @@ a.xs-post-title:hover {
     background-color: #011b58; }
 
 .xs-square-nav {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  width: 75px;
+  display: inline-table;
+  height: 30px;
+  line-height: 30px;
+  width: 40px;
   background-color: #2cc391;
   text-align: center;
   color: #FFFFFF;
-  font-size: 2.14286em;
+  font-size: 1.14286em;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .xs-square-nav:hover {
@@ -3249,6 +3249,21 @@ position: relative; }
     color: #041D57; }
   .xs-blog-post-details .xs-post-footer .post-meta {
     margin-bottom: 0; }
+	
+  .xs-post-height{
+	height: 250px;}
+	
+  .xs-single-wm{
+	width: 57%;
+	margin-left: 135px;}
+	
+  .xs-sigle-dimension{
+	height:210px;}
+
+   .xs-sigle-dimension img{
+	width:328px;
+	height:210px;}
+  
   .xs-blog-post-details .post-meta-date {
     padding: 17px 24px;
     display: inline-block;

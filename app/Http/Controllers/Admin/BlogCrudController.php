@@ -71,12 +71,14 @@ class BlogCrudController extends CrudController
 			'label' => "Fotografía",
 			'type' => 'upload',
 			'upload' => true,
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'separator0',
 			'type' => 'custom_html',
 			'value' => '<hr>',
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -88,7 +90,8 @@ class BlogCrudController extends CrudController
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			],		
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -101,6 +104,7 @@ class BlogCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-8',
 			], 
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -115,18 +119,29 @@ class BlogCrudController extends CrudController
 				'format' => 'dd-mm-yyyy',
 				'language' => 'es'
 			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'separator1',
 			'type' => 'custom_html',
 			'value' => '<hr>',
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'contenido_1',
 			'label' => "Contenido del artículo",
 			'type' => 'summernote',
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'fotos',
+			'label' => "Fotografías de slider",
+			'type' => 'upload_multiple',
+			'upload' => true,
+			'tab' => 'Galería',
 		]);
     }
 

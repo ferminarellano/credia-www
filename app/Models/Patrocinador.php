@@ -13,7 +13,6 @@ class Patrocinador extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['nombre','foto'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -29,11 +28,7 @@ class Patrocinador extends Model
 		parent::boot();
 		
 		self::deleting(function($obj) {
-			if (count((array)$obj->fotos)) {
-				foreach ($obj->fotos as $file_path) {
-					\Storage::disk('public_folder')->delete($obj->image);
-				}
-			}
+			\Storage::disk('public_folder')->delete($obj->foto);
 		});
     }
 	

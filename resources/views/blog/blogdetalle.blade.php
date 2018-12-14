@@ -22,12 +22,12 @@
 	}
 ?>
 
-@section('title', 'Blog detalles -')
+@section('title', 'Blog -')
 
 @section('blogdetalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
-
+	
 	<!-- blog single post -->
 	<div class="xs-content-section-padding xs-blog-single">
 		<div class="container">
@@ -52,13 +52,6 @@
 												{{ $archive }}
 											</a>
 										</span>
-
-										<!-- <span class="tags-links"> -->
-											<!-- <i class="fa fa-tags"></i> -->
-											<!-- <a href="#" rel="tag">Fund</a>,  -->
-											<!-- <a href="#" rel="tag">Crowd</a> -->
-										<!-- </span> -->
-
 										<span class="post-comment">
 											<i class="fa fa-envelope-o"></i>
 											<a href="#">{{ $comentarios->count() }} Comentarios</a>
@@ -73,17 +66,21 @@
 							<div class="entry-content">
 								{!! $articulo->first()->contenido_1 !!}
 							</div><!-- .xs-entry-content END -->
-
+							
+							@if(count($articulo->first()->fotos) > 0)
+								<div class="xs-post-footer xs-padding-30 xs-border xs-post-height">
+									<div class="xs-single-item-slider owl-carousel xs-single-wm">								
+										@foreach ($articulo->first()->fotos as $foto)
+											<div class="xs-single-slider-item xs-sigle-dimension">
+												<img src="/{{$foto}}" alt="">
+											</div>
+										@endforeach
+									</div>
+								</div>
+							@endif
+							
 							<div class="post-footer">
 								<div class="xs-post-footer xs-padding-40 xs-border">
-									<!-- <div class="post-tags"> -->
-										<!-- <h5 class="xs-post-sub-heading">Releted Tags</h5> -->
-										<!-- <div class="xs-blog-post-tag"> -->
-											<!-- <a href="#">Hopes</a> -->
-											<!-- <a href="#">Medical</a> -->
-										<!-- </div> -->
-									<!-- </div> --><!-- Post tags end -->
-
 									<div class="share-items">
 										<h5 class="xs-post-sub-heading">Compartir</h5>
 										<ul class="xs-social-list square">
@@ -102,40 +99,10 @@
 													<i class="fa fa-google-plus"></i>
 												</a>
 											</li>
-											<!-- <li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li> -->
-											<!-- <li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i></a></li> -->
 										</ul>
 									</div><!-- Share items end -->
 									<div class="clearfix"></div>
 								</div>
-								<!-- <div class="xs-author-block xs-padding-40 xs-border"> -->
-									<!-- <div class="post-author"> -->
-										<!-- <div class="xs-round-avatar float-left"> -->
-											<!-- <img src="/assets/images/avatar/avatar_7.jpg" alt="" class="img-responsive"> -->
-										<!-- </div> -->
-
-										<!-- <div class="xs-post-author-details float-right"> -->
-											<!-- <a href="#">Jhon William</a> -->
-											<!-- <em> -->
-												<!-- <i class="fa fa-map-marker color-green"></i>New York, USA -->
-											<!-- </em> -->
-											<!-- <span class="xs-separetor"></span> -->
-											<!-- <ul class="xs-social-list simple"> -->
-												<!-- <li><a href="#" class="color-facebook"><i class="fa fa-facebook"></i></a></li> -->
-												<!-- <li><a href="#" class="color-twitter"><i class="fa fa-twitter"></i></a></li> -->
-												<!-- <li><a href="#" class="color-dribbble"><i class="fa fa-dribbble"></i></a></li> -->
-												<!-- <li><a href="#" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li> -->
-												<!-- <li><a href="#" class="color-instagram"><i class="fa fa-instagram"></i></a></li> -->
-											<!-- </ul> -->
-										<!-- </div> -->
-										<!-- <div class="clearfix"></div> -->
-									<!-- </div> -->
-
-									<!-- <div class="post-content"> -->
-										<!-- <p class="xs-mb-0">I love advice columns, always have. Growing up, I read “Dear Abby” and “Ask Ann Landers.” I enjoyed the voyeurism — glimpses into the lives with hapy family.</p> -->
-									<!-- </div> --><!-- Share items end --> 
-									<!-- <div class="clearfix"></div> -->
-								<!-- </div> -->
 								
 								<!-- <nav class="navigation post-navigation" role="navigation"> -->
 									<!-- <div class="nav-links float-left w-50"> -->
@@ -144,16 +111,14 @@
 											<!-- <span class="meta-nav"><i class="fa fa-angle-left"></i>Anterior</span> -->
 										<!-- </a> -->
 									<!-- </div> -->
-									<!-- .nav-links -->
 									<!-- <div class="nav-links float-right w-50 text-right"> -->
 										<!-- <a href="#" rel="next" class="next"> -->
 											<!-- <h5>Funding means life</h5> -->
 											<!-- <span class="meta-nav">Siguiente<i class="fa fa-angle-right"></i></span> -->
 										<!-- </a> -->
 									<!-- </div> -->
-									<!-- .nav-links -->
-									<div class="clearfix"></div>
-								</nav>
+									<!-- <div class="clearfix"></div> -->
+								<!-- </nav> -->
 							</div>
 						</div><!-- post-body end -->
 					</article><!-- .post  END -->
@@ -231,20 +196,13 @@
 						<div class="comment-respond">
 							<h3 class="comment-reply-title">Deja un comentario</h3>
 							@include('alertas.warning_comentario')	
-							<form action="{{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" id="form-comment" name="form-comment" method="post" class="comment-form">
+							<form action="{{URL::to('blog',['slug' => str_slug($articulo->first()->titulo,'-'),'id' => $articulo->first()->id])}}" method="post" class="comment-form">
 								{{ csrf_field() }}
-								<input placeholder="Nombre *" name="nombre" value="{{ old('nombre') }}" type="text">
+								<input placeholder="Nombre *" name="nombre" value="{{ old('nombre') }}" type="text" required>
 								
-								<div class="row">
-									<div class="col-lg-6">
-										<input placeholder="Correo *" name="correo" value="{{ old('correo') }}" type="email">
-									</div>
-									<div class="col-lg-6">
-										<input placeholder="Enter Website" name="url" type="url">
-									</div>
-								</div><!-- .comment-info END -->
-
-								<textarea placeholder="Ingrese su comentario *" name="comentario" value="{{ old('comentario') }}" cols="45" rows="8"></textarea>
+								<input placeholder="Correo *" name="correo" value="{{ old('correo') }}" type="email" required>
+						
+								<textarea placeholder="Ingrese su comentario *" name="comentario" value="{{ old('comentario') }}" cols="45" rows="8" required></textarea>
 								
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">Publicar comentario</button>
@@ -265,7 +223,7 @@
 								<!-- <input type="search" name="string" placeholder="Escriba palabras clave..."> -->
 								<!-- <input type="submit" value=""> -->
 							<!-- </form> -->
-						<!-- </div> -->						
+						<!-- </div> -->
 						<!-- search bas stop -->
 						
 						<!-- recent post start -->
@@ -282,7 +240,7 @@
 											<!-- </div> -->
 											<!-- <div class="xs-black-overlay bg-aqua"></div> -->
 										<!-- </a> -->
-									<!-- </div> --><!-- .posts-thumb END --> 
+									<!-- </div> -->
 									<!-- <div class="post-info"> -->
 										<!-- <h4 class="entry-title"> -->
 											<!-- <a href="#">Child Care Centers</a> -->
@@ -291,37 +249,13 @@
 											<!-- <span class="comments-link"> -->
 												<!-- <i class="fa fa-comments-o"></i> -->
 												<!-- <a href="#">300 Comments</a> -->
-											<!-- </span> --><!-- .comments-link --> 
+											<!-- </span> -->
 										<!-- </div> -->
-									<!-- </div> --><!-- .post-info END --> 
+									<!-- </div> -->
 									<!-- <div class="clearfix"></div> -->
-								<!-- </li> --><!-- 1st post end--> 
-								<!-- <li> -->
-									<!-- <div class="posts-thumb float-left">  -->
-										<!-- <a href="#"> -->
-											<!-- <img alt="img" class="img-responsive" src="assets/images/news_feeds_1.jpg"> -->
-											<!-- <div class="xs-entry-date"> -->
-												<!-- <span class="entry-date d-block">23</span> -->
-												<!-- <span class="entry-month d-block">sep</span> -->
-											<!-- </div> -->
-											<!-- <div class="xs-black-overlay bg-aqua"></div> -->
-										<!-- </a> -->
-									<!-- </div> --><!-- .posts-thumb END --> 
-									<!-- <div class="post-info"> -->
-										<!-- <h4 class="entry-title"> -->
-											<!-- <a href="#">Disaster Relief</a> -->
-										<!-- </h4> -->
-										<!-- <div class="post-meta"> -->
-											<!-- <span class="comments-link"> -->
-												<!-- <i class="fa fa-comments-o"></i> -->
-												<!-- <a href="#">35 Comments</a> -->
-											<!-- </span>-->
-										<!-- </div> --><!-- .comments-link --> 
-									<!-- </div>--><!-- .post-info END --> 
-									<!-- <div class="clearfix"></div> -->
-								<!-- </li>--><!-- 2nd post end--> 
+								<!-- </li> -->
 							<!-- </ul> -->
-						<!-- </div> -->					
+						<!-- </div>				 -->
 						<!-- recent post end -->
 						
 						<!-- categories start -->
@@ -338,35 +272,6 @@
 								@endforeach
 							</ul>
 						</div><!-- categories end -->
-						
-						
-						<!-- call to action start -->
-						<!-- <div class="widget widget_call_to_action"> -->
-							<!-- <a href="#" class="d-block"> -->
-								<!-- <img src="/assets/images/side_add_baner.jpg" alt=""> -->
-							<!-- </a> -->
-						<!-- </div> -->
-						<!-- call to action end -->
-						
-						<!-- widget Populares -->
-						<!-- <div class="widget widget_tags xs-sidebar-widget"> -->
-							<!-- <h3 class="widget-title">Populares</h3> -->
-
-							<!-- <div class="xs-blog-post-tag"> -->
-								<!-- <a href="#">Crowdfunding</a> -->
-								<!-- <a href="#">Fundrise</a> -->
-								<!-- <a href="#">70</a> -->
-								<!-- <a href="#">Medicine</a> -->
-								<!-- <a href="#">Food</a> -->
-								<!-- <a href="#">7</a> -->
-								<!-- <a href="#">Greeny</a> -->
-								<!-- <a href="#">Fundrising</a> -->
-								<!-- <a href="#">Hopes</a> -->
-								<!-- <a href="#">Medical</a> -->
-								<!-- <a href="#">Help</a> -->
-							<!-- </div> -->
-						<!-- </div> -->
-						<!-- widget tags closed -->
 						
 						<!-- widget tags -->
 						<div class="widget widget_social_share xs-sidebar-widget">
@@ -425,147 +330,3 @@
 		</div><!-- .container end -->
 	</div>	<!-- End blog single post -->
 @endsection
-
-@section('bd_revista')
-	<!-- journal section -->
-	<section class="xs-section-padding bg-gray">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title">From the Journal</h2>
-					<span class="xs-separetor dashed"></span>
-					<p>It allows you to gather monthly subscriptions from fans to help fund your creative projects. They also encourage their users to offer rewards to fans as a way to repay them for their support.</p>
-				</div><!-- .xs-heading-title END -->
-				<div class="col-xl-3 col-md-3 xs-btn-wraper">
-					<a href="" class="btn btn-primary">all Causes</a>
-				</div><!-- .xs-btn-wraper END -->
-			</div><!-- .row end -->
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_1.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="/assets/images/avatar/avatar_1.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By Simona</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										27th August 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">Brilliant After All, A New Album by Rebecca: Help poor people</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_2.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="/assets/images/avatar/avatar_2.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By Julian</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										02 May 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">South african pre primary school build for children</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="xs-box-shadow xs-single-journal">
-						<div class="entry-thumbnail ">
-							<img src="assets/images/blog/blog_3.jpg" alt="">
-							<div class="post-author">
-								<span class="xs-round-avatar">
-									<img class="img-responsive" src="/assets/images/avatar/avatar_3.jpg" alt="">
-								</span>
-								<span class="author-name">
-									<a href="#">By David Willy</a>
-								</span>
-							</div>
-						</div><!-- .xs-item-header END -->
-						<div class="entry-header">
-							<div class="entry-meta">
-								<span class="date">
-									<a href=""  rel="bookmark" class="entry-date">
-										13 January 2017
-									</a>
-								</span>
-							</div>
-							
-							<h4 class="entry-title">
-								<a href="#">Provide pure water for syrian poor people</a>
-							</h4>
-						</div><!-- .xs-entry-header END -->
-						<span class="xs-separetor"></span>
-						<div class="post-meta">
-							<span class="comments-link">
-								<i class="fa fa-comments-o"></i>
-								<a href="">300 Comments</a>
-							</span><!-- .comments-link -->
-							<span class="view-link">
-								<i class="fa fa-eye"></i>
-								<a href="">1000 Views</a>
-							</span>
-						</div><!-- .post-meta END -->
-					</div><!-- .xs-from-journal END -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End journal section -->
-@endsection
-
-@push('scripts_blogdetalle')
-    <script>
-		
-	</script>
-@endpush
-
