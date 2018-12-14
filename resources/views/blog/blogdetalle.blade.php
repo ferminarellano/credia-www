@@ -72,7 +72,7 @@
 									<div class="xs-single-item-slider owl-carousel xs-single-wm">								
 										@foreach ($articulo->first()->fotos as $foto)
 											<div class="xs-single-slider-item xs-sigle-dimension">
-												<img src="/{{$foto}}" alt="">
+												<img src="/{{$foto}}" class="xs-sigle-img" alt="">
 											</div>
 										@endforeach
 									</div>
