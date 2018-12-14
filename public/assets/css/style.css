@@ -3696,7 +3696,7 @@ position: relative; }
     transition: all 0.4s ease; }
     .xs-side-bar-list li a span {
       display: table-cell;
-      width: 50%; }
+      width: 15%; }
       .xs-side-bar-list li a .first {
         text-align: left; }
       .xs-side-bar-list li a .last {

@@ -122,6 +122,9 @@
 						<!--<span class="xs-separetor dashed"></span>-->
 						<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
 					</div><!-- .xs-heading-title END -->
+					<div class="col-xl-3 col-md-3 xs-btn-wraper">
+						<a href="{{ URL::route('evento') }}" class="btn btn-primary">Ver todos</a>
+					</div><!-- .xs-btn-wraper END -->
 				</div>
 				<div class="row">
 					@foreach($eventos as $evento)
@@ -159,10 +162,10 @@
 		<section class="bg-gray waypoint-tigger xs-section-padding">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
-					<div class="col-md-10 col-xl-10">
+					<div class="col-md-9 col-xl-9">
 						<h2 class="xs-title">Proyectos</h2>
 					</div>
-					<div class="col-xl-2 col-md-2">
+					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
 					</div><!-- .xs-btn-wraper END -->
 				</div><!-- .row end -->
@@ -301,7 +304,7 @@
 @endsection
 
 @section('descripcion_in')
-	<section class="" style="background-image: url('assets/images/backgrounds/background-img.jpg')">
+	<section class="" style="background-image: url('assets/images/backgrounds/background-img.jpg');background-repeat: round;">
 		<div class="container-fulid">
 			<div class="xs-feature-content">
 				<h2 class="color-white">

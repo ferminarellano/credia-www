@@ -42,10 +42,10 @@
 						<div class="post-body xs-border xs-padding-40">
 							<div class="entry-header">
 								<div class="post-meta row">
-									<div class="col-md-2 xs-padding-0">
+									<div class="col-md-3 xs-padding-0">
 										<span class="post-meta-date"><b>{{date('d', strtotime($articulo->first()->fecha))}}</b>{{diccionario(date('m', strtotime($articulo->first()->fecha)))}}</span>
 									</div>
-									<div class="col-md-10 d-flex align-items-end xs-post-meta-list">
+									<div class="col-md-9 d-flex align-items-end xs-post-meta-list">
 										<span class="post-cat">
 											<i class="fa fa-folder-open"></i>
 											<a href="{{URL::route('categoria_blog',['categoria' => str_slug($archive,'-'),'categoria_id' => $articulo->first()->categoria_id])}}">
@@ -215,7 +215,7 @@
 				</div>
 				
 				<div class="col-md-12 col-lg-4">
-							<!-- sidebar content -->
+					<!-- sidebar content -->
 					<div class="sidebar sidebar-right">
 						<!-- search bar start -->
 						<!-- <div class="widget widget_search">	 -->
