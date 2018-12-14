@@ -57,6 +57,6 @@ class IndexController extends Controller
 					
 		$voluntario->save();
 					
-		return redirect('/');
+		return redirect('/#form-voluntario');
     }
 }

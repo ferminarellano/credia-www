@@ -40,8 +40,8 @@
 @endsection
 
 @section('eventosection')
-	<!-- video popup section section -->
-	<section class="xs-content-section-padding">
+	<!-- eventos section section -->
+	<section class="xs-content-section-padding xs-content-color">
 		<div class="container">
 			<div class="row">
 				@if(count($eventos) === 0)
@@ -120,9 +120,9 @@
 				</div><!-- End pagination -->
 			@endif
 		</div><!-- .container end -->
-	</section>	<!-- End video popup section section -->
+	</section>	<!-- End eventos section -->
 
-	<!-- partners section -->
+	<!-- alianzas section -->
 	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
 			<div class="row">
@@ -136,22 +136,19 @@
 							implementación de un módelo de gestión basado en el fortalecimiento de redes y promoción del análisis estratégico de los procesos 
 							sociales, económicas y ambientales, para la toma de decisiones participativas.
 						</p>
-						<!-- <a href="#" class="btn btn-primary"> -->
-							<!-- join us now -->
-						<!-- </a> -->
 					</div>
 				</div>
 				<div class="col-md-7">
 					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/partner/client_1.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_2.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_3.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_4.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_5.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/partner/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_3.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_4.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_5.png" style="width: 90%;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
 					</ul>
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</section>	<!-- End partners section -->
+	</section>	<!-- End alianzas section -->
 @endsection

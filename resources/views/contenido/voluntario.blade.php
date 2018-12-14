@@ -15,7 +15,7 @@
 @endsection
 
 @section('team_vol')
-	<!-- team section -->
+	<!-- equipo section -->
 	<section class="xs-section-padding bg-gray">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
@@ -52,7 +52,7 @@
 				@endif
 			</div><!-- .row END -->
 		</div><!-- .container end -->
-	</section>	<!-- End team section -->
+	</section>	<!-- End equipo section -->
 @endsection
 
 @section('voluntarios_vol')
@@ -68,7 +68,7 @@
 							Y así, estarás listo para comenzar.
 						</p>
 						
-						<form action="{{URL::to('/voluntarios')}}" method="post" id="volunteer-form" class="xs-volunteer-form" enctype="multipart/form-data">
+						<form action="{{URL::to('/voluntarios')}}" method="post" id="form-voluntarios" class="xs-volunteer-form" enctype="multipart/form-data">
 							 {{ csrf_field() }}
 							<div class="row">
 								<div class="col-lg-6">
@@ -87,7 +87,7 @@
 								</div>
 								<div class="col-lg-6 xs-mb-20">
 									<div class="xs-fileContainer">
-										<input type="file" name="file" class="form-control">
+										<input type="file" name="file" class="form-control" required/>
 										<label for="archivo">Sube tu CV</label>
 									</div>
 									<small style="padding-left:85px;color:white;">Formato <b>PDF</b> 100kb máximo.</small>
