@@ -23,7 +23,7 @@
 	}
 ?>
 
-@section('title', 'Evento detalles -')
+@section('title', 'Evento -')
 
 @section('eventodetalle')
 	

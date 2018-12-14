@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\BlogCommentRequest;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\BlogComment;
@@ -23,7 +22,8 @@ class BlogController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$articulos = Blog::where([['estado','=','1']])->orderBy('id','desc')->paginate(6);
+		$articulos = Blog::where([['estado','=','1']])->orderBy('fecha','desc')->paginate(6);
+		
 		
 		$data = array(
 			"foto" => $foto,
@@ -44,7 +44,7 @@ class BlogController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 
-		$articulos = Blog::where([['categoria_id',$id],['estado','=','1']])->orderBy('id','desc')->paginate(6);
+		$articulos = Blog::where([['categoria_id',$id],['estado','=','1']])->orderBy('fecha','desc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
@@ -85,7 +85,7 @@ class BlogController extends Controller
 		return View::make('blog.blogdetalle')->with($data);
 	}
 	
-	public function store(BlogCommentRequest $request,$slug,$id)
+	public function store(Request $request,$slug,$id)
     {	
 		$comentario = new BlogComment;
 

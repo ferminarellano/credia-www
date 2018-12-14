@@ -51,7 +51,6 @@ class ProyectoCrudController extends CrudController
 			'attributes' => [
 				'placeholder' => 'Agregue el título *',
 			],
-			'suffix' => '<span class="glyphicon glyphicon-star"></span>',
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
@@ -133,9 +132,7 @@ class ProyectoCrudController extends CrudController
 		    'type' => 'range',
 		    'min' => '0',
 		    'max' => '100',
-			'attributes' => [
-				'placeholder' => 'Agregue la cantidad *',
-			],
+		    'default' => '0',
 			'tab' => 'Datos generales',
 		]);
 		

@@ -3,10 +3,6 @@
     <label>{!! $field['label'] !!}</label>
     @include('crud::inc.field_translatable_icon')
 	
-	<?php
-		$proyecto = App\Models\Proyecto::find($id);
-	?>
-	
 	<div class="range-slider">
 		<input 
 			min="{{ $field['min'] }}"
