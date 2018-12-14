@@ -3748,6 +3748,9 @@ position: relative; }
 .xs-content-section-padding {
   padding: 90px 0px; 
   background-color:#F9F9F9;}
+ 
+ .xs-content-color{
+	background-color: #FFFFFF;}
   
  .xs-content-section-padding-conocenos {
   padding: 90px 0px; 

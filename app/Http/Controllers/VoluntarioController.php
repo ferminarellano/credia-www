@@ -56,6 +56,6 @@ class VoluntarioController extends Controller
 					
 		$voluntario->save();
 					
-		return redirect('/voluntarios');
+		return redirect('/voluntarios#form-voluntarios');
     }
 }
