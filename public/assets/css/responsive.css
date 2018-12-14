@@ -1,5 +1,3 @@
-
-
 /*
 Author: XpeedStudio
 Author URI: http://themeforest.net/user/XpeedStudio/portfolio
@@ -25,6 +23,19 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-post-title{
 		font-size: 1.1em;
 	}
+	
+	.header-transparent .nav-menu,
+	.xs-box .nav-menu {
+	  padding-top:0px;}
+	  
+	.header-transparent-other .nav-menu,
+	.xs-box .nav-menu {
+	  padding-top:35px;}
+	  
+	.xs-sidebar-widget .widget-title:before,
+	.xs-sidebar-widget .widget-title:after{
+		width: 20px;
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -35,6 +46,19 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	
 	.xs-post-title{
 		font-size: 1.1em;
+	}
+	
+	.header-transparent .nav-menu,
+	.xs-box .nav-menu {
+	  padding-top:0px;}
+	  
+	.header-transparent-other .nav-menu,
+	.xs-box .nav-menu {
+	  padding-top:35px;}
+	 
+	.xs-sidebar-widget .widget-title:before,
+	.xs-sidebar-widget .widget-title:after{
+		width: 20px;
 	}
 	
 	/* margin bottom list  */
