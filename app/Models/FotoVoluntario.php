@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class FotoVoluntario extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'foto_voluntarios';
     protected $primaryKey = 'id';
@@ -18,6 +19,13 @@ class FotoVoluntario extends Model
     // protected $dates = [];
 	protected $visible = ['foto'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'cargo' => 'cargo',
+		'nombre' => 'nombre',
+		'foto' => 'fotografía',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

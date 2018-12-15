@@ -22,6 +22,10 @@ class IndicadorCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/indicador');
         $this->crud->setEntityNameStrings('indicador', 'indicadores');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'nombre',
 			'label' => 'Indicador',

@@ -22,6 +22,10 @@ class BlogCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/blog');
         $this->crud->setEntityNameStrings('artículo', 'artículos de blog');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		if($user->hasRole('Creador de articulos'))
 		{
 			$this->crud->denyAccess(['delete','revisions']);
@@ -30,6 +34,11 @@ class BlogCrudController extends CrudController
 		$this->crud->addColumn([
 			'name' => 'titulo',
 			'label' => 'Título'
+		]);
+		
+		$this->crud->addColumn([
+			'name' => 'nombre',
+			'label' => 'Fuente'
 		]);
 		
 		$this->crud->addColumn([
@@ -124,6 +133,39 @@ class BlogCrudController extends CrudController
 		
 		$this->crud->addField([
 			'name' => 'separator1',
+			'type' => 'custom_html',
+			'value' => '<hr>',
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'nombre',
+			'label' => "Fuente",
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el nombre *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'correo',
+			'label' => "Correo",
+			'type' => 'email',
+			'attributes' => [
+				'placeholder' => 'Agregue el correo de la fuente *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'separator2',
 			'type' => 'custom_html',
 			'value' => '<hr>',
 			'tab' => 'Datos generales',

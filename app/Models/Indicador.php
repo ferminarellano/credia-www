@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Indicador extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'indicadores';
     protected $primaryKey = 'id';
@@ -20,6 +21,20 @@ class Indicador extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre',
+		'descripcion' => 'descripción',
+		'frecuencia' => 'frecuencia',
+		'frecuencia_posteo' => 'frecuencia de posteo',
+		'protocolo_recoleccion' => 'protocolo de recolección',
+		'calculo_indicador' => 'cálculo de indicador',
+		'tipo_indicador' => 'tipo de indicador',
+		'evaluacion_tipo' => 'tipo de evaluación',
+		'unidad_medida_id' => 'unidad de medida',
+		'institucion_id' => 'institución',
+	);
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS

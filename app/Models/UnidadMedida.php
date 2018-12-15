@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class UnidadMedida extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'unidades_de_medidas';
     protected $primaryKey = 'id';
@@ -17,6 +18,11 @@ class UnidadMedida extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre',
+	);
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS

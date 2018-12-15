@@ -18,6 +18,10 @@ class ProyectoCrudController extends CrudController
         $this->crud->setModel('App\Models\Proyecto');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/proyecto');
         $this->crud->setEntityNameStrings('proyecto', 'proyectos');
+		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
 
 		$this->crud->addColumn([
 			'name' => 'titulo',

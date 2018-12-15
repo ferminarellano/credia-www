@@ -9,18 +9,33 @@ use Illuminate\Support\Facades\Auth;
 class Blog extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'blog_posts';
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
 	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['foto','titulo','fecha','contenido_1',
-						   'estado','fotos','categoria_id','user_id','total_vista'];
+    protected $fillable = ['foto','titulo','fecha','contenido_1','estado','fotos',
+						   'total_vista','nombre','correo','categoria_id','user_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto','fotos'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre',
+		'correo' => 'correo',
+		'estado' => 'estado de artículo',
+		'foto' => 'fotografía de artículo',
+		'fotos' => 'fotografías de artículo',
+		'titulo' => 'título de artículo',
+		'fecha' => 'fecha de artículo',
+		'descripcion' => 'descripción de artículo',
+		'contenido_1' => 'contenido de artículo',
+		'categoria_id' => 'categoria de artículo',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

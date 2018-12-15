@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class Proyecto extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'proyectos';
     protected $primaryKey = 'id';
@@ -21,6 +22,23 @@ class Proyecto extends Model
     // protected $dates = [];
 	protected $visible = ['foto'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'titulo' => 'titulo',
+		'subtitulo' => 'subtitulo',
+		'foto' => 'foto',
+		'fecha_convenio' => 'fecha de convenio',
+		'contenido' => 'contenido',
+		'presupuesto' => 'presupuesto',
+		'avance' => 'avance',
+		'utilizado' => 'utilizado',
+		'fecha_inicio' => 'fecha de inicio',
+		'fecha_finalizacion' => 'fecha de finalizacion',
+		'estado' => 'estado',
+		'categoria_id' => 'categoria',
+		'user_id' => 'usuario',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

@@ -18,6 +18,10 @@ class FaqCrudController extends CrudController
         $this->crud->setModel('App\Models\Faq');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/faq');
         $this->crud->setEntityNameStrings('pregunta', 'preguntas frecuentes');
+		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
 
         $this->crud->addColumn([
 			'name' => 'pregunta',

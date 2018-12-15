@@ -18,6 +18,10 @@ class UnidadMedidaCrudController extends CrudController
         $this->crud->setModel('App\Models\UnidadMedida');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/unidadmedida');
         $this->crud->setEntityNameStrings('unidad de medidas', 'Unidad Medidas');
+		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
 
 		$this->crud->addColumn([
 			'name' => 'nombre',

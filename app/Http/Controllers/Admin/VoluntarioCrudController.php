@@ -19,7 +19,10 @@ class VoluntarioCrudController extends CrudController
         $this->crud->setModel('App\Models\Voluntario');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/voluntario');
         $this->crud->setEntityNameStrings('voluntario', 'voluntarios');
-		$this->crud->allowAccess(['show']);
+		
+		$this->crud->allowAccess(['revisions','show']);
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
 		$this->crud->denyAccess(['update','revisions']);
 		$this->crud->removeButton('create');
 		

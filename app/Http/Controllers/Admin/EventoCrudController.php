@@ -20,6 +20,10 @@ class EventoCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/evento');
         $this->crud->setEntityNameStrings('evento', 'eventos');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'titulo',
 			'label' => 'Título de evento',

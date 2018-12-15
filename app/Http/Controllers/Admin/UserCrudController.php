@@ -104,13 +104,20 @@ class UserCrudController extends CrudController
 				],
 				'tab' => 'Datos generales',
             ],
+			[
+                'name' => 'foto',
+				'label' => "Fotografía",
+				'type' => 'upload',
+				'upload' => true,
+				'tab' => 'Fotografía',
+			],
             [
-            // two interconnected entities
-            'label'             => trans('backpack::permissionmanager.user_role_permission'),
-            'field_unique_name' => 'user_role_permission',
-            'type'              => 'checklist_dependency_secondary_rows',
-            'name'              => 'roles_and_permissions', // the methods that defines the relationship in your Model
-            'subfields'         => [
+				// two interconnected entities
+				'label'             => trans('backpack::permissionmanager.user_role_permission'),
+				'field_unique_name' => 'user_role_permission',
+				'type'              => 'checklist_dependency_secondary_rows',
+				'name'              => 'roles_and_permissions', // the methods that defines the relationship in your Model
+				'subfields'         => [
                     'primary' => [
                         'label'            => trans('backpack::permissionmanager.roles'),
                         'name'             => 'roles', // the method that defines the relationship in your Model
