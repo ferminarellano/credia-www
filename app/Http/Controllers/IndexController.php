@@ -25,7 +25,7 @@ class IndexController extends Controller
 		$eventos = Evento::orderBy('id','desc')->take(3)->get();
 		$redes = Social::all();
 		$proyectos = Proyecto::orderBy('id','desc')->take(3)->get();
-		$articulos = Blog::where([['estado','=','1']])->orderBy('id','desc')->take(3)->get();
+		$articulos = Blog::where([['estado','=','1']])->orderBy('fecha','desc')->take(3)->get();
 		
 		$data = array(
 			"sliders" => $sliders,
