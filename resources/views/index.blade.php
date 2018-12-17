@@ -337,8 +337,8 @@
 							Con tu patrocinio puedes llegar a difundir la percepción de la población hacia la conservación
 							de los recursos naturales y de las áreas protegidas del Corredor Biológico del Caribe Hondureño y sus ecosistemas.
 						</p>
-						<a href="{{ URL::route('donacion') }}" class="btn btn-secondary btn-color-alt">
-							Patrocina
+						<a href="{{ URL::route('actividad') }}" class="btn btn-secondary btn-color-alt">
+							Actividades
 						</a>
 					</div> <!-- .xs-feature-box-content end -->
 				</div><!-- .xs-feature-box .highlight END -->
