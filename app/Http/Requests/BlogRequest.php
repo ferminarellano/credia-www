@@ -43,7 +43,7 @@ class BlogRequest extends FormRequest
 			'fecha.date' => 'Es necesario que sea en formato de fecha.',
 			'contenido_1.required' => 'Es necesario agregar el contenido principal del artículo.',
 			'categoria_id.required' => 'Es necesario seleccionar la categoría a la que pertenece el artículo.',
-			'foto.max' => 'El tamaño de cada fotografía no es valido. Máximo 1MB c/u.',
+			'fotos.max' => 'El tamaño de cada fotografía no es valido. Máximo 1MB c/u.',
 			'nombre.required' => 'Es necesario agregar el nombre.',
 			'correo.required' => 'Es necesario agregar el correo de la fuente.',
         ];
