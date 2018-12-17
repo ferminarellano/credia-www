@@ -1,6 +1,6 @@
 @extends('layouts.layout_other')
 
-@section('title', 'Proyecto -')
+@section('title', 'Actividad -')
 
 @section('proyectodetalle')
 	
