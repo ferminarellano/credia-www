@@ -16,43 +16,43 @@
 
 @section('promo')
 	<!-- box promo section -->
-	<section class="xs-what-we-do-box">
+	<section class="xs-what-we-do-box" style="background-color:#F9F9F9;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo-p box-color bg-light-c-green">
 						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/jardin_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Jardín botánico<br><small>Sendero Gerardo Rodríguez</small></h5>
-						<p>
-							Recorrido interpretado por un guía especializado en el Jardín del CREDIA.
-						</p>
+						<!-- <p> -->
+							<!-- Recorrido interpretado por un guía especializado en el Jardín del CREDIA. -->
+						<!-- </p> -->
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo-p box-color bg-light-c-green">
 						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/pasaporte_w.png') no-repeat;"></span>
 						<h5>Pasaporte Verde<br><small>Corredor Biológico</small></h5>
-						<p>
-							Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH.
-						</p>
+						<!-- <p> -->
+							<!-- Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH. -->
+						<!-- </p> -->
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo-p box-color bg-light-c-green">
 						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/foresteria_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Forestería comunitaria<br><small>Cambio Climático</small></h5>
-						<p>
-							Concientización de métodos para mitigar los efectos del cambio climático.
-						</p>
+						<!-- <p> -->
+							<!-- Concientización de métodos para mitigar los efectos del cambio climático. -->
+						<!-- </p> -->
 					</div><!-- .xs-service-promo END -->
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="xs-service-promo-p box-color bg-light-c-green">
 						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/videos_w.png') no-repeat; background-position: bottom;"></span>
 						<h5>Videos sobre el ambiente<br><small>Proyecciones en 3D</small></h5>
-						<p>
-							Enriqueciendo la experiencia de la visita en temas de importancia.
-						</p>
+						<!-- <p> -->
+							<!-- Enriqueciendo la experiencia de la visita en temas de importancia. -->
+						<!-- </p> -->
 					</div><!-- .xs-service-promo END -->
 				</div>
 			</div><!-- .row end -->
@@ -60,7 +60,7 @@
 	</section>	<!-- End box promo section -->
 
 	<!-- box promo section -->
-	<section class="xs-children-section">
+	<section class="xs-children-section" style="background-color:#F9F9F9;">
 		<div class="container">
 			<div class="xs-heading row xs-mb-60">
 				<div class="col-md-6 mx-auto text-center">
@@ -74,7 +74,7 @@
 
 	<!-- service promo section -->
 	@if(count($actividades) > 0)
-		<section class="xs-content-section-padding xs-service-promo-section">
+		<section class="xs-content-section-padding xs-service-promo-section" style="background-color:#FFFFFF;">
 			<div class="container">
 				<div class="row">
 					@foreach($actividades as $actividad)
