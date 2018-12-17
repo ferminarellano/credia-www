@@ -71,72 +71,27 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End box promo section -->
-	
+
 	<!-- service promo section -->
-	<section class="xs-content-section-padding xs-service-promo-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-donation_2 d-flex color-light-red"></span>
-						<div class="media-body">
-							<h5>Receive Donations</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
+	@if(count($actividades) > 0)
+		<section class="xs-content-section-padding xs-service-promo-section">
+			<div class="container">
+				<div class="row">
+					@foreach($actividades as $actividad)
+						<div class="col-lg-4 col-md-6">
+							<div class="media xs-single-media xs-service-promo-p">
+								<!-- <span class="icon-donation_2 d-flex color-light-red"></span> -->
+								<span class="xs-service-promo-p" style="background: url({{ $actividad->foto }}) no-repeat;"></span>
+								<div class="media-body">
+									<h5 style="text-align:center;">{{ $actividad->titulo }}</h5>
+									<p style="text-align:justify;">{{ $actividad->descripcion }}</p>
+									<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}"><i class="fa fa-play"></i> Saber más</a>
+								</div>
+							</div><!-- .xs-single-media END -->
 						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-tap-water d-flex color-purple"></span>
-						<div class="media-body">
-							<h5>Pure Water Supply</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
-						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-open-book d-flex color-light-green"></span>
-						<div class="media-body">
-							<h5>Education For Childrens</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
-						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-first-aid-kit d-flex color-blue"></span>
-						<div class="media-body">
-							<h5>Medical Care</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
-						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-sweater d-flex color-burntOrange"></span>
-						<div class="media-body">
-							<h5>Cloth Donate</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
-						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="media xs-single-media">
-						<span class="icon-team_2 d-flex color-riptide"></span>
-						<div class="media-body">
-							<h5>Adoption</h5>
-							<p>Each year 27,000 children in the United diagnosed with a life-threatening illness. children, simple surprises.</p>
-							<a href="#"><i class="fa fa-play"></i> Saber más</a>
-						</div>
-					</div><!-- .xs-single-media END -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- end service promo section -->
+					@endforeach
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>	<!-- end service promo section -->
+	@endif
 @endsection
