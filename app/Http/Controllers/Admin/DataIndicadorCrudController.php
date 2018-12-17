@@ -22,6 +22,10 @@ class DataIndicadorCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/dataindicador');
         $this->crud->setEntityNameStrings('datos indicador', 'datos indicadores');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'indicador_id',
 			'label' => 'Indicador',

@@ -20,6 +20,10 @@ class BannerCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/banner');
         $this->crud->setEntityNameStrings('banner', 'sliders-banners');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'indicador',
 			'label' => 'Pertenece',

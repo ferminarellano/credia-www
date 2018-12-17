@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Contacto extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'contactos';
     protected $primaryKey = 'id';
@@ -17,6 +18,13 @@ class Contacto extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre de contacto',
+		'correo' => 'correo de contacto',
+		'mensaje' => 'mensaje de contacto',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

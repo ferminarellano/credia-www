@@ -20,6 +20,10 @@ class InstitucionCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/institucion');
         $this->crud->setEntityNameStrings('institucion', 'instituciones');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'nombre',
 			'label' => 'Institución',

@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Evento extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'eventos';
     protected $primaryKey = 'id';
@@ -20,6 +21,23 @@ class Evento extends Model
     // protected $dates = [];
 	protected $visible = ['foto','latitud','longitud'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'titulo' => 'título',
+		'subtitulo' => 'subtitulo',
+		'foto' => 'foto',
+		'fecha' => 'fecha',
+		'contenido' => 'contenido de evento',
+		'organizador' => 'organizador de evento',
+		'horaInicio' => 'hora de inicio de evento',
+		'horaFinal' => 'hora final de evento',
+		'direccion' => 'direccion de evento',
+		'telefono' => 'telefono de evento',
+		'correo' => 'correo de evento',
+		'latitud' => 'latitud',
+		'longitud' => 'longitud',
+	);
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS

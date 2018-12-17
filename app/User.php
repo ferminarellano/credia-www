@@ -17,10 +17,11 @@ class User extends Authenticatable
 	
 	protected $primaryKey = 'id';
 	
-    protected $fillable = ['name','email','password','institucion_id'];
+    protected $fillable = ['name','email','password','institucion_id','foto'];
 
     protected $hidden = ['password','remember_token'];
 	
+	protected $visible = ['foto'];
 	protected $guard_name = 'web';
 	
 	protected $revisionCreationsEnabled = true;
@@ -29,10 +30,24 @@ class User extends Authenticatable
 		'email' => 'correo',
 		'password' => 'contraseña',
 		'institucion_id' => 'institución',
+		'foto' => 'fotografía',
 	);
+	
+	/*------------------------------------------------------------------------
+    | FUNCTIONS
+    |------------------------------------------------------------------------*/
+	
+	public static function boot()
+    {
+        parent::boot();
+		
+		self::deleting(function($obj) {	
+			\Storage::disk('public_folder')->delete($obj->foto);
+        });
+    }
 
     /*-------------------------------------------------------------------------
-    | FUNCTIONS
+    | RELATIONS
     |------------------------------------------------------------------------*/
 	
 	public function blogs(){
@@ -56,6 +71,18 @@ class User extends Authenticatable
 	public function data_indicadores()
 	{
 		return $this->hasMany('App\Models\DataIndicador');
+	}
+	
+	/*------------------------------------------------------------------------
+    | MUTATORS
+    |-----------------------------------------------------------------------*/
+	
+	public function setFotoAttribute($value)
+	{
+		$attribute_name = "foto";
+		$disk = "public";
+		$destination_path = "images/fotos-usuarios";
+		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 	
 }

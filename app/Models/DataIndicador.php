@@ -11,6 +11,7 @@ use App\User;
 class DataIndicador extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'data_indicadores';
     protected $primaryKey = 'id';
@@ -22,6 +23,20 @@ class DataIndicador extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'indicador_id' => 'indicador',
+		'fecha_inicio' => 'fecha inicio',
+		'fecha_final' => 'fecha final',
+		'valor' => 'valor de indicador',
+		'estado' => 'estado de indicador',
+		'fecha_aprovacion' => 'fecha de aprobación',
+		'created_user_id' => 'usuario creador',
+		'updated_user_id' => 'usuario que modifico',
+		'institucion_id' => 'institución',
+		'fuente_id' => 'fuente de información',
+	);
 
     /*-------------------------------------------------------------------------
     | FUNCTIONS

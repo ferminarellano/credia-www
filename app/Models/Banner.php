@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Banner extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'banners';
     protected $primaryKey = 'id';
@@ -18,6 +19,18 @@ class Banner extends Model
     // protected $dates = [];
 	protected $visible = ['foto'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'indicador' => 'indicador de banners',
+		'estado' => 'estado de banners',
+		'foto' => 'fotografía de banners',
+		'titulo' => 'título de banners',
+		'descripcion' => 'descripción de banners',
+		'secuencia' => 'secuencia de slider de inicio',
+		'url' => 'url de botón de slider',
+		'accion' => 'accion de botón de slider',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

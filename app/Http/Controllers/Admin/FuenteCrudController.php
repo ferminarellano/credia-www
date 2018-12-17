@@ -20,6 +20,10 @@ class FuenteCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/fuente');
         $this->crud->setEntityNameStrings('fuente', 'fuentes');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'fuente',
 			'label' => 'Indicador',

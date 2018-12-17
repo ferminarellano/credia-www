@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Faq extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'faqs';
     protected $primaryKey = 'id';
@@ -17,6 +18,12 @@ class Faq extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'pregunta' => 'pregunta',
+		'respuesta' => 'respuesta',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

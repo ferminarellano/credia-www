@@ -20,6 +20,10 @@ class CategoriaCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/categoria');
         $this->crud->setEntityNameStrings('categoria', 'categorias');
 		
+		$this->crud->allowAccess('revisions');
+		$this->crud->with('revisionHistory');
+		$this->crud->genero = "este";
+		
 		$this->crud->addColumn([
 			'name' => 'nombre',
 			'label' => 'Nombre de categoría'

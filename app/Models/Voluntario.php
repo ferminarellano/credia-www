@@ -10,10 +10,7 @@ use File;
 class Voluntario extends Model
 {
     use CrudTrait;
-
-    /*------------------------------------------------------------------------
-    | GLOBAL VARIABLES
-    |------------------------------------------------------------------------*/
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'voluntarios';
     protected $primaryKey = 'id';
@@ -24,6 +21,14 @@ class Voluntario extends Model
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 	protected $visible = ['archivo'];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre',
+		'correo' => 'correo',
+		'archivo' => 'archivo',
+		'descripcion' => 'descripción',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

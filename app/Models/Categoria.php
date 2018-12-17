@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Categoria extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'categorias';
     protected $primaryKey = 'id';
@@ -17,6 +18,12 @@ class Categoria extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'nombre' => 'nombre de categoria',
+		'descripcion' => 'descripción de categoria',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS

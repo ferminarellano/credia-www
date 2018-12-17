@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Fuente extends Model
 {
     use CrudTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'fuentes';
     protected $primaryKey = 'id';
@@ -17,6 +18,12 @@ class Fuente extends Model
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
+	
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'fuente' => 'fuente',
+		'institucion_id' => 'institución',
+	);
 
 	/*-------------------------------------------------------------------------
     | FUNCTIONS
