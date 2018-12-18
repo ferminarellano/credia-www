@@ -24,7 +24,7 @@
 						<div class="col-lg-4">
 							<!-- categories start -->
 							<div class="widget widget_categories xs-sidebar-widget">
-								<h3 class="widget-title">Otras actividades</h3>
+								<h3 class="widget-title">Actividades</h3>
 								<ul class="xs-side-bar-list">
 									@foreach($actividades as $actividad)
 											<li>

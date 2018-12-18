@@ -51,9 +51,8 @@
 				@endif
 				@foreach($eventos as $evento)
 					<div class="col-lg-6 row xs-single-event event-blue">
-						<div class="col-md-5">
-							<div class="xs-event-image">
-								<img src="/{{$evento->foto}}" alt="">
+						<div class="col-md-5 xs-pad">
+							<div class="xs-event-image" style="background-image: url(/{{ $evento->foto }});">
 								<div class="xs-entry-date">
 									<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
 									<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>
@@ -138,7 +137,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-7 fundpress-pad">
 					<ul class="fundpress-partners">
 						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>

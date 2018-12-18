@@ -28,7 +28,7 @@
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
-	<!-- blog single post -->
+	<!-- detalle de artículos de blog -->
 	<div class="xs-content-section-padding xs-blog-single">
 		<div class="container">
 			<div class="row">
@@ -328,5 +328,5 @@
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</div>	<!-- End blog single post -->
+	</div>	<!-- End detalle de artículos de blog -->
 @endsection

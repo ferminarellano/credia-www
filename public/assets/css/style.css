@@ -623,8 +623,7 @@ blockquote {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 1.49;
-  margin-bottom: 17px;
-  display: inline-block; }
+  margin-bottom: 17px;}
 
 .xs-info-list a {
   margin-top: 8px;
@@ -1497,7 +1496,7 @@ blockquote {
 	
 	.xs-service-promo-p.box-color {
     padding: 40px 30px;
-	/*height: 362px;*/
+	height: 262px;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
     .xs-service-promo.box-color span,
@@ -1748,8 +1747,15 @@ blockquote {
   min-height: 230px;
   margin-bottom: 30px;
   background-color: white;
-  padding: 10px;
-  border: 1px solid #eaeaea;}
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .xs-pad{
+	 padding: 0px;
+ }
   .xs-single-event.event-blue .xs-black-overlay {
     background-color: rgba(1, 27, 88, 0.3); }
   .xs-single-event.event-blue .xs-event-content a:not(.btn) {
@@ -1762,11 +1768,20 @@ blockquote {
       padding: 13px 20px; }
 	  .xs-single-event .xs-event-content-event .btn {
       padding: 13px 20px; }
+	  
+	.xs-item-header {
+	position: relative; 
+  	background-size: cover;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;}
 
-.xs-event-image {
-  position: relative; }
-  .xs-event-image img {
-    height: 226px; }
+  .xs-event-image {
+	position: relative; 
+  	background-size: cover;
+    height: 226px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;}
   .xs-event-image .xs-entry-date {
     color: #FFFFFF;
     position: absolute;
@@ -1827,8 +1842,11 @@ blockquote {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  padding: 75px 0; }
+  padding: 30px 0; }
 
+.pagination{
+	padding-top: 50px;
+}
 .xs-partner-content {
   padding-top: 70px; }
   
@@ -1846,15 +1864,9 @@ blockquote {
     display: inline-block;
     margin-right: auto;
     margin-bottom: 20px; }
-    .fundpress-partners li a {
-      width: 180px;
-      height: 180px;
-      line-height: 180px;
-      -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-              box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.2);
-      border-radius: 10%;
-      display: table-row-group;
-      margin: 0 auto; }
+  .fundpress-pad{
+	  padding:50px;
+  }
     .fundpress-partners li:first-child, .fundpress-partners li:last-child {
       margin-right: 0px; }
     .fundpress-partners li:nth-child(4) {
@@ -1869,11 +1881,13 @@ blockquote {
     margin-bottom: 0;
     background-color: #f3f3f3; }
   .xs-single-journal .entry-thumbnail {
-    position: relative; }
-  .entry-thumbnail .img-height{
-	height:208px;  
-	width:100%;
-  }
+    position: relative; 
+	background-size: cover;
+    height: 208px;
+    background-repeat: no-repeat;
+    background-position: 0% 60%;
+	}
+	
     .xs-single-journal .entry-thumbnail .author-name a {
       font-size: 0.85714em;
       color: #FFFFFF;
@@ -2916,14 +2930,17 @@ svg {
       width: 70px;
       height: 2px; }
   .xs-feature-text-content p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px; 
+	color:#011b58;
+	font-weight:500;}
 
 .xs-feature-image-box {
   position: relative; }
   .xs-feature-image-box img {
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; }
+    /* -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+            /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    border-radius: 10px; 
+	padding: 50px;}
   .xs-feature-image-box.image-1 {
     text-align: right;
     z-index: 1; }
@@ -3919,7 +3936,10 @@ position: relative; }
   background-color: #fe813a; }
 
 .bg-bondiBlue {
-  background-color: #079bbb; }
+  background-color: #6acaf0; }
+  
+.bg-bondiGreen {
+  background-color: #a6ce39; }
 
 .xs-black-overlay {
   position: absolute;

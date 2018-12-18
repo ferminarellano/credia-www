@@ -15,6 +15,7 @@
 	CRUD::resource('faq', 'FaqCrudController');
 	CRUD::resource('equipo', 'EquipoCrudController');
 	CRUD::resource('fotovoluntario', 'FotoVoluntarioCrudController');
+	CRUD::resource('sistema', 'SistemaCrudController');
 	
 	CRUD::resource('user', 'UserCrudController');
 	CRUD::resource('role', 'RoleCrudController');

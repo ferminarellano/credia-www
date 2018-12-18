@@ -60,6 +60,13 @@
 		</li>
 		
 		<li class="treeview">
+			<a href="#"><i class="fa fa-desktop" aria-hidden="true"></i> <span>Sistemas</span> <i class="fa fa-angle-left pull-right"></i></a>
+			<ul class="treeview-menu">
+				<li><a href="{{ backpack_url('sistema') }}"><i class="fa fa-external-link-square"></i> <span>sistemas</span></a></li>
+			</ul>
+		</li>
+		
+		<li class="treeview">
 			<a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Voluntariado</span> <i class="fa fa-angle-left pull-right"></i></a>
 			<ul class="treeview-menu">
 				<li><a href="{{ backpack_url('voluntario') }}"><i class="fa fa-envelope"></i> <span>Mensajes de voluntarios</span></a></li>

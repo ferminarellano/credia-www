@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 
-@section('title', 'Servicios -')
+@section('title', 'Sistemas -')
 
-@section('welcomeservicio')
+@section('welcome_ss')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -14,9 +14,9 @@
 	</section>
 @endsection
 
-@section('promocionservicio')
+@section('recuadro_ss')
 	<!-- video popup section section -->
-	<section class="xs-pricing-section">
+	<section class="xs-pricing-section" style="background-color:#F9F9F9;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6">
@@ -66,31 +66,35 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End video popup section section -->
-		
-	<!-- feature details section -->
-	<section class="xs-section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<div class="xs-feature-text-content">
-						<div class="xs-heading">
-							<h2>With your help</h2>
-							<h3 class="xs-title" data-title="Features">We’ve funded 33,537 water projects for 10 million people around the world.</h3>
-							<span class="xs-separetor bg-bondiBlue"></span>
+@endsection
+
+@section('sistemas_ss')
+	@if(count($sistemas) > 0)
+		@foreach($sistemas as $sistema)
+			<!-- sistemas section -->
+			<section class="xs-section-padding">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="xs-feature-text-content">
+								<div class="xs-heading">
+									<h2 style="color:#a6ce39;">{{ $sistema->texto_mini }}</h2>
+									<h3 class="xs-title" data-title="{{ $sistema->nombre_sistema }}">{{ $sistema->nombre_sistema }}</h3>
+									<span class="xs-separetor bg-bondiBlue"></span>
+								</div>
+								<p style="text-align:justify;">{{ $sistema->descripcion }}</p>
+								<a href="#" class="btn btn-primary bg-bondiBlue">Más detalles</a>
+								<a href="{{ $sistema->url }}" target="_blank" class="btn btn-primary bg-bondiGreen">Ir</a>
+							</div><!-- .xs-feature-text-content END -->
 						</div>
-						<p>Nancee was referred to the Children of the Night shelter home after being rescued from sex trafficking by the Colorado FBI. During her stay she completed her GED (High School Equivalency Exam) and she successfully completed Business 01 and English 28 at the local community college. Nancee enjoyed her boxing hobby.</p>
-						<a href="#" class="btn btn-secondary bg-bondiBlue">see more impact</a>
-					</div><!-- .xs-feature-text-content END -->
-				</div>
-				<div class="col-lg-5">
-					<div class="xs-feature-image-box image-1">
-						<img src="assets/images/feature-image-1.png" alt="">
-					</div>
-					<div class="xs-feature-image-box image-2">
-						<img src="assets/images/feature-image-2.png" alt="">
-					</div>
-				</div>
-			</div><!-- .row END -->
-		</div><!-- .container END -->
-	</section><!-- End feature details section -->
+						<div class="col-lg-5">
+							<div class="xs-feature-image-box image-1">
+								<img src="{{ $sistema->foto }}" alt="">
+							</div>
+						</div>
+					</div><!-- .row END -->
+				</div><!-- .container END -->
+			</section><!-- End feature details section -->
+		@endforeach
+	@endif
 @endsection
