@@ -1301,8 +1301,8 @@ blockquote {
   padding: 30px; 
   height: 370px;}
   .xs-item-content .xs-separetor {
-    margin-top: 30px;
-    margin-bottom: 20px; }
+    margin-top: 0px;
+    margin-bottom: 10px; }
 
 .xs-text-content h2 {
   margin-bottom: 20px; }
@@ -1994,8 +1994,9 @@ blockquote {
   margin-bottom: 30px;}
   
 .xs-footer-logo img{
-	width:150px;
-	height:90px;
+	width: 190px;
+    height: 125px;
+    margin-left: 25px;
 }
 
 .footer-widget p {
@@ -2828,6 +2829,11 @@ svg {
   .xs-widnow-wraper .xs-window-back {
     height: 100%;
     width: 100%; }
+	.xs-window-top {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
   .xs-widnow-wraper .xs-window-top {
     position: absolute;
     top: 0;
@@ -3042,6 +3048,56 @@ svg {
 	
 .justify{
 	text-align:justify;
+}
+
+/*sistema*/
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    text-align: center;
+}
+.section .container {
+    padding-top: 50px;
+}
+
+.triangle {
+    margin: 0 auto;
+    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #011b58;
+    border-left: 585px outset transparent;
+    border-right: 585px outset transparent;
+    position: relative;
+}
+
+.triangle-1 {
+    margin: 0 auto;
+    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #F9F9F9;
+    border-left: 585px outset transparent;
+    border-right: 585px outset transparent;
+    position: relative;
+}
+
+.section {
+    padding-bottom: 50px;
+}
+
+.secondary-section {
+    background: #F9F9F9;
+}
+
+.large-text {
+    line-height:1.2em;
+    font-size: 24px;
+    font-weight: 500;
+    color: #011b58;
+    padding:20px;
+    margin-bottom:20px;
 }
 
 /* xs event partner */

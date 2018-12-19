@@ -33,7 +33,7 @@ class SistemaController extends Controller
 			"sistemas" => $sistemas,
 		);
 		
-		return View::make('contenido.sistema')->with($data);
+		return View::make('sistemas.sistema')->with($data);
 	}
 	
 }

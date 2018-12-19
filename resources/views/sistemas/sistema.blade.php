@@ -69,7 +69,15 @@
 @endsection
 
 @section('sistemas_ss')
+	
+	<div class="section secondary-section">
+		<div class="triangle"></div>
+		<div class="container centered">
+			<p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
+		</div>
+	</div>
 	@if(count($sistemas) > 0)
+		<div class="triangle-1"></div>
 		@foreach($sistemas as $sistema)
 			<!-- sistemas section -->
 			<section class="xs-section-padding">
