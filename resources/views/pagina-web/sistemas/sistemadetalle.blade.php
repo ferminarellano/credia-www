@@ -22,19 +22,21 @@
 						</div>
 						
 						<div class="col-lg-4">
-							<!-- sistemas start -->
-							<div class="widget widget_categories xs-sidebar-widget">
-								<h3 class="widget-title">Sistemas</h3>
-								<ul class="xs-side-bar-list">
-									@foreach($sistemas as $sistem)
-											<li>
-												<a href="{{URL::route('sistemadetalle',['slug' => str_slug($sistem->nombre_sistema,'-'),'id' => $sistem->id])}}">
-													<span class="first">{{ $sistem->nombre_sistema }}</span>
-												</a>
-											</li>
-									@endforeach
-								</ul>
-							</div><!-- sistemas end -->
+							@if(count($sistemas) > 0)
+								<!-- sistemas start -->
+								<div class="widget widget_categories xs-sidebar-widget">
+									<h3 class="widget-title">Sistemas</h3>
+									<ul class="xs-side-bar-list">
+										@foreach($sistemas as $sistem)
+												<li>
+													<a href="{{URL::route('sistemadetalle',['slug' => str_slug($sistem->nombre_sistema,'-'),'id' => $sistem->id])}}">
+														<span class="first">{{ $sistem->nombre_sistema }}</span>
+													</a>
+												</li>
+										@endforeach
+									</ul>
+								</div><!-- sistemas end -->
+							@endif
 							
 							<!-- link start -->
 							<div class="widget xs-sidebar-widget">
