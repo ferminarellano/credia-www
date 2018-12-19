@@ -54,7 +54,7 @@
 @section('blog_recent')
 	@if(count($articulos) > 0)
 		<!-- blog section -->	
-		<section class="xs-section-padding" style="background-color:white;">
+		<section class="xs-section-padding" style="background-color:#F9F9F9;">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
@@ -144,7 +144,7 @@
 									<p>{{ $evento->subtitulo }}</p>
 									<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
 									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary bg-bondiGreen">
-										Aprende más
+										más detalles
 									</a>
 								</div><!-- .xs-event-content END -->
 							</div>

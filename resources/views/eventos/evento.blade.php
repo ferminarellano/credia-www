@@ -65,8 +65,8 @@
 								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}">{{ $evento->titulo }}</a>
 								<p>{{ $evento->subtitulo }}</p>
 								<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
-								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary">
-									Aprende más
+								<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary bg-bondiGreen">
+									más detalles
 								</a>
 							</div><!-- .xs-event-content END -->
 						</div>
@@ -120,7 +120,11 @@
 			@endif
 		</div><!-- .container end -->
 	</section>	<!-- End eventos section -->
-
+	
+	<div class="section secondary-section">
+		<div class="triangle"></div>
+	</div>
+	
 	<!-- alianzas section -->
 	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">

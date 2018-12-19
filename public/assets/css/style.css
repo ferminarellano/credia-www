@@ -596,7 +596,8 @@ blockquote {
   .xs-countdown-timer.timer-style-2 {
     background-color: #011b58;
     padding: 20px 40px;
-    text-align: center; }
+    text-align: center; 
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);}
     .xs-countdown-timer.timer-style-2 .timer-count,
     .xs-countdown-timer.timer-style-2 .timer-title {
       color: #FFFFFF; }
@@ -2952,14 +2953,6 @@ svg {
     z-index: 1; }
   .xs-feature-image-box.image-2 {
     margin-top: -73px; }
-
-.xs-event-banner {
-  margin-bottom: 53px; }
-  
- .xs-event-banner img {
-	max-height: 400px;
-    width: 100%;
- }
   
 .event-slyle{
   padding-top:15px;
@@ -2977,11 +2970,20 @@ svg {
   margin-bottom: 35px;
 }
 
+.xs-event-content-banner {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  border: 1px solid #eaeaea;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
 .xs-event-content {
   margin-bottom: 35px;
   background-color: #ffffff;
   padding: 50px 40px;
   border: 1px solid #eaeaea;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
   
   .xs-event-content h4 {
@@ -3001,7 +3003,9 @@ svg {
 .xs-event-schedule-widget {
   padding: 50px 40px;
   background-color: #ffffff; 
-  border: 1px solid #eaeaea;}
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
 
 .xs-evnet-meta-date {
   text-align: center;
@@ -3066,7 +3070,7 @@ svg {
     text-align: center;
     width: 0;
     height: 0;
-    border-top: 30px solid #011b58;
+    border-top: 30px solid #FFFFFF;
     border-left: 585px outset transparent;
     border-right: 585px outset transparent;
     position: relative;
@@ -3083,6 +3087,26 @@ svg {
     position: relative;
 }
 
+.triangle-2 {
+    margin: 0 auto;
+    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #011b58;
+    border-left: 585px outset transparent;
+    border-right: 585px outset transparent;
+    position: relative;
+}
+
+.xs-black-overlay-triangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0; }
+
 .section {
     padding-bottom: 50px;
 }
@@ -3094,10 +3118,15 @@ svg {
 .large-text {
     line-height:1.2em;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     color: #011b58;
     padding:20px;
     margin-bottom:20px;
+}
+
+.large-text span{
+	color: #6acaf0;
+	font-weight: 700;
 }
 
 /* xs event partner */
@@ -3119,8 +3148,19 @@ svg {
   border-bottom: 1px solid #dbdbdb;
   }
   
+  .waypoint-padding{
+	  padding: 90px 0px;
+  }
+  
   .xs-event-sponsor img {
 	max-height:50px;
+  }
+  
+  .post-image{
+	height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
   
   .xs-event-sponsor li:nth-child(1), .xs-event-sponsor li:nth-child(3) {
@@ -3667,7 +3707,8 @@ position: relative; }
 
 .widget {
   margin-bottom: 40px; 
-  background-color:#FFFFFF;}
+  background-color:#FFFFFF;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);}
   
   .widget-footer {
   margin-bottom: 40px; 
@@ -3820,6 +3861,11 @@ position: relative; }
 .xs-content-section-padding {
   padding: 90px 0px; 
   background-color:#F9F9F9;}
+  
+ .xs-content-section-padding-proyect {
+	 padding: 90px 0px; 
+	 background-color: #FFFFFF;
+ }
  
  .xs-content-color{
 	background-color: #FFFFFF;}
@@ -4012,7 +4058,7 @@ position: relative; }
   left: 0;
   height: 100%;
   width: 100%;
-  /*background-color: rgba(0, 0, 0, 0.5);*/
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0; }
   
   .resp{
@@ -4089,6 +4135,7 @@ h1, h2, h3 {
   .estilo {
 	padding: 15px;
 	background-color: #FFFFFF;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
   
 .fi {

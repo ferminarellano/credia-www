@@ -73,7 +73,11 @@
 	<div class="section secondary-section">
 		<div class="triangle"></div>
 		<div class="container centered">
-			<p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
+			<p class="large-text">
+				El <span>CREDIA</span> cuenta con diferentes sistemas de información que comprenden un conjunto de elementos
+				orientados a tratamiento y administración de datos e información, los cuales estan organizados 
+				y disponibles para uso público.
+			</p>
 		</div>
 	</div>
 	@if(count($sistemas) > 0)

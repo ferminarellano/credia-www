@@ -121,7 +121,7 @@
 									<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
 									<li><a href="{{ URL::route('equipo') }}">Equipo de trabajo</a></li>
 									<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
-									<li><a href="{{ URL::route('Sistemas') }}">Sistemas</a></li>
+									<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 								</ul>
 						</div>
 						<div class="col-lg-4 col-md-6 footer-widget">

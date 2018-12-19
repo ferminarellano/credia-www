@@ -31,7 +31,7 @@
 @section('proyectosection')
 
 	<!-- Proyectos Recientes -->
-	<section class="xs-content-section-padding">
+	<section class="xs-content-section-padding-proyect">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-4">
@@ -64,22 +64,23 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- End causes section -->
-
+	
+	<div class="section secondary-section">
+		<div class="triangle"></div>
+		<div class="container centered">
+			<p class="large-text">
+				Nos caracterizamos por promover, facilitar e impartir la formación ambiental, informar 
+				sobre la adaptación al cambio climático y sostenibilidad, promocionar el turismo sostenible,
+				educativo y científico en las áreas protegidas, fomentar la recreación comunitaria y saludable
+				en entornos  naturales, contribuir en la difusión de las diversas manifestaciones culturales y 
+				artesanales de la zona.
+			</p>
+		</div>
+	</div>
+	<div class="triangle-1"></div>
 	<!-- popularCauses version 2 section -->
-	<section class="waypoint-tigger xs-section-padding" style="background-color:#FFFFFF;">
+	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-12 col-xl-12">
-					<h2 class="xs-title">Proyectos</h2>
-					<p>Para el desarrollo de los proyectos se nos caracteriza por poseer un enfoque de gestión 
-					y análisis de la información, promover, 
-					facilitar e impartir la formación ambiental, informar sobre la adaptación al cambio climático 
-					y sostenibilidad, promocionar el turismo sostenible, educativo y científico en las áreas 
-					protegidas, fomentar la recreación comunitaria y saludable en entornos  naturales,
-					contribuir en la difusión de las diversas manifestaciones culturales y artesanales de la zona.</p>
-				</div><!-- .xs-heading-title END -->
-			</div><!-- .row end -->
-			
 			<div class="row">
 				@if(count($proyectos) === 0)
 					<div class="col-lg-12">

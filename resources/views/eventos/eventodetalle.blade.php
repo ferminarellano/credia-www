@@ -34,11 +34,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="xs-event-banner">
-						<img src="/{{$eventos->first()->foto}}">
-					</div>
 					<div class="row event-slyle">
 						<div class="col-lg-8 xs-event-wraper">
+							<div class="xs-event-content-banner">
+								<div class="post-media post-image" style="background-image: url(/{{ $eventos->first()->foto }});"></div>
+							</div>
 							<div class="xs-event-content">
 								<h4>Detalle de evento</h4>
 								{!! $eventos->first()->contenido !!}
@@ -137,14 +137,16 @@
 							
 							<div class="xs-countdown-timer timer-style-2 xs-mb-30" data-countdown="{{ date('Y-m-d', strtotime($eventos->first()->fecha)) }}"></div>
 							
-							<div class="xs-event-schedule-widget">
-								<h3 class="widget-title">Patrocinadores</h3>
-								<ul class="xs-event-sponsor clearfix">
-									@foreach($eventos->first()->patrocinadores()->get() as $evento)
-										<li><a><img src="/{{ $evento->foto }}" alt=""></a></li>
-									@endforeach
-								</ul>
-							</div><!-- .xs-event-schedule-widget END -->
+							@if(count($eventos->first()->patrocinadores()->get()) > 0)
+								<div class="xs-event-schedule-widget">
+									<h3 class="widget-title">Patrocinadores</h3>
+									<ul class="xs-event-sponsor clearfix">
+										@foreach($eventos->first()->patrocinadores()->get() as $evento)
+											<li><a><img src="/{{ $evento->foto }}" alt=""></a></li>
+										@endforeach
+									</ul>
+								</div><!-- .xs-event-schedule-widget END -->
+							@endif
 						</div>
 					</div>
 				</div>

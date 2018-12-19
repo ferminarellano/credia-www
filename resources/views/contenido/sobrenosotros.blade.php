@@ -69,8 +69,9 @@
 
 @section('widget_sn')
 	<!-- funfacts section -->
-	<div class="xs-funfact-section xs-content-section-padding waypoint-tigger parallax-window" style="background-color:#011b58;">
-		<div class="container">
+	<div class="xs-funfact-section waypoint-tigger parallax-window" style="background-color:#011b58;">
+		<div class="triangle"></div>
+		<div class="container waypoint-padding">
 			<div class="row col-lg-10 xs-heading mx-auto">
 				<h2 align="center" class="xs-title color-white small">Nuestra fundación ha estado presente por más de 7 años. Hacemos lo mejor para todos.</h2>
 			</div>
@@ -105,8 +106,8 @@
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-		<div class="xs-black-overlay"></div>
 	</div>	<!-- End funfacts section -->
+	<div class="triangle-2"></div>
 @endsection
 
 @section('quehacemos_sn')
