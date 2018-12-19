@@ -73,7 +73,7 @@
 								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 								<li><a href="{{ URL::route('evento') }}">Eventos</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
-									{{--<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>--}}
+								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
 						<div class="xs-navs-button d-flex-center-end col-lg-2">
