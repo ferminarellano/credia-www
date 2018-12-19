@@ -11,9 +11,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<!-- <div class="xs-event-banner"> -->
-					{{--<img src="/{{ $proyecto->first()->foto }}">--}}
-					<!-- </div> -->
 					<div class="row event-slyle">
 						<div class="col-lg-8 xs-event-wraper">
 							<div class="xs-event-content">
@@ -30,12 +27,14 @@
 								<h3 class="widget-title">Categor&iacute;as</h3>
 								<ul class="xs-side-bar-list">
 									@foreach($categorias as $categoria)
+										@if($categoria->proyectos()->count() > 0)
 											<li>
 												<a href="{{ URL::route('categoria_proyecto',['categoria' => str_slug($categoria->nombre,'-'),'categoria_id' => $categoria->id])}}">
 													<span class="first">{{ $categoria->nombre }}</span>
 													<span class="last">{{ $categoria->proyectos()->count() }}</span>
 												</a>
 											</li>
+										@endif
 									@endforeach
 								</ul>
 							</div><!-- categories end -->

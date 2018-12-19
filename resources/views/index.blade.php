@@ -54,7 +54,7 @@
 @section('blog_recent')
 	@if(count($articulos) > 0)
 		<!-- blog section -->	
-		<section class="xs-section-padding" style="background-color:white;">
+		<section class="xs-section-padding" style="background-color:#F9F9F9;">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
@@ -68,8 +68,8 @@
 					@foreach($articulos as $articulo)
 						<div class="col-lg-4 col-md-6">
 							<div class="xs-box-shadow xs-single-journal xs-mb-30">
-								<div class="entry-thumbnail ">
-									<img class="img-height" src="/{{$articulo->foto}}">
+								<div class="entry-thumbnail" style="background-image: url(/{{ $articulo->foto }});">
+								{{--<img class="img-height" src="/{{$articulo->foto}}">--}}
 									<div class="post-author">
 										<span class="xs-round-avatar">
 											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->correo))).'?s=50&d=monsterid' }}">
@@ -129,9 +129,8 @@
 				<div class="row">
 					@foreach($eventos as $evento)
 						<div class="col-lg-6 row xs-single-event event-blue">
-							<div class="col-md-5">
-								<div class="xs-event-image">
-									<img src="/{{$evento->foto}}" alt="">
+							<div class="col-md-5 xs-pad">
+								<div class="xs-event-image" style="background-image: url(/{{ $evento->foto }});">
 									<div class="xs-entry-date">
 										<span class="entry-date-day">{{ date('d', strtotime($evento->fecha)) }}</span>
 										<span class="entry-date-month">{{ diccionario(date('m', strtotime($evento->fecha))) }}</span>
@@ -144,8 +143,8 @@
 									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}">{{ $evento->titulo }}</a>
 									<p>{{ $evento->subtitulo }}</p>
 									<div class="xs-countdown-timer" data-countdown="{{ date('Y-m-d', strtotime($evento->fecha)) }}"></div>
-									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary">
-										Aprende más
+									<a href="{{ URL::route('eventodetalle',['slug' => str_slug($evento->titulo,'-'),'id' => $evento->id]) }}" class="btn btn-primary bg-bondiGreen">
+										más detalles
 									</a>
 								</div><!-- .xs-event-content END -->
 							</div>
@@ -173,16 +172,12 @@
 					@foreach($proyectos as $proyecto)
 						<div class="col-lg-4 col-md-6">
 							<div class="xs-popular-item xs-box-shadow">
-								<div class="xs-item-header">
-
-									<img src="/{{$proyecto->foto}}" alt="">
-
-									<div class="xs-skill-bar">
-										<div class="xs-skill-track bg-light-green">
-											<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
-										</div>
+								<div class="xs-item-header" style="background-image: url(/{{ $proyecto->foto }});"></div>
+								<div class="xs-skill-bar">
+									<div class="xs-skill-track bg-light-green">
+										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
 									</div>
-								</div><!-- .xs-item-header END -->
+								</div>
 								<div class="xs-item-content">
 									<div class="xs-margin-1">
 										<ul class="xs-simple-tag xs-mb-20">
@@ -272,7 +267,7 @@
 	</section><!-- End archive section -->
 @endsection
 
-@section('texto_in') 
+@section('texto_in')
 	<!-- text with image section -->
 	<section class="xs-section-padding">
 		<div class="container">
@@ -463,7 +458,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-7 fundpress-pad">
 					<ul class="fundpress-partners">
 						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>

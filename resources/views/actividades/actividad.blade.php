@@ -78,7 +78,7 @@
 			<div class="container">
 				<div class="row">
 					@foreach($actividades as $actividad)
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-6 col-md-6" style="margin-bottom:30px;">
 							<div class="media xs-single-media xs-service-promo-p">
 								<!-- <span class="icon-donation_2 d-flex color-light-red"></span> -->
 								<span class="xs-service-promo-p" style="background: url({{ $actividad->foto }}) no-repeat;"></span>

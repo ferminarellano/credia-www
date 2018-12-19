@@ -28,17 +28,14 @@
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
-	<!-- blog single post -->
+	<!-- detalle de artículos de blog -->
 	<div class="xs-content-section-padding xs-blog-single">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-8 estilo">
 					<!-- format standard -->
 					<article class="post format-standard hentry xs-blog-post-details">
-						<div class="post-media post-image">
-							<img src="/{{ $articulo->first()->foto }}" class="img-responsive" alt="">
-						</div><!-- .post-media END -->
-
+						<div class="post-media post-image" style="background-image: url(/{{ $articulo->first()->foto }});"></div>
 						<div class="post-body xs-border xs-padding-40">
 							<div class="entry-header">
 								<div class="post-meta row">
@@ -263,12 +260,14 @@
 							<h3 class="widget-title">Categorías</h3>
 							<ul class="xs-side-bar-list">
 								@foreach($categorias as $categoria)
-										<li>
-											<a href="{{URL::route('categoria_blog',['categoria' => str_slug($categoria->nombre,'-'),'categoria_id' => $categoria->id])}}">
-												<span class="first">{{ $categoria->nombre }}</span>
-												<span class="last">{{ $categoria->blogs()->count() }}</span>
-											</a>
-										</li>
+										@if($categoria->blogs()->count() > 0)
+											<li>
+												<a href="{{URL::route('categoria_blog',['categoria' => str_slug($categoria->nombre,'-'),'categoria_id' => $categoria->id])}}">
+													<span class="first">{{ $categoria->nombre }}</span>
+													<span class="last">{{ $categoria->blogs()->count() }}</span>
+												</a>
+											</li>
+										@endif
 								@endforeach
 							</ul>
 						</div><!-- categories end -->
@@ -328,5 +327,5 @@
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</div>	<!-- End blog single post -->
+	</div>	<!-- End detalle de artículos de blog -->
 @endsection
