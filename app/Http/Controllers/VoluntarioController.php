@@ -35,7 +35,7 @@ class VoluntarioController extends Controller
 			"voluntarios" => $voluntarios,
 		);
 		
-		return View::make('contenido.voluntario')->with($data);
+		return View::make('pagina-web.otras-secciones.voluntario')->with($data);
 	}
 	
 	public function store(Request $request)

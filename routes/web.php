@@ -29,7 +29,7 @@ Route::get('blog/categoria/{categoria}/{categoria_id}', 'BlogController@search_c
 Route::get('proyectos/{slug}/{id}', 'ProyectoController@proyectodetalle')->name('proyectodetalle'); 
 Route::get('proyectos/categoria/{categoria}/{categoria_id}', 'ProyectoController@search_categoria_proyecto')->name('categoria_proyecto');
 Route::get('nuestras-actividades/{slug}/{id}', 'ActividadController@actividadetalle')->name('actividadetalle'); 
-
+Route::get('sistemas/{slug}/{id}', 'SistemaController@sistemadetalle')->name('sistemadetalle');
 
 Route::post('/','IndexController@store');
 Route::post('/voluntarios','VoluntarioController@store');

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('pagina-web.layouts.layout')
 
 @section('title', 'Galería -')
 

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('pagina-web.layouts.layout')
 
 @section('title', 'Sistemas -')
 
@@ -95,7 +95,7 @@
 									<span class="xs-separetor bg-bondiBlue"></span>
 								</div>
 								<p style="text-align:justify;">{{ $sistema->descripcion }}</p>
-								<a href="#" class="btn btn-primary bg-bondiBlue">Más detalles</a>
+								<a href="{{URL::route('sistemadetalle',['slug' => str_slug($sistema->nombre_sistema,'-'),'id' => $sistema->id])}}" class="btn btn-primary bg-bondiBlue">Más detalles</a>
 								<a href="{{ $sistema->url }}" target="_blank" class="btn btn-primary bg-bondiGreen">Ir</a>
 							</div><!-- .xs-feature-text-content END -->
 						</div>

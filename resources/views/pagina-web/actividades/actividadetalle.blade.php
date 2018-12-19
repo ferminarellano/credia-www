@@ -1,4 +1,4 @@
-@extends('layouts.layout_other')
+@extends('pagina-web.layouts.layout_other')
 
 @section('title', 'Actividad -')
 
@@ -22,7 +22,7 @@
 							</div>
 						</div>
 						<div class="col-lg-4">
-							<!-- categories start -->
+							<!-- actividades start -->
 							<div class="widget widget_categories xs-sidebar-widget">
 								<h3 class="widget-title">Actividades</h3>
 								<ul class="xs-side-bar-list">
@@ -34,7 +34,7 @@
 											</li>
 									@endforeach
 								</ul>
-							</div><!-- categories end -->
+							</div><!-- actividades end -->
 						</div>
 					</div>
 				</div>

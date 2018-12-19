@@ -30,7 +30,7 @@ class ProyectoController extends Controller
 			"proyectos" => $proyectos,
 		);
 		
-		return View::make('proyectos.proyecto')->with($data);
+		return View::make('pagina-web.proyectos.proyecto')->with($data);
 	}
 	
 	public function search_categoria_proyecto($categoria,$id)
@@ -51,7 +51,7 @@ class ProyectoController extends Controller
 			"proyectos" => $proyectos,
 		);
 		
-		return View::make('proyectos.proyecto')->with($data);
+		return View::make('pagina-web.proyectos.proyecto')->with($data);
 	}
 	
 	public function proyectodetalle($slug,$id)
@@ -66,6 +66,6 @@ class ProyectoController extends Controller
 			"categorias" => $categorias,
 		);
 		
-		return View::make('proyectos.proyectodetalle')->with($data);
+		return View::make('pagina-web.proyectos.proyectodetalle')->with($data);
 	}
 }

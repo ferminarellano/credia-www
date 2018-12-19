@@ -36,7 +36,7 @@ class IndexController extends Controller
 			"articulos" => $articulos,
 		);
 		
-		return View::make('index')->with($data);
+		return View::make('pagina-web.index')->with($data);
 	}
 	
 	public function store(Request $request)

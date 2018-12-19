@@ -27,6 +27,6 @@ class ConoceController extends Controller
 			"empleados" => $empleados,
 		);
 		
-		return View::make('contenido.sobrenosotros')->with($data);
+		return View::make('pagina-web.otras-secciones.sobrenosotros')->with($data);
 	}
 }

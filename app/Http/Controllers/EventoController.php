@@ -33,7 +33,7 @@ class EventoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('eventos.evento')->with($data);
+		return View::make('pagina-web.eventos.evento')->with($data);
 	}
 	
 	public function eventodetalle($slug,$id)
@@ -46,7 +46,7 @@ class EventoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('eventos.eventodetalle')->with($data);
+		return View::make('pagina-web.eventos.eventodetalle')->with($data);
 	}
 	
 	public function store(Request $request,$slug,$id)
