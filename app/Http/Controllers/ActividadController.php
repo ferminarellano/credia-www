@@ -28,7 +28,7 @@ class ActividadController extends Controller
 			"actividades" => $actividades,
 		);
 		
-		return View::make('actividades.actividad')->with($data);
+		return View::make('pagina-web.actividades.actividad')->with($data);
 	}
 	
 	public function actividadetalle($slug,$id)
@@ -43,6 +43,6 @@ class ActividadController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('actividades.actividadetalle')->with($data);
+		return View::make('pagina-web.actividades.actividadetalle')->with($data);
 	}
 }

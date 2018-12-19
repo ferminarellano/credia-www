@@ -33,7 +33,22 @@ class SistemaController extends Controller
 			"sistemas" => $sistemas,
 		);
 		
-		return View::make('sistemas.sistema')->with($data);
+		return View::make('pagina-web.sistemas.sistema')->with($data);
+	}
+	
+	public function sistemadetalle($slug,$id)
+	{
+		$sistema = Sistema::where([['estado','=','1'],['id',$id]])->get();
+		$sistemas = Sistema::where([['id','!=',$id],['estado','1']])->get();
+		$redes = Social::all();
+		
+		$data = array(
+			"sistema" => $sistema,
+			"sistemas" => $sistemas,
+			"redes" => $redes,
+		);
+		
+		return View::make('pagina-web.sistemas.sistemadetalle')->with($data);
 	}
 	
 }

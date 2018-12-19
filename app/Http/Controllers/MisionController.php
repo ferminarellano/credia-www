@@ -24,6 +24,6 @@ class MisionController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.mision')->with($data);
+		return View::make('pagina-web.otras-secciones.mision')->with($data);
 	}
 }

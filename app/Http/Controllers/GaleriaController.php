@@ -16,6 +16,6 @@ class GaleriaController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.galeria')->with($data);
+		return View::make('pagina-web.otras-secciones.galeria')->with($data);
 	}
 }

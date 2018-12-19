@@ -33,7 +33,7 @@ class BlogController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('blog.blog')->with($data);
+		return View::make('pagina-web.blog.blog')->with($data);
 	}
 	
 	public function search_categoria_blog($categoria,$id)
@@ -54,7 +54,7 @@ class BlogController extends Controller
 			"articulos" => $articulos,
 		);
 		
-		return View::make('blog.blog')->with($data);
+		return View::make('pagina-web.blog.blog')->with($data);
 	}
 	
 	public function blogdetalle($slug,$id)
@@ -82,7 +82,7 @@ class BlogController extends Controller
 			"archive" => $archive,
 		);
 		
-		return View::make('blog.blogdetalle')->with($data);
+		return View::make('pagina-web.blog.blogdetalle')->with($data);
 	}
 	
 	public function store(Request $request,$slug,$id)

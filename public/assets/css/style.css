@@ -3129,6 +3129,82 @@ svg {
 	font-weight: 700;
 }
 
+.service {
+    margin-top: 20px;
+}
+
+.service img {
+    width:150px;
+    height:150px;
+	padding:30px;
+}
+
+.service{
+	padding-top: 10px;
+} 
+
+.service p {
+    padding-top: 25px;
+	color: #011b58;
+	font-weight: 600;
+}
+
+.zoom-in {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.zoom-in:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+}
+.circle-border {
+    display: inline-block;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -khtml-border-radius: 500px;
+    border: 3px solid rgba(1,27,88,10%);
+	background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+}
+
+.xs-heading-sistema .xs-title {
+    color: #011b58;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -.2px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 7px;
+	margin-top: 30px;
+}
+
+.xs-heading-sistema .xs-title:before {
+    position: absolute;
+    content: attr(data-title);
+    top: -22px;
+    left: 30px;
+    font-size: 1.846em;
+    color: rgba(1,27,88,10%);
+    line-height: 1;
+    z-index: -1;
+    pointer-events: none;
+	margin-left: 0px;
+}
+
 /* xs event partner */
 .xs-event-schedule-widget .widget-title {
   text-align: center;

@@ -29,6 +29,6 @@ class FaqController extends Controller
 			"faqs" => $faqs,
 		);
 		
-		return View::make('contenido.faq')->with($data);
+		return View::make('pagina-web.otras-secciones.faq')->with($data);
 	}
 }

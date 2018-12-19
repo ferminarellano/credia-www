@@ -27,6 +27,6 @@ class EquipoController extends Controller
 			"empleados" => $empleados,
 		);
 		
-		return View::make('contenido.equipo')->with($data);
+		return View::make('pagina-web.otras-secciones.equipo')->with($data);
 	}
 }

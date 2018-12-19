@@ -584,6 +584,9 @@
 
 .fadeInDown {
   animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+	-o-animation-name: fadeInDown;
+	animation-name: fadeInDown;
 }
 
 @keyframes fadeInDownBig {
@@ -599,7 +602,10 @@
 }
 
 .fadeInDownBig {
-  animation-name: fadeInDownBig;
+  -webkit-animation-name: fadeInDownBig;
+	-moz-animation-name: fadeInDownBig;
+	-o-animation-name: fadeInDownBig;
+	animation-name: fadeInDownBig;
 }
 
 @keyframes fadeInLeft {

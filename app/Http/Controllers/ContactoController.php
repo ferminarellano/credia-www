@@ -25,7 +25,7 @@ class ContactoController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('contenido.contacto')->with($data);
+		return View::make('pagina-web.otras-secciones.contacto')->with($data);
 	}
 	
 	public function store(Request $request)
