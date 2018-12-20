@@ -45,7 +45,7 @@ class Categoria extends Model
 	
 	public function proyectos()
 	{
-		return $this->hasMany('App\Models\Proyecto');
+		return $this->belongsToMany('App\Models\Proyecto', 'proyecto_categoria','categoria_id');
 	}
 	
 	public function faqs()

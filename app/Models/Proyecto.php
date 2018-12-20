@@ -16,8 +16,7 @@ class Proyecto extends Model
     public $timestamps = true;
     // protected $guarded = ['id'];
     protected $fillable = ['titulo','subtitulo','foto','fecha_convenio','contenido','presupuesto',
-						   'avance','utilizado','fecha_inicio','fecha_finalizacion','estado',
-						   'categoria_id','user_id'];
+						   'avance','utilizado','fecha_inicio','fecha_finalizacion','estado','user_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];
@@ -36,7 +35,6 @@ class Proyecto extends Model
 		'fecha_inicio' => 'fecha de inicio',
 		'fecha_finalizacion' => 'fecha de finalizacion',
 		'estado' => 'estado',
-		'categoria_id' => 'categoria',
 		'user_id' => 'usuario',
 	);
 
@@ -73,9 +71,9 @@ class Proyecto extends Model
 		return $this->belongsTo('App\User','user_id');
 	}
 	
-	public function categoria()
+	public function categorias()
 	{
-		return $this->belongsTo('App\Models\Categoria');
+	return $this->belongsToMany('App\Models\Categoria','proyecto_categoria','proyecto_id');
 	}
 	
     /*------------------------------------------------------------------------
