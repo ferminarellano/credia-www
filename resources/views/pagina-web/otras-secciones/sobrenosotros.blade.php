@@ -15,23 +15,22 @@
 @endsection
 
 @section('video_sn')
-	<!-- video popup section section -->
-	<div class="xs-video-popup-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 content-center">
-					<div class="xs-video-popup-wraper">
-						<img src="assets/images/video_img.jpg" alt="">
-						<div class="xs-video-popup-content">
-							<a href="#" class="xs-video-popup xs-round-btn">
-								<i class="fa fa-play"></i>
-							</a>
-						</div><!-- .xs-video-popup-content end -->
-					</div><!-- .xs-video-popup-wraper end -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</div>	<!-- End video popup section section -->
+	<!-- <div class="xs-video-popup-section"> -->
+		<!-- <div class="container"> -->
+			<!-- <div class="row"> -->
+				<!-- <div class="col-lg-8 content-center"> -->
+					<!-- <div class="xs-video-popup-wraper"> -->
+						<!-- <img src="assets/images/video_img.jpg" alt=""> -->
+						<!-- <div class="xs-video-popup-content"> -->
+							<!-- <a href="https://youtu.be/ar1rtzH-CqM" class="xs-video-popup xs-round-btn"> -->
+								<!-- <i class="fa fa-play"></i> -->
+							<!-- </a> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </div>	 -->
 @endsection
 
 @section('contenido_video_sn')
