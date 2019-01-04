@@ -16,7 +16,7 @@ class ConoceController extends Controller
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
-		$empleados = Equipo::orderBy('id','asc')->take(4)->get();
+		$empleados = Equipo::orderBy('id','desc')->paginate(6);
 		$redes = Social::all();
 		
 		$data = array(

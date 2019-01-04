@@ -1,5 +1,9 @@
 @extends('pagina-web.layouts.layout')
 
+<?php
+	$pagination_range = 2;
+?>
+
 @section('title', 'conocenos -')
 
 @section('welcomesn')
@@ -69,7 +73,6 @@
 @section('widget_sn')
 	<!-- funfacts section -->
 	<div class="xs-funfact-section waypoint-tigger parallax-window" style="background-color:#011b58;">
-		<div class="triangle"></div>
 		<div class="container waypoint-padding">
 			<div class="row col-lg-10 xs-heading mx-auto">
 				<h2 align="center" class="xs-title color-white small">Nuestra fundación ha estado presente por más de 7 años. Hacemos lo mejor para todos.</h2>
@@ -106,56 +109,120 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</div>	<!-- End funfacts section -->
-	<div class="triangle-2"></div>
 @endsection
 
 @section('quehacemos_sn')
-	<!-- what we do section -->
+	<!-- objetivo section -->
 	<section class="xs-section-padding">
-		<div class="container" align="justify">
-			<!-- .xs-heading row -->
-			<div class="xs-heading row xs-mb-60"> 
-				<div class="col-md-9 col-xl-9">
-					<h2 class="xs-title" style="color:#a6ce39;">¿Qué hacemos?</h2>
-					<hr style="width:220px;float:left;margin-bottom:20px;margin-top:10px;">
-				</div>
-				<div class="xs-heading xs-mb-70 text-center">
-					<h2 class="xs-mb-0 xs-title">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba y comunidades vecinas del CBCH. </h2>
-				</div>
-			</div><!-- .xs-heading row END -->
-			
+		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/jardin.png') no-repeat; background-position: bottom;"></span>
-						<h5>Jardín botánico y Sendero<br> Gerardo Rodríguez</h5>
-						<p>Ofrece un recorrido interpretado por un guía especializado que ofrece conocimiento acerca de las diversas especies de flora, aves, pequeños mamíferos y anfibios de diversas clases que habitan el Jardín del CREDIA.</p>
-					</div><!-- .xs-service-promo END -->
+				<div class="col-lg-8">
+					<div class="xs-fature-causes-deatils" style="margin-top:45px;">
+						<h3>Objetivo estratégico institucional</h3>
+						<p style="color:#6acaf0;">
+							Fortalecer la gestión ambiental y el desarrollo sostenible, bajo un enfoque de gestión
+							del conocimiento como línea conductora vinculada con el manejo del Agua, bosques, suelo,
+							cambio climático, gestión integral del riesgo, promocionando el ecoturismo, la cultura y
+							la recreación del <span>Corredor Biológico del Caribe</span>
+						</p>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/pasaporte.png') no-repeat;"></span>
-						<h5>Pasaporte Verde del<br>Corredor Biológico</h5>
-						<p>Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH, al tiempo que se adquieren conocimientos que son certificados mediante los diferentes sellos que acreditan las visitas a las áreas.</p>
-					</div><!-- .xs-service-promo END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/foresteria.png') no-repeat; background-position: bottom;"></span>
-						<h5>Forestería comunitaria y<br>Cambio Climático</h5>
-						<p>Mediante la realización de charlas, y visitas a la parcela demostrativa dentro del Jardín Botánico se concientiza acerca de la implementación de métodos amigables para mitigar los efectos del cambio climático.</p>
-					</div><!-- .xs-service-promo END -->
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo">
-						<span class="xs-service-promo" style="background: url('assets/images/actividades/videos.png') no-repeat; background-position: bottom;"></span>
-						<h5>Videos sobre el ambiente<br>y proyecciones en 3D</h5>
-						<p>La sala de proyecciones audiovisuales enriquese la experiencia de la visita con la presentación de videos, e imagenes 3D basados en temas de importancia para la conservación del ambiete.</p>
-					</div><!-- .xs-service-promo END -->
+				<div class="col-lg-4">
+					<div class="xs-causes-images">
+						<img src="assets/images/causes/causes_12.jpg" class="d-block" alt="">
+					</div><!-- .xs-causes-images END -->
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</section>	<!-- End what we do section -->
+	</section>	<!-- objetivo list section -->
+	
+	<!-- Antecedentes section -->
+	<section class="xs-section-padding bg-gray-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="xs-causes-images" style="margin-top:35px;">
+						<img src="assets/images/causes/causes_11.jpg" class="d-block" alt="">
+					</div><!-- .xs-causes-images END -->
+				</div>
+				<div class="col-lg-8">
+					<div class="xs-fature-causes-deatils">
+						<h3> Nuestra <span class="color-green">fundación</span></h3>
+						<p>
+							Creada el 31 de Octubre 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, 
+							mediante la implementación de un modelo de gestión basado en el fortalecimiento de redes y promoción del análisis
+							estratégico de los procesos sociales, económicos y ambientales, para la toma de decisiones participativas.
+						</p>
+						<h5><span class="color-green">Componentes</span></h5>
+						<ul class="xs-unorder-list">
+							<li><i class="fa fa-circle color-light-green"></i>Adaptación, Agua, Bosques y Suelos.</li>
+							<li><i class="fa fa-circle color-light-green"></i>Cambio Climatico y Gestión Integral de Riesgos.</li>
+							<li><i class="fa fa-circle color-light-green"></i>Interpretación y Educación Ambiental.</li>
+							<li><i class="fa fa-circle color-light-green"></i>Observatorio de Desarrollo Sostenible (ODS).</li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</section>	<!-- Antecedentes section -->
+	
+	<!-- Organigrama section section -->
+	<section class="xs-content-section-padding-conocenos organigram-responsive">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 content-center">
+					<h2 class="xs-title" style="color:#011b58;font-weight:900;">Organigrama</h2>
+				</div>
+				<div class="col-lg-9 content-center">
+					<div class="xs-heading xs-mb-100 text-center">
+						<div class="organigrama">
+							<ul>
+								<li>
+								  <a href="#" style="width:170px;">Asamblea General</a>
+									<ul>
+										<li><a href="#" style="width:170px;">Junta Directiva</a>
+											<ul>
+												<li><a href="#" style="width:170px;">Dirección Ejecutiva</a>
+													<ul>
+														<li id="line4"><a href="#">Administración y Finanzas</a></li>
+															<ul>
+																<li id="line5"><a href="#" style="width:170px;">Promoción y Mercadeo</a></li>
+																	<ul>
+																		<li id="line6" style="float:right;margin-top:-50px;"><a href="#" style="width:170px;">Centro de Documentación</a></li>
+																			<ul>		
+																				<li><a href="#">Asistencia Técnica y Gestión de proyectos</a>
+																					<ul>
+																						<li>
+																							<a href="#" style="width:170px;">Observatorio de desarrollo sostenible</a>
+																						</li>
+																						<li>
+																							<a href="#" style="width:170px;">Cambio Climático y Gestión Integral de Riesgos</a>
+																						</li>
+																						<li>
+																							<a href="#" style="width:170px;">Interpretación y Educación Ambiental</a>
+																						</li>
+																						<li>
+																							<a href="#" style="width:170px;height: 69.78px">Agua, bosques y Suelos</a>
+																						</li>
+																					</ul>
+																				</li>
+																			</ul>
+																	</ul>
+															</ul>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<!-- Organigrama section section -->
 @endsection
 
 @section('equipo_sn')
@@ -186,11 +253,51 @@
 						</div>
 					@endforeach
 				</div><!-- .row END -->
-				<div class="text-center">
-					<a href="{{ URL::route('equipo') }}" class="btn btn-success">
-						Ver más
-					</a>
-				</div>
+					@if($empleados->count() > 0)
+					<!-- pagination -->
+					<div>
+						<ul class="pagination justify-content-center xs-pagination">
+							<li class="page-item {{ $empleados->previousPageUrl() == null ? 'disabled' : '' }}">
+								<a class="page-link" href="{{ $empleados->previousPageUrl() ?? '#' }}" aria-label="Previous">
+									<i class="fa fa-angle-left"></i>
+								</a>
+							</li>
+							@if ($empleados->currentPage() > 1+$pagination_range )
+								<li class="page-item">
+									<a class="page-link" href="{{ $empleados->url(1) ?? '#' }}">{{ 1 }}</a>
+								</li>
+
+								@if ($empleados->currentPage() > 1+$pagination_range+1 )
+									<li class="page-item disabled">
+										<span class="page-link">&hellip;</span>
+									</li>
+								@endif
+							@endif
+							@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+								@if ($empleados->currentPage()+$i > 0 && $empleados->currentPage()+$i <= $empleados->lastPage())
+									<li class="page-item {{ $i==0 ? 'active' : '' }}">
+										<a class="page-link" href="{{ $empleados->url($empleados->currentPage()+$i) }}">{{ $empleados->currentPage()+$i }}</a>
+									</li>
+								@endif
+							@endfor
+							@if ($empleados->currentPage() < $empleados->lastPage()-$pagination_range )	
+								@if ($empleados->currentPage() < $empleados->lastPage()-$pagination_range-1 )
+									<li class="page-item disabled">
+										<span class="page-link">&hellip;</span>
+									</li>
+								@endif
+								<li class="page-item">
+									<a class="page-link" href="{{ $empleados->url($empleados->lastPage()) ?? '#' }}">{{ $empleados->lastPage() }}</a>
+								</li>
+							@endif
+							<li class="page-item {{ $empleados->nextPageUrl()==null ? 'disabled' : '' }}">
+								<a class="page-link " href="{{ $empleados->nextPageUrl() ?? '#' }}" aria-label="Next">
+									<i class="fa fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</div><!-- End pagination -->
+				@endif
 			</div><!-- .container end -->
 		</section>	<!-- End team section -->
 	@endif

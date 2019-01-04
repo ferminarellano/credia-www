@@ -33,6 +33,31 @@ class ProyectoController extends Controller
 		return View::make('pagina-web.proyectos.proyecto')->with($data);
 	}
 	
+	public function proyectos($slug)
+	{
+		$banner = Banner::where([['indicador','=','proyectos']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
+		$redes = Social::all();
+		
+		if($slug === "proyectos-ejecutados"){
+			$proyectos = Proyecto::where([['avance','=','100']])->orderBy('id','desc')->paginate(6);
+		}else{
+			$proyectos = Proyecto::where([['avance','<','100']])->orderBy('id','desc')->paginate(6);
+		}
+		
+		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
+			"redes" => $redes,
+			"proyectos" => $proyectos,
+		);
+		
+		return View::make('pagina-web.proyectos.proyecto')->with($data);
+	}
+	
 	public function search_categoria_proyecto($categoria,$id)
 	{
 		$banner = Banner::where([['indicador','=','Proyectos']])->get();

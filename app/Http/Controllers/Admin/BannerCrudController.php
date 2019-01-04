@@ -20,9 +20,9 @@ class BannerCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/banner');
         $this->crud->setEntityNameStrings('banner', 'sliders-banners');
 		
-		$this->crud->allowAccess('revisions');
-		$this->crud->with('revisionHistory');
-		$this->crud->genero = "este";
+		// $this->crud->allowAccess('revisions');
+		// $this->crud->with('revisionHistory');
+		// $this->crud->genero = "este";
 		
 		$this->crud->addColumn([
 			'name' => 'indicador',
@@ -30,8 +30,8 @@ class BannerCrudController extends CrudController
 			'type' => 'select_from_array',
 			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
 						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
-						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
+						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador',
+						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes',
 						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
 		]);
 		
@@ -116,10 +116,10 @@ class BannerCrudController extends CrudController
 			'name' => 'indicador',
 			'label' => 'Página',
 			'type' => 'select_from_array',
-			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
+			'options' =>  ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
 						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
-						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
+						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador',
+						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes',
 						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
 			'allows_null' => true,
 		]);

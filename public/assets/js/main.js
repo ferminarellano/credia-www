@@ -3,7 +3,7 @@
 
 /*------------------------------------------------------------------
 [Table of contents]
-
+Portafolio de salones
 Funciones personalizadas
 cuadrícula de cartera
 banner slider
@@ -25,6 +25,7 @@ XpeedStudio Maps
 
 
 -------------------------------------------------------------------*/
+
 
 /*==========================================================
 			Funciones personalizadas
@@ -49,6 +50,7 @@ $(window).on('load', function() {
 	setTimeout(() => {
 		$('#preloader').fadeOut();
 	}, 500);
+	
 
 /*==========================================================
 					cuadrícula de cartera

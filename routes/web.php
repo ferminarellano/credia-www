@@ -14,15 +14,13 @@ Route::get('eventos', 'EventoController@evento')->name('evento');
 Route::get('blog', 'BlogController@blog')->name('blog');
 Route::get('nuestras-actividades', 'ActividadController@actividad')->name('actividad');
 Route::get('faq','FaqController@faq')->name('faq');
-Route::get('equipo-de-trabajo', 'EquipoController@equipo')->name('equipo');
 Route::get('voluntarios','VoluntarioController@voluntario')->name('voluntario');
 Route::get('contacto', 'ContactoController@contacto')->name('contacto');
 Route::get('sistemas', 'SistemaController@sistema')->name('sistema');
-
-/* Faltantes - no estan mostrandose aun*/
-Route::get('mision', 'MisionController@mision')->name('mision');
 Route::get('galeria', 'GaleriaController@galeria')->name('galeria');
+Route::get('alquiler-de-salones', 'ServicioController@alquiler_salones')->name('alquiler_s');
 
+Route::get('proyectos/{slug}', 'ProyectoController@proyectos')->name('proyectos');
 Route::get('blog/{slug}/{id}', 'BlogController@blogdetalle')->name('blogdetalle');
 Route::get('eventos/{slug}/{id}', 'EventoController@eventodetalle')->name('eventodetalle');
 Route::get('blog/categoria/{categoria}/{categoria_id}', 'BlogController@search_categoria_blog')->name('categoria_blog');

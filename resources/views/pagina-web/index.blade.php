@@ -119,8 +119,6 @@
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
 						<h2 class="xs-title">Nuestros eventos</h2>
-						<!--<span class="xs-separetor dashed"></span>-->
-						<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
 					</div><!-- .xs-heading-title END -->
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('evento') }}" class="btn btn-primary">Ver todos</a>
@@ -162,7 +160,7 @@
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
-						<h2 class="xs-title">Proyectos</h2>
+						<h2 class="xs-title">Nuestros proyectos</h2>
 					</div>
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
@@ -279,7 +277,7 @@
 						del Corredor Biológico del Caribe Hondureño en los aspectos sociales, económicos y ambientales de esta importante región del país.</p>
 						
 						<blockquote>
-							Sus aportes también le benefician a usted, ya que todos somos habitantes de este planeta al cual debemos proteger, conservar y promocionar. Cómo <span>ayudar, Contáctenos.</span>
+							Sus aportes también le benefician a usted, ya que todos somos habitantes de este planeta al cual debemos proteger, conservar y promocionar.
 						</blockquote>
 					</div><!-- .xs-text-content END -->
 				</div>
@@ -449,7 +447,7 @@
 				<div class="col-md-5">
 					<div class="xs-partner-content">
 						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y civiles</h2>
+							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y privadas</h2>
 						</div>
 						<p>
 							Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 
@@ -463,9 +461,8 @@
 						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_3.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_4.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_5.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_7.png" style="width: 90%;" alt=""></a></li>
 					</ul>
 				</div>
 			</div><!-- .row end -->
