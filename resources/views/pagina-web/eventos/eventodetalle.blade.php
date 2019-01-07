@@ -25,7 +25,7 @@
 
 @section('title', 'Evento -')
 
-@section('eventodetalle')
+@section('evento_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	

@@ -64,26 +64,40 @@
 						<div class="col-lg-8">
 							<ul class="nav-menu">
 								<li><a href="{{ URL::route('index') }}">Inicio</a></li>
-								<li><a href="">Fundación</a>
+								<li><a>Fundación</a>
 									<ul class="nav-dropdown">
-										<li><a href="{{ URL::route('sobrenosotros') }}">¿Quiénes somos?</a></li>
-											{{--<li><a href="{{ URL::route('sobrenosotros') }}">Convenios</a></li>
-										<li><a href="{{ URL::route('sobrenosotros') }}">Componentes</a></li>
-											<li><a href="{{ URL::route('sobrenosotros') }}">Informes anuales</a></li>--}}
+										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
+										<!-- <li><a>Componentes</a> -->
+											<!-- <ul class="nav-dropdown" style="overflow:visible !important;"> -->
+												<!-- <li><a href="#">Centro de Documentación</a></li> -->
+												<!-- <li><a href="#">Educación Ambiental</a></li> -->
+												<!-- <li><a href="#">Observatorio de Desarrollo Sostenible</a></li> -->
+											<!-- </ul> -->
+										<!-- </li> -->
+										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
+										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
+										<!-- <li><a href="#">Convenios Interinstitucionales</a></li> -->
+										<!-- <li><a href="#">Informes Anuales</a></li> -->
 									</ul>
 								</li>
-								<li><a href="">Proyectos</a>
+								<li><a>Proyectos</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos ejecutados','-')])}}">Proyectos ejecutados</a></li>
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos en ejecucion','-')])}}">Proyectos en ejecución</a></li>
 									</ul>
 								</li>
-								{{--<li><a href="">Multimedia</a>
+								<li><a>Sistemas</a>
 									<ul class="nav-dropdown">
-										<li><a href="{{ URL::route('galeria') }}">Galería</a></li>
+										<!-- <li><a href="#">Sistema de Monitoreo Multipropósito</a></li> -->
+										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
 									</ul>
-								</li>--}}
-								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
+								</li>
+								<!-- <li><a>Multimedia</a> -->
+									<!-- <ul class="nav-dropdown"> -->
+										<!-- <li><a href="#">Videoteca</a></li> -->
+										<!-- <li><a href="{{ URL::route('galeria') }}">Galeríade fotos</a></li> -->
+									<!-- </ul> -->
+								<!-- </li> -->
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
@@ -96,17 +110,25 @@
 		</header>
 
 		<main class="xs-main">
-			<!--   CONTENIDO PROYECTOS   -->
-			@yield('proyectodetalle')
-			<!-- END CONTENIDO PROYECTOS -->
+			<!--    CONTENIDO PROYECTOS    -->
+			@yield('proyecto_detalle')
+			<!--  END CONTENIDO PROYECTOS  -->
 
-			<!--   CONTENIDO EVENTOS   -->
-			@yield('eventodetalle')
-			<!-- END CONTENIDO EVENTO-->
+			<!--     CONTENIDO EVENTOS     -->
+			@yield('evento_detalle')
+			<!--    END CONTENIDO EVENTO   -->
 
-			<!--   CONTENIDO BLOG   -->
-			@yield('blogdetalle')
-			<!-- END CONTENIDO BLOG -->
+			<!--       CONTENIDO BLOG      -->
+			@yield('blog_detalle')
+			<!--     END CONTENIDO BLOG    -->
+			
+			<!--   CONTENIDO ACTIVIDADES   -->
+			@yield('actividad_detalle')
+			<!-- END CONTENIDO ACTIVIDADES -->
+			
+			<!--     CONTENIDO SISTEMA     -->
+			@yield('sistema_detalle')
+			<!--   END CONTENIDO SISTEMA   -->
 		</main>
 
 		<!-- Footer -->
@@ -160,6 +182,7 @@
 							<li><a href="{{ URL::route('actividad') }}">Actividades</a></li>
 							<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
+							<li><a href="{{ URL::route('evento') }}">Eventos</a></li>
 							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 							<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 						</ul>
@@ -184,7 +207,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="xs-copyright-text">
-								<p>&copy; Todos los derechos reservados 2018</p>
+								<p>&copy; Todos los derechos reservados <?php echo "2018 - ".date('Y');?></p>
 							</div>
 						</div>
 						<div class="col-sm-6">

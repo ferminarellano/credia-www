@@ -2,7 +2,7 @@
 
 @section('title', 'alquiler salones -')
 
-@section('welcome_as')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -14,7 +14,7 @@
 	</section>
 @endsection
 
-@section('informacion_as')
+@section('servicios_alquiler_seccion')
 	<!-- causes list section -->
 	<section class="xs-section-padding bg-gray-2">
 		<div class="container">
@@ -44,7 +44,7 @@
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils">
 						<!-- <h3> Worldwide, <span class="color-green">20 million childrens</span> have lost both parents and live in orphanages or on the street. </h3> -->
-						<p style="margin-top:15px;">
+						<p style="margin-top:0px;">
 							El CREDIA a través de su modelo innovador de gestión del conocimiento, el cual busca la 
 							formación para la sostenibilidad, cultura y recreación, se conforma por una serie de 
 							servicios a ofertar a la población y  visitantes: actividades de formación interactivas 
@@ -87,27 +87,8 @@
 					<h1>Espacios disponibles</h1>
 					<p>Nuestros salones son tu mejor opción ven y escoge el más adecuado para tu evento o celebración.</p>
 				</div>
-				<div class="col-lg-12" class="pad-pills">
-					<ul class="nav nav-pills">
-						<li class="filter" data-filter="all">
-							<a href="#noAction">Todos</a>
-						</li>
-						<li class="filter" data-filter="1">
-							<a href="#noAction">Salón Atlántida</a>
-						</li>
-						<li class="filter" data-filter="2">
-							<a href="#noAction">Salón España</a>
-						</li>
-						<li class="filter" data-filter="3">
-							<a href="#noAction">Salón Holanda</a>
-						</li>
-						<li class="filter" data-filter="4">
-							<a href="#noAction">Salón La Ceiba</a>
-						</li>
-					</ul>
-				</div>
 				<!-- Start details for portfolio -->
-				<div id="single-project">
+				<div class="single-margin" id="single-project">
 					<div id="slidingDiv" class="toggleDiv row-fluid single-project col-lg-12">
 						<div class="span6">
 							<img src="assets/images/servicios/servicios_1.jpg" alt="project 1" />
@@ -122,15 +103,18 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Client</span>Some Client Name</div>
+										<span>Capacidad de personas:</span>30 - 40</div>
 									<div>
-										<span>Date</span>July 2013</div>
+										<span>Cantidad de sillas:</span>40</div>
 									<div>
-										<span>Skills</span>HTML5, CSS3, JavaScript</div>
+										<span>Cantidad de mesas:</span>8</div>
 									<div>
-										<span>Link</span>http://examplecomp.com</div>
+										Equipado con:</div>
 								</div>
-								<p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+								<p>
+									Equipadas con: Audio, proyector, micrófonos mobiliario cómodo, mesas rectángulas
+									o circulares, iluminación difuminada y aire acondicionado.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -149,15 +133,18 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Client</span>Some Client Name</div>
+										<span>Capacidad de personas:</span>60 - 80</div>
 									<div>
-										<span>Date</span>July 2013</div>
+										<span>Cantidad de sillas:</span>80</div>
 									<div>
-										<span>Skills</span>HTML5, CSS3, JavaScript</div>
+										<span>Cantidad de mesas:</span>12</div>
 									<div>
-										<span>Link</span>http://examplecomp.com</div>
+										Equipado con:</div>
 								</div>
-								<p>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
+								<p>
+									Equipadas con: Audio, proyector, micrófonos mobiliario cómodo, mesas rectángulas
+									o circulares, iluminación difuminada y aire acondicionado.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -176,15 +163,18 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Client</span>Some Client Name</div>
+										<span>Capacidad de personas:</span>100 - 120</div>
 									<div>
-										<span>Date</span>July 2013</div>
+										<span>Cantidad de sillas:</span>130</div>
 									<div>
-										<span>Skills</span>HTML5, CSS3, JavaScript</div>
+										<span>Cantidad de mesas:</span>18</div>
 									<div>
-										<span>Link</span>http://examplecomp.com</div>
+										Equipado con:</div>
 								</div>
-								<p>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
+								<p>
+									Equipadas con: Audio, proyector, micrófonos mobiliario cómodo, mesas rectángulas
+									o circulares, iluminación difuminada y aire acondicionado.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -203,15 +193,18 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Client</span>Some Client Name</div>
+										<span>Capacidad de personas:</span>25 - 30</div>
 									<div>
-										<span>Date</span>July 2013</div>
+										<span>Cantidad de sillas:</span>35</div>
 									<div>
-										<span>Skills</span>HTML5, CSS3, JavaScript</div>
+										<span>Cantidad de mesas:</span>6</div>
 									<div>
-										<span>Link</span>http://examplecomp.com</div>
+										Equipado con:</div>
 								</div>
-								<p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
+								<p>
+									Audio, proyector, micrófonos mobiliario cómodo, mesas rectángulas
+									o circulares, iluminación difuminada y aire acondicionado.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -226,7 +219,7 @@
 										<i class="fa fa-plus"></i>
 									</a>
 									<h3>Salón Atlántida</h3>
-									<p>Thumbnail caption...</p>
+									<!-- <p>Thumbnail caption...</p> -->
 									<div class="mask"></div>
 								</div>
 							</li>
@@ -237,7 +230,7 @@
 										<i class="fa fa-plus"></i>
 									</a>
 									<h3>Salón España</h3>
-									<p>Thumbnail caption...</p>
+									<!-- <p>Thumbnail caption...</p> -->
 									<div class="mask"></div>
 								</div>
 							</li>
@@ -248,7 +241,7 @@
 										<i class="fa fa-plus"></i>
 									</a>
 									<h3>Salón Holanda</h3>
-									<p>Thumbnail caption...</p>
+									<!-- <p>Thumbnail caption...</p> -->
 									<div class="mask"></div>
 								</div>
 							</li>
@@ -259,7 +252,7 @@
 										<i class="fa fa-plus"></i>
 									</a>
 									<h3>Salón La Ceiba</h3>
-									<p>Thumbnail caption...</p>
+									<!-- <p>Thumbnail caption...</p> -->
 									<div class="mask"></div>
 								</div>
 							</li>
@@ -271,12 +264,12 @@
 	</section>
 	<!-- Portfolio section end -->
 	
-	<section class="section-s mcb-section">
-		<div class="section_wrapper mcb-section-inner">
-			<div class="wrap mcb-wrap one  valign-top clearfix" style="padding:12px" >
-				<div class="mcb-wrap-inner">
-					<div class="column mcb-column one-third column_list">
-						<div class="list_item lists_1 clearfix">
+	<section class="datos-reservacion">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="column col-lg-4">
+						<div class="list_item lists_1">
 							<div class="list_left list_image">
 								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-02.png" class="scale-with-grid" alt="iconos-02" width="64" height="61"/>
 							</div>
@@ -287,8 +280,8 @@
 						</div>
 					</div>
 					
-					<div class="column mcb-column one-third column_list ">
-						<div class="list_item lists_1 clearfix">
+					<div class="column col-lg-4">
+						<div class="list_item lists_1">
 							<div class="list_left list_image">
 								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-04-1.png" class="scale-with-grid" alt="iconos-04" width="64" height="61"/>
 							</div>
@@ -302,8 +295,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="column mcb-column one-third column_list ">
-						<div class="list_item lists_1 clearfix">
+					<div class="column col-lg-4">
+						<div class="list_item lists_1">
 							<div class="list_left list_image">
 								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-03.png" class="scale-with-grid" alt="iconos-03" width="64" height="61"/>
 							</div>

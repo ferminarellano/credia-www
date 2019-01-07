@@ -6,7 +6,7 @@
 
 @section('title', 'FAQ -')
 
-@section('welcomefaq')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -24,7 +24,7 @@
 	</script>   
 @endpush 
 
-@section('newsletter')
+@section('faq_seccion')
 	<!-- newsletter section -->
 	<div class="xs-newsletter-section">
 		<div class="container">

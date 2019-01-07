@@ -24,7 +24,7 @@
 
 @section('title', 'Blog -')
 
-@section('blogdetalle')
+@section('blog_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	

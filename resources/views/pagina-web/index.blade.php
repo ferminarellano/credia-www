@@ -25,7 +25,7 @@
 
 @section('title','')
 
-@section('welcome_in')	
+@section('slider_index_seccion')	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
@@ -51,7 +51,7 @@
 	</section>
 @endsection
 
-@section('blog_recent')
+@section('articulos_recent')
 	@if(count($articulos) > 0)
 		<!-- blog section -->	
 		<section class="xs-section-padding" style="background-color:#F9F9F9;">
@@ -112,7 +112,7 @@
 	@endif
 @endsection
 
-@section('eventos_in')
+@section('eventos_recent')
 	@if(count($eventos) > 0)
 		<section class="xs-section-padding">
 			<div class="container">
@@ -154,7 +154,7 @@
 	@endif
 @endsection
 
-@section('proyectos_in')
+@section('proyectos_recent')
 	@if(count($proyectos) > 0)
 		<section class="bg-gray waypoint-tigger xs-section-padding">
 			<div class="container">
@@ -392,7 +392,6 @@
 @endsection
 
 @section('voluntarios_in')
-
 	<section class="-index xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">

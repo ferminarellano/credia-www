@@ -1045,7 +1045,7 @@ blockquote {
         padding-right: 0; }
 
 .xs-menus.xs_nav-landscape .nav-submenu {
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 5px 5px 5px;
   -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16);
           box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16);
   background-color: #FFFFFF; }
@@ -1062,7 +1062,8 @@ blockquote {
     border-bottom: 0px solid #000; }
 
 .xs-menus .nav-menu li .nav-submenu {
-  border-top: 0px; }
+  border-top: 0px; 
+  margin-left: -35px;}
 
 .xs_nav-landscape .nav-logo {
   display: none; }
@@ -2009,12 +2010,14 @@ blockquote {
   border-top: 1px solid #343e4e; }
 
 .xs-footer-logo {
-  width:100%;
-  height:80px;
+  width:80%;
+  height:auto;
+  margin: 0 auto;
   background-image:url('/assets/images/footer_logo.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
+  background-size: cover;
+  padding: 55px;
 }
 
 .footer-widget p {
@@ -4423,64 +4426,15 @@ h1, h2, h3 {
   /* height:600px; */
   }
   
-  /*Salones*/
-	.section-s {
-		position: relative;
-		padding-top:90px; 
-		padding-bottom:90px; 
-		background-color: #FFFFFF;
-	}
-	
-	.section_wrapper {
-		max-width: 1220px;
-		margin: 0 auto;
-		position: relative;
-	}
-	
-	.one.mcb-wrap {
-    width: 100%;
-}
-
-.clearfix {
-    zoom: 1;
-}
-
-.mcb-wrap {
-    float: left;
-    position: relative;
-    z-index: 1;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.clearfix:before, .clearfix:after {
-    content: '\0020';
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.section_wrapper:after, .container:after {
-    clear: both;
-    content: " ";
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-.one-third.column {
-    width: 31.333%;
-}
+/*Salones*/
 
 .column, .columns {
     float: left;
-    margin: 0 1% 40px;
+	padding: 0 10px 0 0;
+}
+
+.datos-reservacion {
+	margin: 60px 0px 60px 0px;
 }
 
 .list_item {

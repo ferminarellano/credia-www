@@ -16,7 +16,7 @@
 
 @section('title', 'Proyectos -')
 
-@section('welcomeproyecto')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -28,7 +28,7 @@
 	</section>
 @endsection
 
-@section('proyectosection')
+@section('proyecto_seccion')
 	<!-- popularCauses version 2 section -->
 	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">

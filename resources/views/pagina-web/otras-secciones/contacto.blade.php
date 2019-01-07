@@ -2,7 +2,7 @@
 
 @section('title', 'Contacto -')
 
-@section('welcomecontacto')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -20,8 +20,8 @@
 	</script>     
 @endpush   
 
-@section('contacto')
-	<!-- contact section -->
+@section('contacto_seccion')
+	<!-- contacto section -->
 	<section class="xs-contact-section-v2">
 		<div class="container">
 			<div class="xs-contact-container">
@@ -60,10 +60,9 @@
 							<div id="xs-map" class="xs-box-shadow-2"></div>
 						</div>
 					</div>
-				
 				</div><!-- .row end -->
 			</div><!-- .xs-contact-container END -->
 		</div><!-- .container end -->
-	</section>	<!-- End contact section -->
+	</section>	<!-- End contacto section -->
 @endsection
 

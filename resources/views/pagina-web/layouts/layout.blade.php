@@ -70,26 +70,40 @@
 						<div class="col-lg-8">
 							<ul class="nav-menu">
 								<li><a href="{{ URL::route('index') }}">Inicio</a></li>
-								<li><a href="">Fundación</a>
+								<li><a>Fundación</a>
 									<ul class="nav-dropdown">
-										<li><a href="{{ URL::route('sobrenosotros') }}">¿Quiénes somos?</a></li>
-											{{--<li><a href="{{ URL::route('sobrenosotros') }}">Convenios</a></li>
-										<li><a href="{{ URL::route('sobrenosotros') }}">Componentes</a></li>
-											<li><a href="{{ URL::route('sobrenosotros') }}">Informes anuales</a></li>--}}
+										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
+										<!-- <li><a>Componentes</a> -->
+											<!-- <ul class="nav-dropdown" style="overflow:visible !important;"> -->
+												<!-- <li><a href="#">Centro de Documentación</a></li> -->
+												<!-- <li><a href="#">Educación Ambiental</a></li> -->
+												<!-- <li><a href="#">Observatorio de Desarrollo Sostenible</a></li> -->
+											<!-- </ul> -->
+										<!-- </li> -->
+										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
+										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
+										<!-- <li><a href="#">Convenios Interinstitucionales</a></li> -->
+										<!-- <li><a href="#">Informes Anuales</a></li> -->
 									</ul>
 								</li>
-								<li><a href="">Proyectos</a>
+								<li><a>Proyectos</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos ejecutados','-')])}}">Proyectos ejecutados</a></li>
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos en ejecucion','-')])}}">Proyectos en ejecución</a></li>
 									</ul>
 								</li>
-								{{--<li><a href="">Multimedia</a>
+								<li><a>Sistemas</a>
 									<ul class="nav-dropdown">
-										<li><a href="{{ URL::route('galeria') }}">Galería</a></li>
+										<!-- <li><a href="#">Sistema de Monitoreo Multipropósito</a></li> -->
+										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
 									</ul>
-								</li>--}}
-								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
+								</li>
+								<!-- <li><a>Multimedia</a> -->
+									<!-- <ul class="nav-dropdown"> -->
+										<!-- <li><a href="#">Videoteca</a></li> -->
+										<!-- <li><a href="{{ URL::route('galeria') }}">Galeríade fotos</a></li> -->
+									<!-- </ul> -->
+								<!-- </li> -->
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
@@ -102,11 +116,11 @@
 		</header>
 	
 		<main class="xs-main">
-			<!--   CONTENIDO INDEX   -->
-			@yield('welcome_in')
-			@yield('blog_recent')
-			@yield('eventos_in')
-			@yield('proyectos_in')
+			<!--      CONTENIDO INDEX      -->
+			@yield('slider_index_seccion')
+			@yield('articulos_recent')
+			@yield('eventos_recent')
+			@yield('proyectos_recent')
 			@yield('mision_in')
 			@yield('texto_in')
 			@yield('descripcion_in')
@@ -114,81 +128,63 @@
 			@yield('actividades_in')
 			@yield('voluntarios_in')
 			@yield('patrocinadores_in')
-			<!-- END CONTENIDO INDEX -->
+			<!--    END CONTENIDO INDEX    -->
+			
+			<!-- 	      BANNERS          -->
+			@yield('banner')
+			<!-- 	    END BANNERS        -->
 
-			<!--   CONTENIDO SOBRE NOSOTROS   -->
-			@yield('welcomesn')
-			@yield('video_sn')
-			@yield('contenido_video_sn')
-			@yield('widget_sn')
-			@yield('quehacemos_sn')
-			@yield('equipo_sn')
-			<!-- END CONTENIDO SOBRE NOSOTROS -->
+			<!--    CONTENIDO FUNDACIÓN    -->
+			@yield('mision_vision_qs')
+			@yield('widget_qs')
+			@yield('objetivo_qs')
+			@yield('antecedentes_qs')
+			
+			@yield('organigrama_eo')
+			
+			@yield('equipo_et')
+			<!--  END CONTENIDO FUNDACIÓN  -->
 
-			<!--   CONTENIDO PROYECTOS   -->
-			@yield('welcomeproyecto')
-			@yield('proyectosection')
-			<!-- END CONTENIDO PROYECTOS -->
+			<!--    CONTENIDO PROYECTOS    -->
+			@yield('proyecto_seccion')
+			<!--  END CONTENIDO PROYECTOS  -->
 
-			<!--   CONTENIDO EVENTOS   -->
-			@yield('welcomeevento')
-			@yield('eventosection')
-			<!-- END CONTENIDO EVENTOS -->
+			<!--     CONTENIDO EVENTOS     -->
+			@yield('evento_seccion')
+			<!--   END CONTENIDO EVENTOS   -->
 
-			<!--   CONTENIDO EVENTO DETALLE   -->
-			@yield('welcomeedetalle')
-			<!-- END CONTENIDO EVENTO DETALLE -->
+			<!--      CONTENIDO BLOG       -->
+			@yield('blog_seccion')
+			<!--    END CONTENIDO BLOG     -->
 
-			<!--   CONTENIDO BLOG   -->
-			@yield('welcomeblog')
-			@yield('blogsection')
-			<!-- END CONTENIDO BLOG -->
+			<!--   CONTENIDO ACTIVIDADES   -->
+			@yield('actividades_seccion')
+			<!-- END CONTENIDO ACTIVIDADES -->
 
-			<!--   CONTENIDO BLOG DETALLE   -->
-			@yield('welcomebdetalle')
-			<!-- END CONTENIDO BLOG DETALLE -->
+			<!--       CONTENIDO FAQ       -->
+			@yield('faq_seccion')
+			<!--     END CONTENIDO FAQ     -->
 
-			<!--   CONTENIDO DONACION-NOW   -->
-			@yield('welcomedonacion')
-			@yield('promo')
-			<!-- END CONTENIDO DONACION-NOW -->
+			<!--    CONTENIDO SERVICIOS    -->
+			@yield('servicios_alquiler_seccion')
+			<!--  END CONTENIDO SERVICIOS  -->
 
-			<!--   CONTENIDO FAQ   -->
-			@yield('welcomefaq')
-			@yield('newsletter')
-			<!-- END CONTENIDO FAQ -->
+			<!--     CONTENIDO GALERIA     -->
+			@yield('galeria_seccion')
+			<!--   END CONTENIDO GALERIA   -->
 
-			<!--   CONTENIDO Alquiler salon   -->
-			@yield('welcome_as')
-			@yield('informacion_as')
-			<!-- END CONTENIDO Alquiler salon -->
-
-			<!--   CONTENIDO GALERIA   -->
-			@yield('welcomegaleria')
-			@yield('galeria')
-			<!-- END CONTENIDO GALERIA -->
-
-			<!--   CONTENIDO PRECIO   -->
-			@yield('welcomeprecio')
-			@yield('emergente')
-			<!-- END CONTENIDO PRECIO -->
-
-			<!--   CONTENIDO SISTEMA   -->
-			@yield('welcome_ss')
-			{{--@yield('recuadro_ss')--}}
-			@yield('sistemas_ss')
-			<!-- END CONTENIDO SISTEMA -->
+			<!--     CONTENIDO SISTEMA     -->
+			@yield('sistemas_seccion')
+			<!--   END CONTENIDO SISTEMA   -->
 
 			<!--   CONTENIDO VOLUNTARIOS   -->
-			@yield('welcome_vol')
-			@yield('team_vol')
-			@yield('voluntarios_vol')
+			@yield('voluntarios_fotos_seccion')
+			@yield('voluntarios_form_seccion')
 			<!-- END CONTENIDO VOLUNTARIOS -->
 
-			<!--   CONTENIDO CONTACTO   -->
-			@yield('welcomecontacto')
-			@yield('contacto')
-			<!-- END CONTENIDO CONTACTO -->
+			<!--     CONTENIDO CONTACTO    -->
+			@yield('contacto_seccion')
+			<!--   END CONTENIDO CONTACTO  -->
 		</main>
 	
 		<!-- Footer -->
@@ -242,6 +238,7 @@
 							<li><a href="{{ URL::route('actividad') }}">Actividades</a></li>
 							<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							<li><a href="{{ URL::route('contacto') }}">Contacto</a></li>
+							<li><a href="{{ URL::route('evento') }}">Eventos</a></li>
 							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 							<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 						</ul>
@@ -266,7 +263,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="xs-copyright-text">
-								<p>&copy; Todos los derechos reservados 2018</p>
+								<p>&copy; Todos los derechos reservados <?php echo "2018 - ".date('Y');?></p>
 							</div>
 						</div>
 						<div class="col-sm-6">
