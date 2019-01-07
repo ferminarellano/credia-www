@@ -6,6 +6,8 @@
 
 Auth::routes();
 
+Route::view('/smm','smm.index');
+
 Route::get('/home', 'IndexController@index')->name('index');
 Route::get('/','IndexController@index')->name('index');
 Route::get('conocenos', 'ConoceController@snosotros')->name('sobrenosotros');
