@@ -26,7 +26,7 @@
 
 @section('title', 'Blog -')
 
-@section('welcomeblog')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -38,8 +38,7 @@
 	</section>
 @endsection
 
-@section('blogsection')
-	
+@section('blog_seccion')
 	<!-- blog section -->
 	<section class="xs-content-section-padding">
 		<div class="container">

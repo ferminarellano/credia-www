@@ -172,12 +172,13 @@ class ProyectoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'categoria_id',
-			'label' => 'Categoría',
-			'type' => "select2",
-			'entity' => 'categoria',
-			'attribute' => "nombre",
-			'model' => "App\Models\Categoria",
+			'label' => "Categoría",
+			'type' => 'select2_multiple',
+			'name' => 'categorias',
+			'entity' => 'categorias',
+			'attribute' => 'nombre', 
+			'model' => "App\Models\Categoria", 
+			'pivot' => true,
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			], 

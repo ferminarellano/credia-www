@@ -2,7 +2,7 @@
 
 @section('title', 'Voluntarios -')
 
-@section('welcome_vol')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{ $foto }})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -14,27 +14,23 @@
 	</section>
 @endsection
 
-@section('team_vol')
-	<!-- equipo section -->
-	<section class="xs-section-padding bg-gray">
-		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-12 col-xl-12">
-					<h2 class="xs-title">Nuestros voluntarios</h2>
-					<!-- <span class="xs-separetor dashed"></span> -->
-					<h2 class="xs-line-title" style="margin-top:25px;">¿Por qué hacer voluntariado?</h2>
-					<p>
-						Cuando te conviertes en voluntario te sientes útil. Te das cuenta de que tus acciones,
-						tus tareas como voluntario tienen un objetivo y ayudan a otras personas o al medio ambiente.
-					</p>
-				</div><!-- .xs-heading-title END -->
-			</div><!-- .row end -->
-			<div class="row">
-				@if(count($voluntarios) === 0)
-					<div class="col-lg-12">
-						<h1 class="resp">ACTUALMENTE NO SE HAN INGRESADO LOS VOLUNTARIOS<h1>
-					</div>
-				@else
+@section('voluntarios_fotos_seccion')
+	@if(count($voluntarios) > 0)
+		<!-- voluntarios section -->
+		<section class="xs-section-padding bg-gray">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-md-12 col-xl-12">
+						<h2 class="xs-title">Nuestros voluntarios</h2>
+						<!-- <span class="xs-separetor dashed"></span> -->
+						<h2 class="xs-line-title" style="margin-top:25px;">¿Por qué hacer voluntariado?</h2>
+						<p>
+							Cuando te conviertes en voluntario te sientes útil. Te das cuenta de que tus acciones,
+							tus tareas como voluntario tienen un objetivo y ayudan a otras personas o al medio ambiente.
+						</p>
+					</div><!-- .xs-heading-title END -->
+				</div><!-- .row end -->
+				<div class="row">
 					@foreach($voluntarios as $voluntario)
 						<div class="col-md-6 col-lg-3">
 							<div class="xs-single-team xs-mb-50">
@@ -49,13 +45,13 @@
 							</div><!-- .xs-single-team END -->
 						</div>
 					@endforeach
-				@endif
-			</div><!-- .row END -->
-		</div><!-- .container end -->
-	</section>	<!-- End equipo section -->
+				</div><!-- .row END -->
+			</div><!-- .container end -->
+		</section>	<!-- End voluntarios section -->
+	@endif
 @endsection
 
-@section('voluntarios_vol')
+@section('voluntarios_form_seccion')
 	<section class="parallax-window xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">

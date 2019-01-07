@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Banner;
 use App\Models\Social;
+use App\Models\Banner;
 use View;
 
-class MisionController extends Controller
+class ServicioController extends Controller 
 {
-	public function mision()
-	{
-		$banner = Banner::where([['indicador','=','mision']])->get();
+    public function alquiler_salones()
+	{	
+		$banner = Banner::where([['indicador','=','servicio']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
@@ -24,6 +24,6 @@ class MisionController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('pagina-web.otras-secciones.mision')->with($data);
+		return View::make('pagina-web.otras-secciones.alquiler_salones')->with($data);
 	}
 }

@@ -16,7 +16,7 @@
 
 @section('title', 'Proyectos -')
 
-@section('welcomeproyecto')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -28,56 +28,7 @@
 	</section>
 @endsection
 
-@section('proyectosection')
-
-	<!-- Proyectos Recientes -->
-	<section class="xs-content-section-padding-proyect">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-lg-4">
-					<div class="xs-single-causes">
-						<img src="/assets/images/causes/causes_4.jpg" alt="">
-						<div class="xs-causes-footer">
-							<h2 class="color-blue-dark">Adpatación, Agua, Bosques y suelos.</h2>
-							<p style="text-align:justify;">Incrementar la resiliencia de la población más vulnerable de las zonas rurales del Corredor Biológico del Caribe Hondureño.</p>
-						</div>
-					</div><!-- .xs-single-causes END -->
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<div class="xs-single-causes">
-						<img src="/assets/images/causes/causes_5.jpg" alt="">
-						<div class="xs-causes-footer">
-							<h2 class="color-blue-dark">Educación</h2>
-							<p style="text-align:justify;">Introducir en el concepto de Cambio Climático a los niños y niñas del municipio de La Ceiba y aledaños, enriqueciendo a más de 250 escuelas y 10,000 niños.</p>
-						</div>
-					</div><!-- .xs-single-causes END -->
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<div class="xs-single-causes">
-						<img src="/assets/images/causes/causes_2.jpg" alt="">
-						<div class="xs-causes-footer">
-							<h2 class="color-blue-dark">Forestería</h2>
-							<p style="text-align:justify;">Desarrollo de las comunidades rurales, donde a partir del uso responsable y sostenible del bosque éstas generan beneficios económicos, ecológicos y sociales que contribuyen a mejorar su calidad de vida.</p>
-						</div>
-					</div><!-- .xs-single-causes END -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End causes section -->
-	
-	<div class="section secondary-section">
-		<div class="triangle"></div>
-		<div class="container centered">
-			<p class="large-text">
-				Nos caracterizamos por promover, facilitar e impartir la formación ambiental, informar 
-				sobre la adaptación al cambio climático y sostenibilidad, promocionar el turismo sostenible,
-				educativo y científico en las áreas protegidas, fomentar la recreación comunitaria y saludable
-				en entornos  naturales, contribuir en la difusión de las diversas manifestaciones culturales y 
-				artesanales de la zona.
-			</p>
-		</div>
-	</div>
-	<div class="triangle-1"></div>
+@section('proyecto_seccion')
 	<!-- popularCauses version 2 section -->
 	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">

@@ -2,7 +2,7 @@
 
 @section('title', 'Actividades -')
 
-@section('welcomedonacion')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{ $foto }})">
 	<div class="xs-black-overlay"></div>
 	<div class="container">
@@ -14,7 +14,7 @@
 </section>
 @endsection
 
-@section('promo')
+@section('actividades_seccion')
 	<!-- box promo section -->
 	<section class="xs-what-we-do-box" style="background-color:#F9F9F9;">
 		<div class="container">

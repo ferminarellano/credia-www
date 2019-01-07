@@ -27,7 +27,7 @@
 
 @section('title', 'Eventos -')
 
-@section('welcomeevento')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -39,7 +39,7 @@
 	</section>
 @endsection
 
-@section('eventosection')
+@section('evento_seccion')
 	<!-- eventos section section -->
 	<section class="xs-content-section-padding xs-content-color">
 		<div class="container">
@@ -120,38 +120,4 @@
 			@endif
 		</div><!-- .container end -->
 	</section>	<!-- End eventos section -->
-	
-	<div class="section secondary-section">
-		<div class="triangle"></div>
-	</div>
-	
-	<!-- alianzas section -->
-	<section class="bg-gray xs-partner-section" style="background-image: url('assets/images/map.png');">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="xs-partner-content">
-						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y civiles</h2>
-						</div>
-						<p>
-							Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 
-							implementación de un módelo de gestión basado en el fortalecimiento de redes y promoción del análisis estratégico de los procesos 
-							sociales, económicas y ambientales, para la toma de decisiones participativas.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-7 fundpress-pad">
-					<ul class="fundpress-partners">
-						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_3.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_4.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_5.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
-					</ul>
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End alianzas section -->
 @endsection

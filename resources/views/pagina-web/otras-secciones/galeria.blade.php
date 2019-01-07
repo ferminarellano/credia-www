@@ -1,24 +1,21 @@
 @extends('pagina-web.layouts.layout')
 
-@section('title', 'Galer√≠a -')
+@section('title', 'GalerÌa -')
 
-@section('welcomegaleria')
-	<section class="xs-banner-inner-section parallax-window" style="background-image:url('assets/images/backgrounds/blog_details_header_bg.jpg')">
+@section('banner')
+	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
 			<div class="color-white xs-inner-banner-content">
-				<h2>Photo Gallery</h2>
-				<p>Give a helping hand for poor people</p>
-				<ul class="xs-breadcumb">
-					<li class="badge badge-pill badge-primary"><a href="{{ URL::route('index') }}" class="color-white"> Inicio /</a> Galer√≠a</li>
-				</ul>
+				<h2>{{$titulo}}</h2>
+				<p>{{$contenido}}</p>
 			</div>
 		</div>
 	</section>
 @endsection
 
-@section('galeria')
-	<!-- portfolio section -->
+@section('galeria_seccion')
+	<!-- galerÌa section -->
 	<div class="xs-content-section-padding">
 		<div class="container">
 			<div class="xs-portfolio-grid">
@@ -72,5 +69,5 @@
 				</div><!-- .xs-portfolio-grid-item END -->
 			</div><!-- .xs-portfolio-grid END -->
 		</div><!-- .container end -->
-	</div>	<!-- End portfolio section -->
+	</div>	<!-- End galerÌa section -->
 @endsection

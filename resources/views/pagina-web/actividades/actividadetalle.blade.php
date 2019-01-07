@@ -2,7 +2,7 @@
 
 @section('title', 'Actividad -')
 
-@section('proyectodetalle')
+@section('actividad_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
