@@ -17,7 +17,7 @@ class EventoController extends Controller
 {
 	public function evento()
 	{
-		$banner = Banner::where([['indicador','=','eventos']])->get();
+		$banner = Banner::where([['indicador','=','evento']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
