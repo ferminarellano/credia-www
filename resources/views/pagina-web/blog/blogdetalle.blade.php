@@ -1,5 +1,7 @@
 @extends('pagina-web.layouts.layout_other')
 
+@section('title', '| Blog')
+
 <?php
 	function diccionario($palabra)
 	{	
@@ -21,8 +23,6 @@
 		return $arr[$palabra];
 	}
 ?>
-
-@section('title', 'Blog -')
 
 @section('blog_detalle')
 	

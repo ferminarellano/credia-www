@@ -1,11 +1,11 @@
 @extends('pagina-web.layouts.layout')
 
-<?php
+@section('title', '| Eventos')
 
+<?php
 	function diccionario($palabra)
 	{	
 		$arr = array();
-		
 		$arr["01"] = "Ene";
 		$arr["02"] = "Feb";
 		$arr["03"] = "Mar";
@@ -18,14 +18,10 @@
 		$arr["10"] = "Oct";
 		$arr["11"] = "Nov";
 		$arr["12"] = "Dic";
-		
 		return $arr[$palabra];
 	}
-	
 	$pagination_range = 2;
 ?>
-
-@section('title', 'Eventos -')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">

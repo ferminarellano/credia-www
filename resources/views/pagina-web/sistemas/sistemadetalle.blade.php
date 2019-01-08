@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Actividad -')
+@section('title', '| Repositorio Digital')
 
 @section('sistema_detalle')
 	

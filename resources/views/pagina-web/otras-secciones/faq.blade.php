@@ -4,7 +4,7 @@
 	$pagination_range = 2;
 ?>
 
-@section('title', 'FAQ -')
+@section('title', '| Preguntas Frecuentes')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">

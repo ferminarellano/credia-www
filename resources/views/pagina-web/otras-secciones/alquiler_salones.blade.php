@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout')
 
-@section('title', 'alquiler salones -')
+@section('title', '| Alquiler de Salones')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">

@@ -351,7 +351,7 @@
 @endsection
 
 @section('actividades_in')
-	<section class="xs-section-padding">
+	<section class="xs-section-padding" style="background-color: #F9F9F9;">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
 				<h2 class="xs-mb-0 xs-title-sv">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba <br>y comunidades vecinas del CBCH. </h2>
@@ -415,7 +415,7 @@
 								</div>
 								<div class="col-lg-6">
 									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" required>
-											<option value="">Seleccionar</option>
+										<option value="">Seleccionar</option>
 										@foreach($actividades as $actividad)
 											<option value="{{$actividad->id}}">{{$actividad->actividad}}</option>
 										@endforeach

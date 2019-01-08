@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Actividad -')
+@section('title', '| Actividad')
 
 @section('actividad_detalle')
 	

@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout')
 
-@section('title', 'quienes-somos -')
+@section('title', '| Quiénes Somos')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">

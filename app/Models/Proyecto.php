@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class Proyecto extends Model
 {
@@ -53,7 +54,7 @@ class Proyecto extends Model
         });
 		
 		self::deleting(function($obj) {
-			\Storage::disk('public_folder')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->foto);
 		});
     }
 	

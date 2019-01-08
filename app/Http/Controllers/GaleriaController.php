@@ -11,7 +11,7 @@ class GaleriaController extends Controller
 {
     public function galeria()
 	{	
-		$banner = Banner::where([['indicador','=','blog']])->get();
+		$banner = Banner::where([['indicador','=','galeria']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;

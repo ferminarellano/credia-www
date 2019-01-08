@@ -163,7 +163,7 @@ Author URI: https://xpeedstudio.com
 
 .xs_nav-portrait .nav-text+ul{margin-top:15px}
 
-.nav-dropdown{width:200px;margin:0;padding:0;display:none;position:absolute;list-style:none;z-index:98;white-space:normal}
+.nav-dropdown{width:220px;margin:0;padding:0;display:none;position:absolute;list-style:none;z-index:98;white-space:normal}
 
 .xs_nav-portrait .nav-dropdown{width:100%;position:static;left:0}
 

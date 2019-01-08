@@ -1,11 +1,12 @@
 @extends('pagina-web.layouts.layout_other')
 
+@section('title', '| Evento')
+
 <?php
 
 	function diccionario($palabra)
 	{	
 		$arr = array();
-		
 		$arr["01"] = "Ene";
 		$arr["02"] = "Feb";
 		$arr["03"] = "Mar";
@@ -18,12 +19,9 @@
 		$arr["10"] = "Oct";
 		$arr["11"] = "Nov";
 		$arr["12"] = "Dic";
-		
 		return $arr[$palabra];
 	}
 ?>
-
-@section('title', 'Evento -')
 
 @section('evento_detalle')
 	

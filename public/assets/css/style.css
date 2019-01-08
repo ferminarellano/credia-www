@@ -1046,8 +1046,8 @@ blockquote {
 
 .xs-menus.xs_nav-landscape .nav-submenu {
   border-radius: 0 5px 5px 5px;
-  -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16);
-          box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16);
+  /* -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16); */
+          /* box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.16); */
   background-color: #FFFFFF; }
   .xs-menus.xs_nav-landscape .nav-submenu li a {
     padding: 12px 20px;
@@ -1062,8 +1062,7 @@ blockquote {
     border-bottom: 0px solid #000; }
 
 .xs-menus .nav-menu li .nav-submenu {
-  border-top: 0px; 
-  margin-left: -35px;}
+  border-top: 0px;}
 
 .xs_nav-landscape .nav-logo {
   display: none; }
