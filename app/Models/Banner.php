@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Storage;
 
 class Banner extends Model
 {
     use CrudTrait;
-	// use \Venturecraft\Revisionable\RevisionableTrait;
+	use \Venturecraft\Revisionable\RevisionableTrait;
 
     protected $table = 'banners';
     protected $primaryKey = 'id';
@@ -20,17 +21,17 @@ class Banner extends Model
 	protected $visible = ['foto'];
 	protected $guard_name = 'web';
 	
-	// protected $revisionCreationsEnabled = true;
-	// protected $revisionFormattedFieldNames = array(
-		// 'indicador' => 'indicador de banners',
-		// 'estado' => 'estado de banners',
-		// 'foto' => 'fotografía de banners',
-		// 'titulo' => 'título de banners',
-		// 'descripcion' => 'descripción de banners',
-		// 'secuencia' => 'secuencia de slider de inicio',
-		// 'url' => 'url de botón de slider',
-		// 'accion' => 'accion de botón de slider',
-	// );
+	protected $revisionCreationsEnabled = true;
+	protected $revisionFormattedFieldNames = array(
+		'indicador' => 'indicador de banners',
+		'estado' => 'estado de banners',
+		'foto' => 'fotografía de banners',
+		'titulo' => 'título de banners',
+		'descripcion' => 'descripción de banners',
+		'secuencia' => 'secuencia de slider de inicio',
+		'url' => 'url de botón de slider',
+		'accion' => 'accion de botón de slider',
+	);
 
     /*------------------------------------------------------------------------
     | FUNCTIONS
@@ -46,7 +47,7 @@ class Banner extends Model
 		});
 		
 		self::deleting(function($obj) {
-			\Storage::disk('public_folder')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->foto);
 		});
 	}
 	

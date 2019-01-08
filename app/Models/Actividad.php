@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Storage;
 
 class Actividad extends Model
 {
@@ -39,7 +40,7 @@ class Actividad extends Model
 		parent::boot();
 		
 		self::deleting(function($obj) {	
-			\Storage::disk('public_folder')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->foto);
         });
 	}
 	

@@ -1,5 +1,7 @@
 @extends('pagina-web.layouts.layout')
 
+@section('title', '| Proyectos')
+
 <?php
 
 	function cant_dias($fecha11,$fecha22){
@@ -13,8 +15,6 @@
 	
 	$pagination_range = 2;
 ?>
-
-@section('title', 'Proyectos -')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">

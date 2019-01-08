@@ -12,7 +12,7 @@ class ActividadController extends Controller
 {
     public function actividad()
 	{
-		$banner = Banner::where([['indicador','=','patrocinador']])->get();
+		$banner = Banner::where([['indicador','=','actividad']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;

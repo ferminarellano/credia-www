@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>@yield('title') CREDIA</title>
+		<title>CREDIA @yield('title')</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="_token" content="{{ csrf_token() }}">
@@ -70,40 +70,40 @@
 						<div class="col-lg-8">
 							<ul class="nav-menu">
 								<li><a href="{{ URL::route('index') }}">Inicio</a></li>
-								<li><a>Fundación</a>
+								<li><a href="">Fundación</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
-										<!-- <li><a>Componentes</a> -->
-											<!-- <ul class="nav-dropdown" style="overflow:visible !important;"> -->
-												<!-- <li><a href="#">Centro de Documentación</a></li> -->
-												<!-- <li><a href="#">Educación Ambiental</a></li> -->
-												<!-- <li><a href="#">Observatorio de Desarrollo Sostenible</a></li> -->
-											<!-- </ul> -->
-										<!-- </li> -->
+											{{--<li><a href="">Componentes</a>
+											<ul class="nav-dropdown" style="position:static;margin-left: 0px;">
+												<li><a href="{{ URL::route('cendoc') }}">Centro de Documentación</a></li>
+												<li><a href="{{ URL::route('edu_ambiental') }}">Educación Ambiental</a></li>
+												<li><a href="{{ URL::route('observatorio') }}">Observatorio de Desarrollo Sostenible</a></li>
+											</ul>
+										</li>--}}
 										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
 										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
-										<!-- <li><a href="#">Convenios Interinstitucionales</a></li> -->
-										<!-- <li><a href="#">Informes Anuales</a></li> -->
+										{{--<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
+										<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 									</ul>
 								</li>
-								<li><a>Proyectos</a>
+								<li><a href="">Proyectos</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos ejecutados','-')])}}">Proyectos ejecutados</a></li>
 										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos en ejecucion','-')])}}">Proyectos en ejecución</a></li>
 									</ul>
 								</li>
-								<li><a>Sistemas</a>
+								<li><a href="">Sistemas</a>
 									<ul class="nav-dropdown">
 										<!-- <li><a href="#">Sistema de Monitoreo Multipropósito</a></li> -->
 										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
 									</ul>
 								</li>
-								<!-- <li><a>Multimedia</a> -->
-									<!-- <ul class="nav-dropdown"> -->
+								{{--<li><a href="">Multimedia</a>
+									<ul class="nav-dropdown">
 										<!-- <li><a href="#">Videoteca</a></li> -->
-										<!-- <li><a href="{{ URL::route('galeria') }}">Galeríade fotos</a></li> -->
-									<!-- </ul> -->
-								<!-- </li> -->
+										<li><a href="{{ URL::route('galeria') }}">Galería de fotos</a></li>
+									</ul>
+								</li>--}}
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
@@ -122,9 +122,9 @@
 			@yield('eventos_recent')
 			@yield('proyectos_recent')
 			@yield('mision_in')
-			@yield('texto_in')
 			@yield('descripcion_in')
 			@yield('unete_in')
+			@yield('texto_in')
 			@yield('actividades_in')
 			@yield('voluntarios_in')
 			@yield('patrocinadores_in')

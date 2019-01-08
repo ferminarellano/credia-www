@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-
+use Illuminate\Support\Facades\Storage;
 use File;
 
 class Voluntario extends Model
@@ -27,7 +27,7 @@ class Voluntario extends Model
 		'nombre' => 'nombre',
 		'correo' => 'correo',
 		'archivo' => 'archivo',
-		'descripcion' => 'descripciÃ³n',
+		'descripcion' => 'descripción',
 	);
 
     /*------------------------------------------------------------------------
@@ -37,6 +37,11 @@ class Voluntario extends Model
 	public static function boot()
 	{
 		parent::boot();
+		
+		self::deleting(function($model) {
+			// Storage::disk('public')->delete($obj->archivo);
+			// File::delete($model->archivo);
+		});
 	}
 	
     /*------------------------------------------------------------------------

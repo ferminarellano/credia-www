@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Proyecto -')
+@section('title', '| Proyecto')
 
 @section('proyecto_detalle')
 	

@@ -1,6 +1,6 @@
 @extends('pagina-web.layouts.layout')
 
-@section('title', 'Sistemas -')
+@section('title', '| Sistemas')
 
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
@@ -16,7 +16,6 @@
 
 @section('sistemas_seccion')
 	<div class="section secondary-section">
-		<div class="triangle"></div>
 		<div class="container centered">
 			<p class="large-text">
 				El <span>CREDIA</span> cuenta con diferentes sistemas de información que comprenden un conjunto de elementos
@@ -26,7 +25,6 @@
 		</div>
 	</div>
 	@if(count($sistemas) > 0)
-		<div class="triangle-1"></div>
 		@foreach($sistemas as $sistema)
 			<!-- sistemas section -->
 			<section class="xs-section-padding">

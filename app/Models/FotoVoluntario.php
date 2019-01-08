@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Storage;
 
 class FotoVoluntario extends Model
 {
@@ -24,7 +25,7 @@ class FotoVoluntario extends Model
 	protected $revisionFormattedFieldNames = array(
 		'cargo' => 'cargo',
 		'nombre' => 'nombre',
-		'foto' => 'fotografÃ­a',
+		'foto' => 'fotografía',
 	);
 
     /*------------------------------------------------------------------------
@@ -36,7 +37,7 @@ class FotoVoluntario extends Model
         parent::boot();
 		
 		self::deleting(function($obj) {
-           \Storage::disk('public_folder')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->foto);
         });
 		
 	}
