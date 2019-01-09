@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Voluntario;
-use App\Models\Actividad;
+use App\Models\ActividadVoluntario;
 use App\Models\Social;
 use App\Models\FotoVoluntario;
 use View;
@@ -21,7 +21,7 @@ class VoluntarioController extends Controller
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
-		$actividades = Actividad::where('estado','=','1')->get();
+		$actividades = ActividadVoluntario::all();
 		$redes = Social::all();
 		
 		$voluntarios = FotoVoluntario::all();
@@ -52,7 +52,7 @@ class VoluntarioController extends Controller
 		
         $voluntario->archivo =  Storage::url('uploads/curriculums/'.$file_name);
         $voluntario->descripcion = $request->descripcion;
-        $voluntario->actividad_id = $request->actividad_id;
+        $voluntario->actividad_voluntario_id = $request->actividad_id;
 					
 		$voluntario->save();
 					

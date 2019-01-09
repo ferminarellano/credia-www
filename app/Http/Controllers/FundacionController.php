@@ -44,7 +44,7 @@ class FundacionController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('pagina-web.componentes.componente_observatorio')->with($data);
+		return View::make('pagina-web.componentes.observatorio.observatorio')->with($data);
 	}
 	
 	public function cendoc()
@@ -62,7 +62,7 @@ class FundacionController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('pagina-web.componentes.componente_cendoc')->with($data);
+		return View::make('pagina-web.componentes.cendoc.cendoc')->with($data);
 	}
 	
 	public function educacion_ambiental()
@@ -80,7 +80,7 @@ class FundacionController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('pagina-web.componentes.componente_edu_ambiental')->with($data);
+		return View::make('pagina-web.componentes.educacion.educacion_ambiental')->with($data);
 	}
 	
 	public function estructura_organizativa()

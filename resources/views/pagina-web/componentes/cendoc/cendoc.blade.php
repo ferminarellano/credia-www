@@ -44,4 +44,27 @@
 			</div><!-- .row end -->
 		</div><!-- .container end -->
 	</section>	<!-- Antecedentes section -->
+	
+	<!-- actividades section -->
+	{{--@if(count($actividades) > 0)--}}
+		<section class="xs-content-section-padding xs-service-promo-section" style="background-color:#FFFFFF;">
+			<div class="container">
+				<div class="row">
+				{{--@foreach($actividades as $actividad)--}}
+						<div class="col-lg-6 col-md-6" style="margin-bottom:30px;">
+							<div class="media xs-single-media xs-service-promo-p">
+								<!-- <span class="icon-donation_2 d-flex color-light-red"></span> -->
+								{{--<span class="xs-service-promo-p" style="background: url({{ $actividad->foto }}) no-repeat;"></span>
+								<div class="media-body">
+									<h5 style="text-align:center;">{{ $actividad->titulo }}</h5>
+									<p style="text-align:justify;">{{ $actividad->descripcion }}</p>
+									<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}"><i class="fa fa-play"></i> Saber más</a>
+								</div>--}}
+							</div><!-- .xs-single-media END -->
+						</div>
+						{{--@endforeach--}}
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>	<!-- end service promo section -->
+		{{--@endif--}}
 @endsection
