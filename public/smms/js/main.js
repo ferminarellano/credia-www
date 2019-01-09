@@ -1,3 +1,10 @@
+$('#indicador').select2({
+    theme: 'bootstrap4',
+	placeholder: "Seleccione un indicador..",
+	minimumInputLength: 3,
+    allowClear: true
+});
+
 // Themes begin
 
 			am4core.useTheme(am4themes_animated);
