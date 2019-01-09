@@ -15,7 +15,7 @@ class Actividad extends Model
 	protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['actividad','estado','foto','titulo','descripcion','contenido'];
+    protected $fillable = ['titulo','descripcion','contenido','estado','foto'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['foto'];
@@ -23,7 +23,6 @@ class Actividad extends Model
 	
 	protected $revisionCreationsEnabled = true;
 	protected $revisionFormattedFieldNames = array(
-		'actividad' => 'nombre de actividad',
 		'estado' => 'estado de actividad',
 		'foto' => 'fotografía de actividad',
 		'titulo' => 'título de actividad',
@@ -47,10 +46,6 @@ class Actividad extends Model
     /*------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
-	
-	public function voluntarios(){
-		return $this-> hasMany('App\Models\Voluntario');
-	}
 	
     /*------------------------------------------------------------------------
     | SCOPES

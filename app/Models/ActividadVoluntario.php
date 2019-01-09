@@ -4,33 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-use Illuminate\Support\Facades\Storage;
-use File;
 
-class Voluntario extends Model
+class ActividadVoluntario extends Model
 {
     use CrudTrait;
 	use \Venturecraft\Revisionable\RevisionableTrait;
 
-    protected $table = 'voluntarios';
+    protected $table = 'actividad_voluntarios';
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['actividad_voluntario_id','nombre','correo','archivo','descripcion'];
+    protected $fillable = ['actividad'];
     // protected $hidden = [];
-    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
-	protected $visible = ['archivo'];
+    // protected $dates = [];
 	protected $guard_name = 'web';
 	
 	protected $revisionCreationsEnabled = true;
 	protected $revisionFormattedFieldNames = array(
-		'nombre' => 'nombre',
-		'correo' => 'correo',
-		'archivo' => 'archivo',
-		'descripcion' => 'descripción',
+		'actividad' => 'nombre de actividad',
 	);
-
-    /*------------------------------------------------------------------------
+	
+	/*------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
 	
@@ -38,19 +32,17 @@ class Voluntario extends Model
 	{
 		parent::boot();
 		
-		self::deleting(function($model) {
-			// Storage::disk('public')->delete($obj->archivo);
-			// File::delete($model->archivo);
-		});
+		self::deleting(function($obj) {	
+			Storage::disk('public')->delete($obj->foto);
+        });
 	}
 	
     /*------------------------------------------------------------------------
     | RELATIONS
     |------------------------------------------------------------------------*/
-
-	public function actividad_voluntario()
-	{
-		return $this->belongsTo('App\Models\ActividadVoluntario');
+	
+	public function voluntarios(){
+		return $this-> hasMany('App\Models\Voluntario');
 	}
 	
     /*------------------------------------------------------------------------

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Voluntario;
-use App\Models\Actividad;
+use App\Models\ActividadVoluntario;
 use App\Models\Evento;
 use App\Models\Proyecto;
 use App\Models\Categoria;
@@ -21,7 +21,7 @@ class IndexController extends Controller
 	public function index()
 	{
 		$sliders = Banner::where([['indicador','=','inicio']])->orderBy('secuencia', 'asc')->get();
-		$actividades = Actividad::where('estado','=','1')->get();
+		$actividades = ActividadVoluntario::all();
 		$eventos = Evento::orderBy('id','desc')->take(3)->get();
 		$redes = Social::all();
 		$proyectos = Proyecto::orderBy('id','desc')->take(3)->get();
@@ -53,7 +53,7 @@ class IndexController extends Controller
 		
         $voluntario->archivo =  Storage::url('uploads/curriculums/'.$file_name);
         $voluntario->descripcion = $request->descripcion;
-        $voluntario->actividad_id = $request->actividad_id;
+        $voluntario->actividad_voluntario_id = $request->actividad_id;
 					
 		$voluntario->save();
 					

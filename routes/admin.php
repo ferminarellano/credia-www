@@ -4,6 +4,7 @@
 	
 	CRUD::resource('banner', 'BannerCrudController');
 	CRUD::resource('voluntario', 'VoluntarioCrudController');
+	CRUD::resource('actividadvoluntario', 'ActividadVoluntarioCrudController');
 	CRUD::resource('actividad', 'ActividadCrudController');
 	CRUD::resource('contacto', 'ContactoCrudController');
 	CRUD::resource('social', 'SocialCrudController');
