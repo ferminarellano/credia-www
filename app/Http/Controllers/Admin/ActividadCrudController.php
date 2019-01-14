@@ -24,9 +24,17 @@ class ActividadCrudController extends CrudController
 		$this->crud->with('revisionHistory');
 		$this->crud->genero = "este";
 		
-        $this->crud->addColumn([
-			'name' => 'actividad',
-			'label' => 'Nombre de actividad',
+		$this->crud->addColumn([
+			'name' => 'titulo',
+			'label' => 'Actividad',
+		]);
+		
+		$this->crud->addColumn([
+			'name' => 'indicador',
+			'label' => 'Componente',
+			'type' => 'select_from_array',
+			'options' => ['cendoc' => 'Centro de Documantación', 'edu_ambiental' => 'Educación Ambiental', 
+						  'ods' => 'Observatorio de Desarrollo Sostenible'],
 		]);
 		
 		$this->crud->addColumn([
@@ -49,24 +57,20 @@ class ActividadCrudController extends CrudController
 						0 => "Borrador",
 						1 => "Publicado",
 					],
+					'tab' => 'Datos generales',	
 		],'update');
 		
 		$this->crud->addField([
-			'name' => 'actividad',
-			'label' => "Nombre de actividad",
-			'type' => 'text',
-			'attributes' => [
-				'placeholder' => "Ingrese el nombre de la actividad *",
-			],
+			'name' => 'indicador',
+			'label' => "Componente",
+			'type' => 'select2_from_array',
+			'options' => ['cendoc' => 'Centro de Documantación', 'edu_ambiental' => 'Educación Ambiental', 
+						  'ods' => 'Observatorio de Desarrollo Sostenible'],
+			'allows_null' => true,
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
-		]);
-		
-		$this->crud->addField([
-			'name' => 'separator0',
-			'type' => 'custom_html',
-			'value' => '<hr>',
+			],
+			'tab' => 'Datos generales',	
 		]);
 		
 		$this->crud->addField([
@@ -78,7 +82,8 @@ class ActividadCrudController extends CrudController
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			], 
+			],
+			'tab' => 'Datos generales',	
 		]);
 		
 		$this->crud->addField([
@@ -93,12 +98,14 @@ class ActividadCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			], 
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'contenido',
 			'label' => "Contenido de la actividad",
 			'type' => 'summernote',
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -106,6 +113,15 @@ class ActividadCrudController extends CrudController
 			'label' => "Fotografía",
 			'type' => 'upload',
 			'upload' => true,
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'fotos',
+			'label' => "Fotografías",
+			'type' => 'upload_multiple',
+			'upload' => true,
+			'tab' => 'Galería',
 		]);
     }
 

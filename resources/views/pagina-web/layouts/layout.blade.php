@@ -73,13 +73,13 @@
 								<li><a href="">Fundación</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
-											{{--<li><a href="">Componentes</a>
+										<li><a href="">Componentes</a>
 											<ul class="nav-dropdown" style="position:static;margin-left: 0px;">
 												<li><a href="{{ URL::route('cendoc') }}">Centro de Documentación</a></li>
 												<li><a href="{{ URL::route('edu_ambiental') }}">Educación Ambiental</a></li>
 												<li><a href="{{ URL::route('observatorio') }}">Observatorio de Desarrollo Sostenible</a></li>
 											</ul>
-										</li>--}}
+										</li>
 										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
 										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
 										{{--<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
@@ -139,9 +139,12 @@
 			@yield('widget_qs')
 			@yield('objetivo_qs')
 			@yield('antecedentes_qs')
-			
+				<!--	 COMPONENTES	-->	
+				@yield('cendoc_section')
+				@yield('educacion_section')
+				@yield('observatorio_section')
+				<!--   END COMPONENTES  -->	
 			@yield('organigrama_eo')
-			
 			@yield('equipo_et')
 			<!--  END CONTENIDO FUNDACIÓN  -->
 
