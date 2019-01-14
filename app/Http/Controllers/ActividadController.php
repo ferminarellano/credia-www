@@ -18,7 +18,7 @@ class ActividadController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$actividades = Actividad::where('estado','=','1')->paginate(4);
+		$actividades = Actividad::where([['indicador','=','edu_ambiental'],['estado','=','1']])->paginate(4);
 		
 		$data = array(
 			"foto" => $foto,

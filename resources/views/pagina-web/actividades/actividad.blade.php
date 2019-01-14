@@ -21,9 +21,9 @@
 @section('actividades_seccion')
 	<!-- box links section -->
 	<section class="xs-what-we-do-box">
-		<div class="container box-margin">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-lg-3 xs-box-service">
+				<div class="col-md-6 col-lg-4 xs-box-service">
 					<a href="{{ URL::route('cendoc') }}">
 						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
 							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/cendoc_w.png')"></div>
@@ -31,7 +31,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-6 col-lg-3 xs-box-service">
+				<div class="col-md-6 col-lg-4 xs-box-service">
 					<a href="{{ URL::route('edu_ambiental') }}">
 						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
 							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/educacion_w.png')"></div>
@@ -39,7 +39,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-6 col-lg-3 xs-box-service">
+				<div class="col-md-6 col-lg-4 xs-box-service">
 					<a href="{{ URL::route('observatorio') }}">
 						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
 							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/observatorio_w.png')"></div>
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 col-lg-7 row">
+				<div class="col-md-12 col-lg-7 row xs-margin" id="xs-mar">
 					@foreach($actividades as $actividad)
 						<div class="col-md-6 col-sm-6 xs-actividad-pad">
 							<div class="media xs-single-media xs-service-promo-p">
