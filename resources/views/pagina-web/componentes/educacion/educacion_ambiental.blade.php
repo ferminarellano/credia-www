@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<h3>Educación Ambiental </h3>
 						<p>
 							es el encargado de implementar el Programa permanente de educación ambiental del CREDIA, 
@@ -49,7 +49,7 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<p style="margin-top:50px;">
 							Desarrolla proyectos educativos en materia ambiental dirigidos a diferentes públicos meta, entre ellos, 
 							centros de educación pre-escolar, primaria, secundaria y universitaria, con fines educativos, 

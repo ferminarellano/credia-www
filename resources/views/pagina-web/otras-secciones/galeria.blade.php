@@ -15,6 +15,17 @@
 @endsection
 
 @section('galeria_seccion')
+<!-- popularCauses version 2 section -->
+	<section class="waypoint-tigger xs-section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="resp">NO HAY FOTOGRAF&Iacute;AS DISPONIBLES<h1>
+				</div>
+			</div>
+		</div>
+	</section><!-- End popularCauses version 2 section -->
+	
 	<!-- galería section -->
 	<div class="xs-content-section-padding">
 		<div class="container">
