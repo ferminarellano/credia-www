@@ -67,7 +67,7 @@
 	<section class="parallax-window xs-content-section-padding" style="background-image: url('assets/images/backgrounds/parralax_3.jpg')">
 		<div class="container-fulid">
 			<div class="xs-feature-content-v2">
-				<h2 class="color-white">Actividad y Productos de <span> Educación Ambiental</span>.</h2>
+				<h2 class="color-white"><span>Actividades y Productos</span></h2>
 			</div>
 		</div>
 	</section><!-- End titulo section -->

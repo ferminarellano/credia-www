@@ -29,7 +29,7 @@
 									@foreach($actividades as $actividad)
 											<li>
 												<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}">
-													<span class="first">{{ $actividad->actividad }}</span>
+													<span class="first">{{ $actividad->titulo }}</span>
 												</a>
 											</li>
 									@endforeach
