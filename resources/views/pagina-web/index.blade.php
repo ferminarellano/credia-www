@@ -210,13 +210,12 @@
 						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
 						en el Corredor Biológico del Caribe Hondureño.</p>
 						
-						<h5>Nuestros componentes estratégicos actuales:</h5>
+						<h5>Nuestros ejes estratégicos actuales:</h5>
 						
 						<ul class="xs-unorder-list arrow">
-							<li>Adaptación, Agua, Bosques y Suelos.</li>
-							<li>Cambio Climatico y Gestión Integral de Riesgos.</li>
-							<li>Interpretación y Educación Ambiental.</li>
-							<li>Observatorio de Desarrollo Sostenible (ODS).</li>
+							<li>Ecoturismo, Cultura y Recreación.</li>
+							<li>Desarrollo y Sostenibilidad Institucional.</li>
+							<li>Gestión del Conocimiento.</li>
 						</ul>
 						
 						<ul class="xs-funfact-list">
