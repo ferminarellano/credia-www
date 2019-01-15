@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<h3>El Centro de Documentación</h3>
 						<p>
 							Forma parte del modelo de gestión de conocimiento del Centro Regional de Documentación 
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<p style="margin-top:0px;">
 							Constituye la base operativa del modelo, en la cual se integran una gama de socios estratégicos que ejercen
 							acción sobre los elementos biológicos y socioambientales, como hacedores directos en la generación y 
@@ -59,7 +59,7 @@
 			</div>
 			<div class="row" style="margin-top:40px;">
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<p>
 							Así mismo constituye una de las plataformas virtuales innovadoras gracias al uso de sistemas de información
 							libre que permite la divulgación de documentos generados y compartidos por organizaciones vinculadas a este Centro.

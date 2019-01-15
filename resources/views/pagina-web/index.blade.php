@@ -69,7 +69,6 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="xs-box-shadow xs-single-journal xs-mb-30">
 								<div class="entry-thumbnail" style="background-image: url(/{{ $articulo->foto }});">
-								{{--<img class="img-height" src="/{{$articulo->foto}}">--}}
 									<div class="post-author">
 										<span class="xs-round-avatar">
 											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->correo))).'?s=50&d=monsterid' }}">
@@ -446,7 +445,7 @@
 				<div class="col-md-5">
 					<div class="xs-partner-content">
 						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y privadas</h2>
+							<h2 class="xs-mb-0 xs-title">El <span>CREDIA </span>está conformada por destacadas instituciones públicas y privadas</h2>
 						</div>
 						<p>
 							Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 

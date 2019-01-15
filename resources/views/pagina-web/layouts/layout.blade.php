@@ -82,8 +82,8 @@
 										</li>
 										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
 										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
-										{{--<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
-										<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
+										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
+										<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>
 									</ul>
 								</li>
 								<li><a href="">Proyectos</a>
@@ -98,12 +98,12 @@
 										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
 									</ul>
 								</li>
-								{{--<li><a href="">Multimedia</a>
+								<li><a href="">Multimedia</a>
 									<ul class="nav-dropdown">
 										<!-- <li><a href="#">Videoteca</a></li> -->
 										<li><a href="{{ URL::route('galeria') }}">Galería de fotos</a></li>
 									</ul>
-								</li>--}}
+								</li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
@@ -125,7 +125,7 @@
 			@yield('descripcion_in')
 			@yield('unete_in')
 			@yield('texto_in')
-			@yield('actividades_in')
+			{{--@yield('actividades_in')--}}
 			@yield('voluntarios_in')
 			@yield('patrocinadores_in')
 			<!--    END CONTENIDO INDEX    -->
@@ -191,52 +191,38 @@
 		</main>
 	
 		<!-- Footer -->
-		<footer class="xs-footer-section page-footer font-small blue-grey lighten-5">
+		<footer class="xs-footer-section">
 			<div style="background-color:rgba(0, 0, 0, 0.1)">
 				<div class="container">
-					<!-- Grid row-->
-					<div class="row py-2 d-flex align-items-center">
-						<!-- Grid column -->
-						<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-							<h6 class="mb-0"></h6>
-						</div><!-- Grid column -->
-						<!-- Grid column -->
-						<div class="col-md-6 col-lg-7 text-center text-md-right">
+					<div class="row py-2 d-flex">
+						<div class="col-md-12 text-md-right">
 							<ul class="xs-social-list-v2">
 								@foreach($redes as $red)
-									<li><a href="{{ $red->url }}" target="_blank" class="color-{{ $red->red }}"><i class="fa fa-{{ $red->red }}"></i></a></li>
+									<li><a href="{{ $red->url }}" target="_blank" class="color-{{ $red->red }} zoom-in"><i class="fa fa-{{ $red->red }}"></i></a></li>
 								@endforeach
-							</ul><!-- .xs-social-list END -->
-						</div><!-- Grid column -->
-					</div><!-- Grid row-->
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- Footer Links -->
-			<div class="container text-center text-md-left mt-5">
-			  <!-- Grid row -->
-				<div class="row mt-3 dark-grey-text">
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-4 col-xl-3 mb-4 footer-widget">
-						<!-- Content -->
+			<div class="container mt-5">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 footer-widget">
 						<div class="xs-footer-logo"></div>
 						<p>
 							Nuestra misión es promover el desarrollo sostenible por medio de la gestión del conocimiento, logrando impulsar la educación ambiental.
 						</p>
-					</div><!-- Grid column -->
-					<!-- Grid column -->
-					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase font-weight-bold">servicios</h6>
-						<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;background-color: #565656;">
+					</div>
+					<div class="col-lg-2 col-md-6 footer-widget">
+						<h6 class="text-uppercase widget-title">servicios</h6>
+						<hr class="mt-1 mb-3 mx-line">
 						<ul class="xs-footer-list">
 							<li><a href="{{ URL::route('alquiler_s') }}">Alquiler de salones</a></li>
 						</ul>
-					</div><!-- Grid column -->
-					<!-- Grid column -->
-					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase font-weight-bold">¡Conocenos más!</h6>
-						<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;background-color: #565656;">
+					</div>
+					<div class="col-lg-3 col-md-6 footer-widget">
+						<h6 class="text-uppercase widget-title">¡Conocenos más!</h6>
+						<hr class="mt-1 mb-3 mx-line">
 						<ul class="xs-footer-list">
 							<li><a href="{{ URL::route('actividad') }}">Actividades</a></li>
 							<li><a href="{{ URL::route('blog') }}">Blog</a></li>
@@ -245,44 +231,41 @@
 							<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 							<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 						</ul>
-					</div><!-- Grid column -->
-					<!-- Grid column -->
-					<div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
-						<!-- Links -->
-						<h6 class="text-uppercase font-weight-bold">Contáctenos</h6>
-						<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;background-color: #565656;">
-						<ul class="xs-info-list">
-							<li><i class="fa fa-map-marker" aria-hidden="true"></i>Boulevard Cangrejal, Colonia El Naranjal,  La Ceiba, Atlántida, Honduras.</li>
-							<li><i class="fa fa-phone"></i>+504 2442-2610</li>
-							<li><i class="fa fa-envelope-o"></i><a href="mailto:administracionyeventos@credia.hn">info@credia.hn</a></li>
-						</ul><!-- .xs-list-with-icon END -->
-					</div><!-- Grid column -->
-				</div><!-- Grid row -->
-			</div><!-- Footer Links -->
-			
-			<!-- Copyright -->
-			<div class="footer-copyright text-black-50 py-3">
-				<div class="xs-copyright">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="xs-copyright-text">
-								<p>&copy; Todos los derechos reservados <?php echo "2018 - ".date('Y');?></p>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<nav class="xs-footer-menu">
-								<ul>
-									<li><a href="{{ URL::route('faq') }}">Preguntas frecuentes</a></li>
-								</ul>
-							</nav>
-						</div>
 					</div>
-					
-					<div class="xs-back-to-top-wraper">
-						<a href="#"  onclick="topFunction()" id="myBtn"><i class="fa fa-angle-up"></i></a>
+					<div class="col-lg-4 col-md-6 footer-widget">
+						<h6 class="text-uppercase widget-title">Contáctenos</h6>
+						<hr class="mt-1 mb-3 mx-line">
+						<ul class="xs-info-list">
+							<li><i class="fa fa-map-marker"></i><a>Boulevard Cangrejal, Colonia El Naranjal,  La Ceiba, Atlántida, Honduras.</a></li>
+							<li><i class="fa fa-phone"></i>+504 2442-2610</li>
+							<li><i class="fa fa-envelope-o"></i><a href="mailto:info@credia.hn">info@credia.hn</a></li>
+						</ul>
+					</div>
+					<div class="col-md-12">
+						<nav class="xs-footer-menu">
+							<ul>
+								<li><a href="{{ URL::route('faq') }}">Preguntas frecuentes</a></li>
+							</ul>
+						</nav>
 					</div>
 				</div>
-			</div><!-- Copyright -->
+			</div>
+
+			<!-- Copyright -->
+			<div class="" style="background-color:rgba(0, 0, 0, 0.1)">
+				<div class="container xs-copyright py-3">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="xs-copyright-text">
+								<p>&copy; Todos los derechos reservados <?php echo date('Y');?> - Centro Regional de Documentación e Interpretación Ambiental</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- Copyright -->
+			</div>
+			<div class="xs-back-to-top-wraper">
+				<a href="#"  onclick="topFunction()" id="myBtn"><i class="fa fa-angle-up"></i></a>
+			</div>
 		</footer><!-- Footer -->
 		
 		<script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>

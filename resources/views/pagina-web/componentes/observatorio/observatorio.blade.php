@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<h3>Conceptualización del ODS</h3>
 						<p>
 							Se sustenta en la experiencia de observatorios existentes en Iberoamérica, especificamente
@@ -45,7 +45,7 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<p style="margin-top:0px;">
 							En este sentido, el ODS es considerado una dependencia del CREDIA que monitorea e incide en el proceso 
 							de desarrollo sostenible, mediante la generación y difusión de información; on autonomía en su 
@@ -96,18 +96,18 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
-						<h3> Áreas de trabajo del<span class="color-green"> ODS</span></h3>
+					<div class="xs-fature-causes-deatils-comp">
+						<h3> Áreas de trabajo del<span class="color-blue-light-credia"> ODS</span></h3>
 						<p>
 							La investigación, Capacitación y la Comunicación y Difusión de Información, para lo cual constará de tres unidades: 
 							Sistemas de Información Geográfica, Centro de Gestión Documental e Informática.
 						</p>
-						<h5><span class="color-green">Las funciones identificadas para el ODS son:</span></h5>
+						<h5><span class="color-blue-light-credia">Las funciones identificadas para el ODS son:</span></h5>
 						<ul class="xs-unorder-list">
-							<li><i class="fa fa-circle color-light-green"></i>Apoyar la integración de los datos provenientes del sistema de monitoreo biológico de las áreas protegidas..</li>
-							<li><i class="fa fa-circle color-light-green"></i>Desarrollo de capacidades de conocimiento.</li>
-							<li><i class="fa fa-circle color-light-green"></i>Información sobre los procesos de sostenibilidad.</li>
-							<li><i class="fa fa-circle color-light-green"></i>Promover y divulgar resultados de la investigación científica.</li>
+							<li><i class="fa fa-circle color-blue-light-credia"></i><a>Apoyar la integración de los datos provenientes del sistema de monitoreo biológico de las áreas protegidas.</a></li>
+							<li><i class="fa fa-circle color-blue-light-credia"></i><a>Desarrollo de capacidades de conocimiento.</a></li>
+							<li><i class="fa fa-circle color-blue-light-credia"></i><a>Información sobre los procesos de sostenibilidad.</a></li>
+							<li><i class="fa fa-circle color-blue-light-credia"></i><a>Promover y divulgar resultados de la investigación científica.</a></li>
 						</ul>
 					</div>
 				</div>
