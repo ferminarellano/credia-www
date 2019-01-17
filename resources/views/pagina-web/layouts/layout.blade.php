@@ -144,6 +144,7 @@
 				@yield('educacion_section')
 				@yield('observatorio_section')
 				<!--   END COMPONENTES  -->	
+			@yield('estructura_section')
 			@yield('organigrama_eo')
 			@yield('equipo_et')
 			<!--  END CONTENIDO FUNDACIÓN  -->
