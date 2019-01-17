@@ -205,7 +205,7 @@
 							<h3 class="xs-title big" data-title="Misión">Misión</h3>
 						</div>
 						
-						<p>Promover el desarrollo sostenible mediante la gestión del conocimiento, 
+						<p style="text-align:justify;">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
 						facilitando la toma de decisiones para la planificación ordenada del territorio, impulsando 
 						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
 						en el Corredor Biológico del Caribe Hondureño.</p>
