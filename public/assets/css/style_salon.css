@@ -182,7 +182,12 @@
 /*
 2.3 Thumbnails - Predefined bootstrap's thumbnail class.
 **********/
- .thumbnail {
+
+.thumbnails{
+	margin: 0 auto;	
+}
+
+.thumbnail {
     width:100%;
     height:100%;
     padding:0;
@@ -306,11 +311,21 @@
 .single-margin{
 	margin-top: 30px;
 }
-.single-project img {
+.single-img {
+	float:left;
     width:100%;
+	background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 330px;
+}
+.single-info{
+	float: left;
+    min-height: 330px;
+    max-height: 470px;
 }
 .project-description {
-    padding-right:20px;
+    padding: 20px;
 }
 .project-description p {
     padding-left:0;
@@ -318,8 +333,6 @@
     text-align: justify;
 }
 .project-title {
-    margin-top:15px;
-    margin-bottom:15px;
     border-bottom: 2px solid #6acaf0;
 }
 .project-title h3 {
@@ -358,6 +371,8 @@
 #portfolio-grid .mix {
     opacity: 0;
     display: none;
+	float: left;
+    padding: 5px;
 }
 
 /*

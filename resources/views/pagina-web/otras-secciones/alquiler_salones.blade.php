@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<h3>Instalaciones y <span class="color-green">servicios</span></h3>
 						<p>
 							La Fundación CREDIA ofrece espacios disponibles para el desarrollo de eventos técnicos y sociales. Bajo este propósito 
@@ -42,7 +42,7 @@
 					</div><!-- .xs-causes-images END -->
 				</div>
 				<div class="col-lg-8">
-					<div class="xs-fature-causes-deatils">
+					<div class="xs-fature-causes-deatils-comp">
 						<!-- <h3> Worldwide, <span class="color-green">20 million childrens</span> have lost both parents and live in orphanages or on the street. </h3> -->
 						<p style="margin-top:0px;">
 							El CREDIA a través de su modelo innovador de gestión del conocimiento, el cual busca la 
@@ -62,7 +62,7 @@
 	</section>	<!-- End causes list section -->
 	
 	<!-- Nuestra fundación section -->
-	<section class="xs-call-to-action-section-nf" style="background-color: #011b58;">
+	<section class="xs-call-to-action-section-nf parallax-window" style="background-image: url('assets/images/backgrounds/parralax_3.jpg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 mx-auto">
@@ -79,7 +79,7 @@
 		<div class="xs-black-overlay"></div>
 	</section>	<!-- Nuestra fundación section -->
 	
-	<!-- Portfolio section start -->
+	<!-- Salones section start -->
 	<section class="section secondary-section " id="portfolio">
 		<div class="container">
 			<div class="row">
@@ -87,13 +87,14 @@
 					<h1>Espacios disponibles</h1>
 					<p>Nuestros salones son tu mejor opción ven y escoge el más adecuado para tu evento o celebración.</p>
 				</div>
-				<!-- Start details for portfolio -->
+			</div>
+			
+			<div class="row">
+				<!-- Inicio Detalles de Salones -->
 				<div class="single-margin" id="single-project">
-					<div id="slidingDiv" class="toggleDiv row-fluid single-project col-lg-12">
-						<div class="span6">
-							<img src="assets/images/servicios/servicios_1.jpg" alt="project 1" />
-						</div>
-						<div class="span6">
+					<div id="slidingDiv" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
 									<h3>Salón Atlántida</h3>
@@ -103,11 +104,11 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Capacidad de personas:</span>30 - 40</div>
+										<span>Auditorio:</span>45 Personas</div>
 									<div>
-										<span>Cantidad de sillas:</span>40</div>
+										<span>Mesa redonda:</span>25 Personas</div>
 									<div>
-										<span>Cantidad de mesas:</span>8</div>
+										<span>Mesa rectangular U:</span>15 Personas</div>
 									<div>
 										Equipado con:</div>
 								</div>
@@ -119,11 +120,9 @@
 						</div>
 					</div>
 
-					<div id="slidingDiv1" class="toggleDiv row-fluid single-project col-lg-12">
-						<div class="span6">
-							<img src="assets/images/servicios/servicios_1.jpg" alt="project 2">
-						</div>
-						<div class="span6">
+					<div id="slidingDiv1" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
 									<h3>Salón España</h3>
@@ -133,11 +132,11 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Capacidad de personas:</span>60 - 80</div>
+										<span>Auditorio:</span>80 Personas</div>
 									<div>
-										<span>Cantidad de sillas:</span>80</div>
+										<span>Mesa redonda:</span>60 Personas</div>
 									<div>
-										<span>Cantidad de mesas:</span>12</div>
+										<span>Mesa rectangular U:</span>25 Personas</div>
 									<div>
 										Equipado con:</div>
 								</div>
@@ -149,11 +148,9 @@
 						</div>
 					</div>
 
-					<div id="slidingDiv2" class="toggleDiv row-fluid single-project col-lg-12">
-						<div class="span6">
-							<img src="assets/images/servicios/servicios_1.jpg" alt="project 3">
-						</div>
-						<div class="span6">
+					<div id="slidingDiv2" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
 									<h3>Salón Holanda</h3>
@@ -163,11 +160,11 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Capacidad de personas:</span>100 - 120</div>
+										<span>Auditorio:</span>250 Personas</div>
 									<div>
-										<span>Cantidad de sillas:</span>130</div>
+										<span>Mesa redonda:</span>130 Personas</div>
 									<div>
-										<span>Cantidad de mesas:</span>18</div>
+										<span>Mesa rectangular U:</span>50 Personas</div>
 									<div>
 										Equipado con:</div>
 								</div>
@@ -179,11 +176,9 @@
 						</div>
 					</div>
 
-					<div id="slidingDiv3" class="toggleDiv row-fluid single-project col-lg-12">
-						<div class="span6">
-							<img src="assets/images/servicios/servicios_1.jpg" alt="project 4">
-						</div>
-						<div class="span6">
+					<div id="slidingDiv3" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
 									<h3>Salón La Ceiba</h3>
@@ -193,126 +188,117 @@
 								</div>
 								<div class="project-info">
 									<div>
-										<span>Capacidad de personas:</span>25 - 30</div>
-									<div>
-										<span>Cantidad de sillas:</span>35</div>
-									<div>
-										<span>Cantidad de mesas:</span>6</div>
+										<span>Mesa conferencia:</span>12 Personas</div>
 									<div>
 										Equipado con:</div>
 								</div>
 								<p>
-									Audio, proyector, micrófonos mobiliario cómodo, mesas rectángulas
-									o circulares, iluminación difuminada y aire acondicionado.
+									Audio, proyector, micrófonos mobiliario cómodo,
+									iluminación difuminada y aire acondicionado.
 								</p>
 							</div>
 						</div>
-					</div>
-					<!-- End details for portfolio -->
+					</div><!-- End Detalles de Salones -->
 					
-					<div class="col-lg-12" style="padding:0;margin:0;">
-						<ul id="portfolio-grid" class="thumbnails">
-							<li class="span4 mix 1">
-								<div class="thumbnail">
-									<img src="assets/images/servicios/servicios_1.jpg" alt="project 1">
-									<a href="#single-project" class="more show_hide" rel="#slidingDiv">
-										<i class="fa fa-plus"></i>
-									</a>
-									<h3>Salón Atlántida</h3>
-									<!-- <p>Thumbnail caption...</p> -->
-									<div class="mask"></div>
-								</div>
-							</li>
-							<li class="span4 mix 2">
-								<div class="thumbnail">
-									<img src="assets/images/servicios/servicios_1.jpg" alt="project 2">
-									<a href="#single-project" class="show_hide more" rel="#slidingDiv1">
-										<i class="fa fa-plus"></i>
-									</a>
-									<h3>Salón España</h3>
-									<!-- <p>Thumbnail caption...</p> -->
-									<div class="mask"></div>
-								</div>
-							</li>
-							<li class="span4 mix 3">
-								<div class="thumbnail">
-									<img src="assets/images/servicios/servicios_1.jpg" alt="project 3">
-									<a href="#single-project" class="more show_hide" rel="#slidingDiv2">
-										<i class="fa fa-plus"></i>
-									</a>
-									<h3>Salón Holanda</h3>
-									<!-- <p>Thumbnail caption...</p> -->
-									<div class="mask"></div>
-								</div>
-							</li>
-							<li class="span4 mix 4">
-								<div class="thumbnail">
-									<img src="assets/images/servicios/servicios_1.jpg" alt="project 4">
-									<a href="#single-project" class="show_hide more" rel="#slidingDiv3">
-										<i class="fa fa-plus"></i>
-									</a>
-									<h3>Salón La Ceiba</h3>
-									<!-- <p>Thumbnail caption...</p> -->
-									<div class="mask"></div>
-								</div>
-							</li>
-						</ul>
+					<div class="thumbnails col-md-12 col-lg-12" id="portfolio-grid">
+						<div class="col-md-3 col-lg-3 mix 1">
+							<div class="thumbnail">
+								<img src="assets/images/servicios/servicios_1.jpg" alt="project 1">
+								<a href="#single-project" class="more show_hide" rel="#slidingDiv">
+									<i class="fa fa-plus"></i>
+								</a>
+								<h3>Salón Atlántida</h3>
+								<div class="mask"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 mix 2">
+							<div class="thumbnail">
+								<img src="assets/images/servicios/servicios_1.jpg" alt="project 2">
+								<a href="#single-project" class="show_hide more" rel="#slidingDiv1">
+									<i class="fa fa-plus"></i>
+								</a>
+								<h3>Salón España</h3>
+								<div class="mask"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 mix 3">
+							<div class="thumbnail">
+								<img src="assets/images/servicios/servicios_1.jpg" alt="project 3">
+								<a href="#single-project" class="more show_hide" rel="#slidingDiv2">
+									<i class="fa fa-plus"></i>
+								</a>
+								<h3>Salón Holanda</h3>
+								<div class="mask"></div>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 mix 4">
+							<div class="thumbnail">
+								<img src="assets/images/servicios/servicios_1.jpg" alt="project 4">
+								<a href="#single-project" class="show_hide more" rel="#slidingDiv3">
+									<i class="fa fa-plus"></i>
+								</a>
+								<h3>Salón La Ceiba</h3>
+								<div class="mask"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- Portfolio section end -->
+	</section><!-- End Salones section -->
 	
+	<!-- Informacion extra section -->
 	<section class="datos-reservacion">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="column col-lg-4">
-						<div class="list_item lists_1">
-							<div class="list_left list_image">
-								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-02.png" class="scale-with-grid" alt="iconos-02" width="64" height="61"/>
-							</div>
-							<div class="list_right">
-								<h4>Restaurante</h4>
-								<div class="desc">Contamos con un restaurante donde se ofrece un amplio menú de alimentos y bebidas.</div>
+				<div class="col-lg-4 col-md-6 mt-3 mb-3">
+					<h4 class="wid-title">Restaurante</h4>
+					<div class="list_item lists_1">
+						<div class="list_left list_image">
+							<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-02.png" class="scale-with-grid" alt="iconos-02" width="64" height="61"/>
+						</div>
+						<div class="list_right">
+							<div class="desc">Contamos con un restaurante donde se ofrece un amplio menú de alimentos y bebidas.</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 mt-3 mb-3">
+					<h4 class="wid-title">Reservación</h4>
+					<div class="list_item lists_1">
+						<div class="list_left list_image">
+							<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-04-1.png" class="scale-with-grid" alt="iconos-04" width="64" height="61"/>
+						</div>
+						<div class="list_right">
+							<div class="desc">
+								<ul class="xs-info-salon">
+									<li><i class="fa fa-check"></i><a>Debe ser con anticipación.</a></li>
+									<li><i class="fa fa-check"></i><a>Anticipo de pago previo.</a></li>
+									<li><i class="fa fa-check"></i><a>Pago  presencial o por transferencia bancaria.</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					
-					<div class="column col-lg-4">
-						<div class="list_item lists_1">
-							<div class="list_left list_image">
-								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-04-1.png" class="scale-with-grid" alt="iconos-04" width="64" height="61"/>
-							</div>
-							<div class="list_right">
-								<h4>Reservación</h4>
-								<div class="desc">
-									<i class="fa fa-check color-light-green"></i>Debe ser con anticipación</br>
-									<i class="fa fa-check color-light-green"></i>Anticipo de pago previo</br>
-									<i class="fa fa-check color-light-green"></i>Pago  presencial o por transferencia bancaria
-								</div>
-							</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-3 mb-3">
+					<h4 class="wid-title">Disposición</h4>
+					<div class="list_item lists_1">
+						<div class="list_left list_image">
+							<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-03.png" class="scale-with-grid" alt="iconos-03" width="64" height="61"/>
 						</div>
-					</div>
-					<div class="column col-lg-4">
-						<div class="list_item lists_1">
-							<div class="list_left list_image">
-								<img src="https://aftegucigalpa.hn/wp-content/uploads/2018/05/iconos-03.png" class="scale-with-grid" alt="iconos-03" width="64" height="61"/>
-							</div>
-							<div class="list_right">
-								<h4>Cortesía</h4>
-								<div class="desc">
-									<i class="fa fa-check color-light-green"></i>100 sillas </br>    
-									<i class="fa fa-check color-light-green"></i>14 mesas  </br>                                                              
-									<i class="fa fa-check color-light-green"></i>Equipo Audiovisual</br>                                               
-									<i class="fa fa-check color-light-green"></i>Amplio Estacionamiento </br>
-								</div>
+						<div class="list_right">
+							<div class="desc">
+								<ul class="xs-info-salon xs-info-salon-2">
+									<li><i class="fa fa-check"></i><a>Sillas.</a></li>
+									<li><i class="fa fa-check"></i><a>Mesas.</a></li>
+									<li><i class="fa fa-check"></i><a>Equipo Audiovisual.</a></li>
+									<li><i class="fa fa-check"></i><a>Amplio Estacionamiento.</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section><!-- End Informacion extra section -->
 @endsection
