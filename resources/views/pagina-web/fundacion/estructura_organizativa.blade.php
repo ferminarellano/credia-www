@@ -26,7 +26,69 @@
 @endpush
 
 @section('estructura_section')
-	<!-- Junta Directiva section -->
+	<!-- Organigrama section section -->
+	<section class="waypoint-tigger xs-content-section-padding-actividad organigram-responsive">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12 pr-0 pl-0">
+					<div class="xs-archive-content xs-asg">
+						<div class="xs-heading">
+							<h2 class="xs-line-title">Nuestro</h2>
+							<h3 class="xs-title big-o" data-title="Organigrama">Organigrama</h3>
+						</div>
+						<div class="col-md-9 col-lg-9 content-center-o">
+							<div class="xs-heading xs-mb-100 text-center">
+								<div class="organigrama">
+									<ul>
+										<li>
+										  <a href="#" style="width:170px;">Asamblea General</a>
+											<ul>
+												<li><a href="#" style="width:170px;">Junta Directiva</a>
+													<ul>
+														<li><a href="#" style="width:170px;">Dirección Ejecutiva</a>
+															<ul>
+																<li id="line4"><a href="#">Administración y Finanzas</a></li>
+																	<ul>
+																		<li id="line5"><a href="#" style="width:198px;">Promoción y Mercadeo</a></li>
+																			<ul>
+																				<li id="line6" style="float:right;margin-top:-50px;"><a href="#" style="width:170px;">Centro de Documentación</a></li>
+																					<ul>		
+																						<li><a href="#">Asistencia Técnica y Gestión de proyectos</a>
+																							<ul>
+																								<li>
+																									<a href="#" style="width:170px;height:102px;">Observatorio de desarrollo sostenible</a>
+																								</li>
+																								<li>
+																									<a href="#" style="width:170px;height:102px;">Cambio Climático y Gestión Integral de Riesgos</a>
+																								</li>
+																								<li>
+																									<a href="#" style="width:170px;height:102px;">Interpretación y Educación Ambiental</a>
+																								</li>
+																								<li>
+																									<a href="#" style="width:170px;height:102px;">Agua, bosques y Suelos</a>
+																								</li>
+																							</ul>
+																						</li>
+																					</ul>
+																			</ul>
+																	</ul>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- End Organigrama section -->
+
+	<!-- Asamblea General section -->
 	<section class="waypoint-tigger xs-section-padding xs-content-section-padding-actividad">
 		<div class="container">
 			<div class="row">
@@ -91,7 +153,7 @@
 	</section><!-- Edn Asamblea General section -->
 
 	<!-- Junta Directiva section -->
-	<section class="waypoint-tigger xs-section-padding xs-content-section-padding-actividad">
+	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">
@@ -158,60 +220,56 @@
 		</div>
 	</section><!-- Edn Junta Directiva section -->
 	
-	<!-- Organigrama section section -->
-	<section class="xs-content-section-padding-conocenos organigram-responsive">
+	<!-- Comité Técnico section -->
+	<section class="waypoint-tigger xs-section-padding">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 content-center">
-					<h2 class="xs-title" style="color:#011b58;font-weight:900;">Organigrama</h2>
-				</div>
-				<div class="col-lg-9 content-center">
-					<div class="xs-heading xs-mb-100 text-center">
-						<div class="organigrama">
-							<ul>
-								<li>
-								  <a href="#" style="width:170px;">Asamblea General</a>
-									<ul>
-										<li><a href="#" style="width:170px;">Junta Directiva</a>
-											<ul>
-												<li><a href="#" style="width:170px;">Dirección Ejecutiva</a>
-													<ul>
-														<li id="line4"><a href="#">Administración y Finanzas</a></li>
-															<ul>
-																<li id="line5"><a href="#" style="width:170px;">Promoción y Mercadeo</a></li>
-																	<ul>
-																		<li id="line6" style="float:right;margin-top:-50px;"><a href="#" style="width:170px;">Centro de Documentación</a></li>
-																			<ul>		
-																				<li><a href="#">Asistencia Técnica y Gestión de proyectos</a>
-																					<ul>
-																						<li>
-																							<a href="#" style="width:170px;">Observatorio de desarrollo sostenible</a>
-																						</li>
-																						<li>
-																							<a href="#" style="width:170px;">Cambio Climático y Gestión Integral de Riesgos</a>
-																						</li>
-																						<li>
-																							<a href="#" style="width:170px;">Interpretación y Educación Ambiental</a>
-																						</li>
-																						<li>
-																							<a href="#" style="width:170px;height:66.09px;">Agua, bosques y Suelos</a>
-																						</li>
-																					</ul>
-																				</li>
-																			</ul>
-																	</ul>
-															</ul>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
+				<div class="col-md-12 col-lg-12 pr-0 pl-0">
+					<div class="xs-archive-content xs-asg">
+						<div class="xs-heading">
+								<h2 class="xs-line-title">Nuestro</h2>
+								<h3 class="xs-title big-o" data-title="Comité Técnico">Comité Técnico Consultivo</h3>
+						</div>
+						<div class="tbl-header">
+							<table class="tbl">
+								<thead>
+									<tr>
+										<th><div><h2>CARGO</h2></div></th>
+										<th><div><h2>INSTITUCIÓN</h2></div></th>
+										<th><div><h2>REPRESENTANTE</h2></div></th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="tbl-content">
+							<table class="tbl">
+								<tbody>
+									<tr>
+										<td>Asesor Principal</td>
+										<td>LARECOTURH</td>
+										<td>Gerardo Yanes</td>
+									</tr>
+									<tr>
+										<td>Asesor Técnico<br>Eje Estratégico #1<br><span> - Gestión del Conocimiento.</span></td>
+										<td>CEM</td>
+										<td>Emilio D'Cuire</td>
+									</tr>
+									<tr>
+										<td>Asesor Técnico<br>Eje Estratégico #2<br><span> - Interpretación y Educaión Ambiental.</span></td>
+										<td>INHGEOMIN</td>
+										<td>Gladys Murillo</td>						
+									</tr>
+									<tr>
+										<td>Asesor Técnico<br>Eje Estratégico #3<br><span> - Desarrollo y Sostenibilidad Institucional.</span></td>
+										<td>Fundación ANED</td>
+										<td>Carlos Posas</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section><!-- End Organigrama section -->
+	</section><!-- Edn Comité Técnico section -->
 @endsection
