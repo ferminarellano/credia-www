@@ -15,14 +15,14 @@
 @endsection
 
 @section('voluntarios_fotos_seccion')
-	@if(count($voluntarios) > 0)
 		<!-- voluntarios section -->
-		<section class="xs-section-padding bg-gray">
+		<section class="xs-section-padding">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-12 col-xl-12">
-						<h2 class="xs-title">Nuestros voluntarios</h2>
-						<!-- <span class="xs-separetor dashed"></span> -->
+						<div class="xs-heading">
+							<h3 class="xs-title big-o" data-title="Voluntarios">Nuestros voluntarios</h3>
+						</div>
 						<h2 class="xs-line-title" style="margin-top:25px;">¿Por qué hacer voluntariado?</h2>
 						<p>
 							Cuando te conviertes en voluntario te sientes útil. Te das cuenta de que tus acciones,
@@ -39,7 +39,7 @@
 									<h4>{{ $voluntario->nombre }}</h4>
 									<small>{{ $voluntario->cargo }}</small>
 									<svg class="xs-svgs" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 138">
-										<path class="fill-blue" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
+										<path class="fill-green" d="M375,3294H645v128a10,10,0,0,1-10,10l-250-20a10,10,0,0,1-10-10V3294Z" transform="translate(-375 -3294)"/>
 									</svg>
 								</div><!-- .xs-team-content END -->
 							</div><!-- .xs-single-team END -->
@@ -48,7 +48,6 @@
 				</div><!-- .row END -->
 			</div><!-- .container end -->
 		</section>	<!-- End voluntarios section -->
-	@endif
 @endsection
 
 @section('voluntarios_form_seccion')

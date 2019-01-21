@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Social;
 use App\Models\Equipo;
+use App\Models\FotoVoluntario;
 use View;
 
 class FundacionController extends Controller
@@ -53,7 +54,8 @@ class FundacionController extends Controller
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
-		$empleados = Equipo::orderBy('id','desc')->paginate(6);
+		$empleados = Equipo::orderBy('id','asc')->get();
+		$voluntarios = FotoVoluntario::orderBy('id','asc')->get();
 		$redes = Social::all();
 		
 		$data = array(
@@ -62,6 +64,7 @@ class FundacionController extends Controller
 			"contenido" => $contenido,
 			"redes" => $redes,
 			"empleados" => $empleados,
+			"voluntarios" => $voluntarios,
 		);
 		
 		return View::make('pagina-web.fundacion.equipo_de_trabajo')->with($data);
