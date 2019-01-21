@@ -40,32 +40,34 @@
 							<div class="xs-heading xs-mb-100 text-center">
 								<div class="organigrama">
 									<ul>
-										<li>
-										  <a href="#" style="width:170px;">Asamblea General</a>
+										<li class="text-center">
+										  <a href="#asamblea" style="width:170px;padding-left:20px;">Asamblea General</a>
 											<ul>
-												<li><a href="#" style="width:170px;">Junta Directiva</a>
+												<li><a href="#junta" style="width:170px;padding-left:30px;">Junta Directiva</a>
 													<ul>
-														<li><a href="#" style="width:170px;">Dirección Ejecutiva</a>
+														<li><a href="#" onclick="return false;" style="width:170px;padding-left:20px;">Dirección Ejecutiva</a>
 															<ul>
 																<li id="line4"><a href="#">Administración y Finanzas</a></li>
 																	<ul>
-																		<li id="line5"><a href="#" style="width:198px;">Promoción y Mercadeo</a></li>
+																		<li id="line5"><a href="#" onclick="return false;" style="width:198px;padding-left:20px;">Promoción y Mercadeo</a></li>
 																			<ul>
-																				<li id="line6" style="float:right;margin-top:-50px;"><a href="#" style="width:170px;">Centro de Documentación</a></li>
+																				<li id="line6" style="float:right;margin-top:-50px;">
+																					<a href="{{ URL::route('cendoc') }}" target="_blank" style="width:170px;">Centro de Documentación</a>
+																				</li>
 																					<ul>		
-																						<li><a href="#">Asistencia Técnica y Gestión de proyectos</a>
+																						<li><a href="#asistencia">Asistencia Técnica y Gestión de proyectos</a>
 																							<ul>
 																								<li>
-																									<a href="#" style="width:170px;height:102px;">Observatorio de desarrollo sostenible</a>
+																									<a href="{{ URL::route('observatorio') }}" target="_blank" style="width:170px;height:102px;">Observatorio de Desarrollo Sostenible</a>
 																								</li>
 																								<li>
-																									<a href="#" style="width:170px;height:102px;">Cambio Climático y Gestión Integral de Riesgos</a>
+																									<a href="#" onclick="return false;" style="width:170px;height:102px;">Cambio Climático y Gestión Integral de Riesgos</a>
 																								</li>
 																								<li>
-																									<a href="#" style="width:170px;height:102px;">Interpretación y Educación Ambiental</a>
+																									<a href="{{ URL::route('edu_ambiental') }}" target="_blank" style="width:170px;height:102px;">Interpretación y Educación Ambiental</a>
 																								</li>
 																								<li>
-																									<a href="#" style="width:170px;height:102px;">Agua, bosques y Suelos</a>
+																									<a href="#" onclick="return false;" style="width:170px;height:102px;">Agua, bosques y Suelos</a>
 																								</li>
 																							</ul>
 																						</li>
@@ -89,7 +91,7 @@
 	</section><!-- End Organigrama section -->
 
 	<!-- Asamblea General section -->
-	<section class="waypoint-tigger xs-section-padding xs-content-section-padding-actividad">
+	<section class="waypoint-tigger xs-section-padding xs-content-section-padding-actividad" id="asamblea">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">
@@ -153,7 +155,7 @@
 	</section><!-- Edn Asamblea General section -->
 
 	<!-- Junta Directiva section -->
-	<section class="waypoint-tigger xs-section-padding">
+	<section class="waypoint-tigger xs-section-padding" id="junta">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">
@@ -221,7 +223,7 @@
 	</section><!-- Edn Junta Directiva section -->
 	
 	<!-- Comité Técnico section -->
-	<section class="waypoint-tigger xs-section-padding">
+	<section class="waypoint-tigger xs-section-padding" id="asistencia">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">

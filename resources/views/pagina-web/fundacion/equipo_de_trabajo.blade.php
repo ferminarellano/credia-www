@@ -26,7 +26,8 @@
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-12 col-xl-12">
 						<div class="xs-heading">
-							<h3 class="xs-title big-o" data-title="Equipo">Nuestros Equipo de trabajo</h3>
+							<h2 class="xs-line-title">Nuestro</h2>
+							<h3 class="xs-title big-o" data-title="Equipo">Equipo de trabajo</h3>
 						</div>
 						<!-- <span class="xs-separetor dashed"></span> -->
 						<p style="color:#011b58;text-align:justify;">Nuestra fundaci&oacute;n esta compuesta por el personal adecuado, los mejores profesionales en su labor, unete se parte de esta gran familia.</p>

@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-11 content-center">
-					<div class="xs-heading xs-mb-100 text-center">
+					<div class="xs-heading xs-mb-70 text-center">
 						<h2 class="xs-mb-0 xs-title" style="text-align:center;">Somos una organización sin fines de lucro que<span class="color-green"> apoyamos</span> buenas causas y cambios positivos para la población de Honduras.</h2>
 					</div>
 				</div>
@@ -96,7 +96,7 @@
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils" style="margin-top:45px;">
 						<h3>Nuestra estrategia</h3>
-						<p style="color:#6acaf0;">
+						<p>
 							Fortalecer la gestión ambiental y el desarrollo sostenible, bajo un enfoque de gestión
 							del conocimiento como línea conductora vinculada con el manejo del Agua, bosques, suelo,
 							cambio climático, gestión integral del riesgo, promocionando el ecoturismo, la cultura y
@@ -126,7 +126,7 @@
 				</div>
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils">
-						<h3> Nuestra <span class="color-blue-light-credia">fundación</span></h3>
+						<h3> Nuestra fundación</h3>
 						<p>
 							Creada el 31 de Octubre 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, 
 							mediante la implementación de un modelo de gestión basado en el fortalecimiento de redes y promoción del análisis

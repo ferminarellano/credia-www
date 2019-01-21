@@ -221,27 +221,27 @@
 						<ul class="xs-funfact-list">
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="31" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Escuelas</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="25" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Colegios</span>
+								<span>Institutos</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="8" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Universidades</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="18424" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Voluntarios</span>
+								<span>Visitantes</span>
 							</li>
 							<div class="clearfix"></div>
 						</ul>
