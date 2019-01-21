@@ -98,12 +98,7 @@
 										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
 									</ul>
 								</li>
-								<li><a href="">Multimedia</a>
-									<ul class="nav-dropdown">
-										<!-- <li><a href="#">Videoteca</a></li> -->
-										<li><a href="{{ URL::route('galeria') }}">Galería de fotos</a></li>
-									</ul>
-								</li>
+								<li><a href="{{ URL::route('galeria') }}">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>

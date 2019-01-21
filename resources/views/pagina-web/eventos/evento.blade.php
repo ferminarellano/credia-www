@@ -91,8 +91,8 @@
 						@endif
 						@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
 							@if ($eventos->currentPage()+$i > 0 && $eventos->currentPage()+$i <= $eventos->lastPage())
-								<li class="page-item {{ $i==0 ? 'active' : '' }}">
-									<a class="page-link" href="{{ $eventos->url($eventos->currentPage()+$i) }}">{{ $eventos->currentPage()+$i }}</a>
+								<li class="page-item">
+									<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $eventos->url($eventos->currentPage()+$i) }}">{{ $eventos->currentPage()+$i }}</a>
 								</li>
 							@endif
 						@endfor
@@ -107,7 +107,7 @@
 							</li>
 						@endif
 						<li class="page-item {{ $eventos->nextPageUrl()==null ? 'disabled' : '' }}">
-							<a class="page-link " href="{{ $eventos->nextPageUrl() ?? '#' }}" aria-label="Next">
+							<a class="page-link" href="{{ $eventos->nextPageUrl() ?? '#' }}" aria-label="Next">
 								<i class="fa fa-angle-right"></i>
 							</a>
 						</li>

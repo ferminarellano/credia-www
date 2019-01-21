@@ -34,7 +34,7 @@
 							<div class="xs-feature-text-content">
 								<div class="xs-heading">
 									<h2 style="color:#a6ce39;">{{ $sistema->texto_mini }}</h2>
-									<h3 class="xs-title" data-title="{{ $sistema->nombre_sistema }}">{{ $sistema->nombre_sistema }}</h3>
+									<h3 class="xs-title">{{ $sistema->nombre_sistema }}</h3>
 									<span class="xs-separetor bg-bondiBlue"></span>
 								</div>
 								<p style="text-align:justify;">{{ $sistema->descripcion }}</p>

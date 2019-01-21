@@ -46,7 +46,7 @@
 										<div class="circle-border zoom-in" style="background-image: url(/{{ $sistema->first()->foto }});"></div>
 									</a>
 									<div class="xs-heading-sistema">
-										<h3 class="xs-title" data-title="{{ $sistema->first()->nombre_sistema }}">{{ $sistema->first()->nombre_sistema }}</h3>
+										<h3 class="xs-title">{{ $sistema->first()->nombre_sistema }}</h3>
 									</div>
 								</div>
 							</div><!-- link end -->

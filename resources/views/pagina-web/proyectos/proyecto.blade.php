@@ -42,21 +42,23 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="xs-popular-item xs-box-shadow">
 							<div class="xs-item-header" style="background-image: url(/{{ $proyecto->foto }});"></div>
-								<div class="xs-skill-bar">
-									<div class="xs-skill-track bg-light-green">
-										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
+								@if($proyecto->avance < 100)
+									<div class="xs-skill-bar">
+										<div class="xs-skill-track bg-light-green">
+											<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
+										</div>
 									</div>
-								</div>
+								@endif
 							<div class="xs-item-content">
 								<div class="xs-margin-1">
-									<ul class="xs-simple-tag xs-mb-20">
+									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-20">{{ $proyecto->titulo }}</a>
+									<span class="xs-separetor"></span>
+									<ul class="xs-simple-tag xs-mt-10">
 										<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
 									</ul>
-									<span class="xs-separetor"></span>
-									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
 								</div>
-							</div><!-- .xs-item-content END -->
-						</div><!-- .xs-popular-item END -->
+							</div>
+						</div>
 					</div>
 				@endforeach
 			</div><!-- .row end -->
@@ -82,8 +84,8 @@
 						@endif
 						@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
 							@if ($proyectos->currentPage()+$i > 0 && $proyectos->currentPage()+$i <= $proyectos->lastPage())
-								<li class="page-item {{ $i==0 ? 'active' : '' }}">
-									<a class="page-link" href="{{ $proyectos->url($proyectos->currentPage()+$i) }}">{{ $proyectos->currentPage()+$i }}</a>
+								<li class="page-item">
+									<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $proyectos->url($proyectos->currentPage()+$i) }}">{{ $proyectos->currentPage()+$i }}</a>
 								</li>
 							@endif
 						@endfor
@@ -98,7 +100,7 @@
 							</li>
 						@endif
 						<li class="page-item {{ $proyectos->nextPageUrl()==null ? 'disabled' : '' }}">
-							<a class="page-link " href="{{ $proyectos->nextPageUrl() ?? '#' }}" aria-label="Next">
+							<a class="page-link" href="{{ $proyectos->nextPageUrl() ?? '#' }}" aria-label="Next">
 								<i class="fa fa-angle-right"></i>
 							</a>
 						</li>
@@ -106,5 +108,5 @@
 				</div><!-- End pagination -->
 			@endif
 		</div><!-- .container end -->
-	</section>	<!-- End popularCauses version 2 section -->
+	</section><!-- End popularCauses version 2 section -->
 @endsection

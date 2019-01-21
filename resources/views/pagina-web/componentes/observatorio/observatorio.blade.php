@@ -97,7 +97,7 @@
 				</div>
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils-comp">
-						<h3> Áreas de trabajo del<span class="color-blue-light-credia"> ODS</span></h3>
+						<h3> Áreas de trabajo del ODS</h3>
 						<p>
 							La investigación, Capacitación y la Comunicación y Difusión de Información, para lo cual constará de tres unidades: 
 							Sistemas de Información Geográfica, Centro de Gestión Documental e Informática.
