@@ -390,8 +390,7 @@ ul, li {
     margin-right: 0; }
 
 .xs-simple-tag li {
-  line-height: 1; 
-  text-align: center;}
+  line-height: 1; }
   .xs-simple-tag li a {
     font-size: 0.85714em;
     color: #18bfc3;
@@ -2076,7 +2075,7 @@ text-align:center;}
 	background-size: cover;
     height: 208px;
     background-repeat: no-repeat;
-    background-position: 0% 60%;
+    background-position: top center;
 	}
 	
     .xs-single-journal .entry-thumbnail .author-name a {

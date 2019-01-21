@@ -20,7 +20,7 @@ class ProyectoController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$proyectos = Proyecto::orderBy('id','desc')->paginate(6);
+		$proyectos = Proyecto::orderBy('id','asc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
