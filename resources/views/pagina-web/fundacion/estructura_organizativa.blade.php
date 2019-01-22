@@ -14,17 +14,6 @@
 	</section>
 @endsection
 
-@push('scripts')
-    <script>
-		$("ol").each(function(idx, el) {
-			var index = parseInt($(el).attr("start"))-1;
-			if (!isNaN(index)) {
-				$(el).css({'counter-reset':'li ' + index});    
-			}
-		});
-	</script>
-@endpush
-
 @section('estructura_section')
 	<!-- Organigrama section section -->
 	<section class="waypoint-tigger xs-content-section-padding-actividad organigram-responsive">
@@ -168,9 +157,9 @@
 							<table class="tbl">
 								<thead>
 									<tr>
-										<th><div><h2>CARGO</h2></div></th>
+										<th><div class="first"><h2>CARGO</h2></div></th>
 										<th><div><h2>INSTITUCIÓN</h2></div></th>
-										<th><div><h2>REPRESENTANTE</h2></div></th>
+										<th><div class="last"><h2>REPRESENTANTE</h2></div></th>
 									</tr>
 								</thead>
 							</table>
@@ -236,9 +225,9 @@
 							<table class="tbl">
 								<thead>
 									<tr>
-										<th><div><h2>CARGO</h2></div></th>
+										<th><div class="first"><h2>CARGO</h2></div></th>
 										<th><div><h2>INSTITUCIÓN</h2></div></th>
-										<th><div><h2>REPRESENTANTE</h2></div></th>
+										<th><div class="last"><h2>REPRESENTANTE</h2></div></th>
 									</tr>
 								</thead>
 							</table>

@@ -28,7 +28,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="xs-about-feature-fundacion">
-						<h3>Nuestra Misión</h3>
+						<h3>Nuestra <span class="color-blue">Misión</span></h3>
 						<p align="center" class="lead">Promover el desarrollo sostenible mediante la gestión del conocimiento, facilitando la toma de decisiones 
 						para la planificación ordenada del territorio, impulsando la educación ambiental, el turismo sostenible, las áreas protegidas, 
 						la cultura y la recreación en el Corredor Biológico del Caribe Hondureño.</p>
@@ -36,7 +36,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="xs-about-feature-fundacion">
-						<h3>Nuestra Visión</h3>
+						<h3>Nuestra <span class="color-blue">Visión</span></h3>
 						<p align="center" class="lead">Ser un centro innovador de documentación e interpretación ambiental y punto de encuentro 
 						con la naturaleza que promueve la gestión del conocimiento del Corredor Biológico del Caribe Hondureño, 
 						facilitando la toma de decisiones en el territorio, reconocida nacional e internacionalmente..</p>
@@ -95,7 +95,7 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils" style="margin-top:45px;">
-						<h3>Nuestra estrategia</h3>
+						<h3>Nuestra <span class="color-blue">Estrategia</span></h3>
 						<p>
 							Fortalecer la gestión ambiental y el desarrollo sostenible, bajo un enfoque de gestión
 							del conocimiento como línea conductora vinculada con el manejo del Agua, bosques, suelo,
@@ -126,7 +126,7 @@
 				</div>
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils">
-						<h3> Nuestra fundación</h3>
+						<h3> Nuestra <span class="color-blue">Fundación</span></h3>
 						<p>
 							Creada el 31 de Octubre 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, 
 							mediante la implementación de un modelo de gestión basado en el fortalecimiento de redes y promoción del análisis

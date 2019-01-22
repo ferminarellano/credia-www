@@ -32,6 +32,7 @@ Route::get('blog/{slug}/{id}', 'BlogController@blogdetalle')->name('blogdetalle'
 Route::get('eventos/{slug}/{id}', 'EventoController@eventodetalle')->name('eventodetalle');
 Route::get('proyectos/categoria/{categoria}/{categoria_id}', 'ProyectoController@search_categoria_proyecto')->name('categoria_proyecto');
 Route::get('proyectos/{slug}', 'ProyectoController@proyectos')->name('proyectos');
+Route::get('proyectos/en/{slug}', 'ProyectoController@proyecto_ejecucion')->name('proyecto_ejecucion');
 Route::get('proyectos/{slug}/{id}', 'ProyectoController@proyectodetalle')->name('proyectodetalle'); 
 Route::get('nuestras-actividades/{slug}/{id}', 'ActividadController@actividadetalle')->name('actividadetalle'); 
 Route::get('sistemas/{slug}/{id}', 'SistemaController@sistemadetalle')->name('sistemadetalle');
