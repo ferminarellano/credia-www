@@ -82,8 +82,8 @@
 								</li>
 								<li><a href="">Proyectos</a>
 									<ul class="nav-dropdown">
-										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos ejecutados','-')])}}">Proyectos ejecutados</a></li>
-										<li><a href="{{URL::route('proyectos',['slug' => str_slug('proyectos en ejecucion','-')])}}">Proyectos en ejecución</a></li>
+										<li><a href="{{URL::route('proyectos',['slug' => str_slug('ejecutados','-')])}}">Proyectos ejecutados</a></li>
+										<li><a href="{{URL::route('proyecto_ejecucion',['slug' => str_slug('ejecucion','-')])}}">Proyectos en ejecución</a></li>
 									</ul>
 								</li>
 								<li><a href="">Sistemas</a>
@@ -189,7 +189,7 @@
 
 			<!-- Copyright -->
 			<div class="" style="background-color:rgba(0, 0, 0, 0.1)">
-				<div class="container xs-copyright py-3">
+				<div class="container py-3">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="xs-copyright-text">

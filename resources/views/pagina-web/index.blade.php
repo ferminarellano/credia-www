@@ -177,11 +177,13 @@
 								</div>
 								<div class="xs-item-content">
 									<div class="xs-margin-1">
-										<ul class="xs-simple-tag xs-mb-20">
+										<div class="xs-margin-4" id="textlarge">
+											<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title">{{ $proyecto->titulo }}</a>
+										</div>
+										<span class="xs-separetor xs-mt-10"></span>
+										<ul class="xs-simple-tag xs-mb-20" id="textmini">
 											<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
 										</ul>
-										<span class="xs-separetor"></span>
-										<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
 									</div>
 								</div><!-- .xs-item-content END -->
 							</div><!-- .xs-popular-item END -->

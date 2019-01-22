@@ -1385,7 +1385,16 @@ blockquote {
   padding: 10px 30px;
   max-height: 370px;}
   
+.xs-item-content-box {
+  padding: 20px 30px;
+  height: 306px;
+  float: left;}
+  
   .xs-item-content .xs-separetor {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+	
+  .xs-item-content-box .xs-separetor {
     margin-top: 0px;
     margin-bottom: 10px; }
 
@@ -1951,13 +1960,28 @@ text-align:center;}
       padding: 13px 20px; }
 	  .xs-single-event .xs-event-content-event .btn {
       padding: 13px 20px; }
-	  
+	
+	.xs-item-box{
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.xs-item-header-box {
+		position: relative; 
+		background-size: cover;
+		height: 300px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	
 	.xs-item-header {
-	position: relative; 
-  	background-size: cover;
-    height: 260px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;}
+		position: relative; 
+		background-size: cover;
+		height: 260px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
 
   .xs-event-image {
 	position: relative; 
@@ -2515,8 +2539,6 @@ svg {
 	}
 	.tbl-header{
 		margin-top: 70px;
-		padding-left: 5px;
-		padding-right: 5px;
 	}
 	
 	.tbl-header h2{
@@ -2529,23 +2551,28 @@ svg {
 	.tbl-header div{
 		background-color: #011b58;
 		padding: 15px;
-		border-radius: 10px;
 		text-align: center;
 		margin: 0;
 		box-shadow: 15px 0 10px -10px rgba(0, 0, 0, .1), 
 					-15px 0 10px -10px rgba(0, 0, 0, .15);
 	}
+	.tbl-header div.first{
+		border-radius: 5px 0px 0px 0px;
+	}
+	
+	.tbl-header div.last{
+		border-radius: 0px 5px 0px 0px;
+	}
+	
 	.tbl-content{
-		overflow-x: auto;
+	    overflow-x: auto;
 		margin-top: 0px;
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
-		border: 2px solid #a6ce398a;
-		margin: 0px 5px 0px 5px;
-		border-top: 0.5px solid #a6ce398a;
-		box-shadow: 15px 0 10px -10px rgba(0, 0, 0, .1), 
-					-15px 0 10px -10px rgba(0, 0, 0, .15);
+		border-radius: 0px 0px 5px 5px;
+		-webkit-border-radius: 0px 0px 5px 5px;
+		border: 0.5px solid #011b5812;
+		box-shadow: 
+				-5px 14px 10px -10px rgba(0, 0, 0, .1),
+				0px 4px 20px 2px rgba(0, 0, 0, .15);
 	}
 	.tbl-content td{
 		padding: 15px 15px 15px 40px;
@@ -4553,6 +4580,23 @@ position: relative; }
 .xs-margin-1 {
   margin: 0; 
   max-height: 320px;}
+ 
+.xs-margin-2 {
+  margin: 0; 
+  height: 265px;}
+
+.xs-margin-3 {
+    height: 220px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.xs-margin-4 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .xs-mb-0 {
   margin-bottom: 0; }
@@ -4636,7 +4680,7 @@ position: relative; }
   color: #f7a900; }
 
 .color-blue {
-  color: #369ff4; }
+  color: #6acaf0; }
   
   .color-blue-light-credia {
   color: #6acaf0; }

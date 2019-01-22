@@ -21,8 +21,8 @@ Code For Switching Style (FOR DEMO)
 Contact From dynamic
 XpeedStudio multipile Maps
 XpeedStudio Maps
-
-
+puntos-suspensivos
+Contador Li start
 
 -------------------------------------------------------------------*/
 
@@ -496,4 +496,41 @@ function init() {
 	});
 }
 
+/*==========================================================
+					Contador Li start
+==========================================================*/
+	$("ol").each(function(idx, el) {
+		var index = parseInt($(el).attr("start"))-1;
+		if (!isNaN(index)) {
+			$(el).css({'counter-reset':'li ' + index});    
+		}
+	});
+
+/*==========================================================
+					Puntos suspensivos
+==========================================================*/
+	function TextLarge ( containerId , largomaximo) {
+		var $container = $("#" + containerId); 
+		var $text = $("#textlarge a");    
+	 
+		while ( $container.text().length > largomaximo ) {
+			$text.text(function (index, text) {
+				return text.replace(/\W*\s(\S)*$/, '...');
+			});
+		}
+	}
+	TextLarge("textlarge", 370);
+	
+	function TextminiLarge ( containerId , largomaximo) {
+		var $container = $("#" + containerId); 
+		var $text = $("#textmini a");    
+	 
+		while ( $container.text().length > largomaximo ) {
+			$text.text(function (index, text) {
+				return text.replace(/\W*\s(\S)*$/, '...');
+			});
+		}
+	}
+	TextminiLarge("textmini", 125);
+	
 })(jQuery);
