@@ -51,7 +51,7 @@
 								@endif
 							<div class="xs-item-content">
 								<div class="xs-margin-1">
-									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-20">{{ $proyecto->titulo }}</a>
+									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title-i xs-mb-20">{{ $proyecto->titulo }}</a>
 									<span class="xs-separetor"></span>
 									<ul class="xs-simple-tag xs-mt-10">
 										<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>

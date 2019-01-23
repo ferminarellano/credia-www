@@ -40,25 +40,34 @@
 				@endif
 				@foreach($proyectos as $proyecto)
 					<div class="xs-popular-item xs-box-shadow">
-						<div class="xs-item-box col-lg-6 col-md-6">
+						<div class="xs-item-box col-lg-5 col-md-12">
 							<div class="xs-item-header-box" style="background-image: url(/{{ $proyecto->foto }});"></div>
-							@if($proyecto->avance < 100)
-								<div class="xs-skill-bar">
-									<div class="xs-skill-track bg-light-green">
-										<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
-									</div>
-								</div>
-							@endif
 						</div>
-						<div class="xs-item-content-box col-lg-6 col-md-6">
+						<div class="xs-item-content-box col-lg-7 col-md-12">
 							<div class="xs-margin-2">
 								<div class="xs-margin-3" id="textlarge">
-									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-20">{{ $proyecto->titulo }}</a>
+									<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-10">{{ $proyecto->titulo }}</a>
 								</div>
 								<span class="xs-separetor"></span>
-								<ul class="xs-simple-tag xs-mt-10" id="textmini">
-									<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
-								</ul>
+								<div class="xs-margin-5" id="textdescripcion">
+									<p class="xs-descript-format">{{ $proyecto->first()->descripcion }}</p>
+								</div>
+								<span class="xs-separetor"></span>
+								<div class="xs-margin-6 row">
+									<ul class="xs-list-with-content col-md-8 col-md-18">
+										<li>L 67,000<span>Presupuesto</span></li>
+										<li><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>% <span>Avance</span></li>
+										<li>3<span>Tiempo</span></li>
+									</ul>
+									<div class="xs-margin-t col-md-4 col-md-4">
+										<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="btn btn-primary">seguir leyendo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xs-skill-bar col-lg-12 col-md-12">
+							<div class="xs-skill-track bg-light-green">
+								<p><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>%</p>
 							</div>
 						</div>
 					</div>

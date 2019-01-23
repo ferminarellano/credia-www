@@ -18,6 +18,9 @@
 								<span class="xs-separetor"></span>
 								<br>
 								{!! $sistema->first()->contenido !!}
+								<div class="xs-margin-7 mt-5">
+									<a href="{{ $sistema->first()->url }}" target="_blank" class="btn btn-primary">Ir a {{ $sistema->first()->nombre_sistema }}</a>
+								</div>
 							</div>
 						</div>
 						

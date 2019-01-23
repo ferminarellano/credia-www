@@ -75,6 +75,21 @@ class ProyectoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
+			'name' => 'descripcion',
+			'label' => "Descripción de proyecto",
+			'type' => 'textarea',
+			'attributes' => [
+				'placeholder' => 'Agregue una breve descripción del proyecto *',
+				'style' => 'text-align:justify;resize:vertical;',
+				'rows' => '4',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			], 
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
 			'name' => 'contenido',
 			'label' => "Contenido",
 			'type' => 'summernote',

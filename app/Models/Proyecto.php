@@ -16,7 +16,7 @@ class Proyecto extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['titulo','subtitulo','foto','fecha_convenio','contenido','presupuesto',
+    protected $fillable = ['titulo','descripcion','subtitulo','foto','fecha_convenio','contenido','presupuesto',
 						   'avance','utilizado','fecha_inicio','fecha_finalizacion','estado','user_id'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -26,6 +26,7 @@ class Proyecto extends Model
 	protected $revisionCreationsEnabled = true;
 	protected $revisionFormattedFieldNames = array(
 		'titulo' => 'titulo',
+		'descripcion' => 'descripcion',
 		'subtitulo' => 'subtitulo',
 		'foto' => 'foto',
 		'fecha_convenio' => 'fecha de convenio',
