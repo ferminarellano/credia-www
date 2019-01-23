@@ -50,14 +50,14 @@
 								</div>
 								<span class="xs-separetor"></span>
 								<div class="xs-margin-5" id="textdescripcion">
-									<p class="xs-descript-format">{{ $proyecto->first()->descripcion }}</p>
+									<p class="xs-descript-format">{{ $proyecto->descripcion }}</p>
 								</div>
 								<span class="xs-separetor"></span>
 								<div class="xs-margin-6 row">
 									<ul class="xs-list-with-content col-md-8 col-md-18">
-										<li>L 67,000<span>Presupuesto</span></li>
+										<li>L {{ number_format($proyecto->presupuesto,2) }}<span>Presupuesto</span></li>
+										<li>L {{ number_format($proyecto->utilizado,2) }}<span>Utilizado</span></li>
 										<li><span class="number-percentage-count number-percentage" data-value="{{ $proyecto->avance }}" data-animation-duration="3500">0</span>% <span>Avance</span></li>
-										<li>3<span>Tiempo</span></li>
 									</ul>
 									<div class="xs-margin-t col-md-4 col-md-4">
 										<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="btn btn-primary">seguir leyendo</a>
