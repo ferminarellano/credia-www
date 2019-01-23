@@ -25,8 +25,6 @@
 			</div>
 		</div>
 		
-		 
-		
 		{{-- HINT --}}
 		@if (isset($field['hint']))
 			<p class="help-block">{!! $field['hint'] !!}</p>

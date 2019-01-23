@@ -31,8 +31,8 @@ class ProyectoCrudController extends CrudController
 		$this->crud->addColumn([
 			'name' => 'estado',
 			'label' => 'Estado del proyecto',
-			'type' => 'select_from_array',
-			'options' => ['no_iniciado' => 'No iniciado', 'en_proceso' => 'En proceso', 'finalizado' => 'Finalizaco'],
+			'type' => 'boolean',
+			'options' => [0 => 'Borrador', 1 => 'Públicado'],
 		]);
 		
 		$this->crud->addColumn([
@@ -41,12 +41,15 @@ class ProyectoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'foto',
-			'label' => "Fotografía",
-			'type' => 'upload',
-			'upload' => true,
-			'tab' => 'Datos generales',
-		]);
+			'name' => 'estado',
+			'label' => '',
+			'type' => 'toggleButtom_proyecto',
+			'options' => [ 
+						0 => "Borrador",
+						1 => "Publicado",
+					],
+					'tab' => 'Contenido de proyecto',
+		],'update');
 		
 		$this->crud->addField([
 			'name' => 'titulo',
@@ -58,7 +61,7 @@ class ProyectoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
-			'tab' => 'Datos generales',
+			'tab' => 'Contenido de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -71,7 +74,7 @@ class ProyectoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
-			'tab' => 'Datos generales',			
+			'tab' => 'Contenido de proyecto',			
 		]);
 		
 		$this->crud->addField([
@@ -81,26 +84,40 @@ class ProyectoCrudController extends CrudController
 			'attributes' => [
 				'placeholder' => 'Agregue una breve descripción del proyecto *',
 				'style' => 'text-align:justify;resize:vertical;',
-				'rows' => '4',
+				'rows' => '5',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			], 
-			'tab' => 'Datos generales',
+			'tab' => 'Contenido de proyecto',
 		]);
 		
 		$this->crud->addField([
-			'name' => 'contenido',
-			'label' => "Contenido",
-			'type' => 'summernote',
-			'tab' => 'Datos generales',
+			'label' => "Categoría",
+			'type' => 'select2_multiple',
+			'name' => 'categorias',
+			'entity' => 'categorias',
+			'attribute' => 'nombre', 
+			'model' => "App\Models\Categoria", 
+			'pivot' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			], 
+			'tab' => 'Contenido de proyecto',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'separator0',
 			'type' => 'custom_html',
 			'value' => '<hr>',
-			'tab' => 'Datos generales',
+			'tab' => 'Contenido de proyecto',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'contenido',
+			'label' => "Contenido",
+			'type' => 'summernote',
+			'tab' => 'Contenido de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -118,7 +135,7 @@ class ProyectoCrudController extends CrudController
 				'format' => 'dd-mm-yyyy',
 				'language' => 'es'
 			],
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -127,10 +144,11 @@ class ProyectoCrudController extends CrudController
 			'type' => 'number',
 			'prefix' => "L",
 			'spinner' => False,
+			'default' => '0',
 			'attributes' => [
 				'placeholder' => 'Agregue la cantidad *',
 			],
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -139,10 +157,11 @@ class ProyectoCrudController extends CrudController
 			'type' => 'number',
 			'prefix' => "L",
 			'spinner' => False,
+			'default' => '0',
 			'attributes' => [
 				'placeholder' => 'Agregue la cantidad *',
 			],
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -152,7 +171,7 @@ class ProyectoCrudController extends CrudController
 		    'min' => '0',
 		    'max' => '100',
 		    'default' => '0',
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -170,34 +189,7 @@ class ProyectoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
-			'tab' => 'Datos generales',
-		]);
-		
-		$this->crud->addField([
-			'name' => 'estado',
-			'label' => "Estado de proyecto",
-			'type' => 'select2_from_array',
-			'options' => ['no_iniciado' => 'No iniciado', 'en_proceso' => 'En proceso', 'finalizado' => 'Finalizaco'],
-			'allows_null' => false,
-			'default'    => 'no_iniciado',
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],
-			'tab' => 'Datos generales',
-		]);
-		
-		$this->crud->addField([
-			'label' => "Categoría",
-			'type' => 'select2_multiple',
-			'name' => 'categorias',
-			'entity' => 'categorias',
-			'attribute' => 'nombre', 
-			'model' => "App\Models\Categoria", 
-			'pivot' => true,
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			], 
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
 		$this->crud->addField([
@@ -211,10 +203,16 @@ class ProyectoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
-			'tab' => 'Datos generales',
+			'tab' => 'Datos de proyecto',
 		]);
 		
-		
+		$this->crud->addField([
+			'name' => 'foto',
+			'label' => "Fotografía",
+			'type' => 'upload',
+			'upload' => true,
+			'tab' => 'Fotografía',
+		]);
     }
 
     public function store(StoreRequest $request)

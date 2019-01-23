@@ -2,7 +2,7 @@
    <div @include('crud::inc.field_wrapper_attributes')>
 		
 		<?php
-			$articulos = App\Models\DataIndicador::where([['id',"=",$id]])->get(['estado']);
+			$articulos = App\Models\Proyecto::where([['id',"=",$id]])->get(['estado']);
 		?>
 		
 		<div class="smart-button-container">
