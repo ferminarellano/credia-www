@@ -85,7 +85,7 @@
 				@endforeach
 				<div class="col-xl-12 col-md-12 xs-btn-wraper">
 					<a href="{{ URL::route('voluntario') }}" class="btn btn-primary" style="float:right;">INSCRIBETE</a>
-				</div><!-- .xs-btn-wraper END -->
+				</div>
 			</div>
 			
 		</div>

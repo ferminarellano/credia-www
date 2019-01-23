@@ -62,7 +62,7 @@
 					</div><!-- .xs-heading-title END -->
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('blog') }}" class="btn btn-primary">Ver todos</a>
-					</div><!-- .xs-btn-wraper END -->
+					</div>
 				</div><!-- .row end -->
 				<div class="row">
 					@foreach($articulos as $articulo)
@@ -178,7 +178,7 @@
 								<div class="xs-item-content">
 									<div class="xs-margin-1">
 										<div class="xs-margin-4" id="textlarge">
-											<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title">{{ $proyecto->titulo }}</a>
+											<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title-i">{{ $proyecto->titulo }}</a>
 										</div>
 										<span class="xs-separetor xs-mt-10"></span>
 										<ul class="xs-simple-tag xs-mb-20" id="textmini">

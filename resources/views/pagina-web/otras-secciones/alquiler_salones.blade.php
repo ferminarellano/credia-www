@@ -21,7 +21,7 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="xs-fature-causes-deatils-comp">
-						<h3>Instalaciones y <span class="color-blue">servicios</span></h3>
+						<h3>Instalaciones y <span class="color-blue">Servicios</span></h3>
 						<p>
 							La Fundación CREDIA ofrece espacios disponibles para el desarrollo de eventos técnicos y sociales. Bajo este propósito 
 							el CREDIA pone a la disposición el servicio de cuatro salas de conferencia, debidamente 

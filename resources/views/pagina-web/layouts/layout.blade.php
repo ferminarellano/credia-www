@@ -92,12 +92,7 @@
 										<li><a href="{{URL::route('proyecto_ejecucion',['slug' => str_slug('ejecucion','-')])}}">Proyectos en ejecución</a></li>
 									</ul>
 								</li>
-								<li><a href="">Sistemas</a>
-									<ul class="nav-dropdown">
-										<!-- <li><a href="#">Sistema de Monitoreo Multipropósito</a></li> -->
-										<li><a href="{{ URL::route('sistema') }}">Repositorio Digital</a></li>
-									</ul>
-								</li>
+								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 								<li><a href="{{ URL::route('galeria') }}">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
