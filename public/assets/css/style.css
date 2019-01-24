@@ -1952,6 +1952,7 @@ text-align:center;}
 
 .xs-single-event {
   min-height: 230px;
+  max-height: 290px;
   margin-bottom: 30px;
   background-color: white;
   padding: 15px;
@@ -2001,7 +2002,7 @@ text-align:center;}
   .xs-event-image {
 	position: relative; 
   	background-size: cover;
-    height: 226px;
+    height: 256px;
     background-repeat: no-repeat;
     background-position: 50% 50%;}
   .xs-event-image .xs-entry-date {
