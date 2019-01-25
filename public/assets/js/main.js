@@ -45,13 +45,12 @@ function email_patern(email) {
 }
 
 $(window).on('load', function() {
-
 	// custom xs function init
 	xsFunction();
 
 	setTimeout(() => {
 		$('#preloader').fadeOut();
-	}, 500);
+	}, 100);
 	
 
 /*==========================================================

@@ -18,8 +18,9 @@ Route::get('equipo-de-trabajo', 'FundacionController@equipo_trabajo')->name('equ
 Route::get('estructura-organizativa', 'FundacionController@estructura_organizativa')->name('estructura_organizativa');
 Route::get('eventos', 'EventoController@evento')->name('evento');
 Route::get('preguntas-frecuentes','FaqController@faq')->name('faq');
-Route::get('galeria', 'GaleriaController@galeria')->name('galeria');
 Route::get('informes-anuales', 'FundacionController@informes')->name('informe');
+Route::get('multimedias', 'MultimediaController@multimedia')->name('multimedia');
+Route::get('album-fotos', 'MultimediaController@foto')->name('foto');
 Route::get('nuestras-actividades', 'ActividadController@actividad')->name('actividad');
 Route::get('observatorio', 'ComponenteController@observatorio')->name('observatorio');
 Route::get('proyectos', 'ProyectoController@proyecto')->name('proyecto');

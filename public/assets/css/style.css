@@ -4996,6 +4996,41 @@ img.scale-with-grid, #Content img {
     opacity: 0.3;
 	color: white;
 }
+
+/*------- MULTIMEDIA ----------*/
+
+.xs-container-div{
+	height: 400px;
+    width: 500px;
+    margin: 10px auto;
+	background-color: white;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.img-thumbnail{
+	height: 194px;
+    border: 0px solid #dee2e6;
+    background-repeat: no-repeat;
+	border-radius: 10px 10px 0px 0px;
+    background-size: cover;
+    background-position: 50% 50%;
+    -webkit-box-shadow: -9px -6px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -3px 12px 2px rgba(0, 0, 0, 0.2);
+}
+.titulo-album {
+	background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.titulo-album p{
+	font-size: 1.5em;
+    color: #011b58;
+    font-weight: 600;
+}
+
 }
   
 

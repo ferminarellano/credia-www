@@ -46,7 +46,7 @@
 				<div class="double-bounce1"></div>
 				<div class="double-bounce2"></div>
 			</div>
-		</div> <!-- #preloader -->
+		</div>
 
 		<header class="xs-header header-transparent">
 			<div class="container">
@@ -93,7 +93,7 @@
 									</ul>
 								</li>
 								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
-								<li><a href="{{ URL::route('galeria') }}">Multimedia</a></li>
+								<li><a href="{{ URL::route('multimedia') }}#contenido">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
@@ -136,6 +136,7 @@
 				<!--   END COMPONENTES  -->	
 			@yield('estructura_section')
 			@yield('organigrama_eo')
+			@yield('convenios_section')
 			@yield('equipo_et')
 			<!--  END CONTENIDO FUNDACIÓN  -->
 
@@ -163,9 +164,10 @@
 			@yield('servicios_alquiler_seccion')
 			<!--  END CONTENIDO SERVICIOS  -->
 
-			<!--     CONTENIDO GALERIA     -->
+			<!--  CONTENIDO MULTIMEDIA     -->
 			@yield('galeria_seccion')
-			<!--   END CONTENIDO GALERIA   -->
+			@yield('album_seccion')
+			<!-- END CONTENIDO MULTIMEDIA  -->
 
 			<!--     CONTENIDO SISTEMA     -->
 			@yield('sistemas_seccion')

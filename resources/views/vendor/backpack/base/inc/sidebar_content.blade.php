@@ -53,6 +53,15 @@
 		</li>
 		
 		<li class="treeview">
+			<a href="#"><i class="fa fa-film" aria-hidden="true"></i> <span>Multimedia</span> <i class="fa fa-angle-left pull-right"></i></a>
+			<ul class="treeview-menu">
+				<li><a href="{{ backpack_url('album') }}"><i class="fa fa-folder-open-o"></i> <span>albums</span></a></li>
+				<li><a href="{{ backpack_url('foto') }}"><i class="fa fa-picture-o"></i> <span>Fotos</span></a></li>
+				<li><a href="{{ backpack_url('video') }}"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+			</ul>
+		</li>
+		
+		<li class="treeview">
 			<a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Proyectos</span> <i class="fa fa-angle-left pull-right"></i></a>
 			<ul class="treeview-menu">
 				<li><a href="{{ backpack_url('proyecto') }}"><i class="fa fa-folder"></i> <span>Proyectos</span></a></li>
