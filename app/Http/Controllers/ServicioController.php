@@ -24,6 +24,6 @@ class ServicioController extends Controller
 			"redes" => $redes,
 		);
 		
-		return View::make('pagina-web.otras-secciones.alquiler_salones')->with($data);
+		return View::make('pagina-web.servicios.alquiler_salones')->with($data);
 	}
 }

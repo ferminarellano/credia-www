@@ -40,7 +40,7 @@
 				<div class="double-bounce1"></div>
 				<div class="double-bounce2"></div>
 			</div>
-		</div> <!-- #preloader -->
+		</div>
 
 		<header class="xs-header-other header-transparent-other">
 			<div class="container">
@@ -87,7 +87,7 @@
 									</ul>
 								</li>
 								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
-								<li><a href="{{ URL::route('galeria') }}">Multimedia</a></li>
+								<li><a href="{{ URL::route('multimedia') }}">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
 							</ul><!-- .nav-menu END -->
 						</div>
