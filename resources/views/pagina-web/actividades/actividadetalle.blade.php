@@ -1,8 +1,8 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Actividad -')
+@section('title', '| Actividad')
 
-@section('proyectodetalle')
+@section('actividad_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
@@ -29,7 +29,7 @@
 									@foreach($actividades as $actividad)
 											<li>
 												<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}">
-													<span class="first">{{ $actividad->actividad }}</span>
+													<span class="first">{{ $actividad->titulo }}</span>
 												</a>
 											</li>
 									@endforeach

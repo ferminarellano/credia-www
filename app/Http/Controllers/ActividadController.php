@@ -12,13 +12,13 @@ class ActividadController extends Controller
 {
     public function actividad()
 	{
-		$banner = Banner::where([['indicador','=','patrocinador']])->get();
+		$banner = Banner::where([['indicador','=','actividad']])->get();
 		$foto = $banner->first()->foto;
 		$titulo = $banner->first()->titulo;
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$actividades = Actividad::where('estado','=','1')->get();
+		$actividades = Actividad::where([['indicador','=','edu_ambiental'],['estado','=','1']])->paginate(4);
 		
 		$data = array(
 			"foto" => $foto,

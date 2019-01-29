@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Storage;
 
 class Sistema extends Model
 {
@@ -42,11 +43,11 @@ class Sistema extends Model
 		parent::boot();
 		
 		self::deleting(function($obj) {	
-			\Storage::disk('public_folder')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->foto);
 			
             if (count((array)$obj->fotos)) {
                 foreach ($obj->fotos as $file_path) {
-                    \Storage::disk('public_folder')->delete($file_path);
+                    Storage::disk('public')->delete($file_path);
                 }
             }
         });

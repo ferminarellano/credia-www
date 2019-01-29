@@ -3,7 +3,7 @@
 
 /*------------------------------------------------------------------
 [Table of contents]
-
+Portafolio de salones
 Funciones personalizadas
 cuadrícula de cartera
 banner slider
@@ -21,10 +21,13 @@ Code For Switching Style (FOR DEMO)
 Contact From dynamic
 XpeedStudio multipile Maps
 XpeedStudio Maps
+puntos-suspensivos - puntos-suspensivos-descripcion
+Contador Li start
 
 
 
 -------------------------------------------------------------------*/
+
 
 /*==========================================================
 			Funciones personalizadas
@@ -42,13 +45,13 @@ function email_patern(email) {
 }
 
 $(window).on('load', function() {
-
 	// custom xs function init
 	xsFunction();
 
 	setTimeout(() => {
 		$('#preloader').fadeOut();
-	}, 500);
+	}, 100);
+	
 
 /*==========================================================
 					cuadrícula de cartera
@@ -494,4 +497,53 @@ function init() {
 	});
 }
 
+/*==========================================================
+					Contador Li start
+==========================================================*/
+	$("ol").each(function(idx, el) {
+		var index = parseInt($(el).attr("start"))-1;
+		if (!isNaN(index)) {
+			$(el).css({'counter-reset':'li ' + index});    
+		}
+	});
+
+/*==========================================================
+					Puntos suspensivos
+==========================================================*/
+	function TextLarge ( containerId , largomaximo) {
+		var $container = $("#" + containerId); 
+		var $text = $("#textlarge a");    
+	 
+		while ( $container.text().length > largomaximo ) {
+			$text.text(function (index, text) {
+				return text.replace(/\W*\s(\S)*$/, '...');
+			});
+		}
+	}
+	TextLarge("textlarge", 330);
+	
+	function TextminiLarge ( containerId , largomaximo) {
+		var $container = $("#" + containerId); 
+		var $text = $("#textmini a");    
+	 
+		while ( $container.text().length > largomaximo ) {
+			$text.text(function (index, text) {
+				return text.replace(/\W*\s(\S)*$/, '...');
+			});
+		}
+	}
+	TextminiLarge("textmini", 125);
+	
+	function TextdescriptionLarge ( containerId , largomaximo) {
+		var $container = $("#" + containerId); 
+		var $text = $("#textdescripcion p");    
+	 
+		while ( $container.text().length > largomaximo ) {
+			$text.text(function (index, text) {
+				return text.replace(/\W*\s(\S)*$/, '...');
+			});
+		}
+	}
+	TextdescriptionLarge("textdescripcion", 450);
+	
 })(jQuery);

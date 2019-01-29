@@ -1,8 +1,8 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Actividad -')
+@section('title', '| Repositorio Digital')
 
-@section('proyectodetalle')
+@section('sistema_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
@@ -18,6 +18,9 @@
 								<span class="xs-separetor"></span>
 								<br>
 								{!! $sistema->first()->contenido !!}
+								<div class="xs-margin-7 mt-5">
+									<a href="{{ $sistema->first()->url }}" target="_blank" class="btn btn-primary">Ir a {{ $sistema->first()->nombre_sistema }}</a>
+								</div>
 							</div>
 						</div>
 						
@@ -46,7 +49,7 @@
 										<div class="circle-border zoom-in" style="background-image: url(/{{ $sistema->first()->foto }});"></div>
 									</a>
 									<div class="xs-heading-sistema">
-										<h3 class="xs-title" data-title="{{ $sistema->first()->nombre_sistema }}">{{ $sistema->first()->nombre_sistema }}</h3>
+										<h3 class="xs-title">{{ $sistema->first()->nombre_sistema }}</h3>
 									</div>
 								</div>
 							</div><!-- link end -->

@@ -25,7 +25,7 @@
 
 @section('title','')
 
-@section('welcome_in')	
+@section('slider_index_seccion')	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">
 			@foreach($sliders as $slide)
@@ -51,7 +51,7 @@
 	</section>
 @endsection
 
-@section('blog_recent')
+@section('articulos_recent')
 	@if(count($articulos) > 0)
 		<!-- blog section -->	
 		<section class="xs-section-padding" style="background-color:#F9F9F9;">
@@ -62,14 +62,13 @@
 					</div><!-- .xs-heading-title END -->
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('blog') }}" class="btn btn-primary">Ver todos</a>
-					</div><!-- .xs-btn-wraper END -->
+					</div>
 				</div><!-- .row end -->
 				<div class="row">
 					@foreach($articulos as $articulo)
 						<div class="col-lg-4 col-md-6">
 							<div class="xs-box-shadow xs-single-journal xs-mb-30">
 								<div class="entry-thumbnail" style="background-image: url(/{{ $articulo->foto }});">
-								{{--<img class="img-height" src="/{{$articulo->foto}}">--}}
 									<div class="post-author">
 										<span class="xs-round-avatar">
 											<img class="img-responsive" src="{{ 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($articulo->correo))).'?s=50&d=monsterid' }}">
@@ -112,15 +111,13 @@
 	@endif
 @endsection
 
-@section('eventos_in')
+@section('eventos_recent')
 	@if(count($eventos) > 0)
 		<section class="xs-section-padding">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
 						<h2 class="xs-title">Nuestros eventos</h2>
-						<!--<span class="xs-separetor dashed"></span>-->
-						<p>La Fundación CREDIA ha creado una plataforma para que te involucres con el medio ambiente <br> cambio climatico, salud, suelos y agua.</p>
 					</div><!-- .xs-heading-title END -->
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('evento') }}" class="btn btn-primary">Ver todos</a>
@@ -156,13 +153,13 @@
 	@endif
 @endsection
 
-@section('proyectos_in')
+@section('proyectos_recent')
 	@if(count($proyectos) > 0)
 		<section class="bg-gray waypoint-tigger xs-section-padding">
 			<div class="container">
 				<div class="xs-heading row xs-mb-60">
 					<div class="col-md-9 col-xl-9">
-						<h2 class="xs-title">Proyectos</h2>
+						<h2 class="xs-title">Nuestros proyectos</h2>
 					</div>
 					<div class="col-xl-3 col-md-3 xs-btn-wraper">
 						<a href="{{ URL::route('proyecto') }}" class="btn btn-primary">Ver todos</a>
@@ -180,11 +177,13 @@
 								</div>
 								<div class="xs-item-content">
 									<div class="xs-margin-1">
-										<ul class="xs-simple-tag xs-mb-20">
+										<div class="xs-margin-4" id="textlarge">
+											<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title-i">{{ $proyecto->titulo }}</a>
+										</div>
+										<span class="xs-separetor xs-mt-10"></span>
+										<ul class="xs-simple-tag xs-mb-20" id="textmini">
 											<li><a class="color-light-black" href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}">{{ $proyecto->subtitulo }}</a></li>
 										</ul>
-										<span class="xs-separetor"></span>
-										<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="xs-post-title xs-mb-30" style="text-align:justify;">{{ $proyecto->titulo }}</a>
 									</div>
 								</div><!-- .xs-item-content END -->
 							</div><!-- .xs-popular-item END -->
@@ -208,44 +207,43 @@
 							<h3 class="xs-title big" data-title="Misión">Misión</h3>
 						</div>
 						
-						<p>Promover el desarrollo sostenible mediante la gestión del conocimiento, 
+						<p style="text-align:justify;">Promover el desarrollo sostenible mediante la gestión del conocimiento, 
 						facilitando la toma de decisiones para la planificación ordenada del territorio, impulsando 
 						la educación ambiental, el turismo sostenible, las áreas protegidas, la cultura y la recreación 
 						en el Corredor Biológico del Caribe Hondureño.</p>
 						
-						<h5>Nuestros componentes estratégicos actuales:</h5>
+						<h5>Nuestros ejes estratégicos actuales:</h5>
 						
 						<ul class="xs-unorder-list arrow">
-							<li>Adaptación, Agua, Bosques y Suelos.</li>
-							<li>Cambio Climatico y Gestión Integral de Riesgos.</li>
-							<li>Interpretación y Educación Ambiental.</li>
-							<li>Observatorio de Desarrollo Sostenible (ODS).</li>
+							<li>Ecoturismo, Cultura y Recreación.</li>
+							<li>Desarrollo y Sostenibilidad Institucional.</li>
+							<li>Gestión del Conocimiento.</li>
 						</ul>
 						
 						<ul class="xs-funfact-list">
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="120" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="31" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Escuelas</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="48" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="25" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Colegios</span>
+								<span>Institutos</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="7" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="8" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
 								<span>Universidades</span>
 							</li>
 							<li>
 								<p>
-									<span class="number-percentage-count number-percentage" data-value="40" data-animation-duration="3500">0</span><sup> + </sup>
+									<span class="number-percentage-count number-percentage" data-value="18424" data-animation-duration="3500">0</span><sup> + </sup>
 								</p>
-								<span>Voluntarios</span>
+								<span>Visitantes</span>
 							</li>
 							<div class="clearfix"></div>
 						</ul>
@@ -279,7 +277,7 @@
 						del Corredor Biológico del Caribe Hondureño en los aspectos sociales, económicos y ambientales de esta importante región del país.</p>
 						
 						<blockquote>
-							Sus aportes también le benefician a usted, ya que todos somos habitantes de este planeta al cual debemos proteger, conservar y promocionar. Cómo <span>ayudar, Contáctenos.</span>
+							Sus aportes también le benefician a usted, ya que todos somos habitantes de este planeta al cual debemos proteger, conservar y promocionar.
 						</blockquote>
 					</div><!-- .xs-text-content END -->
 				</div>
@@ -353,7 +351,7 @@
 @endsection
 
 @section('actividades_in')
-	<section class="xs-section-padding">
+	<section class="xs-section-padding" style="background-color: #F9F9F9;">
 		<div class="container" align="justify">
 			<div class="xs-heading xs-mb-70 text-center">
 				<h2 class="xs-mb-0 xs-title-sv">Nuestras actividades y servicios de educación ambiental han beneficiado a más de <span>10,000 niños y niñas</span> de La Ceiba <br>y comunidades vecinas del CBCH. </h2>
@@ -394,7 +392,6 @@
 @endsection
 
 @section('voluntarios_in')
-
 	<section class="-index xs-become-a-volunteer xs-section-padding" style="background-image: url('assets/images/backgrounds/voluntarios-bg.jpg')">
 		<div class="container">
 			<div class="row">
@@ -418,7 +415,7 @@
 								</div>
 								<div class="col-lg-6">
 									<select name="actividad_id" id="actividad_id" value="{{ old('actividad_id') }}" class="form-control" required>
-											<option value="">Seleccionar</option>
+										<option value="">Seleccionar</option>
 										@foreach($actividades as $actividad)
 											<option value="{{$actividad->id}}">{{$actividad->actividad}}</option>
 										@endforeach
@@ -449,7 +446,7 @@
 				<div class="col-md-5">
 					<div class="xs-partner-content">
 						<div class="xs-heading xs-mb-40">
-							<h2 class="xs-mb-0 xs-title">La fundación <span>CREDIA </span>está conformada por destacadas instituciones públicas y civiles</h2>
+							<h2 class="xs-mb-0 xs-title">El <span>CREDIA </span>está conformada por destacadas instituciones públicas y privadas</h2>
 						</div>
 						<p>
 							Creada el 31 de octubre de 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, mediante la 
@@ -463,9 +460,8 @@
 						<li><a href="#"><img src="assets/images/alianzas/client_1.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_2.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_3.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_4.png" style="width: 90%;" alt=""></a></li>
 						<li><a href="#"><img src="assets/images/alianzas/client_5.png" style="width: 90%;" alt=""></a></li>
-						<li><a href="#"><img src="assets/images/alianzas/client_6.png" style="width: 90%; padding-right:0px;" alt=""></a></li>
+						<li><a href="#"><img src="assets/images/alianzas/client_7.png" style="width: 90%;" alt=""></a></li>
 					</ul>
 				</div>
 			</div><!-- .row end -->

@@ -72,6 +72,7 @@ class BlogCrudController extends CrudController
 							0 => "Borrador",
 							1 => "Publicado",
 						],
+						'tab' => 'Datos generales',
 			],'update');
 		}
 		

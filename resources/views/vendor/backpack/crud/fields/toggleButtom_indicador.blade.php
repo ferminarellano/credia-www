@@ -44,14 +44,14 @@
 				{
 					text-align:right;
 					padding-right: 0px;
-					padding-bottom: 10px;
+					float: right;
 				}
 				
 				.smart-button{
 					display: flex;
 					width: 169px;
 					border: 0px solid #efefef;
-					margin-left: auto;
+					/*margin-left: auto;*/
 				}
 				
 				.btn-default.btn-on.active{

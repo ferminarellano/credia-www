@@ -1,5 +1,7 @@
 @extends('pagina-web.layouts.layout')
 
+@section('title', '| Blog')
+
 <?php
 	function diccionario($palabra)
 	{	
@@ -24,9 +26,7 @@
 	$pagination_range = 2;
 ?>
 
-@section('title', 'Blog -')
-
-@section('welcomeblog')
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{$foto}})">
 		<div class="xs-black-overlay"></div>
 		<div class="container">
@@ -38,8 +38,7 @@
 	</section>
 @endsection
 
-@section('blogsection')
-	
+@section('blog_seccion')
 	<!-- blog section -->
 	<section class="xs-content-section-padding">
 		<div class="container">
@@ -112,8 +111,8 @@
 						@endif
 						@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
 							@if ($articulos->currentPage()+$i > 0 && $articulos->currentPage()+$i <= $articulos->lastPage())
-								<li class="page-item {{ $i==0 ? 'active' : '' }}">
-									<a class="page-link" href="{{ $articulos->url($articulos->currentPage()+$i) }}">{{ $articulos->currentPage()+$i }}</a>
+								<li class="page-item">
+									<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $articulos->url($articulos->currentPage()+$i) }}">{{ $articulos->currentPage()+$i }}</a>
 								</li>
 							@endif
 						@endfor
@@ -128,7 +127,7 @@
 							</li>
 						@endif
 						<li class="page-item {{ $articulos->nextPageUrl()==null ? 'disabled' : '' }}">
-							<a class="page-link " href="{{ $articulos->nextPageUrl() ?? '#' }}" aria-label="Next">
+							<a class="page-link" href="{{ $articulos->nextPageUrl() ?? '#' }}" aria-label="Next">
 								<i class="fa fa-angle-right"></i>
 							</a>
 						</li>

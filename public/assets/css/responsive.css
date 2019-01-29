@@ -20,8 +20,24 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		display:none;
 	}
 	
+	.organigram-responsive{
+		display:none;
+	}
+	
 	.xs-post-title{
 		font-size: 1.1em;
+	}
+	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
+	}
+	
+	.xs-descript-format{
+		font-size: 1.52vw;
+	}
+	
+	.xs-margin-5{
+		height: 235px;
 	}
 	
 	.header-transparent .nav-menu,
@@ -36,6 +52,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-sidebar-widget .widget-title:after{
 		width: 20px;
 	}
+	
+	.xs-heading .xs-title.big-o {
+		font-size: 2.1em;
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -44,8 +64,37 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		font-size: 90%;
 	}
 	
+	.organigram-responsive{
+		display:none;
+	}
+	
 	.xs-post-title{
 		font-size: 1.1em;
+	}
+	
+	.xs-list-with-content li{
+		font-size: 1.3em;
+	}
+	
+	.xs-list-with-content li span{
+		font-size: 0.6em;
+	}
+	
+	.xs-margin-t{
+		margin-top: 15px;
+		text-align: center;
+	}
+	
+	.xs-margin-t a{
+		float: right;
+	}
+	
+	.xs-margin#xs-mar{
+		margin: 0 0 0 auto;
+	}
+	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
 	}
 	
 	.header-transparent .nav-menu,
@@ -93,6 +142,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	
 	.right{
 		margin-right:100px;
+	}
+	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
 	}
 	
 	.nav-opacity{
@@ -190,6 +243,10 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-archive-content {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.xs-asg{
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 	.xs-funfact-list li span {
 		font-size: 0.65714em;
@@ -411,6 +468,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		padding-bottom: 20px;
 	}
 }
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	html {
@@ -422,12 +480,32 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		margin-right:100px;
 	}
 	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
+	}
+	
+	.xs-margin#xs-mar{
+		margin: 0 0 0 auto;
+	}
+	
 	.nav-opacity{
 		display:none;
 	}
 	
 	.nav-opacity-other{
 		display:none;
+	}
+	
+	.organigram-responsive{
+		display:none;
+	}
+	
+	.tbl-header h2{
+		font-size: 0.8em;
+	}
+	
+	.tbl-content td {
+		padding: 10px 5px 10px 5px;
 	}
 	
 	/* header top bar */
@@ -462,7 +540,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 	
 	.xs-post-title{
-		font-size: 3.5vw;
+		font-size: 2vw;
+	}
+	
+	.xs-descript-format{
+		font-size: 1.05em;
 	}
 	
 	.xs-post-footer .share-items, 
@@ -487,11 +569,23 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		font-size: 65%;
 	}
 	
+	.xs-margin#xs-mar{
+		margin: 0 0 0 auto;
+	}
+	
 	.right{
 		margin-right:100px;
 	}
 	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
+	}
+	
 	.nav-opacity{
+		display:none;
+	}
+	
+	.organigram-responsive{
 		display:none;
 	}
 	
@@ -499,8 +593,33 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		display:none;
 	}
 	
+	.xs-box-shadow{
+		margin: 5px;
+	}
+	
 	.xs-post-title{
-		font-size: 4.5vw;
+		font-size: 3vw;
+	}
+	
+	.xs-descript-format{
+		font-size: 3.1vw;
+	}
+	
+	.xs-list-with-content li{
+		font-size: 1.2em;
+	}
+	
+	.xs-list-with-content li span{
+		font-size: 0.6em;
+	}
+	
+	.xs-margin-t{
+		margin-top: 15px;
+		text-align: center;
+	}
+	
+	.xs-margin-t a{
+		float: none;
 	}
 }
 
@@ -511,6 +630,18 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	
 	.right{
 		margin-right:100px;
+	}
+	
+	.xs-margin#xs-mar{
+		margin: 0 0 0 auto;
+	}
+	
+	.xs-inner-banner-content h2{
+		font-size: 2.0em;
+	}
+	
+	.organigram-responsive{
+		display:none;
 	}
 	
 	.nav-opacity{

@@ -1,8 +1,8 @@
 @extends('pagina-web.layouts.layout_other')
 
-@section('title', 'Proyecto -')
+@section('title', '| Proyecto')
 
-@section('proyectodetalle')
+@section('proyecto_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
@@ -26,16 +26,16 @@
 							<div class="widget widget_categories xs-sidebar-widget">
 								<h3 class="widget-title">Categor&iacute;as</h3>
 								<ul class="xs-side-bar-list">
-									@foreach($categorias as $categoria)
-										@if($categoria->proyectos()->count() > 0)
+									@foreach($proyecto as $categorias)
+										@foreach($categorias->first()->categorias()->get() as $categoria)	
 											<li>
 												<a href="{{ URL::route('categoria_proyecto',['categoria' => str_slug($categoria->nombre,'-'),'categoria_id' => $categoria->id])}}">
 													<span class="first">{{ $categoria->nombre }}</span>
-													<span class="last">{{ $categoria->proyectos()->count() }}</span>
+													<!-- <span class="last"></span> -->
 												</a>
 											</li>
-										@endif
-									@endforeach
+										@endforeach
+									@endforeach								
 								</ul>
 							</div><!-- categories end -->
 							

@@ -1,5 +1,7 @@
 @extends('pagina-web.layouts.layout_other')
 
+@section('title', '| Blog')
+
 <?php
 	function diccionario($palabra)
 	{	
@@ -22,9 +24,7 @@
 	}
 ?>
 
-@section('title', 'Blog -')
-
-@section('blogdetalle')
+@section('blog_detalle')
 	
 	<section class="xs-banner-inner-section-other"></section>
 	

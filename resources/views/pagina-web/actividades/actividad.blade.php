@@ -1,8 +1,12 @@
 @extends('pagina-web.layouts.layout')
 
-@section('title', 'Actividades -')
+@section('title', '| Actividades')
 
-@section('welcomedonacion')
+<?php
+	$pagination_range = 2;
+?>
+
+@section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url(/{{ $foto }})">
 	<div class="xs-black-overlay"></div>
 	<div class="container">
@@ -14,84 +18,201 @@
 </section>
 @endsection
 
-@section('promo')
-	<!-- box promo section -->
-	<section class="xs-what-we-do-box" style="background-color:#F9F9F9;">
+@section('actividades_seccion')
+	<!-- box links section -->
+	<section class="xs-what-we-do-box">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo-p box-color bg-light-c-green">
-						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/jardin_w.png') no-repeat; background-position: bottom;"></span>
-						<h5>Jardín botánico<br><small>Sendero Gerardo Rodríguez</small></h5>
-						<!-- <p> -->
-							<!-- Recorrido interpretado por un guía especializado en el Jardín del CREDIA. -->
-						<!-- </p> -->
-					</div><!-- .xs-service-promo END -->
+				<div class="col-md-6 col-lg-4 xs-box-service">
+					<a href="{{ URL::route('cendoc') }}">
+						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
+							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/cendoc_w.png')"></div>
+							<h5>Centro de Documentación<br><small></small></h5>
+						</div>
+					</a>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo-p box-color bg-light-c-green">
-						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/pasaporte_w.png') no-repeat;"></span>
-						<h5>Pasaporte Verde<br><small>Corredor Biológico</small></h5>
-						<!-- <p> -->
-							<!-- Mediante esta herramienta se invita a recorrer las 10 áreas protegidas del CBCH. -->
-						<!-- </p> -->
-					</div><!-- .xs-service-promo END -->
+				<div class="col-md-6 col-lg-4 xs-box-service">
+					<a href="{{ URL::route('edu_ambiental') }}">
+						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
+							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/educacion_w.png')"></div>
+							<h5>Educación Ambiental<br><small></small></h5>
+						</div>
+					</a>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo-p box-color bg-light-c-green">
-						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/foresteria_w.png') no-repeat; background-position: bottom;"></span>
-						<h5>Forestería comunitaria<br><small>Cambio Climático</small></h5>
-						<!-- <p> -->
-							<!-- Concientización de métodos para mitigar los efectos del cambio climático. -->
-						<!-- </p> -->
-					</div><!-- .xs-service-promo END -->
+				<div class="col-md-6 col-lg-4 xs-box-service">
+					<a href="{{ URL::route('observatorio') }}">
+						<div class="xs-service-promo-p box-color bg-light-c-green zoom-in">
+							<div class="xs-service-promo-img zoom-in" style="background-image: url('assets/images/actividades/observatorio_w.png')"></div>
+							<h5>Observatorio de Desarrollo Sostenible<br><small></small></h5>
+						</div>
+					</a>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="xs-service-promo-p box-color bg-light-c-green">
-						<span class="xs-service-promo-p" style="background: url('assets/images/actividades/videos_w.png') no-repeat; background-position: bottom;"></span>
-						<h5>Videos sobre el ambiente<br><small>Proyecciones en 3D</small></h5>
-						<!-- <p> -->
-							<!-- Enriqueciendo la experiencia de la visita en temas de importancia. -->
-						<!-- </p> -->
-					</div><!-- .xs-service-promo END -->
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</section>	<!-- End box promo section -->
+			</div>
+		</div>
+	</section><!-- End box links section -->
 
-	<!-- box promo section -->
-	<section class="xs-children-section" style="background-color:#F9F9F9;">
+	<section class="waypoint-tigger xs-section-padding xs-content-section-padding-actividad">
 		<div class="container">
-			<div class="xs-heading row xs-mb-60">
-				<div class="col-md-6 mx-auto text-center">
-					<h2 class="xs-title" style="text-align:center;">Otras actividades</h2>
-					<p>Charlas, foros, senderismo y demás atracciones que te ofrecemos para planificar y aprovechar al máximo tu tiempo y enriquecer el aprendizaje.</p>
-					<span class="xs-separetor v3"></span>
+			<div class="row">
+				<div class="col-md-12 col-lg-6">
+					<div class="xs-archive-content">
+						<div class="xs-heading">
+							<h2 class="xs-line-title">Centro de Documentación</h2>
+							<h3 class="xs-title big" data-title="CENDOC">CENDOC</h3>
+						</div>
+						<p>
+							Forma parte del modelo de gestión de conocimiento del Centro 
+							Regional de Documentación e Interpretación Ambiental (CREDIA), como plataforma dinámica e integradora
+							para la gestión y administración de información.
+						</p>
+						<h5>El Centro de Documentación se encarga:</h5>
+						
+						<ul class="xs-unorder-list xs-li arrow">
+							<li>Captura, recopilación y difusión de información documental referente al desarrollo sostenible.</li>
+							<li>Gestión y administración de información socioambiental .</li>
+							<li>Utilización de sistemas de información libre que permite la divulgación de documentos generados.</li>
+						</ul>
+						<div class="xs-btn-wraper">
+							<a href="{{ URL::route('cendoc') }}" class="btn btn-primary btn-actividad">Ver componente</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-6 row xs-archive-image">
+					<div class="col-md-6 col-sm-6">
+						<img src="assets/images/componentes/cendoc/img-2.jpg" alt="" class="rounded" style="height:169.06px;">
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<img src="assets/images/componentes/cendoc/img-3.jpg" alt="" class="rounded">
+					</div>
+					<div class="col-md-12 xs-mb-30">
+						<img src="assets/images/componentes/cendoc/img-1.jpg" alt="" class="rounded">
+					</div>
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</section>	<!-- End box promo section -->
-
-	<!-- service promo section -->
-	@if(count($actividades) > 0)
-		<section class="xs-content-section-padding xs-service-promo-section" style="background-color:#FFFFFF;">
-			<div class="container">
-				<div class="row">
+	</section><!-- end Actividades cendoc section -->
+	
+	<!-- Educación ambiental section -->
+	<section class="xs-content-section-padding-actividad xs-service-promo-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-5">
+					<div class="col-md-12 xs-mb-30 xs-edu-img">
+						<img src="assets/images/componentes/educacion/img-1.jpg" alt="" class="rounded" style="width:415px;">
+					</div>
+					<div class="xs-archive-content xs-educacion-pad">
+						<h3 class="xs-title-educacion">Educación Ambiental</h3>
+						<p>
+							El componente de Educación Ambiental de CREDIA tiene definidas dos áreas de trabajo. Primero, la sensibilización
+							ambiental mediante campañas, visitas y actividades educativas en el jardín e instalaciones. Y segundo, la oferta
+							de cursos y talleres que se imparten a los diferentes públicos, en temas tales como biodiversidad, cambio
+							climático, consumo responsable, entre otros.
+						</p>
+						<div class="xs-btn-wraper">
+							<a href="{{ URL::route('edu_ambiental') }}" class="btn btn-primary btn-actividad">Ver componente</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-7 row xs-margin" id="xs-mar">
 					@foreach($actividades as $actividad)
-						<div class="col-lg-6 col-md-6" style="margin-bottom:30px;">
+						<div class="col-md-6 col-sm-6 xs-actividad-pad">
 							<div class="media xs-single-media xs-service-promo-p">
-								<!-- <span class="icon-donation_2 d-flex color-light-red"></span> -->
-								<span class="xs-service-promo-p" style="background: url({{ $actividad->foto }}) no-repeat;"></span>
+								<div class="xs-service-promo-img2" style="background-image: url({{ $actividad->foto }});"></div>
 								<div class="media-body">
-									<h5 style="text-align:center;">{{ $actividad->titulo }}</h5>
-									<p style="text-align:justify;">{{ $actividad->descripcion }}</p>
+									<h5>{{ $actividad->titulo }}</h5>
+									<p>{{ $actividad->descripcion }}</p>
 									<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}"><i class="fa fa-play"></i> Saber más</a>
 								</div>
-							</div><!-- .xs-single-media END -->
+							</div>
 						</div>
 					@endforeach
-				</div><!-- .row end -->
-			</div><!-- .container end -->
-		</section>	<!-- end service promo section -->
-	@endif
+					
+					@if($actividades->count()  > 0)
+						<!-- pagination -->
+						<div class="col-md-12">
+							<ul class="pagination justify-content-center xs-pagination" style="padding-top:0px;">
+								<li class="page-item {{ $actividades->previousPageUrl() == null ? 'disabled' : '' }}">
+									<a class="page-link" href="{{ $actividades->previousPageUrl() ?? '#' }}" aria-label="Previous">
+										<i class="fa fa-angle-left"></i>
+									</a>
+								</li>
+								@if ($actividades->currentPage() > 1+$pagination_range )
+									<li class="page-item">
+										<a class="page-link" href="{{ $actividades->url(1) ?? '#' }}">{{ 1 }}</a>
+									</li>
+
+									@if ($actividades->currentPage() > 1+$pagination_range+1 )
+										<li class="page-item disabled">
+											<span class="page-link">&hellip;</span>
+										</li>
+									@endif
+								@endif
+								@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+									@if ($actividades->currentPage()+$i > 0 && $actividades->currentPage()+$i <= $actividades->lastPage())
+										<li class="page-item">
+											<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $actividades->url($actividades->currentPage()+$i) }}">{{ $actividades->currentPage()+$i }}</a>
+										</li>
+									@endif
+								@endfor
+								@if ($actividades->currentPage() < $actividades->lastPage()-$pagination_range )	
+									@if ($actividades->currentPage() < $actividades->lastPage()-$pagination_range-1 )
+										<li class="page-item disabled">
+											<span class="page-link">&hellip;</span>
+										</li>
+									@endif
+									<li class="page-item">
+										<a class="page-link" href="{{ $actividades->url($actividades->lastPage()) ?? '#' }}">{{ $actividades->lastPage() }}</a>
+									</li>
+								@endif
+								<li class="page-item {{ $actividades->nextPageUrl()==null ? 'disabled' : '' }}">
+									<a class="page-link" href="{{ $actividades->nextPageUrl() ?? '#' }}" aria-label="Next">
+										<i class="fa fa-angle-right"></i>
+									</a>
+								</li>
+							</ul>
+						</div><!-- End pagination -->
+					@endif
+				</div>
+			</div>
+		</div>
+	</section><!-- end Educación ambiental section -->
+	
+	<!-- Observatorio section -->
+	<section class="waypoint-tigger xs-section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-6">
+					<div class="xs-archive-content">
+						<div class="xs-heading">
+							<h3 class="xs-title big-o" data-title="Observatorio">Observatorio de Desarrollo Sostenible</h3>
+						</div>
+						<p>
+							Es responsable de desempeñar las funciones medulares para las cuales fue concebido el CREDIA. En este sentido, 
+							el ODS es considerado una dependencia del CREDIA que monitorea e incide en el proceso de desarrollo sostenible, 
+							mediante la generación y difusión de información.
+						</p>
+						<h5>Las funciones identificadas para el ODS:</h5>
+						
+						<ul class="xs-unorder-list arrow">
+							<li>Apoyar la integración de los datos provenientes del sistema de monitoreo biológico de las áreas protegidas.</li>
+							<li>Desarrollo de capacidades de conocimiento.</li>
+							<li>Información sobre los procesos de sostenibilidad.</li>
+							<li>Promover y divulgar resultados de la investigación científica.</li>
+						</ul>
+						<div class="xs-btn-wraper">
+							<a href="{{ URL::route('observatorio') }}" class="btn btn-primary btn-actividad">Ver componente</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-6 row xs-archive-image">
+					<div class="col-md-12 xs-mb-30">
+						<img src="assets/images/componentes/observatorio/img-1.jpg" alt="" class="rounded" style="height:250px;">
+					</div>
+					<div class="col-md-12 xs-mb-30">
+						<img src="assets/images/componentes/observatorio/img-2.jpg" alt="" class="rounded" style="height:250px; width:100%;">
+					</div>
+				</div>
+			</div><!-- .row end -->
+		</div><!-- .container end -->
+	</section><!-- end Observatorio section -->
 @endsection

@@ -20,7 +20,7 @@ class ProyectoController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$proyectos = Proyecto::orderBy('id','desc')->paginate(6);
+		$proyectos = Proyecto::where([['estado','=','1']])->orderBy('id','asc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
@@ -33,6 +33,48 @@ class ProyectoController extends Controller
 		return View::make('pagina-web.proyectos.proyecto')->with($data);
 	}
 	
+	public function proyectos($slug)
+	{
+		$banner = Banner::where([['indicador','=','proyectos']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
+		$redes = Social::all();
+		
+		$proyectos = Proyecto::where([['avance','=','100'],['estado','=','1']])->orderBy('id','desc')->paginate(6);
+		
+		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
+			"redes" => $redes,
+			"proyectos" => $proyectos,
+		);
+		
+		return View::make('pagina-web.proyectos.proyecto')->with($data);
+	}
+	
+	public function proyecto_ejecucion($slug1)
+	{
+		$banner = Banner::where([['indicador','=','proyectos']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
+		$redes = Social::all();
+		
+		$proyectos = Proyecto::where([['avance','<','100'],['estado','=','1']])->orderBy('id','desc')->paginate(6);
+		
+		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
+			"redes" => $redes,
+			"proyectos" => $proyectos,
+		);
+		
+		return View::make('pagina-web.proyectos.proyecto_ejecucion')->with($data);
+	}
+	
 	public function search_categoria_proyecto($categoria,$id)
 	{
 		$banner = Banner::where([['indicador','=','Proyectos']])->get();
@@ -41,7 +83,8 @@ class ProyectoController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 
-		$proyectos = Proyecto::where([['categoria_id',$id]])->orderBy('id','desc')->paginate(6);
+		$categoria = Categoria::where([['id',$id]])->get();
+		$proyectos = $categoria->first()->proyectos()->where('estado','1')->orderBy('id','desc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
@@ -56,14 +99,12 @@ class ProyectoController extends Controller
 	
 	public function proyectodetalle($slug,$id)
 	{	
-		$proyecto = Proyecto::where([['id',$id]])->get();
+		$proyecto = Proyecto::where([['id','=',$id],['estado','=','1']])->get();
 		$redes = Social::all();
-		$categorias = Categoria::all();
 		
 		$data = array(
 			"proyecto" => $proyecto,
 			"redes" => $redes,
-			"categorias" => $categorias,
 		);
 		
 		return View::make('pagina-web.proyectos.proyectodetalle')->with($data);

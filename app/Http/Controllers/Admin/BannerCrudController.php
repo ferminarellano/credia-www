@@ -18,7 +18,7 @@ class BannerCrudController extends CrudController
 
         $this->crud->setModel('App\Models\Banner');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/banner');
-        $this->crud->setEntityNameStrings('banner', 'sliders-banners');
+        $this->crud->setEntityNameStrings('banner', 'banners');
 		
 		$this->crud->allowAccess('revisions');
 		$this->crud->with('revisionHistory');
@@ -28,11 +28,14 @@ class BannerCrudController extends CrudController
 			'name' => 'indicador',
 			'label' => 'Pertenece',
 			'type' => 'select_from_array',
-			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
-						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
-						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
-						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
+			'options' => ['inicio' => 'Inicio','quienes_somos' => 'Quienes somos','observatorio' => 'Observatorio',
+						  'cendoc' => 'Centro de documentacion','educacion_ambiental' => 'Educación Ambiental',
+						  'estructura_organizativa' => 'Estructura organizativa','equipo_trabajo' => 'Equipo de trabajo',
+						  'convenios' => 'Convenios interinstitucionales','informes' => 'Informes Anuales',
+						  'proyectos' => 'Proyectos','sistema' => 'Sistema','videoteca' => 'Videoteca','galeria' => 'Galería',
+						  'blog' => 'Blog','contacto'=> 'Contactenos','evento'=> 'Eventos','servicio'=> 'Servicios',
+						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes','actividad'=> 'Actividades',
+						  'voluntario' => 'Voluntariado'],
 		]);
 		
 		$this->crud->addColumn([
@@ -115,12 +118,15 @@ class BannerCrudController extends CrudController
 		$this->crud->addField([
 			'name' => 'indicador',
 			'label' => 'Página',
-			'type' => 'select_from_array',
-			'options' => ['inicio' => 'Inicio','fundacion' => 'Fundación', 'proyectos' => 'Proyectos', 
-						  'eventos' => 'Eventos','blog' => 'Blog','contacto'=> 'Contacto',
-						  'voluntario'=> 'Voluntario','patrocinador'=> 'Patrocinador','equipo'=> 'Equipo',
-						  'galeria'=> 'Galería','mision'=> 'Misión','faq'=> 'Preguntas Frecuentes',
-						  'servicio'=> 'Servicio','sistema'=> 'Sistema'],
+			'type' => 'select2_from_array',
+			'options' =>  ['inicio' => 'Inicio','quienes_somos' => 'Quienes somos','observatorio' => 'Observatorio',
+						  'cendoc' => 'Centro de documentacion','educacion_ambiental' => 'Educación Ambiental',
+						  'estructura_organizativa' => 'Estructura organizativa','equipo_trabajo' => 'Equipo de trabajo',
+						  'convenios' => 'Convenios interinstitucionales','informes' => 'Informes Anuales',
+						  'proyectos' => 'Proyectos','sistema' => 'Sistema','videoteca' => 'Videoteca','galeria' => 'Galería',
+						  'blog' => 'Blog','contacto'=> 'Contactenos','evento'=> 'Eventos','servicio'=> 'Servicios',
+						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes','actividad'=> 'Actividades',
+						  'voluntario' => 'Voluntariado'],
 			'allows_null' => true,
 		]);
 		
