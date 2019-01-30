@@ -75,6 +75,16 @@ class Foto extends Model
 		return $this->belongsTo('App\Models\Album');
 	}
 	
+	public function componentes()
+	{
+		return $this->belongsToMany('App\Models\Componente', 'foto_componente','foto_id');
+	}
+	
+	public function actividades()
+	{
+		return $this->belongsToMany('App\Models\Actividad', 'foto_actividad','foto_id');
+	}
+	
     /*-------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/

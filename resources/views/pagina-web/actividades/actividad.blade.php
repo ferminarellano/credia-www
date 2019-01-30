@@ -97,10 +97,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-5">
-					<div class="col-md-12 xs-mb-30 xs-edu-img">
-						<img src="assets/images/componentes/educacion/img-1.jpg" alt="" class="rounded" style="width:415px;">
+					<div class="col-md-12 xs-mb-20 mt-2 xs-edu-img" >
+						<!-- <img src="assets/images/componentes/educacion/img-1.jpg" alt="" class="rounded" style="width:415px;"> -->
 					</div>
-					<div class="xs-archive-content xs-educacion-pad">
+					<div class="xs-archive-content mt-2 xs-educacion-pad">
 						<h3 class="xs-title-educacion">Educación Ambiental</h3>
 						<p>
 							El componente de Educación Ambiental de CREDIA tiene definidas dos áreas de trabajo. Primero, la sensibilización
@@ -113,15 +113,26 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 col-lg-7 row xs-margin" id="xs-mar">
+				<div class="col-lg-7 col-md-12 row xs-margin" id="xs-mar">
 					@foreach($actividades as $actividad)
-						<div class="col-md-6 col-sm-6 xs-actividad-pad">
-							<div class="media xs-single-media xs-service-promo-p">
-								<div class="xs-service-promo-img2" style="background-image: url({{ $actividad->foto }});"></div>
-								<div class="media-body">
-									<h5>{{ $actividad->titulo }}</h5>
+						<div class="col-lg-6 col-md-6" style="padding: 0px 0px 25px 10px;">
+							<div class="plan-inner text-right">
+								<div class="entry-banner" style="background-image: url({{ $actividad->foto }});"></div>
+								<div class="entry-title-act">
+									@if(empty($actividad->icono) === FALSE)
+										<div class="price" style="background-image: url({{ $actividad->icono }});"></div>
+									@else
+										<div class="price" style="background-image: url('assets/images/actividades/actividad_general.png');"></div>
+									@endif
+								</div>
+								<div class="entry-content-act">
+									<h3>{{ $actividad->titulo }}</h3>
 									<p>{{ $actividad->descripcion }}</p>
-									<a href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}"><i class="fa fa-play"></i> Saber más</a>
+								</div>
+								<div class="div-btn">
+									<a class="btn btn-secondary btn-color-alt" href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}">
+										Saber más
+									</a>
 								</div>
 							</div>
 						</div>

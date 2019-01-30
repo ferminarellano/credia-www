@@ -9,6 +9,7 @@
 	CRUD::resource('blog', 'BlogCrudController');
 	CRUD::resource('categoria', 'CategoriaCrudController');
 	CRUD::resource('contacto', 'ContactoCrudController');
+	CRUD::resource('componente', 'ComponenteCrudController');
 	CRUD::resource('dataindicador', 'DataIndicadorCrudController');
 	CRUD::resource('equipo', 'EquipoCrudController');
 	CRUD::resource('evento', 'EventoCrudController');

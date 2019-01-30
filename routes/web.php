@@ -20,7 +20,6 @@ Route::get('eventos', 'EventoController@evento')->name('evento');
 Route::get('preguntas-frecuentes','FaqController@faq')->name('faq');
 Route::get('informes-anuales', 'FundacionController@informes')->name('informe');
 Route::get('multimedias', 'MultimediaController@multimedia')->name('multimedia');
-Route::get('album-fotos', 'MultimediaController@foto')->name('foto');
 Route::get('nuestras-actividades', 'ActividadController@actividad')->name('actividad');
 Route::get('observatorio', 'ComponenteController@observatorio')->name('observatorio');
 Route::get('proyectos', 'ProyectoController@proyecto')->name('proyecto');
@@ -35,6 +34,9 @@ Route::get('proyectos/categoria/{categoria}/{categoria_id}', 'ProyectoController
 Route::get('proyectos/{slug}', 'ProyectoController@proyectos')->name('proyectos');
 Route::get('proyectos/en/{slug}', 'ProyectoController@proyecto_ejecucion')->name('proyecto_ejecucion');
 Route::get('proyectos/{slug}/{id}', 'ProyectoController@proyectodetalle')->name('proyectodetalle'); 
+Route::get('multimedia/albumes/{slug}', 'MultimediaController@album')->name('album');
+Route::get('multimedia/albumes/fotos/{id}', 'MultimediaController@foto')->name('foto');
+Route::get('multimedia/albumes/videos/{id}', 'MultimediaController@video')->name('video');
 Route::get('nuestras-actividades/{slug}/{id}', 'ActividadController@actividadetalle')->name('actividadetalle'); 
 Route::get('sistemas/{slug}/{id}', 'SistemaController@sistemadetalle')->name('sistemadetalle');
 

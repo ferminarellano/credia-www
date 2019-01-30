@@ -15,10 +15,10 @@ class Video extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['nombre','album_id','url_video','descripcion','secuencia'];
+    protected $fillable = ['nombre','album_id','url_video','cover','descripcion','secuencia'];
     // protected $hidden = [];
     // protected $dates = [];
-	protected $visible = ['url_video'];
+	protected $visible = ['url_video','cover'];
 	protected $guard_name = 'web';
 	
 	protected $revisionCreationsEnabled = true;
@@ -26,6 +26,7 @@ class Video extends Model
 		'album_id' => 'album',
 		'url_video' => 'url de video',
 		'descripcion' => 'descripcion',
+		'cover' => 'foto de portada',
 	);
 
     /*------------------------------------------------------------------------
@@ -47,7 +48,7 @@ class Video extends Model
         });
 		
 		self::deleting(function($obj) {	
-			
+			Storage::disk('public')->delete($obj->cover);
         });
     }
 	
@@ -70,6 +71,16 @@ class Video extends Model
 		return $this->belongsTo('App\Models\Album');
 	}
 	
+	public function componentes()
+	{
+		return $this->belongsToMany('App\Models\Componente', 'video_componente','video_id');
+	}
+	
+	public function actividades()
+	{
+		return $this->belongsToMany('App\Models\Actividad', 'video_actividad','video_id');
+	}
+	
     /*-------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
@@ -81,4 +92,12 @@ class Video extends Model
     /*------------------------------------------------------------------------
     | MUTATORS
     |------------------------------------------------------------------------*/
+	
+	public function setCoverAttribute($value)
+	{
+		$attribute_name = "cover";
+		$disk = "public";
+		$destination_path = "images/videos/cover";
+		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+	}
 }
