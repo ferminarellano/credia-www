@@ -150,8 +150,11 @@
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">
 					<div class="xs-archive-content xs-asg">
 						<div class="xs-heading">
-								<h2 class="xs-line-title">Nuestra</h2>
-								<h3 class="xs-title big-o" data-title="Junta Directiva">Junta Directiva</h3>
+							<h2 class="xs-line-title">Nuestra</h2>
+							<h3 class="xs-title big-o" data-title="Junta Directiva">Junta Directiva</h3>
+							<p>
+								Periodo vigente del 24/07/2017 al 24/07/2019
+							</p>
 						</div>
 						<div class="tbl-header">
 							<table class="tbl">
@@ -218,8 +221,13 @@
 				<div class="col-md-12 col-lg-12 pr-0 pl-0">
 					<div class="xs-archive-content xs-asg">
 						<div class="xs-heading">
-								<h2 class="xs-line-title">Nuestro</h2>
-								<h3 class="xs-title big-o" data-title="Comité Técnico">Comité Técnico Consultivo</h3>
+							<h2 class="xs-line-title">Nuestro</h2>
+							<h3 class="xs-title big-o" data-title="Comité Técnico">Comité Técnico Consultivo</h3>
+							<p>
+								Es el órgano que; reúne a miembros de la asamblea general ordinaria, con una experiencia 
+								reconocida y probada, captado en función de sus conocimientos técnicos específicos. 
+								Su periodo de vigencia del 08/03/2018 al 24/07/2019.
+							</p>
 						</div>
 						<div class="tbl-header">
 							<table class="tbl">

@@ -30,11 +30,12 @@ class ActividadCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
-			'name' => 'indicador',
 			'label' => 'Componente',
-			'type' => 'select_from_array',
-			'options' => ['cendoc' => 'Centro de Documantación', 'edu_ambiental' => 'Educación Ambiental', 
-						  'ods' => 'Observatorio de Desarrollo Sostenible'],
+			'type' => "select",
+			'name' => 'componente_id',
+			'entity' => 'componente',
+			'attribute' => "nombre",
+			'model' => "App\Models\Componente",
 		]);
 		
 		$this->crud->addColumn([
@@ -61,12 +62,12 @@ class ActividadCrudController extends CrudController
 		],'update');
 		
 		$this->crud->addField([
-			'name' => 'indicador',
-			'label' => "Componente",
-			'type' => 'select2_from_array',
-			'options' => ['cendoc' => 'Centro de Documantación', 'edu_ambiental' => 'Educación Ambiental', 
-						  'ods' => 'Observatorio de Desarrollo Sostenible'],
-			'allows_null' => true,
+			'name' => 'titulo',
+			'label' => "Título de actividad",
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => "Ingrese el título de la actividad *",
+			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
@@ -74,12 +75,12 @@ class ActividadCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'titulo',
-			'label' => "Título de actividad",
-			'type' => 'text',
-			'attributes' => [
-				'placeholder' => "Ingrese el título de la actividad *",
-			],
+			'label' => "Componente",
+			'type' => 'select2',
+			'name' => 'componente_id', 
+			'entity' => 'componente',
+			'attribute' => 'nombre', 
+			'model' => "App\Models\Componente",
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
@@ -117,7 +118,15 @@ class ActividadCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'fotos',
+			'name' => 'icono',
+			'label' => "Icono",
+			'type' => 'upload',
+			'upload' => true,
+			'tab' => 'Icono de actividad',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'galeria',
 			'label' => "Fotografías",
 			'type' => 'upload_multiple',
 			'upload' => true,
@@ -128,12 +137,21 @@ class ActividadCrudController extends CrudController
     public function store(StoreRequest $request)
     {
         $redirect_location = parent::storeCrud($request);
+		$this->insertIndicador($this->crud->entry);
         return $redirect_location;
     }
+	
+	public function insertIndicador($componente)
+	{
+		$nombre = $componente->componente()->first()->nombre;		
+		$componente->indicador = strtolower($nombre);
+		$componente->save();
+	}
 
     public function update(UpdateRequest $request)
     {
         $redirect_location = parent::updateCrud($request);
+		$this->insertIndicador($this->crud->entry);
         return $redirect_location;
     }
 }

@@ -32,14 +32,38 @@ class AlbumCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
+			'name' => 'tipo',
+			'label' => "Tipo de álbum",
+			'type' => 'select_from_array',
+			'options' => ['fotos' => 'Fotos', 'videos' => 'Videos'],
+		]);
+		
+		$this->crud->addColumn([
 			'name' => 'descripcion',
 			'label' => 'Descripción'
+		]);
+		
+		$this->crud->addColumn([
+			'name' => 'estado',
+			'label' => "Estado",
+			'type' => 'select_from_array',
+			'options' => ['0' => 'Borrador', '1' => 'Publicado'],
 		]);
 		
 		$this->crud->addColumn([
 			'name' => 'created_at',
 			'label' => 'Frecha de creación'
 		]);
+		
+		$this->crud->addField([
+			'name' => 'estado',
+			'label' => '',
+			'type' => 'toggleButtom_album',
+			'options' => [ 
+						0 => "Borrador",
+						1 => "Publicado",
+					],	
+		],'update');
 		
 		$this->crud->addField([
 			'name' => 'nombre',
@@ -54,6 +78,34 @@ class AlbumCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
+			'name' => 'tipo',
+			'label' => "Tipo de álbum",
+			'type' => 'select2_from_array',
+			'options' => ['fotos' => 'Fotos', 'videos' => 'Videos'],
+			'allows_null' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		
+		$this->crud->addField([
+			'name' => 'fecha',
+			'label' => "Fecha del álbum",
+			'type' => 'date_picker',		
+			'date_picker_options' => [
+				'todayBtn' => true,
+				'format' => 'dd-mm-yyyy',
+				'language' => 'es'
+			],
+			'attributes' => [
+				'placeholder' => 'Agregue la fecha *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		
+		$this->crud->addField([
 			'name' => 'descripcion',
 			'label' => "Descripción",
 			'type' => 'textarea',
@@ -64,23 +116,6 @@ class AlbumCrudController extends CrudController
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
-			],
-		]);
-		
-		$this->crud->addField([
-			'name' => 'fecha',
-			'label' => "Fecha del álbum",
-			'type' => 'date_picker',
-			'attributes' => [
-				'placeholder' => 'Agregue la fecha *',
-			],
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],
-			'date_picker_options' => [
-				'todayBtn' => true,
-				'format' => 'dd-mm-yyyy',
-				'language' => 'es'
 			],
 		]);
 		

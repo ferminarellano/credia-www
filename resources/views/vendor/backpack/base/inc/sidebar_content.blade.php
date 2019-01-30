@@ -26,6 +26,7 @@
 				<li><a href="{{ backpack_url('actividad') }}"><i class="fa fa-dot-circle-o"></i> <span>Actividades</span></a></li>
 				<li><a href="{{ backpack_url('banner') }}"><i class="fa fa-picture-o"></i> <span>Banner</span></a></li>
 				<li><a href="{{ backpack_url('categoria') }}"><i class="fa fa-tasks"></i> <span>Categorías</span></a></li>
+				<li><a href="{{ backpack_url('componente') }}"><i class="fa fa-list-alt"></i> <span>Componentes</span></a></li>
 				<li><a href="{{ backpack_url('equipo') }}"><i class="fa fa-users"></i> <span>Equipo de trabajo</span></a></li>
 				<li><a href="{{ backpack_url('faq') }}"><i class="fa fa-question-circle-o"></i> <span>Preguntas frecuentes</span></a></li>
 				<li><a href="{{ backpack_url('contacto') }}"><i class="fa fa-envelope"></i> <span>Mensajes de contacto</span></a></li>

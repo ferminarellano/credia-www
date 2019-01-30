@@ -106,6 +106,7 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="xs-causes-images">
+						<h3 class="text-center">Valores</h3>
 						<img src="assets/images/causes/causes_12.jpg" class="d-block" alt="">
 					</div><!-- .xs-causes-images END -->
 				</div>
@@ -128,7 +129,7 @@
 					<div class="xs-fature-causes-deatils">
 						<h3> Nuestra <span class="color-blue">Fundación</span></h3>
 						<p>
-							Creada el 31 de Octubre 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, 
+							Creada el 3 de Agosto del 2011, bajo el objetivo de fortalecer el acceso a la información socio ambiental de Honduras, 
 							mediante la implementación de un modelo de gestión basado en el fortalecimiento de redes y promoción del análisis
 							estratégico de los procesos sociales, económicos y ambientales, para la toma de decisiones participativas.
 						</p>

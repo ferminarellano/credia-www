@@ -16,11 +16,12 @@ class ActividadRequest extends FormRequest
     {
         return [
             'foto' => 'nullable|max:1024',
+            'icono' => 'nullable|max:1024',
+            'galeria' => 'nullable',
             'titulo' => 'required',
             'descripcion' => 'required',
             'contenido' => 'required',
-			'indicador' => 'required',
-			'fotos' => 'nullable',
+			'componente_id' => 'required',
         ];
     }
 
@@ -33,10 +34,11 @@ class ActividadRequest extends FormRequest
     {
         return [
 			'foto.max' => 'El tamaño de la fotografía no es valido. Máximo 1MB.',
+			'icono.max' => 'El tamaño de la fotografía para ser utilizada como icono no es valido. Máximo 1MB.',
 			'titulo.required' => 'Necesita agregar el título de la actividad.',
 			'descripcion.required' => 'Necesita agregar la descripción de la actividad.',
 			'contenido.required' => 'Necesita agregar el contenido de la actividad.',
-			'indicador.required' => 'Necesita seleccionar a que componente pertenece la actividad.',
+			'componente_id.required' => 'Necesita seleccionar a que componente pertenece la actividad.',
         ];
     }
 }

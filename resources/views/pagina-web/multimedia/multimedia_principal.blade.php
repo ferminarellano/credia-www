@@ -19,13 +19,15 @@
 	<div class="xs-content-section-padding" id="contenido">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<a href="{{ URL::route('foto') }}">
+				<div class="titulo-mult col-lg-6 col-md-12">
+					<h3>Galería de fotos</h3>
+					<a href="{{URL::route('album',['slug' => str_slug('fotos','-')])}}">
 						<div class="xs-container-div zoom-in" style="background-image: url('/assets/images/multimedia/fotos-img-1.png');"></div>
 					</a>
 				</div><!-- END .xs-portafolio-fotos-item -->
-				<div class="col-lg-6 col-md-12">
-					<a href="{{ URL::route('foto') }}">
+				<div class="titulo-mult col-lg-6 col-md-12">
+					<h3>Videoteca</h3>
+					<a href="{{URL::route('album',['slug' => str_slug('videos','-')])}}">
 						<div class="xs-container-div zoom-in" style="background-image: url('/assets/images/multimedia/fotos-img-2.png');"></div>	
 					</a>
 				</div><!-- END .xs-portafolio-videos-item -->

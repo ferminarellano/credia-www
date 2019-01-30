@@ -77,7 +77,7 @@
 										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
 										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
 										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
-										<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>
+									{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 									</ul>
 								</li>
 								<li><a href="">Proyectos</a>
