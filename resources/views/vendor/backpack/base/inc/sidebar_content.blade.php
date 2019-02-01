@@ -59,6 +59,7 @@
 				<li><a href="{{ backpack_url('album') }}"><i class="fa fa-folder-open-o"></i> <span>albums</span></a></li>
 				<li><a href="{{ backpack_url('foto') }}"><i class="fa fa-picture-o"></i> <span>Fotos</span></a></li>
 				<li><a href="{{ backpack_url('video') }}"><i class="fa fa-play"></i> <span>Videos</span></a></li>
+				<li><a href="{{ backpack_url('descarga') }}"><i class="fa fa-download"></i> <span>Archivos</span></a></li>
 			</ul>
 		</li>
 		

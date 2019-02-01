@@ -469,6 +469,12 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 }
 
+@media (min-width: 768px){
+	.min-l{
+		float:left;
+	}
+}
+
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	html {

@@ -4,40 +4,28 @@ namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-use App\Http\Requests\VideoRequest as StoreRequest;
-use App\Http\Requests\VideoRequest as UpdateRequest;
+use App\Http\Requests\DescargaRequest as StoreRequest;
+use App\Http\Requests\DescargaRequest as UpdateRequest;
 
 use App\Authorizable;
-use Auth;
 
-class VideoCrudController extends CrudController
+class DescargaCrudController extends CrudController
 {
 	use Authorizable;
 	
     public function setup()
     {
-		$user = Auth::user();
-		
-        $this->crud->setModel('App\Models\Video');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/video');
-        $this->crud->setEntityNameStrings('video', 'videos');
-		
-		$this->crud->allowAccess('revisions');
+        $this->crud->setModel('App\Models\Descarga');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/descarga');
+        $this->crud->setEntityNameStrings('descarga', 'descargas');
+
+        $this->crud->allowAccess('revisions');
 		$this->crud->with('revisionHistory');
 		$this->crud->genero = "este";
 		
 		$this->crud->addColumn([
 			'name' => 'nombre',
-			'label' => 'Registro de video'
-		]);
-		
-		$this->crud->addColumn([
-			'name' => 'album_id',
-			'label' => 'Álbum',
-			'type' => "select",
-			'entity' => 'album',
-			'attribute' => "nombre",
-			'model' => "App\Models\Album",
+			'label' => 'Registro de archivo'
 		]);
 		
 		$this->crud->addColumn([
@@ -51,17 +39,17 @@ class VideoCrudController extends CrudController
 		
 		$this->crud->addColumn([
 			'name' => 'descripcion',
-			'label' => 'Descripción'
+			'label' => 'Descripción',
 		]);
 		
 		$this->crud->addColumn([
 			'name' => 'created_at',
-			'label' => 'Fecha de creación'
+			'label' => 'Fecha de creación',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'nombre',
-			'label' => 'Registro de videos',
+			'label' => 'Registro de archivos',
 			'type' => 'text',
 			'attributes' => [
 				'readonly' => 'readonly',
@@ -72,19 +60,6 @@ class VideoCrudController extends CrudController
 			],
 			'tab' => 'Datos generales',
 		], 'update');
-		
-		$this->crud->addField([
-			'name' => 'album_id',
-			'label' => 'Álbum',
-			'type' => "select2_video",
-			'entity' => 'album',
-			'attribute' => "nombre",
-			'model' => "App\Models\Album",
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],
-			'tab' => 'Datos generales',
-		]);
 		
 		$this->crud->addField([
 			'label' => "Componentes",
@@ -115,24 +90,11 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'url_video',
-			'label' => "URL de video",
-			'type' => 'text',
-			'attributes' => [
-				'placeholder' => 'Agregue la ULR del video *',
-			],
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],
-			'tab' => 'Datos generales',
-		]);
-		
-		$this->crud->addField([
 			'name' => 'descripcion',
 			'label' => "Descripción",
 			'type' => 'textarea',
 			'attributes' => [
-				'placeholder' => 'Agregue una breve descripción de los videos *',
+				'placeholder' => 'Agregue una breve descripción de los archivos *',
 				'style' => 'text-align:justify;resize:vertical;',
 				'rows' => '5',
 			],
@@ -143,11 +105,14 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'cover',
-			'label' => "Portada de video",
-			'type' => 'upload',
+			'name' => 'archivos',
+			'label' => "Archivos",
+			'type' => 'upload_multiple_file',
 			'upload' => true,
-			'tab' => 'Portada de video',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			],
+			'tab' => 'Archivos',
 		]);
     }
 

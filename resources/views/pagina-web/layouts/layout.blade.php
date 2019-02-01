@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 		
 		<link rel="stylesheet" href="{{ asset('assets/css/jquery.cslider.css') }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/jquery.bxslider.css') }}" />
@@ -280,6 +281,7 @@
 		<script src="{{ asset('assets/js/buttontop.js') }}"></script>
 		<script src="{{ asset('assets/js/jquery.inview.js') }}"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 		<script src="{{ asset('assets/js/app.js') }}"></script>

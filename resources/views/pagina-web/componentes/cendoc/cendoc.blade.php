@@ -104,6 +104,50 @@
 		</div>
 	</section><!-- end objetivo cendoc section -->
 	
+	{{--<!-- Multimedia ambiental section -->
+	<section class="xs-content-section-padding xs-service-promo-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-12">
+					
+				</div>
+				<div class="col-lg-4 col-md-12">
+					
+				</div>
+				<div class="col-lg-4 col-md-12">
+					<div class="text-center">
+						<div class="datagrid">
+							<table id="table-id">
+								<thead>
+									<tr>
+										<th>Documento</th>
+										<th>Descarga</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach($archivos as $archivo)
+											@foreach($archivo->archivos as $file)
+												<tr>
+													<td>{{ $archivo->nombre }}</td>
+													<td>
+														<div>								
+															<ul>
+																<li><a href="{{$file}}" download="archivo-0" class="btn-des btn-descarga"><span>Descargar</span></a></li>
+															</ul>														
+														</div>
+													</td>
+												</tr>
+											@endforeach
+									@endforeach
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- End Multimedia ambiental section -->--}}
+	
 	<!-- Enfoque cendoc section -->
 	<section class="xs-cendoc-section" style="background-image: url('assets/images/map.png');">
 		<div class="container">
@@ -142,4 +186,6 @@
 			</div>
 		</div>
 	</section><!-- End Enfoque cendoc section -->
+	
+	
 @endsection
