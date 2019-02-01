@@ -65,6 +65,11 @@ class Componente extends Model
 	{
 		return $this->belongsToMany('App\Models\Video','video_componente','componente_id');
 	}
+	
+	public function descargas()
+	{
+		return $this->belongsToMany('App\Models\Descarga','descarga_componente','componente_id');
+	}
 
     /*------------------------------------------------------------------------
     | SCOPES

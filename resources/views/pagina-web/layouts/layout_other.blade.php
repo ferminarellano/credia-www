@@ -200,8 +200,14 @@
 		</footer><!-- Footer -->		
 		
 		<script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
-		<script src="{{ asset('assets/js/plugins.js') }}"></script>
 		<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.mixitup.js') }}"></script>
+		<script src="{{ asset('assets/js/plugins.js') }}"></script>
+		<script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+		<script src="{{ asset('assets/js/modernizr.custom.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.bxslider.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.cslider.js') }}"></script>
 		<script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
 		<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
 		<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
@@ -209,8 +215,11 @@
 		<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 		<script src="{{ asset('assets/js/spectragram.min.js') }}"></script>
 		<script src="{{ asset('assets/js/buttontop.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.inview.js') }}"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
 		<script src="{{ asset('assets/js/main.js') }}"></script>
+		<script src="{{ asset('assets/js/app.js') }}"></script>
 	</body>
 </html>

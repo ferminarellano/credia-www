@@ -263,7 +263,7 @@
 		</div>
 	</section><!-- end service slider section -->
 	
-	{{--<!-- Actividades Educación ambiental section -->
+	{{--<!-- Multimedia ambiental section -->
 	<section class="xs-content-section-padding xs-service-promo-section">
 		<div class="container">
 			<div class="row">
@@ -276,81 +276,28 @@
 				<div class="col-lg-4 col-md-12">
 					<div class="text-center">
 						<div class="datagrid">
-							<table>
+							<table id="table-id">
 								<thead>
 									<tr>
-										<th>Documento</th>
-										<th>Link Descarga</th>
+										<th>Documentos</th>
+										<th>Descarga</th>
 									</tr>
 								</thead>
-								<tfoot>
-									<tr>
-										<td colspan="2">
-											<div id="paging">
-												<ul>
-													<li><a href="#"><span>Anterior</span></a></li>
-													<li><a href="#" class="active"><span>1</span></a></li>
-													<!-- <li><a href="#"><span>2</span></a></li> -->
-													<!-- <li><a href="#"><span>3</span></a></li> -->
-													<!-- <li><a href="#"><span>4</span></a></li> -->
-													<!-- <li><a href="#"><span>5</span></a></li> -->
-													<li><a href="#"><span>Siguiente</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-								</tfoot>
 								<tbody>
-									<tr>
-										<td>Archivo 1</td>
-										<td>
-											<div>
-												<ul>
-													<li><a href="#" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Archivo 2</td>
-										<td>
-											<div>
-												<ul>
-													<li><a href="#" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Archivo 3</td>
-										<td>
-											<div>
-												<ul>
-													<li><a href="#" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Archivo 4</td>
-										<td>
-											<div>
-												<ul>
-													<li><a href="#" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Archivo 5</td>
-										<td>
-											<div>
-												<ul>
-													<li><a href="#" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-												</ul>
-											</div>
-										</td>
-									</tr>
+								@foreach($archivos as $archivo)
+										@foreach($archivo->archivos as $file)
+											<tr>
+												<td>{{ $archivo->nombre }}</td>
+												<td>
+													<div>								
+														<ul>
+															<li><a href="{{$file}}" download="archivo-0" class="btn-des btn-descarga"><span>Descargar</span></a></li>
+														</ul>														
+													</div>
+												</td>
+											</tr>
+										@endforeach
+								@endforeach
 								</tbody>
 							</table>
 						</div>
@@ -358,5 +305,5 @@
 				</div>
 			</div>
 		</div>
-	</section><!-- End Actividades Educación ambiental section -->--}}
+	</section><!-- End Multimedia ambiental section -->--}}
 @endsection

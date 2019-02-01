@@ -81,6 +81,11 @@ class Actividad extends Model
 		return $this->belongsToMany('App\Models\Video','video_actividad','actividad_id');
 	}
 	
+	public function descargas()
+	{
+		return $this->belongsToMany('App\Models\Descarga','descarga_actividad','actividad_id');
+	}
+	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/

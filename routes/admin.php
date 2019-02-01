@@ -11,6 +11,7 @@
 	CRUD::resource('contacto', 'ContactoCrudController');
 	CRUD::resource('componente', 'ComponenteCrudController');
 	CRUD::resource('dataindicador', 'DataIndicadorCrudController');
+	CRUD::resource('descarga', 'DescargaCrudController');
 	CRUD::resource('equipo', 'EquipoCrudController');
 	CRUD::resource('evento', 'EventoCrudController');
 	CRUD::resource('faq', 'FaqCrudController');
