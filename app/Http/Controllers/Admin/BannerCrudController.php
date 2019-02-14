@@ -36,7 +36,7 @@ class BannerCrudController extends CrudController
 						  'blog' => 'Blog','contacto'=> 'Contactenos','evento'=> 'Eventos','servicio'=> 'Servicios',
 						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes','actividad'=> 'Actividades',
 						  'voluntario' => 'Voluntariado','album_fotos' => 'Álbum de fotos','album_videos' => 'Álbum de videos',
-						  'fotos' => 'Fotos','videos' => 'Videos'],
+						  'fotos' => 'Fotos','videos' => 'Videos','servicio_oficina'=> 'Alquiler Oficina'],
 		]);
 		
 		$this->crud->addColumn([
@@ -128,7 +128,7 @@ class BannerCrudController extends CrudController
 						  'blog' => 'Blog','contacto'=> 'Contactenos','evento'=> 'Eventos','servicio'=> 'Servicios',
 						  'galeria'=> 'Galería','faq'=> 'Preguntas Frecuentes','actividad'=> 'Actividades',
 						  'voluntario' => 'Voluntariado','album_fotos' => 'Álbum de fotos','album_videos' => 'Álbum de videos',
-						  'fotos' => 'Fotos','videos' => 'Videos'],
+						  'fotos' => 'Fotos','videos' => 'Videos','servicio_oficina'=> 'Alquiler Oficina'],
 			'allows_null' => true,
 		]);
 		

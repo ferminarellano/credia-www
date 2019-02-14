@@ -6,6 +6,46 @@
 	
 	<section class="xs-banner-inner-section-other"></section>
 	
+	@push('scripts')
+		<script>
+			var slideIndex = 1;
+			var slideIndexv = 1;
+			
+			showDivs(slideIndex);
+			showDivsv(slideIndexv);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+			
+			function plusDivsv(n) {
+			  showDivsv(slideIndexv += n);
+			}  
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			
+			function showDivsv(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlidesv");
+			  if (n > x.length) {slideIndexv = 1}
+			  if (n < 1) {slideIndexv = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndexv-1].style.display = "block";  
+			}
+		</script>
+	@endpush
+	
 	<!-- event single section -->
 	<section class="xs-content-section-padding">
 		<div class="container">
@@ -37,41 +77,76 @@
 									</ul>
 								</div><!-- actividades end -->
 							</div>
-							<div class="min-l col-lg-12 col-md-6">
-								<div class="text-center">
-									<div class="datagrid-act">
-										<table id="">
-											<thead>
-												<tr>
-													<th colspan="2">Documentos</th>
-												</tr>
-											</thead>
-											<tbody>
-											@if(count($archivos)  > 0)
-												@foreach($archivos as $archivo)
-														@foreach($archivo->archivos as $file)
-															<tr>
-																<td>{{ $archivo->nombre }}</td>
-																<td>
-																	<div>								
-																		<ul>
-																			<li><a href="{{$file}}" download="archivo-0" class="btn-des-act btn-descarga-act"><span>Descargar</span></a></li>
-																		</ul>														
-																	</div>
-																</td>
-															</tr>
-														@endforeach
+							@if(count($fotos) > 0)
+								<div class="min-l col-lg-12 col-md-6">
+									<div class="widget widget_categories xs-sidebar-foto">
+										<h3 class="widget-title">Fotografías</h3>
+										<div class="slide-foto-actividad">
+												@foreach($fotos as $fotografia)
+													@foreach($fotografia->fotos as $picture)
+															<div class="mySlides" style="background-image: url(/{{$picture}})"></div>
+													@endforeach
 												@endforeach
-											@else
-												<tr>
-													<td class="text-center" colspan="2">Actividad sin Archivos</td>
-												</tr>
-											@endif
-											</tbody>
-										</table>
+											<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+											<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+										</div>
 									</div>
 								</div>
-							</div>
+							@endif
+							@if(count($videos) > 0)
+								<div class="min-l col-lg-12 col-md-6">
+									<div class="widget widget_categories xs-sidebar-foto">
+										<h3 class="widget-title">Videos</h3>
+										<div class="slide-foto-actividad">
+												@foreach($videos as $video)
+													<div class="mySlidesv">
+														<div class="xs-video-popup-wraper-c">
+															<div class="xs-vide-image-c" style="background-image:url(/{{ $video->cover }})"></div>
+															<div class="xs-video-popup-content-c">
+																<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
+																	<i class="fa fa-play"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												@endforeach
+											<button class="w3-button w3-black w3-display-left" onclick="plusDivsv(-1)">&#10094;</button>
+											<button class="w3-button w3-black w3-display-right" onclick="plusDivsv(1)">&#10095;</button>
+										</div>
+									</div>
+								</div>
+							@endif
+							@if(count($archivos)  > 0)
+								<div class="min-l col-lg-12 col-md-6">
+									<div class="text-center">
+										<div class="datagrid-act">
+											<table id="">
+												<thead>
+													<tr>
+														<th colspan="2">Documentos</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach($archivos as $archivo)
+															@foreach($archivo->archivos as $file)
+																<tr>
+																	<td>{{ $archivo->nombre }}</td>
+																	<td>
+																		<div>								
+																			<ul>
+																				<li><a href="/{{$file}}" download="{{ $archivo->nombre }}" class="btn-des-act btn-descarga-act"><span>Descargar</span></a></li>
+																			</ul>														
+																		</div>
+																	</td>
+																</tr>
+															@endforeach
+													@endforeach
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							@endif
 						</div>
 					</div>
 				</div>

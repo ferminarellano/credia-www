@@ -111,6 +111,9 @@
 						<div class="xs-btn-wraper">
 							<a href="{{ URL::route('edu_ambiental') }}" class="btn btn-primary btn-actividad">Ver componente</a>
 						</div>
+						<div class="xs-btn-wraper">
+							<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=cenaida_moncada@yahoo.com" target="_blank" class="btn btn-primary btn-actividad">Obtén información</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-7 col-md-12 row xs-margin" id="xs-mar">

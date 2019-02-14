@@ -48,11 +48,11 @@ class Descarga extends Model
 			$model->secuencia = $suffix;
         });
 		
-		self::deleting(function($obj) {	
-			if (count((array)$obj->archivos)) {
-                foreach ($obj->archivos as $file_path) {
+		self::deleting(function($obj) {
+			if(count((array)$obj->archivos)) {
+				foreach ($obj->archivos as $file_path) {
 					Storage::disk('public')->delete($file_path);
-                }
+				}
             }
         });
     }
@@ -97,7 +97,7 @@ class Descarga extends Model
     {
         $attribute_name = "archivos";
         $disk = "public";
-        $destination_path = "multimedia/archivos";
+        $destination_path = "multimedia/descargas";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
 }

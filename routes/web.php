@@ -9,6 +9,7 @@ Auth::routes();
 Route::get('/home', 'IndexController@index')->name('index');
 Route::get('/','IndexController@index')->name('index');
 Route::get('alquiler-de-salones', 'ServicioController@alquiler_salones')->name('alquiler_s');
+Route::get('alquiler-de-oficinas', 'ServicioController@alquiler_oficinas')->name('alquiler_o');
 Route::get('blog', 'BlogController@blog')->name('blog');
 Route::get('cendoc', 'ComponenteController@cendoc')->name('cendoc');
 Route::get('contactenos', 'ContactoController@contacto')->name('contacto');
@@ -31,8 +32,6 @@ Route::get('blog/categoria/{categoria}/{categoria_id}', 'BlogController@search_c
 Route::get('blog/{slug}/{id}', 'BlogController@blogdetalle')->name('blogdetalle');
 Route::get('eventos/{slug}/{id}', 'EventoController@eventodetalle')->name('eventodetalle');
 Route::get('proyectos/categoria/{categoria}/{categoria_id}', 'ProyectoController@search_categoria_proyecto')->name('categoria_proyecto');
-Route::get('proyectos/{slug}', 'ProyectoController@proyectos')->name('proyectos');
-Route::get('proyectos/en/{slug}', 'ProyectoController@proyecto_ejecucion')->name('proyecto_ejecucion');
 Route::get('proyectos/{slug}/{id}', 'ProyectoController@proyectodetalle')->name('proyectodetalle'); 
 Route::get('multimedia/albumes/{slug}', 'MultimediaController@album')->name('album');
 Route::get('multimedia/albumes/fotos/{id}', 'MultimediaController@foto')->name('foto');

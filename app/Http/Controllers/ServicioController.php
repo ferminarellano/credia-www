@@ -26,4 +26,22 @@ class ServicioController extends Controller
 		
 		return View::make('pagina-web.servicios.alquiler_salones')->with($data);
 	}
+	
+	public function alquiler_oficinas()
+	{	
+		$banner = Banner::where([['indicador','=','servicio_oficina']])->get();
+		$foto = $banner->first()->foto;
+		$titulo = $banner->first()->titulo;
+		$contenido = $banner->first()->descripcion;
+		$redes = Social::all();
+		
+		$data = array(
+			"foto" => $foto,
+			"titulo" => $titulo,
+			"contenido" => $contenido,
+			"redes" => $redes,
+		);
+		
+		return View::make('pagina-web.servicios.alquiler_oficinas')->with($data);
+	}
 }

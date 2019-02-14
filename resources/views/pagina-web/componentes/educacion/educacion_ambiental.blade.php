@@ -153,7 +153,13 @@
 		<!-- Actividades Educación ambiental section -->
 		<section class="xs-content-section-padding xs-service-promo-section">
 			<div class="container">
-				<div class="row" style="margin:90px 0;">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-lg-12 col-md-12">
+						<h2 class="xs-line-title">Nuestras</h2>
+						<h3 class="xs-title big">Actividades</h3>
+					</div>
+				</div>
+				<div class="row" style="margin:60px 0;">
 					@foreach($actividades as $actividad)
 						<div class="plan col-lg-4 col-md-6">
 							<div class="plan-inner text-right">
@@ -263,15 +269,98 @@
 		</div>
 	</section><!-- end service slider section -->
 	
-	{{--<!-- Multimedia ambiental section -->
+	@push('scripts')
+		<script>
+			var slideIndex = 1;
+			var slideIndexv = 1;
+			
+			showDivs(slideIndex);
+			showDivsv(slideIndexv);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+			
+			function plusDivsv(n) {
+			  showDivsv(slideIndexv += n);
+			}  
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			
+			function showDivsv(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlidesv");
+			  if (n > x.length) {slideIndexv = 1}
+			  if (n < 1) {slideIndexv = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndexv-1].style.display = "block";  
+			}
+		</script>
+	@endpush
+	
+	<!-- Multimedia ambiental section -->
 	<section class="xs-content-section-padding xs-service-promo-section">
 		<div class="container">
+			<div class="xs-heading row xs-mb-60">
+				<div class="col-lg-12 col-md-12">
+					<h2 class="xs-line-title">Nuestra</h2>
+					<h3 class="xs-title big">Multimedia</h3>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-12">
-					
+					<div class="slide-foto-info">
+						<h3>Fotografías</h3>
+					</div>
+					<div class="slide-foto">
+						@if(count($fotos) > 0)
+							@foreach($fotos as $fotografia)
+								@foreach($fotografia->fotos as $picture)
+										<div class="mySlides" style="background-image: url({{$picture}})"></div>
+								@endforeach
+							@endforeach
+						@else
+							<div class="mySlides" style="background-image: url('/assets/images/componentes/educacion/educacion_1.jpg')"></div>
+						@endif
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+					</div>
 				</div>
 				<div class="col-lg-4 col-md-12">
-					
+					<div class="slide-foto-info">
+						<h3>Videos</h3>
+					</div>
+					<div class="slide-foto">
+						@if(count($videos) > 0)
+							@foreach($videos as $video)
+								<div class="mySlidesv">
+									<div class="xs-video-popup-wraper-c">
+										<div class="xs-vide-image-c" style="background-image:url(/{{ $video->cover }})"></div>
+										<div class="xs-video-popup-content-c">
+											<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
+												<i class="fa fa-play"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							@endforeach
+						@else
+							<div class="mySlidesv" style="background-image: url('/assets/images/componentes/educacion/educacion_1.jpg');background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;height: 275px;"></div>
+						@endif
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivsv(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivsv(1)">&#10095;</button>
+					</div>
 				</div>
 				<div class="col-lg-4 col-md-12">
 					<div class="text-center">
@@ -285,18 +374,18 @@
 								</thead>
 								<tbody>
 								@foreach($archivos as $archivo)
-										@foreach($archivo->archivos as $file)
-											<tr>
-												<td>{{ $archivo->nombre }}</td>
-												<td>
-													<div>								
-														<ul>
-															<li><a href="{{$file}}" download="archivo-0" class="btn-des btn-descarga"><span>Descargar</span></a></li>
-														</ul>														
-													</div>
-												</td>
-											</tr>
-										@endforeach
+									@foreach($archivo->archivos as $file)
+										<tr>
+											<td>{{ $archivo->nombre }}</td>
+											<td>
+												<div>								
+													<ul>
+														<li><a href="{{$file}}" download="archivo-0" class="btn-des btn-descarga"><span>Descargar</span></a></li>
+													</ul>														
+												</div>
+											</td>
+										</tr>
+									@endforeach
 								@endforeach
 								</tbody>
 							</table>
@@ -305,5 +394,5 @@
 				</div>
 			</div>
 		</div>
-	</section><!-- End Multimedia ambiental section -->--}}
+	</section><!-- End Multimedia ambiental section -->
 @endsection
