@@ -547,7 +547,7 @@ function init() {
 	TextdescriptionLarge("textdescripcion", 450);
 
 /*==========================================================
-				Pagination tabla descargas
+				Pagination tabla descargas 
 ==========================================================*/
 	$(document).ready(function() {
 		$('#table-id').DataTable( {
@@ -559,7 +559,8 @@ function init() {
 			"lengthMenu": [[6, 2, 4, 6, 8], ["Por defecto", 2, 4, 6, 8]],
 			"language": {
 				"lengthMenu": "Mostrar _MENU_",
-				"infoEmpty": "No hay registros disponibles",
+				"emptyTable": "No hay archivos disponibles",
+				"infoEmpty": "No hay archivos disponibles",
 				"paginate": {
 					"next":  ">",
 					"previous":"<"

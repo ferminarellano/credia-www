@@ -80,12 +80,7 @@
 									{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 									</ul>
 								</li>
-								<li><a href="">Proyectos</a>
-									<ul class="nav-dropdown">
-										<li><a href="{{URL::route('proyectos',['slug' => str_slug('ejecutados','-')])}}">Proyectos ejecutados</a></li>
-										<li><a href="{{URL::route('proyecto_ejecucion',['slug' => str_slug('ejecucion','-')])}}">Proyectos en ejecución</a></li>
-									</ul>
-								</li>
+								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 								<li><a href="{{ URL::route('multimedia') }}">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
@@ -149,6 +144,7 @@
 						<hr class="mt-1 mb-3 mx-line">
 						<ul class="xs-footer-list">
 							<li><a href="{{ URL::route('alquiler_s') }}">Alquiler de salones</a></li>
+							<li><a href="{{ URL::route('alquiler_o') }}">Alquiler de oficinas</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 footer-widget">
@@ -221,5 +217,7 @@
 
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 		<script src="{{ asset('assets/js/app.js') }}"></script>
+		
+		@stack('scripts')
 	</body>
 </html>

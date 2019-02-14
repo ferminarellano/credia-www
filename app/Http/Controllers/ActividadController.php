@@ -39,12 +39,16 @@ class ActividadController extends Controller
 		$redes = Social::all();
 		
 		$archivos = $actividad->first()->descargas()->get();
+		$fotos = $actividad->first()->fotos()->get();
+		$videos = $actividad->first()->videos()->get();
 		
 		$data = array(
 			"actividad" => $actividad,
 			"actividades" => $actividades,
 			"redes" => $redes,
 			"archivos" => $archivos,
+			"fotos" => $fotos,
+			"videos" => $videos,
 		);
 		
 		return View::make('pagina-web.actividades.actividadetalle')->with($data);

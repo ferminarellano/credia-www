@@ -19,15 +19,22 @@ class ComponenteController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
+		$actividades = Actividad::where([['indicador','=','centro de documentacion'],['estado','=','1']])->paginate(6);
+		
 		$componentes = Componente::where([['nombre','=','centro de documentacion']])->get();	
 		$archivos = $componentes->first()->descargas()->get();
+		$fotos = $componentes->first()->fotos()->get();
+		$videos = $componentes->first()->videos()->get();
 		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
+			"actividades" => $actividades,
 			"archivos" => $archivos,
+			"fotos" => $fotos,
+			"videos" => $videos,
 		);
 		
 		return View::make('pagina-web.componentes.cendoc.cendoc')->with($data);
@@ -45,6 +52,8 @@ class ComponenteController extends Controller
 
 		$componentes = Componente::where([['nombre','=','educacion ambiental']])->get();	
 		$archivos = $componentes->first()->descargas()->get();
+		$fotos = $componentes->first()->fotos()->get();
+		$videos = $componentes->first()->videos()->get();
 		
 		$data = array(
 			"foto" => $foto,
@@ -53,6 +62,8 @@ class ComponenteController extends Controller
 			"redes" => $redes,
 			"actividades" => $actividades,
 			"archivos" => $archivos,
+			"fotos" => $fotos,
+			"videos" => $videos,
 		);
 		
 		return View::make('pagina-web.componentes.educacion.educacion_ambiental')->with($data);
@@ -66,15 +77,22 @@ class ComponenteController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
+		$actividades = Actividad::where([['indicador','=','observatorio de desarrollo sostenible'],['estado','=','1']])->paginate(6);
+		
 		$componentes = Componente::where([['nombre','=','observatorio de desarrollo sostenible']])->get();	
 		$archivos = $componentes->first()->descargas()->get();
+		$fotos = $componentes->first()->fotos()->get();
+		$videos = $componentes->first()->videos()->get();
 		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
+			"actividades" => $actividades,
 			"archivos" => $archivos,
+			"fotos" => $fotos,
+			"videos" => $videos,
 		);
 		
 		return View::make('pagina-web.componentes.observatorio.observatorio')->with($data);
