@@ -25,25 +25,7 @@
 @endpush 
 
 @section('faq_seccion')
-	<!-- newsletter section -->
-	<div class="xs-newsletter-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 mx-auto">
-					<div class="xs-newsletter-content">
-						<i class="icon-telemarketer icon-watermark"></i>
-						<h5>¿Cómo ayudamos?</h5>
-						<form action="/search" method="get" class="xs-newsletter-form" id="xs-form">
-							<input type="text" id="search" name="search" class="form-control" placeholder="Tus preguntas.....">
-							<button type="submit"><i class="fa fa-search"></i> Buscar</button>
-						</form>
-					</div>
-				</div>
-			</div><!-- .row end -->
-		</div><!-- .container end -->
-	</div>	<!-- End newsletter section -->
-
-	<!-- newsletter section -->
+	<!-- preguntas section -->
 	<section class="xs-content-section-padding">
 		<div class="container">
 			<div class="row col-md-11 mx-auto">
@@ -82,8 +64,8 @@
 										@endif
 										@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
 											@if ($faqs->currentPage()+$i > 0 && $faqs->currentPage()+$i <= $faqs->lastPage())
-												<li class="page-item {{ $i==0 ? 'active' : '' }}">
-													<a class="page-link" href="{{ $faqs->url($faqs->currentPage()+$i) }}">{{ $faqs->currentPage()+$i }}</a>
+												<li class="page-item">
+													<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $faqs->url($faqs->currentPage()+$i) }}">{{ $faqs->currentPage()+$i }}</a>
 												</li>
 											@endif
 										@endfor
@@ -110,5 +92,5 @@
 				</div>
 			</div><!-- .row end -->
 		</div><!-- .container end -->
-	</section>	<!-- End newsletter section -->
+	</section>	<!-- End preguntas section -->
 @endsection

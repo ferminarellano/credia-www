@@ -25,6 +25,11 @@
 	<div class="xs-content-section-padding" id="contenido">
 		<div class="container">
 			<div class="row text-center text-lg-left">
+				@if(count($albums) === 0)
+					<div class="col-lg-12">
+						<h1 class="resp">NO HAY PUBLICACIONES DISPONIBLES<h1>
+					</div>
+				@endif
 				@foreach($albums as $album)
 					<div class="col-lg-3 col-md-4 col-xs-6">
 						<div class="zoom-in">
