@@ -67,6 +67,10 @@
 								<li><a href="">Fundación</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
+										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
+										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
+										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
+										{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 										<li><a href="">Componentes</a>
 											<ul class="nav-dropdown" style="position:static;margin-left: 0px;">
 												<li><a href="{{ URL::route('cendoc') }}">Centro de Documentación</a></li>
@@ -74,10 +78,6 @@
 												<li><a href="{{ URL::route('observatorio') }}">Observatorio de Desarrollo Sostenible</a></li>
 											</ul>
 										</li>
-										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
-										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
-										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
-									{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 									</ul>
 								</li>
 								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
