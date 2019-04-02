@@ -32,6 +32,11 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
+			'name' => 'descripcion',
+			'label' => 'Título',
+		]);
+		
+		$this->crud->addColumn([
 			'name' => 'album_id',
 			'label' => 'Álbum',
 			'type' => "select",
@@ -50,13 +55,8 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
-			'name' => 'descripcion',
-			'label' => 'Descripción'
-		]);
-		
-		$this->crud->addColumn([
 			'name' => 'created_at',
-			'label' => 'Fecha de creación'
+			'label' => 'Fecha de creación',
 		]);
 		
 		$this->crud->addField([
@@ -114,7 +114,7 @@ class VideoCrudController extends CrudController
 			'tab' => 'Datos generales',
 		]);
 		
-			$this->crud->addField([
+		$this->crud->addField([
 			'name' => 'descripcion',
 			'label' => "Título",
 			'type' => 'text',
