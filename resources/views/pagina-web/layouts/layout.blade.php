@@ -26,7 +26,6 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-		
 		<link rel="stylesheet" href="{{ asset('assets/css/jquery.cslider.css') }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/jquery.bxslider.css') }}" />
 
@@ -41,7 +40,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}"/>
 	</head>
 	
-	<body>
+	<body>		
 		<div id="preloader">
 			<div class="spinner">
 				<div class="double-bounce1"></div>
@@ -278,7 +277,8 @@
 		<script src="{{ asset('assets/js/jquery.inview.js') }}"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+		
 		<script src="{{ asset('assets/js/main.js') }}"></script>
 		<script src="{{ asset('assets/js/app.js') }}"></script>
 		
