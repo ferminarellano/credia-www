@@ -177,7 +177,7 @@
 					</div>
 
 					<div id="slidingDiv3" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
-						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salo_ceiba.jpg')"></div>
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salon_ceiba.jpg')"></div>
 						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
@@ -233,7 +233,7 @@
 						</div>
 						<div class="col-md-3 col-lg-3 mix 4">
 							<div class="thumbnail">
-								<img src="assets/images/servicios/salo_ceiba.jpg" alt="project 4">
+								<img src="assets/images/servicios/salon_ceiba.jpg" alt="project 4">
 								<a href="#single-project" class="show_hide more" rel="#slidingDiv3">
 									<i class="fa fa-plus"></i>
 								</a>

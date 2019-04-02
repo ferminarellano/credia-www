@@ -30,6 +30,9 @@
 						<div class="col-lg-3 col-md-3">
 							<div class="xs-video-popup-wraper">
 								<div class="xs-vide-image" style="background-image:url(/{{ $video->cover }})"></div>
+								<div class="content-video">
+									<h3>{{ $video->descripcion }}</h3>
+								</div>
 								<div class="xs-video-popup-content">
 									<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
 										<i class="fa fa-play"></i>
