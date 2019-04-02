@@ -114,12 +114,12 @@ class VideoCrudController extends CrudController
 			'tab' => 'Datos generales',
 		]);
 		
-		$this->crud->addField([
-			'name' => 'url_video',
-			'label' => "URL de video",
+			$this->crud->addField([
+			'name' => 'descripcion',
+			'label' => "Título",
 			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue la ULR del video *',
+				'placeholder' => 'Agregue el título del videos *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
@@ -128,13 +128,11 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addField([
-			'name' => 'descripcion',
-			'label' => "Descripción",
-			'type' => 'textarea',
+			'name' => 'url_video',
+			'label' => "URL de video",
+			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue una breve descripción de los videos *',
-				'style' => 'text-align:justify;resize:vertical;',
-				'rows' => '5',
+				'placeholder' => 'Agregue la ULR del video *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
@@ -159,7 +157,7 @@ class VideoCrudController extends CrudController
 
     public function update(UpdateRequest $request)
     {
-        $redirect_location = parent::updateCrud($request);
-        return $redirect_location;
+		$redirect_location = parent::updateCrud($request);
+		return $redirect_location;
     }
 }
