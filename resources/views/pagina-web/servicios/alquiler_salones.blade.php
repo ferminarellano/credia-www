@@ -93,7 +93,7 @@
 				<!-- Inicio Detalles de Salones -->
 				<div class="single-margin" id="single-project">
 					<div id="slidingDiv" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
-						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salon_atlantida.jpg')"></div>
 						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
@@ -121,7 +121,7 @@
 					</div>
 
 					<div id="slidingDiv1" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
-						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salon_espana.jpg')"></div>
 						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
@@ -149,7 +149,7 @@
 					</div>
 
 					<div id="slidingDiv2" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
-						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salon_holanda.jpg')"></div>
 						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
@@ -177,7 +177,7 @@
 					</div>
 
 					<div id="slidingDiv3" class="toggleDiv row-fluid single-project col-md-12 col-lg-12">
-						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/servicios_1.jpg')"></div>
+						<div class="single-img col-lg-6 col-md-6" style="background-image: url('assets/images/servicios/salo_ceiba.jpg')"></div>
 						<div class="single-info col-lg-6 col-md-6">
 							<div class="project-description">
 								<div class="project-title clearfix">
@@ -203,7 +203,7 @@
 					<div class="thumbnails col-md-12 col-lg-12" id="portfolio-grid">
 						<div class="col-md-3 col-lg-3 mix 1">
 							<div class="thumbnail">
-								<img src="assets/images/servicios/servicios_1.jpg" alt="project 1">
+								<img src="assets/images/servicios/salon_atlantida.jpg" alt="project 1">
 								<a href="#single-project" class="more show_hide" rel="#slidingDiv">
 									<i class="fa fa-plus"></i>
 								</a>
@@ -213,7 +213,7 @@
 						</div>
 						<div class="col-md-3 col-lg-3 mix 2">
 							<div class="thumbnail">
-								<img src="assets/images/servicios/servicios_1.jpg" alt="project 2">
+								<img src="assets/images/servicios/salon_espana.jpg" alt="project 2">
 								<a href="#single-project" class="show_hide more" rel="#slidingDiv1">
 									<i class="fa fa-plus"></i>
 								</a>
@@ -223,7 +223,7 @@
 						</div>
 						<div class="col-md-3 col-lg-3 mix 3">
 							<div class="thumbnail">
-								<img src="assets/images/servicios/servicios_1.jpg" alt="project 3">
+								<img src="assets/images/servicios/salon_holanda.jpg" alt="project 3">
 								<a href="#single-project" class="more show_hide" rel="#slidingDiv2">
 									<i class="fa fa-plus"></i>
 								</a>
@@ -233,7 +233,7 @@
 						</div>
 						<div class="col-md-3 col-lg-3 mix 4">
 							<div class="thumbnail">
-								<img src="assets/images/servicios/servicios_1.jpg" alt="project 4">
+								<img src="assets/images/servicios/salo_ceiba.jpg" alt="project 4">
 								<a href="#single-project" class="show_hide more" rel="#slidingDiv3">
 									<i class="fa fa-plus"></i>
 								</a>

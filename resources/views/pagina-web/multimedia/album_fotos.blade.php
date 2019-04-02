@@ -20,7 +20,6 @@
 @endsection
 
 @section('album_seccion')
-	
 	<!-- Album section -->
 	<div class="xs-content-section-padding" id="contenido">
 		<div class="container">
@@ -45,4 +44,64 @@
 			</div>
 		</div>
 	</div><!-- End Album section -->
+	
+	<!-- Modal -->
+	<div class="modal" id="modal-terms">
+		<div class="content-modal">
+			<div class="content-header">
+				<h5><i class="fa fa-exclamation-triangle"></i> Advertencia legal</h5>
+				<button type="button" class="cerrar-modal">&times;</button>
+			</div>
+			<div class="content-body">
+				<div class="well">
+					La producción de las fotografías que conforman la presente galería de imágenes del CREDIA, 
+					fue gracias al financiamiento de EuroFor, a través del Programa Clifor mediante la Subvención 
+					directa al Centro Regional de Documentación e Interpretación Ambiental, CREDIA. Reservados 
+					todos los derechos de las fotografías de esta galería  para la Fundación CREDIA. Queda 
+					rigurosamente prohibida la reproducción total o parcial de cualquiera de estas fotografías 
+					por cualquier medio o procedimiento impreso y digital, sin la debida autorización escrita, 
+					bajo las sanciones establecidas en las leyes.
+				</div>
+			</div>
+			<div class="content-footer d-flex">
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="checked-0" value="acepto">
+					<label class="custom-control-label" for="checked-0">Acepto los terminos.</label>
+				</div>			
+				<button type="button" class="btn btn-primary ml-auto" id="btn-aceptar">Aceptar</button>
+			</div>
+		</div>
+	</div><!-- End Modal -->
 @endsection
+
+@push('scripts')
+	<script>
+		$(document).ready(function(){
+			
+			$('.custom-control-input').change(function(){
+				if ($(this).is(':checked')){
+					$('#btn-aceptar').css('display','block');
+				}else{
+					$('#btn-aceptar').css('display','none');
+				}
+			});
+			
+			if(Cookies.get('advertencia') != 'f-acepto'){
+				$('html, body').css({'overflow':'hidden','height':'auto'});
+				$('div#modal-terms').css('display','block');
+			}
+			
+			$('.content-header button.cerrar-modal').mousedown(function(){
+				$('html, body').css({'overflow':'auto','height':'auto'});
+				$('div#modal-terms').css('display','none');
+			});
+			
+			$('.content-footer button#btn-aceptar').mousedown(function(){
+				Cookies.set('advertencia', 'f-acepto', { expires: 7 });
+				$('html, body').css({'overflow':'auto','height':'auto'});
+				$('div#modal-terms').css('display','none');
+			});
+		});
+	</script>
+@endpush
+
