@@ -19,7 +19,7 @@ class VideoRequest extends FormRequest
 			'album_id' => 'required',
 			'url_video' => 'required',
 			'descripcion' => 'required',
-        ]
+        ];
     }
 
     public function attributes()
