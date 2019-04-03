@@ -325,10 +325,8 @@
 					</div>
 					<div class="slide-foto">
 						@if(count($fotos) > 0)
-							@foreach($fotos as $fotografia)
-								@foreach($fotografia->fotos as $picture)
-										<div class="mySlides" style="background-image: url({{$picture}})"></div>
-								@endforeach
+							@foreach($fotos as $foto)
+								<div class="mySlides" style="background-image: url({{$foto->fotos}})"></div>
 							@endforeach
 						@else
 							<div class="mySlides" style="background-image: url('/assets/images/componentes/no_foto.jpg')"></div>
