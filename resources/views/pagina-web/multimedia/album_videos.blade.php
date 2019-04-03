@@ -87,7 +87,7 @@
 				}
 			});
 			
-			if(Cookies.get('advertencia') != 'v-acepto'){
+			if(Cookies.get('advertencia-v') != 'v-acepto'){
 				$('html, body').css({'overflow':'hidden','height':'auto'});
 				$('div#modal-terms').css('display','block');
 			}
@@ -98,7 +98,7 @@
 			});
 			
 			$('.content-footer button#btn-aceptar').mousedown(function(){
-				Cookies.set('advertencia', 'v-acepto', { expires: 7 });
+				Cookies.set('advertencia-v', 'v-acepto', { expires: 7 });
 				$('html, body').css({'overflow':'auto','height':'auto'});
 				$('div#modal-terms').css('display','none');
 			});

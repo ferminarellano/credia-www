@@ -26,17 +26,15 @@
 		<div class="container">
 			@if(count($fotos) > 0)
 				<div class="xs-portfolio-grid">
-					@foreach($fotos as $foto)
-						@foreach($foto->fotos as $pic)
-							<div class="xs-portfolio-grid-item">
-								<a href="/{{$pic}}" class="xs-single-portfolio-item xs-image-popup">
-									<img src="/{{$pic}}" alt="">
-									<div class="xs-portfolio-content">
-										<span class="icon-plus-button"></span>
-									</div>
-								</a>
-							</div>
-						@endforeach
+					@foreach($fotos as $foto)						
+						<div class="xs-portfolio-grid-item">
+							<a href="/{{ $foto->fotos }}" class="xs-single-portfolio-item xs-image-popup" title='{{ $foto->descripcion }}'>
+								<img src="/{{ $foto->fotos }}">
+								<div class="xs-portfolio-content">
+									<span class="icon-plus-button"></span>
+								</div>
+							</a>
+						</div>
 					@endforeach
 				</div>
 			@else
@@ -49,3 +47,11 @@
 		</div>
 	</div><!-- End Fotos section -->
 @endsection
+
+@push('scripts')
+	<script type="text/javascript">
+		$(document).ready(function () {
+	
+		});
+	</script>
+@endpush
