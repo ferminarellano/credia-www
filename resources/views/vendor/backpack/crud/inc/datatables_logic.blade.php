@@ -6,14 +6,6 @@
   <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
 
   <script>
-    @if ($crud->getPersistentTable())
-    // if there's a filtered URL saved for this list view, redirect to that one
-    var saved_list_url = localStorage.getItem('{{ $crud->entity_name_plural }}_list_url');
-    if (saved_list_url && saved_list_url!=window.location.href) {
-      window.location.href = localStorage.getItem('{{ $crud->entity_name_plural }}_list_url');
-    }
-    @endif
-
     var crud = {
       exportButtons: JSON.parse('{!! json_encode($crud->export_buttons) !!}'),
       functionsToRunOnDataTablesDrawEvent: [],
