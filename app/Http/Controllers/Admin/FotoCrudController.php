@@ -116,12 +116,10 @@ class FotoCrudController extends CrudController
 		
 		$this->crud->addField([
 			'name' => 'descripcion',
-			'label' => "Descripción",
-			'type' => 'textarea',
+			'label' => "Título",
+			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue una breve descripción de las fotografías *',
-				'style' => 'text-align:justify;resize:vertical;',
-				'rows' => '5',
+				'placeholder' => 'Agregue un breve título de la fotografía *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
@@ -131,13 +129,13 @@ class FotoCrudController extends CrudController
 		
 		$this->crud->addField([
 			'name' => 'fotos',
-			'label' => "Fotos",
-			'type' => 'upload_multiple',
+			'label' => "Foto",
+			'type' => 'upload',
 			'upload' => true,
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
-			'tab' => 'Fotografías',
+			'tab' => 'Datos generales',
 		]);
     }
 

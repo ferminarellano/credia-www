@@ -15,7 +15,6 @@ class Foto extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
     protected $fillable = ['nombre','album_id','fotos','descripcion','secuencia'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -48,11 +47,7 @@ class Foto extends Model
         });
 		
 		self::deleting(function($obj) {	
-			if (count((array)$obj->fotos)) {
-                foreach ($obj->fotos as $file_path) {
-					Storage::disk('public')->delete($file_path);
-                }
-            }
+			Storage::disk('public')->delete($obj->fotos);
         });
     }
 	
@@ -98,10 +93,10 @@ class Foto extends Model
     |------------------------------------------------------------------------*/
 	
 	public function setFotosAttribute($value)
-    {
-        $attribute_name = "fotos";
-        $disk = "public";
-        $destination_path = "multimedia/fotos";
-        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
-    }
+	{
+		$attribute_name = "fotos";
+		$disk = "public";
+		$destination_path = "multimedia/fotos";
+		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+	}
 }

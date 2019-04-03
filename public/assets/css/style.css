@@ -5689,7 +5689,39 @@ color: #FFFFFF;	}
 		background-color: #6acaf0;
 	}
 	
+	.mfp-bottom-bar {
+		background-color: #011b58;
+		height: 35px;
+		margin-top: -40px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		cursor: auto;
+	}
 	
+	.mfp-title {
+		text-align: left;
+		line-height: 35px;
+		color: #FFFFFF;
+		word-wrap: break-word;
+		padding-left: 20px;
+		margin-top: 0px;
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+	
+	.mfp-counter {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #a6ce39;
+		line-height: 35px;
+		white-space: nowrap;
+		padding-right: 20px;
+		font-size: 1rem;
+		font-weight: 600;
+	}
 }
   
 
