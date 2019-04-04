@@ -55,11 +55,11 @@
 			</div>
 			<div class="content-body">
 				<div class="well">
-					La producción de los videos que conforman la presente videoteca del CREDIA, 
+					La producción de los vídeos que conforman la presente videoteca del CREDIA, 
 					fue gracias al financiamiento de EuroFor, a través del Programa Clifor mediante la Subvención 
 					directa al Centro Regional de Documentación e Interpretación Ambiental, CREDIA. Reservados 
-					todos los derechos de las fotografías de esta galería  para la Fundación CREDIA. Queda 
-					rigurosamente prohibida la reproducción total o parcial de cualquiera de estas fotografías 
+					todos los derechos de los vídeos de esta videoteca  para la Fundación CREDIA. Queda 
+					rigurosamente prohibida la reproducción total o parcial de cualquiera de estos vídeos 
 					por cualquier medio o procedimiento impreso y digital, sin la debida autorización escrita, 
 					bajo las sanciones establecidas en las leyes.
 				</div>
