@@ -10,7 +10,7 @@
 			<ul class="treeview-menu">
 				<li><a href="{{ backpack_url('fuente') }}"><i class="fa fa-copyright"></i> <span>Fuentes</span></a></li>
 				<li><a href="{{ backpack_url('indicador') }}"><i class="fa fa-line-chart"></i> <span>Indicadores</span></a></li>
-				<li><a href="{{ backpack_url('dataindicador') }}"><i class="fa fa-pencil-square-o"></i> <span>Igreso de datos</span></a></li>
+				<li><a href="{{ backpack_url('dataindicador') }}"><i class="fa fa-pencil-square-o"></i> <span>Ingreso de datos</span></a></li>
 				<li><a href="{{ backpack_url('institucion') }}"><i class="fa fa-building"></i> <span>Instituciones</span></a></li>
 				<li><a href="{{ backpack_url('unidadmedida') }}"><i class="fa fa-percent"></i> <span>Unidades de medida</span></a></li>
 			</ul>

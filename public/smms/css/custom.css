@@ -57,9 +57,10 @@ body{
 	color: #6acaf2;
 }
 
-.header > small{
-	color:white;
+div.header small{
+	color: #FFF;
 }
+
 
 .has-search .form-control {
     padding-left: 2.375rem;
