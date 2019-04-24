@@ -19,7 +19,7 @@ class DataIndicador extends Model
     // protected $guarded = ['id'];
     protected $fillable = ['indicador_id','fecha_inicio','fecha_final','valor','estado',
 						   'fecha_aprovacion','created_user_id','updated_user_id',
-						   'institucion_id','fuente_id'];
+						   'institucion_id','fuente_id','zona_id','uom_id'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $guard_name = 'web';
@@ -90,6 +90,16 @@ class DataIndicador extends Model
 	public function indicador()
 	{
 		return $this->belongsTo('App\Models\Indicador', 'indicador_id');
+	}
+	
+	public function uom()
+	{
+		return $this->belongsTo('App\Models\UnidadMedida', 'uom_id');
+	}
+	
+	public function zona()
+	{
+		return $this->belongsTo('App\Models\Zona_geografica', 'zona_id');
 	}
 	
 	/*------------------------------------------------------------------------
