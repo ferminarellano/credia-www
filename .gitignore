@@ -2,6 +2,7 @@
 /public/hot
 /public/avaluo
 /public/storage
+/public/images
 /storage/*.key
 /storage/uploads
 /vendor

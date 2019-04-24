@@ -4,7 +4,36 @@
 | Web Routes
 |------------------------------------------------------------------------*/
 
+use App\Models\Indicador;
+use App\Models\Zona_geografica;
+use App\Http\Resources\Indicador as IndicadorResource;
+use App\Http\Resources\Zona_geografica as Zona_geograficaResource;
+
 Auth::routes();
+
+Route::view('/smm','smm.index');
+
+Route::get('/smm/indicadores', function(){
+	return IndicadorResource::collection(Indicador::all());
+});
+
+Route::get('/smm/zona-geografica/{nivel}/{filtro?}', function($nivel, $filtro = null){
+	$filtro_array = false;
+	if($filtro)
+	{
+		$filtro_array = explode(';',$filtro);
+	}
+
+	return Zona_geograficaResource::collection(
+		Zona_geografica::where([['nivel','=',$nivel]])
+			-> when($filtro_array, function($q, $filtro_array){
+				return $q->whereIn('padre_id', $filtro_array);
+			})
+			-> get()
+	);
+});
+
+Route::get('/smm/buscar', 'SistemaController@search_indicata');
 
 Route::get('/home', 'IndexController@index')->name('index');
 Route::get('/','IndexController@index')->name('index');

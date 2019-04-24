@@ -120,9 +120,34 @@ class DataIndicadorCrudController extends CrudController
 			'type' => 'number',
 			'attributes' => [
 				'placeholder' => 'Ingrese valor *',
+				'step' => "any"
 			],
 			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		
+		$this->crud->addField([
+			'name' => 'uom_id',
+			'label' => "Unidad de Media",
+			'type' => 'select2',
+			'entity' => 'uom',
+			'attribute' => 'nombre',
+			'model' => 'App\Models\UnidadMedida',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+		]);
+		
+		$this->crud->addField([
+			'name' => 'zona_id',
+			'label' => "Zona Geográfica",
+			'type' => 'select2',
+			'entity' => 'zona',
+			'attribute' => 'nombre',
+			'model' => 'App\Models\Zona_geografica',
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
 			],
 		]);
 		

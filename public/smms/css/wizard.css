@@ -1,0 +1,131 @@
+#wizardContainer .steps-container{
+}
+
+#wizardContainer .panes-container{
+	border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#wizardContainer .wizard-step{
+	background-color: #dee2e6;
+	user-select: none;
+	padding: 10px 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+#wizardContainer .wizard-step.active{
+	background-color: #011b58;
+    color: white;
+}
+
+#wizardContainer .wizard-step:not(.active):hover{
+	background-color: #ced4da!important;
+}
+
+#wizardContainer .wizard-step-name{
+	text-align:left; 
+	font-weight: 500;
+	line-height: 20px;
+}
+	
+#wizardContainer .wizard-step-number{
+	border-radius:50%;
+	height: 45px;
+    width: 45px;
+	background-color: white;
+    color: #495057;
+    font-weight: 800;
+    font-size: 18px;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#wizardContainer .wizard-pane{
+	padding: 20px 15px;
+}
+
+#wizardContainer .wizard-pane-header{
+	text-align: left;
+}
+
+#wizardContainer .wizard-pane-header-title{
+	font-size: 24px;
+    font-weight: 600;
+}
+
+#wizardContainer .wizard-pane-header-instructions{
+    font-weight: 100;
+	color:gray;
+}
+
+#wizardContainer .wizard-pane-header hr{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#wizardContainer .wizard-pane-body{
+	text-align: left;
+	margin-top: 10px;
+	padding-left: 20px;
+    padding-top: 10px;
+}
+
+#wizardContainer .wizard-pane-body label{
+	font-weight: 500;
+}
+
+#wizardContainer .wizard-pane-body .more-info-container{
+	text-align:right;
+	margin-top:-1rem;
+}
+
+#wizardContainer .wizard-pane-body button.ver-mas{
+	font-size:12px;
+}
+
+#wizardContainer .wizard-control-btn.next{
+	color: #fff;
+    background-color: #011b58;
+    border-color: #021747;
+}
+
+#wizardContainer .wizard-control-btn.next{
+	margin-left:10px;
+}
+
+#wizardContainer .wizard-control-btn.search{
+	margin-left:10px;
+}
+
+#wizardContainer .select2-container--default .select2-selection--multiple .select2-selection__choice{
+	background-color: #5897fb4d;
+    border: 1px solid #343a40;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true]{
+	background-color: #5897fb4d!important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+	background-color: #5897fb80!important;
+	color: #000;
+}
+
+select{
+	width: 100%;
+}
+
+.hidden{
+	display: none;
+}
+
+.pl-0{
+	padding-left:0px!important;
+}
+
+.pr-0{
+	padding-right:0px!important;
+}
+
