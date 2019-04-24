@@ -24,7 +24,7 @@ class IndexController extends Controller
 		$actividades = ActividadVoluntario::all();
 		$eventos = Evento::orderBy('id','desc')->take(3)->get();
 		$redes = Social::all();
-		$proyectos = Proyecto::where([['fecha_convenio','>=','2018-01-01']])->orderBy('id','desc')->take(3)->get();
+		$proyectos = Proyecto::orderBy('fecha_convenio','desc')->take(3)->get();
 		$articulos = Blog::where([['estado','=','1']])->orderBy('fecha','desc')->take(3)->get();
 		
 		$data = array(

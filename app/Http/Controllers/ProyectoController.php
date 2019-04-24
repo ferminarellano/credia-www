@@ -20,59 +20,19 @@ class ProyectoController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$proyectos = Proyecto::where([['estado','=','1']])->orderBy('id','asc')->paginate(6);
+		$proyectos = Proyecto::where([['avance','<','100'],['estado','=','1']])->orderBy('fecha_convenio','asc')->get();
+		$ejecuciones = Proyecto::where([['avance','=','100'],['estado','=','1']])->orderBy('fecha_convenio','asc')->paginate(6);
 		
 		$data = array(
 			"foto" => $foto,
 			"titulo" => $titulo,
 			"contenido" => $contenido,
 			"redes" => $redes,
+			"ejecuciones" => $ejecuciones,
 			"proyectos" => $proyectos,
 		);
 		
 		return View::make('pagina-web.proyectos.proyecto')->with($data);
-	}
-	
-	public function proyectos($slug)
-	{
-		$banner = Banner::where([['indicador','=','proyectos']])->get();
-		$foto = $banner->first()->foto;
-		$titulo = $banner->first()->titulo;
-		$contenido = $banner->first()->descripcion;
-		$redes = Social::all();
-		
-		$proyectos = Proyecto::where([['avance','=','100'],['estado','=','1']])->orderBy('id','desc')->paginate(6);
-		
-		$data = array(
-			"foto" => $foto,
-			"titulo" => $titulo,
-			"contenido" => $contenido,
-			"redes" => $redes,
-			"proyectos" => $proyectos,
-		);
-		
-		return View::make('pagina-web.proyectos.proyecto')->with($data);
-	}
-	
-	public function proyecto_ejecucion($slug1)
-	{
-		$banner = Banner::where([['indicador','=','proyectos']])->get();
-		$foto = $banner->first()->foto;
-		$titulo = $banner->first()->titulo;
-		$contenido = $banner->first()->descripcion;
-		$redes = Social::all();
-		
-		$proyectos = Proyecto::where([['avance','<','100'],['estado','=','1']])->orderBy('id','desc')->paginate(6);
-		
-		$data = array(
-			"foto" => $foto,
-			"titulo" => $titulo,
-			"contenido" => $contenido,
-			"redes" => $redes,
-			"proyectos" => $proyectos,
-		);
-		
-		return View::make('pagina-web.proyectos.proyecto_ejecucion')->with($data);
 	}
 	
 	public function search_categoria_proyecto($categoria,$id)

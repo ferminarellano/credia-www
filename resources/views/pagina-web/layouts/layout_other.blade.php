@@ -35,12 +35,12 @@
 	</head>
 	
 	<body>
-		<div id="preloader">
-			<div class="spinner">
-				<div class="double-bounce1"></div>
-				<div class="double-bounce2"></div>
-			</div>
-		</div>
+		<!-- <div id="preloader"> -->
+			<!-- <div class="spinner"> -->
+				<!-- <div class="double-bounce1"></div> -->
+				<!-- <div class="double-bounce2"></div> -->
+			<!-- </div> -->
+		<!-- </div> -->
 
 		<header class="xs-header-other header-transparent-other">
 			<div class="container">
@@ -67,6 +67,10 @@
 								<li><a href="">Fundación</a>
 									<ul class="nav-dropdown">
 										<li><a href="{{ URL::route('quienes_somos') }}">¿Quiénes somos?</a></li>
+										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
+										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
+										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
+										{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
 										<li><a href="">Componentes</a>
 											<ul class="nav-dropdown" style="position:static;margin-left: 0px;">
 												<li><a href="{{ URL::route('cendoc') }}">Centro de Documentación</a></li>
@@ -74,18 +78,9 @@
 												<li><a href="{{ URL::route('observatorio') }}">Observatorio de Desarrollo Sostenible</a></li>
 											</ul>
 										</li>
-										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
-										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
-										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
-										<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>
 									</ul>
 								</li>
-								<li><a href="">Proyectos</a>
-									<ul class="nav-dropdown">
-										<li><a href="{{URL::route('proyectos',['slug' => str_slug('ejecutados','-')])}}">Proyectos ejecutados</a></li>
-										<li><a href="{{URL::route('proyecto_ejecucion',['slug' => str_slug('ejecucion','-')])}}">Proyectos en ejecución</a></li>
-									</ul>
-								</li>
+								<li><a href="{{ URL::route('proyecto') }}">Proyectos</a></li>
 								<li><a href="{{ URL::route('sistema') }}">Sistemas</a></li>
 								<li><a href="{{ URL::route('multimedia') }}">Multimedia</a></li>
 								<li><a href="{{ URL::route('blog') }}">Blog</a></li>
@@ -149,6 +144,7 @@
 						<hr class="mt-1 mb-3 mx-line">
 						<ul class="xs-footer-list">
 							<li><a href="{{ URL::route('alquiler_s') }}">Alquiler de salones</a></li>
+							<li><a href="{{ URL::route('alquiler_o') }}">Alquiler de oficinas</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 footer-widget">
@@ -200,8 +196,14 @@
 		</footer><!-- Footer -->		
 		
 		<script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
-		<script src="{{ asset('assets/js/plugins.js') }}"></script>
 		<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.mixitup.js') }}"></script>
+		<script src="{{ asset('assets/js/plugins.js') }}"></script>
+		<script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+		<script src="{{ asset('assets/js/modernizr.custom.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.bxslider.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.cslider.js') }}"></script>
 		<script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
 		<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
 		<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
@@ -209,8 +211,13 @@
 		<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 		<script src="{{ asset('assets/js/spectragram.min.js') }}"></script>
 		<script src="{{ asset('assets/js/buttontop.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.inview.js') }}"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
 		<script src="{{ asset('assets/js/main.js') }}"></script>
+		<script src="{{ asset('assets/js/app.js') }}"></script>
+		
+		@stack('scripts')
 	</body>
 </html>

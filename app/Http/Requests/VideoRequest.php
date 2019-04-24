@@ -18,7 +18,7 @@ class VideoRequest extends FormRequest
         return [
 			'album_id' => 'required',
 			'url_video' => 'required',
-			'descripcion' => 'nullable|max:400',
+			'descripcion' => 'required',
         ];
     }
 
@@ -32,7 +32,7 @@ class VideoRequest extends FormRequest
         return [
 			'album_id.required' => 'Es necesario seleccionar a que álbum pertenecen las fotografías.',
 			'url_video.required' => 'Es necesario agregar la URL del video.',
-			'descripcion.max' => 'La cantidad máxima para la descripción es de: 400 caracteres.',
+			'descripcion.required' => 'Es necesario agregar el título del vídeo.',
         ];
     }
 }

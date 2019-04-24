@@ -23,8 +23,7 @@ XpeedStudio multipile Maps
 XpeedStudio Maps
 puntos-suspensivos - puntos-suspensivos-descripcion
 Contador Li start
-
-
+Pagination tabla descargas
 
 -------------------------------------------------------------------*/
 
@@ -325,7 +324,7 @@ $(document).ready(function() {
 		},
 		zoom: {
 			enabled: true,
-			duration: 300, // don't foget to change the duration also in CSS
+			duration: 200, // don't foget to change the duration also in CSS
 		}
 		
 	});
@@ -545,5 +544,29 @@ function init() {
 		}
 	}
 	TextdescriptionLarge("textdescripcion", 450);
+
+/*==========================================================
+				Pagination tabla descargas 
+==========================================================*/
+	$(document).ready(function() {
+		$('#table-id').DataTable( {
+			"pagingType": "simple",
+			"ordering": false,
+			"searching": false,
+			"info":     false,
+			"dom": '<"top"i>rt<"bottom"flp><"clear">',
+			"lengthMenu": [[6, 2, 4, 6, 8], ["Por defecto", 2, 4, 6, 8]],
+			"language": {
+				"lengthMenu": "Mostrar _MENU_",
+				"emptyTable": "No hay archivos disponibles",
+				"infoEmpty": "No hay archivos disponibles",
+				"paginate": {
+					"next":  ">",
+					"previous":"<"
+				},
+			},
+			
+		} );
+	});
 	
 })(jQuery);

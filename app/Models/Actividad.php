@@ -15,11 +15,11 @@ class Actividad extends Model
 	protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-	protected $casts = ['fotos' => 'array'];
-    protected $fillable = ['titulo','descripcion','contenido','foto','estado','indicador','fotos'];
+	protected $casts = ['galeria' => 'array'];
+    protected $fillable = ['titulo','descripcion','contenido','foto','estado','indicador','galeria','icono','componente_id'];
     // protected $hidden = [];
     // protected $dates = [];
-	protected $visible = ['foto','fotos'];
+	protected $visible = ['foto','galeria','icono'];
 	protected $guard_name = 'web';
 	
 	protected $revisionCreationsEnabled = true;
@@ -30,9 +30,10 @@ class Actividad extends Model
 		'descripcion' => 'descripción de actividad',
 		'contenido' => 'contenido de actividad',
 		'indicador' => 'componente',
-		'fotos' => 'fotos',
+		'galeria' => 'galeria',
+		'icono' => 'icono',
+		'componente_id' => 'componente_id',
 	);
-
     /*------------------------------------------------------------------------
     | FUNCTIONS
     |------------------------------------------------------------------------*/
@@ -41,11 +42,20 @@ class Actividad extends Model
 	{
 		parent::boot();
 		
+		self::creating(function($model){
+
+        });
+		
+		self::updating(function($model){
+			
+        });
+		
 		self::deleting(function($obj) {	
 			Storage::disk('public')->delete($obj->foto);
+			Storage::disk('public')->delete($obj->icono);
 			
-			if (count((array)$obj->fotos)) {
-                foreach ($obj->fotos as $file_path) {
+			if (count((array)$obj->galeria)) {
+                foreach ($obj->galeria as $file_path) {
 					Storage::disk('public')->delete($file_path);
                 }
             }
@@ -56,14 +66,33 @@ class Actividad extends Model
     | RELATIONS
     |------------------------------------------------------------------------*/
 	
+	public function componente()
+	{
+		return $this->belongsTo('App\Models\Componente');
+	}
+	
+	public function fotos()
+	{
+		return $this->belongsToMany('App\Models\Foto','foto_actividad','actividad_id');
+	}
+	
+	public function videos()
+	{
+		return $this->belongsToMany('App\Models\Video','video_actividad','actividad_id');
+	}
+	
+	public function descargas()
+	{
+		return $this->belongsToMany('App\Models\Descarga','descarga_actividad','actividad_id');
+	}
+	
     /*------------------------------------------------------------------------
     | SCOPES
     |------------------------------------------------------------------------*/
-
     /*------------------------------------------------------------------------
     | ACCESORS
     |------------------------------------------------------------------------*/
-
+	
     /*------------------------------------------------------------------------
     | MUTATORS
     |------------------------------------------------------------------------*/
@@ -76,11 +105,19 @@ class Actividad extends Model
 		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
 	}
 	
-	public function setFotosAttribute($value)
+	public function setGaleriasAttribute($value)
     {
-        $attribute_name = "fotos";
+        $attribute_name = "galeria";
         $disk = "public";
         $destination_path = "images/fotos-actividades/gallery";
         $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
     }
+	
+	public function setIconoAttribute($value)
+	{
+		$attribute_name = "icono";
+		$disk = "public";
+		$destination_path = "images/fotos-actividades/icono";
+		$this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+	}
 }

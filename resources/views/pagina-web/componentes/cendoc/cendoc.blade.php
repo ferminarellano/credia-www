@@ -2,6 +2,10 @@
 
 @section('title', '| CENDOC')
 
+<?php
+	$pagination_range = 2;
+?>
+
 @section('banner')
 	<section class="xs-banner-inner-section parallax-window" style="background-image:url({{$foto}})">
 		<div class="xs-black-overlay"></div>
@@ -103,6 +107,219 @@
 			</div>
 		</div>
 	</section><!-- end objetivo cendoc section -->
+	
+	@if(count($actividades) > 0)
+		<!-- Actividades CENDOC section -->
+		<section class="xs-cendoc-section xs-service-promo-section">
+			<div class="container">
+				<div class="xs-heading row xs-mb-60">
+					<div class="col-lg-12 col-md-12">
+						<h2 class="xs-line-title">Nuestras</h2>
+						<h3 class="xs-title big" data-title="CENDOC">Actividades</h3>
+					</div>
+				</div>
+				<div class="row" style="margin:40px 0;">
+					@foreach($actividades as $actividad)
+						<div class="plan col-lg-4 col-md-6">
+							<div class="plan-inner text-right">
+								<div class="entry-banner" style="background-image: url({{ $actividad->foto }});"></div>
+								<div class="entry-title-act">
+									@if(empty($actividad->icono) === FALSE)
+										<div class="price" style="background-image: url({{ $actividad->icono }});"></div>
+									@else
+										<div class="price" style="background-image: url('assets/images/actividades/actividad_general.png');"></div>
+									@endif
+								</div>
+								<div class="entry-content-act">
+									<h3>{{ $actividad->titulo }}</h3>
+									<p>{{ $actividad->descripcion }}</p>
+								</div>
+								<div class="div-btn">
+									<a class="btn btn-secondary btn-color-alt" href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}">
+										Saber más
+									</a>
+								</div>
+							</div>
+						</div>
+					@endforeach
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-lg-12 row xs-margin" id="xs-mar">
+						@if($actividades->count()  > 0)
+							<!-- pagination -->
+							<div class="col-md-12">
+								<ul class="pagination justify-content-center xs-pagination" style="padding-top:0px;">
+									<li class="page-item {{ $actividades->previousPageUrl() == null ? 'disabled' : '' }}">
+										<a class="page-link" href="{{ $actividades->previousPageUrl() ?? '#' }}" aria-label="Previous">
+											<i class="fa fa-angle-left"></i>
+										</a>
+									</li>
+									@if ($actividades->currentPage() > 1+$pagination_range )
+										<li class="page-item">
+											<a class="page-link" href="{{ $actividades->url(1) ?? '#' }}">{{ 1 }}</a>
+										</li>
+
+										@if ($actividades->currentPage() > 1+$pagination_range+1 )
+											<li class="page-item disabled">
+												<span class="page-link">&hellip;</span>
+											</li>
+										@endif
+									@endif
+									@for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+										@if ($actividades->currentPage()+$i > 0 && $actividades->currentPage()+$i <= $actividades->lastPage())
+											<li class="page-item">
+												<a class="page-link {{ $i==0 ? 'active' : '' }}" href="{{ $actividades->url($actividades->currentPage()+$i) }}">{{ $actividades->currentPage()+$i }}</a>
+											</li>
+										@endif
+									@endfor
+									@if ($actividades->currentPage() < $actividades->lastPage()-$pagination_range )	
+										@if ($actividades->currentPage() < $actividades->lastPage()-$pagination_range-1 )
+											<li class="page-item disabled">
+												<span class="page-link">&hellip;</span>
+											</li>
+										@endif
+										<li class="page-item">
+											<a class="page-link" href="{{ $actividades->url($actividades->lastPage()) ?? '#' }}">{{ $actividades->lastPage() }}</a>
+										</li>
+									@endif
+									<li class="page-item {{ $actividades->nextPageUrl()==null ? 'disabled' : '' }}">
+										<a class="page-link " href="{{ $actividades->nextPageUrl() ?? '#' }}" aria-label="Next">
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</li>
+								</ul>
+							</div><!-- End pagination -->
+						@endif
+					</div>
+				</div>
+			</div>
+		</section><!-- End Actividades CENDOC section -->
+	@endif
+	
+	@push('scripts')
+		<script>
+			var slideIndex = 1;
+			var slideIndexv = 1;
+			
+			showDivs(slideIndex);
+			showDivsv(slideIndexv);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+			
+			function plusDivsv(n) {
+			  showDivsv(slideIndexv += n);
+			}  
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			
+			function showDivsv(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlidesv");
+			  if (n > x.length) {slideIndexv = 1}
+			  if (n < 1) {slideIndexv = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  x[slideIndexv-1].style.display = "block";  
+			}
+		</script>
+	@endpush
+	
+	<!-- Multimedia ambiental section -->
+	<section class="xs-content-section-padding xs-service-promo-section">
+		<div class="container">
+			<div class="xs-heading row xs-mb-60">
+				<div class="col-lg-12 col-md-12">
+					<h2 class="xs-line-title">Nuestra</h2>
+					<h3 class="xs-title big">Multimedia</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-12">
+					<div class="slide-foto-info">
+						<h3>Fotografías</h3>
+					</div>
+					<div class="slide-foto">
+						@if(count($fotos) > 0)
+							@foreach($fotos as $foto)
+								<div class="mySlides" style="background-image: url({{$foto->fotos}})"></div>
+							@endforeach
+						@else
+							<div class="mySlides" style="background-image: url('/assets/images/componentes/no_foto.jpg')"></div>
+						@endif
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12">
+					<div class="slide-foto-info">
+						<h3>Videos</h3>
+					</div>
+					<div class="slide-foto">
+						@if(count($videos) > 0)
+							@foreach($videos as $video)
+								<div class="mySlidesv">
+									<div class="xs-video-popup-wraper-c">
+										<div class="xs-vide-image-c" style="background-image:url(/{{ $video->cover }})"></div>
+										<div class="xs-video-popup-content-c">
+											<a href="{{ $video->url_video }}" class="xs-video-popup xs-round-btn">
+												<i class="fa fa-play"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							@endforeach
+						@else
+							<div class="mySlidesv" style="background-image: url('/assets/images/componentes/no_video.jpg');background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;height: 275px;"></div>
+						@endif
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivsv(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivsv(1)">&#10095;</button>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12">
+					<div class="text-center">
+						<div class="datagrid">
+							<table id="table-id">
+								<thead>
+									<tr>
+										<th>Documento</th>
+										<th>Descarga</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach($archivos as $archivo)
+											@foreach($archivo->archivos as $file)
+												<tr>
+													<td>{{ $archivo->nombre }}</td>
+													<td>
+														<div>								
+															<ul>
+																<li><a href="{{$file}}" download="archivo-0" class="btn-des btn-descarga"><span>Descargar</span></a></li>
+															</ul>														
+														</div>
+													</td>
+												</tr>
+											@endforeach
+									@endforeach
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- End Multimedia ambiental section -->
 	
 	<!-- Enfoque cendoc section -->
 	<section class="xs-cendoc-section" style="background-image: url('assets/images/map.png');">

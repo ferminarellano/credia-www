@@ -25,6 +25,12 @@
 
 @section('title','')
 
+@push('scripts')
+	<script>
+		
+	</script>
+@endpush
+
 @section('slider_index_seccion')	
 	<section class="xs-welcome-slider">
 		<div class="xs-banner-slider owl-carousel">

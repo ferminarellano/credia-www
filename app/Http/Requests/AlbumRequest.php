@@ -16,6 +16,7 @@ class AlbumRequest extends FormRequest
     {
         return [
 			'nombre' => 'required|min:5|max:255',
+			'tipo' => 'required',
 			'descripcion' => 'required|max:400',
 			'fecha' => 'required|date',
 			'cover' => 'nullable|image|max:1024',
@@ -31,6 +32,7 @@ class AlbumRequest extends FormRequest
     {
         return [
 			'nombre.required' => 'Es necesario agregar el nombre del álbum.',
+			'tipo.required' => 'Es necesario seleccionar el tipo de álbum.',
             'nombre.min' => 'La cantidad mínima para el nombre es de: 5 caracteres.',
 			'nombre.max' => 'La cantidad máxima para el nombre es de: 255 caracteres.',
 			'descripcion.required' => 'Es necesario agregar la descripción del álbum.',

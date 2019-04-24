@@ -174,6 +174,26 @@
 										<td>Convenio Interinstitucional Técnico – Financiero. </td>
 										<td>Prorrogable</td>
 									</tr>
+									<tr>
+										<td>Fundación Parque Nacional Nombre de Dios (FUPNAND)</td>
+										<td>Carta de Entendimiento y de Cooperación Interinstitucional</td>
+										<td>12 meses</td>
+									</tr>
+									<tr>
+										<td>Asociación de Investigación para el Desarrollo Ecológico y Socioeconomico (ASIDE)</td>
+										<td>Carta de Intenciones</td>
+										<td>Sin vencimiento</td>
+									</tr>
+									<tr>
+										<td>Fundacion Hondureña de Investigación Agrícola (FHIA)</td>
+										<td>Carta de Entendimiento y de Cooperación Interinstitucional</td>
+										<td>12 meses</td>
+									</tr>
+									<tr>
+										<td>Instituto Nacional de Conservación y Desarrollo Forestal, Areas protegidas y Vida Silvestre (ICF)</td>
+										<td>Convenio de Cooperación Interinstitucional</td>
+										<td>2 años</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>

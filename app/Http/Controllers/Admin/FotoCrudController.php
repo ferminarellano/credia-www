@@ -41,6 +41,15 @@ class FotoCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
+			'label' => "Componentes",
+		    'type' => "select_multiple",
+		    'name' => 'componentes', 
+		    'entity' => 'componentes',
+		    'attribute' => "nombre", 
+		    'model' => "App\Models\Componente", 
+		]);
+		
+		$this->crud->addColumn([
 			'name' => 'descripcion',
 			'label' => 'Descripción'
 		]);
@@ -61,42 +70,72 @@ class FotoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
 		], 'update');
 		
 		$this->crud->addField([
 			'name' => 'album_id',
 			'label' => 'Álbum',
-			'type' => "select2",
+			'type' => "select2_foto",
 			'entity' => 'album',
 			'attribute' => "nombre",
 			'model' => "App\Models\Album",
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'label' => "Componentes",
+			'type' => 'select2_multiple',
+			'name' => 'componentes', 
+			'entity' => 'componentes',
+			'attribute' => 'nombre',
+			'model' => "App\Models\Componente",
+			'pivot' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'label' => "Actividades",
+			'type' => 'select2_multiple',
+			'name' => 'actividades', 
+			'entity' => 'actividades',
+			'attribute' => 'titulo',
+			'model' => "App\Models\Actividad",
+			'pivot' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'descripcion',
-			'label' => "Descripción",
-			'type' => 'textarea',
+			'label' => "Título",
+			'type' => 'text',
 			'attributes' => [
-				'placeholder' => 'Agregue una breve descripción de las fotografías *',
-				'style' => 'text-align:justify;resize:vertical;',
-				'rows' => '5',
+				'placeholder' => 'Agregue un breve título de la fotografía *',
 			],
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
 			'name' => 'fotos',
-			'label' => "Fotos",
-			'type' => 'upload_multiple',
+			'label' => "Foto",
+			'type' => 'upload',
 			'upload' => true,
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
 		]);
     }
 

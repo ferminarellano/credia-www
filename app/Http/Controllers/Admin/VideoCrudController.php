@@ -32,6 +32,11 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
+			'name' => 'descripcion',
+			'label' => 'Título',
+		]);
+		
+		$this->crud->addColumn([
 			'name' => 'album_id',
 			'label' => 'Álbum',
 			'type' => "select",
@@ -41,13 +46,17 @@ class VideoCrudController extends CrudController
 		]);
 		
 		$this->crud->addColumn([
-			'name' => 'descripcion',
-			'label' => 'Descripción'
+			'label' => "Componentes",
+		    'type' => "select_multiple",
+		    'name' => 'componentes', 
+		    'entity' => 'componentes',
+		    'attribute' => "nombre", 
+		    'model' => "App\Models\Componente", 
 		]);
 		
 		$this->crud->addColumn([
 			'name' => 'created_at',
-			'label' => 'Fecha de creación'
+			'label' => 'Fecha de creación',
 		]);
 		
 		$this->crud->addField([
@@ -59,20 +68,63 @@ class VideoCrudController extends CrudController
 				'style' => 'font-size: 30px; height: 35px;',
 			],
 			'wrapperAttributes' => [
-				'class' => 'form-group col-md-6',
+				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
 		], 'update');
 		
 		$this->crud->addField([
 			'name' => 'album_id',
 			'label' => 'Álbum',
-			'type' => "select2",
+			'type' => "select2_video",
 			'entity' => 'album',
 			'attribute' => "nombre",
 			'model' => "App\Models\Album",
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'label' => "Componentes",
+			'type' => 'select2_multiple',
+			'name' => 'componentes', 
+			'entity' => 'componentes',
+			'attribute' => 'nombre',
+			'model' => "App\Models\Componente",
+			'pivot' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'label' => "Actividades",
+			'type' => 'select2_multiple',
+			'name' => 'actividades', 
+			'entity' => 'actividades',
+			'attribute' => 'titulo',
+			'model' => "App\Models\Actividad",
+			'pivot' => true,
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-6',
+			],
+			'tab' => 'Datos generales',
+		]);
+		
+		$this->crud->addField([
+			'name' => 'descripcion',
+			'label' => "Título",
+			'type' => 'text',
+			'attributes' => [
+				'placeholder' => 'Agregue el título del videos *',
+			],
+			'wrapperAttributes' => [
+				'class' => 'form-group col-md-12',
+			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
@@ -85,22 +137,16 @@ class VideoCrudController extends CrudController
 			'wrapperAttributes' => [
 				'class' => 'form-group col-md-12',
 			],
+			'tab' => 'Datos generales',
 		]);
 		
 		$this->crud->addField([
-			'name' => 'descripcion',
-			'label' => "Descripción",
-			'type' => 'textarea',
-			'attributes' => [
-				'placeholder' => 'Agregue una breve descripción de los videos *',
-				'style' => 'text-align:justify;resize:vertical;',
-				'rows' => '5',
-			],
-			'wrapperAttributes' => [
-				'class' => 'form-group col-md-12',
-			],
+			'name' => 'cover',
+			'label' => "Portada de video",
+			'type' => 'upload',
+			'upload' => true,
+			'tab' => 'Portada de video',
 		]);
-		
     }
 
     public function store(StoreRequest $request)
@@ -111,7 +157,7 @@ class VideoCrudController extends CrudController
 
     public function update(UpdateRequest $request)
     {
-        $redirect_location = parent::updateCrud($request);
-        return $redirect_location;
+		$redirect_location = parent::updateCrud($request);
+		return $redirect_location;
     }
 }

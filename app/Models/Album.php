@@ -15,7 +15,7 @@ class Album extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['nombre','descripcion','fecha','cover'];
+    protected $fillable = ['nombre','tipo','estado','descripcion','fecha','cover'];
     // protected $hidden = [];
     // protected $dates = [];
 	protected $visible = ['cover'];
@@ -24,6 +24,8 @@ class Album extends Model
 	protected $revisionCreationsEnabled = true;
 	protected $revisionFormattedFieldNames = array(
 		'nombre' => 'nombre',
+		'tipo' => 'tipo',
+		'estado' => 'estado',
 		'fecha' => 'fecha',
 		'descripcion' => 'descripcion',
 		'cover' => 'cover',
