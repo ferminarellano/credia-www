@@ -39,6 +39,38 @@ class Wizard extends Component {
 			})
 			.then(function (response) {
 				console.log(response.data.data);
+				window.globalData = response.data.data;
+				window.barchart = false;
+				window.piechart = false;
+				
+				$(".visualPanel").hide();
+				$(".datatable-container").show();
+				let data = response.data.data;
+				
+				/**
+				/*  Preparamos la tabla
+				 */
+				 
+				 $(".visualizations-container").show();
+				let dataset = data.map(x => [x.indicador.nombre, x.zona_geografica.nombre, x.fecha_inicio, x.valor, x.indicador.unidad_medida.nombre]);
+
+				var dataTable = $('#example').DataTable({
+					destroy: true,
+					data: dataset,
+					columns: [
+						{ title: "Indicador" },
+						{ title: "Zona" },
+						{ title: "Periodo" },
+						{ title: "Valor." },
+						{ title: "Unidad" }
+					]
+				});
+				
+				/**
+				/*  Preparamos el BarChart
+				 */
+				
+	
 			});		
 	}
 	

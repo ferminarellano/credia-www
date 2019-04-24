@@ -26847,7 +26847,7 @@ var steps = [{
 	formset: [{
 		type: "Select",
 		id: "periodoNivelSelect",
-		label: "Nivel",
+		label: "Periodo",
 		classNames: ["select2", "form-control"],
 		name: "periodos[]",
 		options: [{
@@ -26988,6 +26988,32 @@ var Wizard = function (_Component) {
 				params: form_data
 			}).then(function (response) {
 				console.log(response.data.data);
+				window.globalData = response.data.data;
+				window.barchart = false;
+				window.piechart = false;
+
+				$(".visualPanel").hide();
+				$(".datatable-container").show();
+				var data = response.data.data;
+
+				/**
+    /*  Preparamos la tabla
+     */
+
+				$(".visualizations-container").show();
+				var dataset = data.map(function (x) {
+					return [x.indicador.nombre, x.zona_geografica.nombre, x.fecha_inicio, x.valor, x.indicador.unidad_medida.nombre];
+				});
+
+				var dataTable = $('#example').DataTable({
+					destroy: true,
+					data: dataset,
+					columns: [{ title: "Indicador" }, { title: "Zona" }, { title: "Periodo" }, { title: "Valor." }, { title: "Unidad" }]
+				});
+
+				/**
+    /*  Preparamos el BarChart
+     */
 			});
 		}
 	}, {

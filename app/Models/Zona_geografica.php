@@ -9,6 +9,7 @@ class Zona_geografica extends Model
     protected $table = 'zonas_geograficas';
     protected $primaryKey = 'id';
 	protected $fillable = ['nombre','nivel','padre_id','activo'];
+	public $timestamps = false;
 	
 	public function padre()
 	{

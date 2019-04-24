@@ -82,7 +82,7 @@ let steps = [
 			{
 				type: "Select",
 				id: "periodoNivelSelect",
-				label: "Nivel",
+				label: "Periodo",
 				classNames: ["select2","form-control"],
 				name: "periodos[]", 
 				options: [
