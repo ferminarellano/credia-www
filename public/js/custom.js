@@ -33,51 +33,152 @@ function initBarGraph() {
 	window.barchart = am4core.create("chartdiv", am4charts.XYChart);
 	
 	let chart = window.barchart;
+	let indicadores = [...new Set(globalData.map(x => x.indicador.nombre))];
+	let periodos = [...new Set(globalData.map(x => x.fecha_inicio))];
+	let zonas = [...new Set(globalData.map(x => x.zona_geografica.nombre))];
 	
-	chart.data = globalData.map(x=>(
-		{
-			country: x.zona_geografica.nombre,
-			visits: x.valor
-		}
-	));
+	if(periodos.length > 1 && zonas.length == 1 )
+	{
+		chart.data = globalData.map(x=>(
+			{
+				country: x.fecha_inicio.split("-")[0],
+				visits: x.valor
+			}
+		));
+		
+		bargraph1(chart);
+	}
+	else if(zonas.length > 1 && periodos.length == 1)
+	{
+		chart.data = globalData.map(x=>(
+			{
+				country: x.zona_geografica.nombre,
+				visits: x.valor
+			}
+		));
+		
+		bargraph1(chart);
+	}
+	else if(zonas.length > 1 && periodos.length > 1)
+	{
+		// chart.data = dataCase3(periodos);
+		bargraph2(chart, periodos,zonas);
+	}
+	else
+	{
+		chart.data = globalData.map(x=>(
+			{
+				country: x.zona_geografica.nombre,
+				visits: x.valor
+			}
+		));
+		
+		bargraph1(chart);
+	}
 	
+	
+	
+	
+	
+	// if(zonas.length > 1 && periodos.length > 1) {
+		
+		// zonas.forEach(function(item, index) {
+			// createSeries(item, item);
+		// });   
+		
+	// }
+	// else {
+		
+	// }
+	
+	
+				
+				
+				
+	
+
+	
+	
+}
+
+function bargraph1(chart) {
 	var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-				categoryAxis.dataFields.category = "country";
-				categoryAxis.renderer.grid.template.location = 0;
-				categoryAxis.renderer.minGridDistance = 30;
+	categoryAxis.dataFields.category = "country";
+	categoryAxis.renderer.grid.template.location = 0;
+	categoryAxis.renderer.minGridDistance = 30;
 
-				categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
-				  if (target.dataItem && target.dataItem.index & 2 == 2) {
-					return dy + 25;
-				  }
-				  return dy;
-				});
+	categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
+	  if (target.dataItem && target.dataItem.index & 2 == 2) {
+		return dy + 25;
+	  }
+	  return dy;
+	});
 
-				var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+	var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+	
+	series = chart.series.push(new am4charts.ColumnSeries());
+		series.dataFields.valueY = "visits";
+		series.dataFields.categoryX = "country";
+		series.name = "Visits";
+		series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+		series.columns.template.fillOpacity = .8;
+		
+	series.columns.template.adapter.add("fill", function(fill, target) {
+	  return chart.colors.getIndex(target.dataItem.index);
+	});
+	
+	var columnTemplate = series.columns.template;
+	columnTemplate.strokeWidth = 2;
+	columnTemplate.strokeOpacity = 1;
+	
+	chart.exporting.menu = new am4core.ExportMenu();
+}
 
-				// Create series
-				var series = chart.series.push(new am4charts.ColumnSeries());
-				series.dataFields.valueY = "visits";
-				series.dataFields.categoryX = "country";
-				series.name = "Visits";
-				series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
-				series.columns.template.fillOpacity = .8;
-				
-				series.columns.template.adapter.add("fill", function(fill, target) {
-  return chart.colors.getIndex(target.dataItem.index);
-});
+function bargraph2(chart, periodos, zonas) {
+	
+chart.data = dataCase3(periodos);
 
+// Create axes
+var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "periodo";
+categoryAxis.numberFormatter.numberFormat = "#";
+categoryAxis.renderer.inversed = true;
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.renderer.cellStartLocation = 0.1;
+categoryAxis.renderer.cellEndLocation = 0.9;
 
-				var columnTemplate = series.columns.template;
-				columnTemplate.strokeWidth = 2;
-				columnTemplate.strokeOpacity = 1;
-				
-				chart.exporting.menu = new am4core.ExportMenu();
-	
-	
-	
-	
-	
+var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
+valueAxis.renderer.opposite = true;
+
+// Create series
+function createSeries(field, name) {
+  var series = chart.series.push(new am4charts.ColumnSeries());
+  series.dataFields.valueX = field;
+  series.dataFields.categoryY = "periodo";
+  series.name = name;
+  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+  series.columns.template.height = am4core.percent(100);
+  series.sequencedInterpolation = true;
+
+  var valueLabel = series.bullets.push(new am4charts.LabelBullet());
+  valueLabel.label.text = "{valueX}";
+  valueLabel.label.horizontalCenter = "left";
+  valueLabel.label.dx = 10;
+  valueLabel.label.hideOversized = false;
+  valueLabel.label.truncate = false;
+
+  var categoryLabel = series.bullets.push(new am4charts.LabelBullet());
+  categoryLabel.label.text = "{name}";
+  categoryLabel.label.horizontalCenter = "right";
+  categoryLabel.label.dx = -10;
+  categoryLabel.label.fill = am4core.color("#fff");
+  categoryLabel.label.hideOversized = false;
+  categoryLabel.label.truncate = false;
+}
+
+zonas.forEach(function(item, index) {
+			createSeries(item, item);
+		});   
 }
 
 function initPieGraph() {
@@ -136,6 +237,28 @@ function initPieGraph() {
 	
 }
 
+function dataCase3(periodos){
+	let groupByDate = [];
+	
+	periodos.forEach(function(item, index) {
+		data_period = globalData.filter(x => x.fecha_inicio == item);
+		
+		let result = data_period.reduce((accumulator, currentValue, currentIndex) => {
+			if(currentIndex==0)
+			{
+				accumulator['periodo'] = currentValue.fecha_inicio.split("-")[0];
+			}
+			accumulator[currentValue.zona_geografica.nombre] = parseFloat(currentValue.valor);
+			return accumulator;
+		},{});
+		
+		groupByDate.push(result);
+		
+	});
+	
+	console.log(groupByDate);
+	return groupByDate;
+}
 				
 				
 				
