@@ -3552,10 +3552,15 @@ svg {
   z-index: 2; }
 
 .xs-about-v2 ~ .xs-popularCauses-v2 {
-  padding-top: 170px; }
+	padding-top: 170px; 
+}
+  
+.espacio{
+	padding-bottom: 50px;
+}
 
 .xs-feature-text-content {
-  padding-top: 75px; }
+  padding-top: 35px; }
   .xs-feature-text-content .xs-heading {
     margin-bottom: 30px; }
     .xs-feature-text-content .xs-heading h2 {
@@ -3740,9 +3745,9 @@ svg {
     float: none;
     text-align: center;
 }
-.section .container {
+/*.section .container {
     padding-top: 50px;
-}
+}*/
 
 .triangle {
     margin: 0 auto;
