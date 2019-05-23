@@ -27,8 +27,8 @@
 	@if(count($sistemas) > 0)
 		@foreach($sistemas as $sistema)
 			<!-- sistemas section -->
-			<section class="xs-section-padding">
-				<div class="container">
+			<section>
+				<div class="container espacio">
 					<div class="row">
 						<div class="col-lg-7">
 							<div class="xs-feature-text-content">
