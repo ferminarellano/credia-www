@@ -75,8 +75,8 @@
 									<div class="xs-margin-6 row">
 										<ul class="xs-list-with-content col-md-8 col-md-18">
 											<li>£ {{ number_format($proyecto->presupuesto,2) }}<span>Presupuesto</span></li>
-											<li>L {{ number_format($proyecto->utilizado,2) }}<span>Utilizado</span></li>
-											<li>{{ $proyecto->avance }}% <span>Avance</span></li>
+											{{-- <li>L {{ number_format($proyecto->utilizado,2) }}<span>Utilizado</span></li>
+											<li>{{ $proyecto->avance }}% <span>Avance</span></li> --}}
 										</ul>
 										<div class="xs-margin-t col-md-4 col-md-4">
 											<a href="{{URL::route('proyectodetalle',['slug' => str_slug($proyecto->titulo,'-'),'id' => $proyecto->id])}}" class="btn btn-primary">seguir leyendo</a>

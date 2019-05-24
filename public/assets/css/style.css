@@ -285,7 +285,7 @@ ul, li {
 }
 
 .btn {
-  font-size: 0.85714em;
+  font-size: 0.99999em;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .3px;
@@ -960,10 +960,10 @@ blockquote {
 }
 
 .xs-header .nav-menu li a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 40px 15px;
+  padding: 35px 15px;
   height: auto;
   color: #000000; }
   
@@ -2307,7 +2307,7 @@ text-align:center;}
 .xs-footer-list li a {
   color: #FFFFFF;
   display: block;
-  font-size: 1em;
+  font-size: 1.1em;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .xs-footer-list li a:hover {
