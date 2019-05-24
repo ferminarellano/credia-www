@@ -25,7 +25,6 @@
 @if ($crud->checkIfFieldIsFirstOfItsType($field, $fields))
 	@push('crud_fields_scripts')
 		<script>
-
 			var formatter = new Intl.NumberFormat('en-US', {
 				style: 'decimal',
 				maximumFractionDigits: 2,
@@ -131,7 +130,3 @@
 
 	@endif
 @endif
-				
-			
-
-

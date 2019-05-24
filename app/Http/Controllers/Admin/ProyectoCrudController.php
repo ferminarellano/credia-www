@@ -142,22 +142,9 @@ class ProyectoCrudController extends CrudController
 			'name' => 'presupuesto',
 			'label' => 'Presupuesto',
 			'type' => 'number',
-			'prefix' => "L",
 			'spinner' => False,
-			'default' => '0',
-			'attributes' => [
-				'placeholder' => 'Agregue la cantidad *',
-			],
-			'tab' => 'Datos de proyecto',
-		]);
-		
-		$this->crud->addField([
-			'name' => 'utilizado',
-			'label' => 'Presupuesto utilizado',
-			'type' => 'number',
 			'prefix' => "L",
-			'spinner' => False,
-			'default' => '0',
+			'default' => '0.00',
 			'attributes' => [
 				'placeholder' => 'Agregue la cantidad *',
 			],
