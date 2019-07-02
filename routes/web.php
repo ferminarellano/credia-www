@@ -43,6 +43,8 @@ Route::get('blog', 'BlogController@blog')->name('blog');
 Route::get('cendoc', 'ComponenteController@cendoc')->name('cendoc');
 Route::get('contactenos', 'ContactoController@contacto')->name('contacto');
 Route::get('convenios', 'FundacionController@convenio')->name('convenio');
+Route::view('revista-hoja-verde', 'revista')->name('revista');
+
 Route::get('educacion-ambiental', 'ComponenteController@educacion_ambiental')->name('edu_ambiental');
 Route::get('equipo-de-trabajo', 'FundacionController@equipo_trabajo')->name('equipo_trabajo');
 Route::get('estructura-organizativa', 'FundacionController@estructura_organizativa')->name('estructura_organizativa');

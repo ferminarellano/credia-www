@@ -1,3 +1,7 @@
+@php
+	$redes2 = 'App\Models\Social'::all();
+@endphp
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -76,7 +80,7 @@
 										<li><a href="{{ URL::route('estructura_organizativa') }}">Estructura Organizativa</a></li>
 										<li><a href="{{ URL::route('equipo_trabajo') }}">Equipo de Trabajo</a></li>
 										<li><a href="{{ URL::route('convenio') }}">Convenios Interinstitucionales</a></li>
-										{{--<li><a href="{{ URL::route('informe') }}">Informes Anuales</a></li>--}}
+										<li><a href="{{ URL::route('revista') }}">Revista Hoja Verde</a></li>
 										<li><a href="">Componentes</a>
 											<ul class="nav-dropdown" style="position:static;margin-left: 0px;">
 												<li><a href="{{ URL::route('cendoc') }}">Centro de Documentación</a></li>
@@ -186,7 +190,7 @@
 					<div class="row py-2 d-flex">
 						<div class="col-md-12 text-md-right">
 							<ul class="xs-social-list-v2">
-								@foreach($redes as $red)
+								@foreach($redes2 as $red)
 									<li><a href="{{ $red->url }}" target="_blank" class="color-{{ $red->red }} zoom-in"><i class="fa fa-{{ $red->red }}"></i></a></li>
 								@endforeach
 							</ul>
