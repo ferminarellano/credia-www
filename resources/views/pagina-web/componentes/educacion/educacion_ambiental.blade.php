@@ -173,7 +173,7 @@
 								</div>
 								<div class="entry-content-act">
 									<h3>{{ $actividad->titulo }}</h3>
-									<p>{{ $actividad->descripcion }}</p>
+									<p style="font-weight:400;">{{ $actividad->descripcion }}</p>
 								</div>
 								<div class="div-btn">
 									<a class="btn btn-secondary btn-color-alt" href="{{URL::route('actividadetalle',['slug' => str_slug($actividad->titulo,'-'),'id' => $actividad->id])}}">
