@@ -48,7 +48,7 @@ class ComponenteController extends Controller
 		$contenido = $banner->first()->descripcion;
 		$redes = Social::all();
 		
-		$actividades = Actividad::where([['indicador','=','educacion ambiental'],['estado','=','1']])->paginate(6);
+		$actividades = Actividad::where([['indicador','=','educacion ambiental'],['estado','=','1']])->orderBy('id', 'desc')->paginate(6);
 
 		$componentes = Componente::where([['nombre','=','educacion ambiental']])->get();	
 		$archivos = $componentes->first()->descargas()->get();
